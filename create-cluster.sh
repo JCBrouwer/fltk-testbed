@@ -1,14 +1,24 @@
 sudo service docker start
 sudo service kubelet start
+
+sudo kubeadm reset
+sudo kubeadm init
+
+sudo cp kube-controller-manager.yaml /etc/kubernetes/manifests/
+
 sudo service docker restart
 sudo service kubelet restart
 
 kubectl create -f https://raw.githubusercontent.com/NVIDIA/k8s-device-plugin/v0.9.0/nvidia-device-plugin.yml
 kubectl create -f gpushare-schd-extender.yaml
+
+sudo cp scheduler-policy-config.json /etc/kubernetes/
+sudo cp kube-scheduler.yaml /etc/kubernetes/manifests/
+
 kubectl create -f device-plugin-rbac.yaml
 kubectl create -f device-plugin-ds.yaml
 
-kubectl label node ubunu94025 gpushare=true
+kubectl label node ubunu94025 gpushare=true 
 
 helm install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
 helm install nfs-server kvaps/nfs-server-provisioner --set persistence.enabled=true,persistence.storageClass=standard,persistence.size=20Gi
