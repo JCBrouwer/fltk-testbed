@@ -24,12 +24,13 @@ def should_distribute() -> bool:
     @return: Indicator for distributed execution.
     @rtype: bool
     """
-    world_size = int(os.environ.get('WORLD_SIZE', 1))
+    world_size = int(os.environ.get("WORLD_SIZE", 1))
     return dist.is_available() and world_size > 1
 
 
-def launch_client(task_id: str, config: BareConfig = None, learning_params: LearningParameters = None,
-                  namespace: Namespace = None):
+def launch_client(
+    task_id: str, config: BareConfig = None, learning_params: LearningParameters = None, namespace: Namespace = None
+):
     """
     @param task_id: String representation (should be unique) corresponding to a client.
     @type task_id: str
@@ -48,7 +49,7 @@ def launch_client(task_id: str, config: BareConfig = None, learning_params: Lear
         rank = dist.get_rank()
         world_size = dist.get_world_size()
         backend = dist.get_backend()
-    logging.info(f'Starting Creating client with {rank}')
+    logging.info(f"Starting Creating client with {rank}")
     client = Client(rank, task_id, world_size, config, learning_params)
     client.prepare_learner(distributed)
     epoch_data = client.run_epochs()
@@ -66,7 +67,7 @@ def launch_orchestrator(args: Namespace = None, conf: BareConfig = None):
     @return: None
     @rtype: None
     """
-    logging.info('Starting as Orchestrator')
+    logging.info("Starting as Orchestrator")
     logging.info("Starting Orchestrator, initializing resources....")
     if args.local:
         logging.info("Loading local configuration file")

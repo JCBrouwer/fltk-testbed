@@ -10,7 +10,7 @@ class Convert:
     Otherwise, provide a custom path to the conversion file when called from a different directory.
     """
 
-    CONVERSION_PATH = Path('configs/quantities/kubernetes.conf')
+    CONVERSION_PATH = Path("configs/quantities/kubernetes.conf")
 
     def __init__(self, path: Path = None):
         if path:

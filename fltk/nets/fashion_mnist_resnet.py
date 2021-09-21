@@ -6,8 +6,9 @@ class Residual(nn.Module):
         super(Residual, self).__init__()
         self.relu = nn.ReLU()
         self.bn1 = nn.BatchNorm2d(in_channel, eps=1e-3)
-        self.conv1 = nn.Conv2d(in_channels=in_channel, out_channels=num_channel, kernel_size=3, padding=1,
-                               stride=strides)
+        self.conv1 = nn.Conv2d(
+            in_channels=in_channel, out_channels=num_channel, kernel_size=3, padding=1, stride=strides
+        )
         self.bn2 = nn.BatchNorm2d(num_channel, eps=1e-3)
         self.conv2 = nn.Conv2d(in_channels=num_channel, out_channels=num_channel, kernel_size=3, padding=1)
         if use_conv1x1:
@@ -46,11 +47,14 @@ class FashionMNISTResNet(nn.Module):
             nn.Conv2d(in_channels=in_channel, out_channels=64, kernel_size=7, stride=2, padding=3),
             nn.BatchNorm2d(64),
             nn.ReLU(),
-            nn.MaxPool2d(kernel_size=3, stride=2, padding=1))
-        self.block2 = nn.Sequential(ResNet_block(64, 64, 2, True),
-                                    ResNet_block(64, 128, 2),
-                                    ResNet_block(128, 256, 2),
-                                    ResNet_block(256, 512, 2))
+            nn.MaxPool2d(kernel_size=3, stride=2, padding=1),
+        )
+        self.block2 = nn.Sequential(
+            ResNet_block(64, 64, 2, True),
+            ResNet_block(64, 128, 2),
+            ResNet_block(128, 256, 2),
+            ResNet_block(256, 512, 2),
+        )
         self.block3 = nn.Sequential(nn.AvgPool2d(kernel_size=3))
         self.Dense = nn.Linear(512, 10)
 

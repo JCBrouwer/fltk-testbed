@@ -9,8 +9,16 @@ from uuid import UUID
 import schedule
 from kubeflow.pytorchjob import V1PyTorchJob, V1ReplicaSpec, V1PyTorchJobSpec
 from kubernetes import client
-from kubernetes.client import V1ObjectMeta, V1ResourceRequirements, V1Container, V1PodTemplateSpec, \
-    V1VolumeMount, V1Toleration, V1Volume, V1PersistentVolumeClaimVolumeSource
+from kubernetes.client import (
+    V1ObjectMeta,
+    V1ResourceRequirements,
+    V1Container,
+    V1PodTemplateSpec,
+    V1VolumeMount,
+    V1Toleration,
+    V1Volume,
+    V1PersistentVolumeClaimVolumeSource,
+)
 
 from fltk.util.cluster.conversion import Convert
 from fltk.util.config import BareConfig
@@ -48,6 +56,7 @@ class ResourceWatchDog:
 
     https://gist.github.com/gorenje/dff508489c3c8a460433ad709f14b7db
     """
+
     _alive: False
     _time: float = -1
     _node_lookup: Dict[str, client.V1Node] = dict()
@@ -59,7 +68,7 @@ class ResourceWatchDog:
         https://github.com/scylladb/scylla-cluster-tests/blob/a7b09e69f0152a4d70bfb25ded3d75b7e7328acc/sdcm/cluster_k8s/__init__.py#L216-L223
         """
         self._v1: client.CoreV1Api
-        self._logger = logging.getLogger('ResourceWatchDog')
+        self._logger = logging.getLogger("ResourceWatchDog")
         self._Q = Convert()
 
     def stop(self) -> None:
@@ -85,9 +94,9 @@ class ResourceWatchDog:
         self.__monitor_nodes()
 
         # Every 10 seconds we check the nodes with all the pods.
-        schedule.every(10).seconds.do(self.__monitor_pods).tag('node-monitoring')
+        schedule.every(10).seconds.do(self.__monitor_pods).tag("node-monitoring")
         # Every 1 minutes we check all the pods (in case the topology changes).
-        schedule.every(1).minutes.do(self.__monitor_pods).tag('pod-monitoring')
+        schedule.every(1).minutes.do(self.__monitor_pods).tag("pod-monitoring")
 
         self._logger.info("Starting with watching resources")
         while self._alive:
@@ -127,12 +136,12 @@ class ResourceWatchDog:
             try:
 
                 # Create field selector to only get active pods that 'request' memory
-                selector = f'status.phase!=Succeeded,status.phase!=Failed,spec.nodeName={node_name}'
+                selector = f"status.phase!=Succeeded,status.phase!=Failed,spec.nodeName={node_name}"
                 # Select pods from all namespaces on specific Kubernetes node
                 # try:
                 pod_list: client.V1PodList = self._v1.list_pod_for_all_namespaces(watch=False, field_selector=selector)
                 # Retrieve allocatable memory of node
-                alloc_cpu, alloc_mem = (self._Q(node.status.allocatable[item]) for item in ['cpu', 'memory'])
+                alloc_cpu, alloc_mem = (self._Q(node.status.allocatable[item]) for item in ["cpu", "memory"])
                 core_req, core_lim, mem_req, mem_lim = 0, 0, 0, 0
                 for pod in pod_list.items:
                     for container in pod.spec.containers:
@@ -146,7 +155,7 @@ class ResourceWatchDog:
                 resource = Resource(node_name, alloc_cpu, alloc_mem, core_req, mem_req, core_lim, mem_lim)
                 new_resource_mapper[node_name] = resource
             except Exception as e:
-                self._logger.error(f'Namespace lookup for {node_name} failed. Reason: {e}')
+                self._logger.error(f"Namespace lookup for {node_name} failed. Reason: {e}")
 
         self._resource_lookup = new_resource_mapper
         self._logger.debug(self._resource_lookup)
@@ -158,6 +167,7 @@ class ClusterManager(metaclass=Singleton):
     requested and parsed. Currently, it mainly exists to start the ResourceWatchDog, which now only logs the amount of
     resources...
     """
+
     __alive = False
     __threadpool: ThreadPool = None
 
@@ -165,7 +175,7 @@ class ClusterManager(metaclass=Singleton):
         # When executing in a pod, load the incluster configuration according to
         # https://github.com/kubernetes-client/python/blob/master/examples/in_cluster_config.py#L21
         self._v1 = client.CoreV1Api()
-        self._logger = logging.getLogger('ClusterManager')
+        self._logger = logging.getLogger("ClusterManager")
         self._watchdog = ResourceWatchDog()
 
     def start(self):
@@ -211,35 +221,36 @@ class DeploymentBuilder:
         @return:
         @rtype:
         """
-        return {'memory': mem, 'cpu': str(cpu)}
+        return {"memory": mem, "cpu": str(cpu)}
 
     def build_resources(self, arrival_task: ArrivalTask) -> None:
         system_reqs = arrival_task.sys_conf
-        req_dict = self.__resource_dict(mem=system_reqs.executor_memory,
-                                        cpu=system_reqs.executor_cores)
+        req_dict = self.__resource_dict(mem=system_reqs.executor_memory, cpu=system_reqs.executor_cores)
         # Currently the request is set to the limits. You may want to change this.
-        self._buildDescription.resources = client.V1ResourceRequirements(requests=req_dict,
-                                                                         limits=req_dict)
+        self._buildDescription.resources = client.V1ResourceRequirements(requests=req_dict, limits=req_dict)
 
     def _generate_command(self, config: BareConfig, task: ArrivalTask):
-        command = (f'python3 -m fltk client {config.config_path} {task.id} '
-                   f'--model {task.network} --dataset {task.dataset} '
-                   f'--optimizer Adam --max_epoch {task.param_conf.max_epoch} '
-                   f'--batch_size {task.param_conf.bs} --learning_rate {task.param_conf.lr} '
-                   f'--decay {task.param_conf.lr_decay} --loss CrossEntropy '
-                   f'--backend gloo')
-        return command.split(' ')
+        command = (
+            f"python3 -m fltk client {config.config_path} {task.id} "
+            f"--model {task.network} --dataset {task.dataset} "
+            f"--optimizer Adam --max_epoch {task.param_conf.max_epoch} "
+            f"--batch_size {task.param_conf.bs} --learning_rate {task.param_conf.lr} "
+            f"--decay {task.param_conf.lr_decay} --loss CrossEntropy "
+            f"--backend gloo"
+        )
+        return command.split(" ")
 
-    def _build_container(self, conf: BareConfig, task: ArrivalTask, name: str = "pytorch",
-                         vol_mnts: List[V1VolumeMount] = None) -> V1Container:
+    def _build_container(
+        self, conf: BareConfig, task: ArrivalTask, name: str = "pytorch", vol_mnts: List[V1VolumeMount] = None
+    ) -> V1Container:
         return V1Container(
             name=name,
             image=conf.cluster_config.image,
             command=self._generate_command(conf, task),
-            image_pull_policy='Always',
+            image_pull_policy="Always",
             # Set the resources to the pre-generated resources
             resources=self._buildDescription.resources,
-            volume_mounts=vol_mnts
+            volume_mounts=vol_mnts,
         )
 
     def build_worker_container(self, conf: BareConfig, task: ArrivalTask, name: str = "pytorch") -> None:
@@ -256,11 +267,9 @@ class DeploymentBuilder:
         @return:
         @rtype:
         """
-        master_mounts: List[V1VolumeMount] = [V1VolumeMount(
-            mount_path=f'/opt/federation-lab/{conf.get_log_dir()}',
-            name='fl-log-claim',
-            read_only=False
-        )]
+        master_mounts: List[V1VolumeMount] = [
+            V1VolumeMount(mount_path=f"/opt/federation-lab/{conf.get_log_dir()}", name="fl-log-claim", read_only=False)
+        ]
         self._buildDescription.master_container = self._build_container(conf, task, name, master_mounts)
 
     def build_container(self, task: ArrivalTask, conf: BareConfig):
@@ -269,13 +278,11 @@ class DeploymentBuilder:
 
     def build_tolerations(self, tols: List[Tuple[str, Optional[str], str, str]] = None):
         if not tols:
-            self._buildDescription.tolerations = [
-                V1Toleration(key="fltk.node",
-                             operator="Exists",
-                             effect="NoSchedule")]
+            self._buildDescription.tolerations = [V1Toleration(key="fltk.node", operator="Exists", effect="NoSchedule")]
         else:
-            self._buildDescription.tolerations = \
-                [V1Toleration(key=key, value=vl, operator=op, effect=effect) for key, vl, op, effect in tols]
+            self._buildDescription.tolerations = [
+                V1Toleration(key=key, value=vl, operator=op, effect=effect) for key, vl, op, effect in tols
+            ]
 
     def build_template(self) -> None:
         """
@@ -287,37 +294,41 @@ class DeploymentBuilder:
         # Ensure with taints that
         # https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
 
-        master_volumes = \
-            [V1Volume(name="fl-log-claim",
-                      persistent_volume_claim=V1PersistentVolumeClaimVolumeSource(claim_name='fl-log-claim'))
-             ]
+        master_volumes = [
+            V1Volume(
+                name="fl-log-claim",
+                persistent_volume_claim=V1PersistentVolumeClaimVolumeSource(claim_name="fl-log-claim"),
+            )
+        ]
 
         self._buildDescription.master_template = client.V1PodTemplateSpec(
             metadata=client.V1ObjectMeta(labels={"app": "fltk-worker"}),
-            spec=client.V1PodSpec(containers=[self._buildDescription.master_container],
-                                  volumes=master_volumes,
-                                  tolerations=self._buildDescription.tolerations))
+            spec=client.V1PodSpec(
+                containers=[self._buildDescription.master_container],
+                volumes=master_volumes,
+                tolerations=self._buildDescription.tolerations,
+            ),
+        )
         self._buildDescription.worker_template = client.V1PodTemplateSpec(
             metadata=client.V1ObjectMeta(labels={"app": "fltk-worker"}),
-            spec=client.V1PodSpec(containers=[self._buildDescription.worker_container],
-                                  tolerations=self._buildDescription.tolerations))
+            spec=client.V1PodSpec(
+                containers=[self._buildDescription.worker_container], tolerations=self._buildDescription.tolerations
+            ),
+        )
 
-    def build_spec(self, task: ArrivalTask, restart_policy: str = 'OnFailure') -> None:
+    def build_spec(self, task: ArrivalTask, restart_policy: str = "OnFailure") -> None:
         master_repl_spec = V1ReplicaSpec(
-            replicas=1,
-            restart_policy=restart_policy,
-            template=self._buildDescription.master_template)
+            replicas=1, restart_policy=restart_policy, template=self._buildDescription.master_template
+        )
         master_repl_spec.openapi_types = master_repl_spec.swagger_types
         pt_rep_spec: Dict[str, V1ReplicaSpec] = {"Master": master_repl_spec}
         parallelism = int(task.sys_conf.data_parallelism)
         if parallelism > 1:
             worker_repl_spec = V1ReplicaSpec(
-                replicas=parallelism - 1,
-                restart_policy=restart_policy,
-                template=self._buildDescription.worker_template
+                replicas=parallelism - 1, restart_policy=restart_policy, template=self._buildDescription.worker_template
             )
             worker_repl_spec.openapi_types = worker_repl_spec.swagger_types
-            pt_rep_spec['Worker'] = worker_repl_spec
+            pt_rep_spec["Worker"] = worker_repl_spec
 
         job_spec = V1PyTorchJobSpec(pytorch_replica_specs=pt_rep_spec)
         job_spec.openapi_types = job_spec.swagger_types
@@ -334,8 +345,9 @@ class DeploymentBuilder:
         job = V1PyTorchJob(
             api_version="kubeflow.org/v1",
             kind="PyTorchJob",
-            metadata=V1ObjectMeta(name=f'trainjob-{self._buildDescription.id}', namespace='test'),
-            spec=self._buildDescription.spec)
+            metadata=V1ObjectMeta(name=f"trainjob-{self._buildDescription.id}", namespace="test"),
+            spec=self._buildDescription.spec,
+        )
         return job
 
     def create_identifier(self, task: ArrivalTask):

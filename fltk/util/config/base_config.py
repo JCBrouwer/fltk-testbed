@@ -11,9 +11,9 @@ class GeneralNetConfig:
     save_model: bool = False
     save_temp_model: bool = False
     save_epoch_interval: int = 1
-    save_model_path: str = 'models'
-    epoch_save_start_suffix: str = 'cloud_experiment'
-    epoch_save_end_suffix: str = 'cloud_experiment'
+    save_model_path: str = "models"
+    epoch_save_start_suffix: str = "cloud_experiment"
+    epoch_save_end_suffix: str = "cloud_experiment"
     scheduler_step_size = 50
     scheduler_gamma = 0.5
     min_lr = 1e-10
@@ -86,8 +86,8 @@ class ClusterConfig:
     orchestrator: OrchestratorConfig
     client: ClientConfig
     wait_for_clients: bool = True
-    namespace: str = 'test'
-    image: str = 'fltk:latest'
+    namespace: str = "test"
+    image: str = "fltk:latest"
 
     def load_incluster_namespace(self):
         with open("/var/run/secrets/kubernetes.io/serviceaccount/namespace") as f:
@@ -107,7 +107,7 @@ class ClusterConfig:
         @return: None
         @rtype: None
         """
-        self.image = os.environ.get('IMAGE_NAME')
+        self.image = os.environ.get("IMAGE_NAME")
 
 
 @dataclass_json
@@ -209,7 +209,8 @@ class BareConfig(object):
         @rtype: bool
         """
         return self.execution_config.general_net.save_model and (
-                epoch_idx == 1 or epoch_idx % self.execution_config.general_net.save_epoch_interval == 0)
+            epoch_idx == 1 or epoch_idx % self.execution_config.general_net.save_epoch_interval == 0
+        )
 
     def get_epoch_save_end_suffix(self) -> str:
         """

@@ -70,7 +70,7 @@ class ExperimentGenerator(ArrivalGenerator):
     _tick_list: List[Arrival] = []
     _alive: bool = False
     _decrement = 10
-    __default_config: Path = Path('configs/tasks/example_arrival_config.json')
+    __default_config: Path = Path("configs/tasks/example_arrival_config.json")
 
     def __init__(self, custom_config: Path = None):
         super(ExperimentGenerator, self).__init__(custom_config or self.__default_config)
@@ -98,7 +98,7 @@ class ExperimentGenerator(ArrivalGenerator):
         """
         parser = ExperimentParser(config_path=alternative_path or self.configuration_path)
         experiment_descriptions = parser.parse()
-        self.job_dict = {f'train_job_{indx}': item for indx, item in enumerate(experiment_descriptions)}
+        self.job_dict = {f"train_job_{indx}": item for indx, item in enumerate(experiment_descriptions)}
 
     def generate_arrival(self, task_id: str) -> Arrival:
         """
@@ -110,7 +110,9 @@ class ExperimentGenerator(ArrivalGenerator):
         """
         self.logger.info(f"Creating task for {task_id}")
         job: JobDescription = self.job_dict[task_id]
-        parameters: JobClassParameter = choices(job.job_class_parameters, [param.class_probability for param in job.job_class_parameters])[0]
+        parameters: JobClassParameter = choices(
+            job.job_class_parameters, [param.class_probability for param in job.job_class_parameters]
+        )[0]
         priority = choices(parameters.priorities, [prio.probability for prio in parameters.priorities], k=1)[0]
 
         inter_arrival_ticks = np.random.poisson(lam=job.arrival_statistic)
@@ -172,4 +174,6 @@ class ExperimentGenerator(ArrivalGenerator):
             correction_time = time.time() - save_time
             event.wait(timeout=self._decrement - correction_time)
         self.stop_time = time.time()
-        self.logger.info(f"Stopped execution at: {self.stop_time}, duration: {self.stop_time - self.start_time}/{duration}")
+        self.logger.info(
+            f"Stopped execution at: {self.stop_time}, duration: {self.stop_time - self.start_time}/{duration}"
+        )

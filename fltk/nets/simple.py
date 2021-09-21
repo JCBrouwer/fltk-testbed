@@ -10,33 +10,47 @@ class SimpleNet(nn.Module):
         self.created_time = created_time
         self.name = name
 
-    def visualize(self, vis, epoch, acc, loss=None, eid='main', is_poisoned=False, name=None):
+    def visualize(self, vis, epoch, acc, loss=None, eid="main", is_poisoned=False, name=None):
         if name is None:
-            name = self.name + '_poisoned' if is_poisoned else self.name
-        vis.line(X=np.array([epoch]), Y=np.array([acc]), name=name, win='vacc_{0}'.format(self.created_time), env=eid,
-                 update='append' if vis.win_exists('vacc_{0}'.format(self.created_time), env=eid) else None,
-                 opts=dict(showlegend=True, title='Accuracy_{0}'.format(self.created_time),
-                           width=700, height=400))
+            name = self.name + "_poisoned" if is_poisoned else self.name
+        vis.line(
+            X=np.array([epoch]),
+            Y=np.array([acc]),
+            name=name,
+            win="vacc_{0}".format(self.created_time),
+            env=eid,
+            update="append" if vis.win_exists("vacc_{0}".format(self.created_time), env=eid) else None,
+            opts=dict(showlegend=True, title="Accuracy_{0}".format(self.created_time), width=700, height=400),
+        )
         if loss is not None:
-            vis.line(X=np.array([epoch]), Y=np.array([loss]), name=name, env=eid,
-                     win='vloss_{0}'.format(self.created_time),
-                     update='append' if vis.win_exists('vloss_{0}'.format(self.created_time), env=eid) else None,
-                     opts=dict(showlegend=True, title='Loss_{0}'.format(self.created_time), width=700, height=400))
+            vis.line(
+                X=np.array([epoch]),
+                Y=np.array([loss]),
+                name=name,
+                env=eid,
+                win="vloss_{0}".format(self.created_time),
+                update="append" if vis.win_exists("vloss_{0}".format(self.created_time), env=eid) else None,
+                opts=dict(showlegend=True, title="Loss_{0}".format(self.created_time), width=700, height=400),
+            )
 
         return
 
-    def train_vis(self, vis, epoch, data_len, batch, loss, eid='main', name=None, win='vtrain'):
+    def train_vis(self, vis, epoch, data_len, batch, loss, eid="main", name=None, win="vtrain"):
 
-        vis.line(X=np.array([(epoch - 1) * data_len + batch]), Y=np.array([loss]),
-                 env=eid,
-                 name=f'{name}' if name is not None else self.name, win=f'{win}_{self.created_time}',
-                 update='append' if vis.win_exists(f'{win}_{self.created_time}', env=eid) else None,
-                 opts=dict(showlegend=True, width=700, height=400, title='Train loss_{0}'.format(self.created_time)))
+        vis.line(
+            X=np.array([(epoch - 1) * data_len + batch]),
+            Y=np.array([loss]),
+            env=eid,
+            name=f"{name}" if name is not None else self.name,
+            win=f"{win}_{self.created_time}",
+            update="append" if vis.win_exists(f"{win}_{self.created_time}", env=eid) else None,
+            opts=dict(showlegend=True, width=700, height=400, title="Train loss_{0}".format(self.created_time)),
+        )
 
     def save_stats(self, epoch, loss, acc):
-        self.stats['epoch'].append(epoch)
-        self.stats['loss'].append(loss)
-        self.stats['acc'].append(acc)
+        self.stats["epoch"].append(epoch)
+        self.stats["loss"].append(loss)
+        self.stats["acc"].append(acc)
 
     def copy_params(self, state_dict, coefficient_transfer=100):
 
@@ -49,7 +63,8 @@ class SimpleNet(nn.Module):
                 # random_tensor = (torch.cuda.FloatTensor(shape).random_(0, 100) <= coefficient_transfer).type(
                 #     torch.cuda.FloatTensor)
                 random_tensor = (torch.FloatTensor(shape).random_(0, 100) <= coefficient_transfer).type(
-                    torch.FloatTensor)
+                    torch.FloatTensor
+                )
                 negative_tensor = (random_tensor * -1) + 1
                 # own_state[name].copy_(param)
                 own_state[name].copy_(param.clone())
