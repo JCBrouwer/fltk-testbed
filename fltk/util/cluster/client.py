@@ -334,7 +334,7 @@ class DeploymentBuilder:
         job = V1PyTorchJob(
             api_version="kubeflow.org/v1",
             kind="PyTorchJob",
-            metadata=V1ObjectMeta(name=str(self._buildDescription.id), namespace='test'),
+            metadata=V1ObjectMeta(name=str(self._buildDescription.id), namespace='default'),
             spec=self._buildDescription.spec)
         return job
 

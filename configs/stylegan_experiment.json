@@ -13,7 +13,7 @@
    },
    "execution_config": {
       "duration": 600,
-      "experiment_prefix": "cloud_experiment",
+      "experiment_prefix": "stylegan_experiment",
       "cuda": true,
       "tensorboard": {
          "active": true,

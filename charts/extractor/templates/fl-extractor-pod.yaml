@@ -12,6 +12,7 @@ spec:
         - tensorboard
         - --logdir
         - logging
+        - --bind_all
       image: "{{ .Values.provider.domain }}/{{ .Values.provider.projectName }}/{{ .Values.provider.imageName }}"
       ports:
         - containerPort: 6006

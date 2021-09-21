@@ -1,8 +1,9 @@
 fltk:
-    worldsize: 50
+    worldsize: 8
     config: cloud_experiment.yaml
-    port: 5000
+    port: 4040
 provider:
-    domain: gcr.io
-    projectName: test-bed-distml
-    imageName: fltk:latest
+    domain: 192.168.1.187:6000
+    projectName: fltk
+    imageName: fltk
+    imagePullPolicy: IfNotPresent
