@@ -46,140 +46,137 @@ import yaml
 # seem worth it.
 APPS_TO_SKIP = ["mysql", "minio"]
 
+
 def build_configmap_generators(kustomize_dir):
-  """Return a dictionary mapping configMapGenerator name to files.
+    """Return a dictionary mapping configMapGenerator name to files.
 
-  The dictionary will be used to copy over the files to the test directory
-  and generate an updated configMapGenerator in the kustomization.yaml
+    The dictionary will be used to copy over the files to the test directory
+    and generate an updated configMapGenerator in the kustomization.yaml
 
-  Returns:
-   dict: config map name to list of files used for the configmap generator
-  """
-  kustomize_file = os.path.join(kustomize_dir, "kustomization.yaml")
+    Returns:
+     dict: config map name to list of files used for the configmap generator
+    """
+    kustomize_file = os.path.join(kustomize_dir, "kustomization.yaml")
 
-  with open(kustomize_file) as hf:
-    kustomize = yaml.load(hf)
+    with open(kustomize_file) as hf:
+        kustomize = yaml.load(hf)
 
-  generators = {}
-  for g in kustomize.get("configMapGenerator", []):
-    p_files = g.get("envs", [])
+    generators = {}
+    for g in kustomize.get("configMapGenerator", []):
+        p_files = g.get("envs", [])
 
-    if "env" in g:
-      p_files.append(g["env"])
+        if "env" in g:
+            p_files.append(g["env"])
 
-    generators[g["name"]] = [os.path.join(kustomize_dir, f) for f in p_files]
+        generators[g["name"]] = [os.path.join(kustomize_dir, f) for f in p_files]
 
-  return generators
+    return generators
+
 
 class GenerateLegacyTests:
-  @staticmethod
-  def generate(kfdef, test_path):
-    """Generate the kustomization.yaml files.
+    @staticmethod
+    def generate(kfdef, test_path):
+        """Generate the kustomization.yaml files.
 
-    Args:
-      kfdef: Path to the kfdef file.
-      test_path: The path where the tests should be written.
-    """
-    this_dir = os.path.dirname(__file__)
-    repo_root = os.path.abspath(os.path.join(this_dir, ".."))
+        Args:
+          kfdef: Path to the kfdef file.
+          test_path: The path where the tests should be written.
+        """
+        this_dir = os.path.dirname(__file__)
+        repo_root = os.path.abspath(os.path.join(this_dir, ".."))
 
-    test_path = os.path.abspath(test_path)
+        test_path = os.path.abspath(test_path)
 
-    # Figure out how many ".." we will need to add to the resource specs
-    # to get to the root of the repo.
-    if not test_path.startswith(repo_root):
-      raise ValueError("Test path {test_path} is not under {repo_root}")
+        # Figure out how many ".." we will need to add to the resource specs
+        # to get to the root of the repo.
+        if not test_path.startswith(repo_root):
+            raise ValueError("Test path {test_path} is not under {repo_root}")
 
-    rtest_path = test_path[len(repo_root):]
+        rtest_path = test_path[len(repo_root) :]
 
-    # Add 1 for the kustomize dir
-    num_parents = len(rtest_path.split(os.path.sep))
+        # Add 1 for the kustomize dir
+        num_parents = len(rtest_path.split(os.path.sep))
 
-    # Open up the kfdef file.
-    with open(os.path.join(kfdef)) as fh:
-      kfdef_spec = yaml.load(fh)
+        # Open up the kfdef file.
+        with open(os.path.join(kfdef)) as fh:
+            kfdef_spec = yaml.load(fh)
 
-    # Map each application to its relative path.
-    apps = {}
-    for a in kfdef_spec["spec"]["applications"]:
-      apps[a["name"]] = a["kustomizeConfig"]["repoRef"]["path"]
+        # Map each application to its relative path.
+        apps = {}
+        for a in kfdef_spec["spec"]["applications"]:
+            apps[a["name"]] = a["kustomizeConfig"]["repoRef"]["path"]
 
-    kfapp_dir = os.path.dirname(kfdef)
-    kustomize_dir = os.path.join(kfapp_dir, "kustomize")
-    for d in os.listdir(kustomize_dir):
-      if d in APPS_TO_SKIP:
-        logging.info(f"Skipping {d}")
-        continue
-      kustomize_file = os.path.join(kustomize_dir, d, "kustomization.yaml")
+        kfapp_dir = os.path.dirname(kfdef)
+        kustomize_dir = os.path.join(kfapp_dir, "kustomize")
+        for d in os.listdir(kustomize_dir):
+            if d in APPS_TO_SKIP:
+                logging.info(f"Skipping {d}")
+                continue
+            kustomize_file = os.path.join(kustomize_dir, d, "kustomization.yaml")
 
-      if not d in apps:
-        logging.info(f"Skipping {d}; not an application")
+            if not d in apps:
+                logging.info(f"Skipping {d}; not an application")
 
-      if not os.path.exists(kustomize_file):
-        logging.info(f"Skipping {d}; {kustomize_file} does not exist.")
-        continue
+            if not os.path.exists(kustomize_file):
+                logging.info(f"Skipping {d}; {kustomize_file} does not exist.")
+                continue
 
-      with open(kustomize_file) as fh:
-        kustomization = yaml.load(fh)
+            with open(kustomize_file) as fh:
+                kustomization = yaml.load(fh)
 
-      # Rewrite the paths to resources to source resources from the manifests
-      # tree
-      for f in ["bases", "configurations", "resources", "patches",
-                "patchesStrategicMerge"]:
-        new = []
-        for b in kustomization.get(f, []):
-          pieces = [".."] * num_parents
-          pieces.append(apps[d])
-          pieces.append(b)
+            # Rewrite the paths to resources to source resources from the manifests
+            # tree
+            for f in ["bases", "configurations", "resources", "patches", "patchesStrategicMerge"]:
+                new = []
+                for b in kustomization.get(f, []):
+                    pieces = [".."] * num_parents
+                    pieces.append(apps[d])
+                    pieces.append(b)
 
-          new.append(os.path.join(*pieces))
+                    new.append(os.path.join(*pieces))
 
-        kustomization[f] = new
+                kustomization[f] = new
 
-      # Build any patches for configmaps
-      generators = build_configmap_generators(os.path.join(kustomize_dir, d, "base"))
+            # Build any patches for configmaps
+            generators = build_configmap_generators(os.path.join(kustomize_dir, d, "base"))
 
-      app_test_dir = os.path.join(test_path, d)
-      if not os.path.exists(app_test_dir):
-        os.makedirs(app_test_dir)
+            app_test_dir = os.path.join(test_path, d)
+            if not os.path.exists(app_test_dir):
+                os.makedirs(app_test_dir)
 
-      # write the generators
-      params_index = 0
-      kustomization["configMapGenerator"] = []
-      for name, files in generators.items():
-        g = {
-          "name": name,
-          "envs": [],
-          "behavior": "merge"
-        }
+            # write the generators
+            params_index = 0
+            kustomization["configMapGenerator"] = []
+            for name, files in generators.items():
+                g = {"name": name, "envs": [], "behavior": "merge"}
 
-        for f in files:
-          pfile = f"params_{params_index}.env"
-          g["envs"].append(pfile)
-          shutil.copy2(f, os.path.join(app_test_dir, pfile))
+                for f in files:
+                    pfile = f"params_{params_index}.env"
+                    g["envs"].append(pfile)
+                    shutil.copy2(f, os.path.join(app_test_dir, pfile))
 
-          params_index += 1
+                    params_index += 1
 
-        kustomization["configMapGenerator"].append(g)
+                kustomization["configMapGenerator"].append(g)
 
-      new_path = os.path.join(app_test_dir, "kustomization.yaml")
-      logging.info(f"Writing {new_path}")
+            new_path = os.path.join(app_test_dir, "kustomization.yaml")
+            logging.info(f"Writing {new_path}")
 
-      # Delete any secret in the kustomization.yaml.
-      for f in ["secretGenerator"]:
-        if f in kustomization:
-          del kustomization[f]
+            # Delete any secret in the kustomization.yaml.
+            for f in ["secretGenerator"]:
+                if f in kustomization:
+                    del kustomization[f]
 
-      with open(new_path, "w") as fh:
-        yaml.dump(kustomization, fh)
+            with open(new_path, "w") as fh:
+                yaml.dump(kustomization, fh)
+
 
 if __name__ == "__main__":
-  logging.basicConfig(
-      level=logging.INFO,
-      format=('%(levelname)s|%(asctime)s'
-              '|%(pathname)s|%(lineno)d| %(message)s'),
-      datefmt='%Y-%m-%dT%H:%M:%S',
-  )
-  logging.getLogger().setLevel(logging.INFO)
+    logging.basicConfig(
+        level=logging.INFO,
+        format=("%(levelname)s|%(asctime)s" "|%(pathname)s|%(lineno)d| %(message)s"),
+        datefmt="%Y-%m-%dT%H:%M:%S",
+    )
+    logging.getLogger().setLevel(logging.INFO)
 
-  fire.Fire(GenerateLegacyTests)
+    fire.Fire(GenerateLegacyTests)

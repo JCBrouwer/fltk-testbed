@@ -10,9 +10,9 @@ class GeneralNetConfig:
     save_model: bool = False
     save_temp_model: bool = False
     save_epoch_interval: int = 1
-    save_model_path: str = 'models'
-    epoch_save_start_suffix: str = 'cloud_experiment'
-    epoch_save_end_suffix: str = 'cloud_experiment'
+    save_model_path: str = "models"
+    epoch_save_start_suffix: str = "cloud_experiment"
+    epoch_save_end_suffix: str = "cloud_experiment"
     scheduler_step_size = 50
     scheduler_gamma = 0.5
     min_lr = 1e-10
@@ -85,8 +85,9 @@ class ClusterConfig:
     orchestrator: OrchestratorConfig
     client: ClientConfig
     wait_for_clients: bool = True
-    namespace: str = 'default'
-    image: str = 'gcr.io/test-bed-distml/fltk:latest'
+    namespace: str = "default"
+    image: str = "gcr.io/test-bed-distml/fltk:latest"
+
 
 @dataclass_json
 @dataclass
@@ -137,7 +138,8 @@ class BareConfig(object):
         :type epoch_idx: int
         """
         return self.execution_config.general_net.save_model and (
-                epoch_idx == 1 or epoch_idx % self.execution_config.general_net.save_epoch_interval == 0)
+            epoch_idx == 1 or epoch_idx % self.execution_config.general_net.save_epoch_interval == 0
+        )
 
     def get_epoch_save_end_suffix(self) -> bool:
         return self.execution_config.epoch_save_suffix

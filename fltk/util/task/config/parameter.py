@@ -17,6 +17,7 @@ class HyperParameters:
     lr: Learning rate parameter, limiting the step size in the gradient update.
     lr_decay: How fast the learning rate 'shrinks'.
     """
+
     bs: int = field(metadata=config(field_name="batchSize"))
     max_epoch: int = field(metadata=config(field_name="maxEpoch"))
     lr: str = field(metadata=config(field_name="learningRate"))
@@ -29,6 +30,7 @@ class Priority:
     """
     Job class priority, indicating the presedence of one arrival over another.
     """
+
     priority: int
     probability: float
 
@@ -43,6 +45,7 @@ class SystemParameters:
     executor_memory: Amount of RAM allocated to each executor.
     action: Indicating whether it regards 'inference' or 'train'ing time.
     """
+
     data_parallelism: int = field(metadata=config(field_name="dataParallelism"))
     executor_cores: int = field(metadata=config(field_name="executorCores"))
     executor_memory: str = field(metadata=config(field_name="executorMemory"))
@@ -55,6 +58,7 @@ class NetworkConfiguration:
     """
     Dataclass describing the network and dataset that is 'trained' for a task.
     """
+
     network: str
     dataset: str
 
@@ -65,6 +69,7 @@ class JobClassParameter:
     """
     Dataclass describing the job specific parameters (system and hyper).
     """
+
     network_configuration: NetworkConfiguration = field(metadata=config(field_name="networkConfiguration"))
     system_parameters: SystemParameters = field(metadata=config(field_name="systemParameters"))
     hyper_parameters: HyperParameters = field(metadata=config(field_name="hyperParameters"))
@@ -81,6 +86,7 @@ class JobDescription:
 
     preemtible_jobs: indicates whether the jobs can be pre-emptively rescheduled by the scheduler.
     """
+
     job_class_parameters: List[JobClassParameter] = field(metadata=config(field_name="jobClassParameters"))
     arrival_statistic: float = field(metadata=config(field_name="lambda"))
     preemtible_jobs: float = field(metadata=config(field_name="preemptJobs"))
@@ -94,6 +100,7 @@ class TrainTask:
 
     Dataclass is ordered, to allow for ordering of arrived tasks in a PriorityQueue (for scheduling).
     """
+
     priority: int
     network_configuration: NetworkConfiguration = field(compare=False)
     system_parameters: SystemParameters = field(compare=False)
@@ -118,7 +125,6 @@ class TrainTask:
 
 
 class ExperimentParser(object):
-
     def __init__(self, config_path: Path):
         self.__config_path = config_path
 
@@ -128,7 +134,7 @@ class ExperimentParser(object):
         should be reflected by the classes used. For more information refer to the dataclasses JSON
         documentation https://pypi.org/project/dataclasses-json/.
         """
-        with open(self.__config_path, 'r') as config_file:
+        with open(self.__config_path, "r") as config_file:
             config_dict = json.load(config_file)
             job_list = [JobDescription.from_dict(job_description) for job_description in config_dict]
         return job_list

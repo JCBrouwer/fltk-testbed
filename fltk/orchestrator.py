@@ -30,6 +30,7 @@ class Orchestrator(object):
     to be scheduled, than that there are resources, as such, letting the Kubernetes Scheduler let decide when to run
     which containers where.
     """
+
     _alive = False
     # Priority queue, requires an orderable object, otherwise a Tuple[int, Any] can be used to insert.
     pending_tasks: "PriorityQueue[ArrivalTask]" = PriorityQueue()
@@ -37,7 +38,7 @@ class Orchestrator(object):
     completed_tasks: List[str] = []
 
     def __init__(self, cluster_mgr: ClusterManager, arv_gen: ArrivalGenerator, config: BareConfig):
-        self.__logger = logging.getLogger('Orchestrator')
+        self.__logger = logging.getLogger("Orchestrator")
         self.__logger.debug("Loading in-cluster configuration")
         self.__cluster_mgr = cluster_mgr
         self.__arrival_generator = arv_gen
@@ -70,12 +71,14 @@ class Orchestrator(object):
             while not self.__arrival_generator.arrivals.empty():
                 arrival: Arrival = self.__arrival_generator.arrivals.get()
                 unique_identifier: uuid.UUID = uuid.uuid4()
-                task = ArrivalTask(priority=arrival.get_priority(),
-                                   id=unique_identifier,
-                                   network=arrival.get_network(),
-                                   dataset=arrival.get_dataset(),
-                                   sys_conf=arrival.get_system_config(),
-                                   param_conf=arrival.get_parameter_config())
+                task = ArrivalTask(
+                    priority=arrival.get_priority(),
+                    id=unique_identifier,
+                    network=arrival.get_network(),
+                    dataset=arrival.get_dataset(),
+                    sys_conf=arrival.get_system_config(),
+                    param_conf=arrival.get_parameter_config(),
+                )
 
                 self.__logger.debug(f"Arrival of: {task}")
                 self.pending_tasks.put(task)
@@ -92,7 +95,7 @@ class Orchestrator(object):
             self.__logger.debug("Still alive...")
             time.sleep(5)
 
-        logging.info(f'Experiment completed, currently does not support waiting.')
+        logging.info(f"Experiment completed, currently does not support waiting.")
 
     def __clear_jobs(self):
         """
@@ -101,18 +104,15 @@ class Orchestrator(object):
         @rtype: None
         """
         namespace = self._config.cluster_config.namespace
-        self.__logger.info(f'Clearing old jobs in current namespace: {namespace}')
+        self.__logger.info(f"Clearing old jobs in current namespace: {namespace}")
 
-        for job in self.__client.get(namespace=self._config.cluster_config.namespace)['items']:
-            job_name = job['metadata']['name']
-            self.__logger.info(f'Deleting: {job_name}')
+        for job in self.__client.get(namespace=self._config.cluster_config.namespace)["items"]:
+            job_name = job["metadata"]["name"]
+            self.__logger.info(f"Deleting: {job_name}")
             try:
                 self.__client.custom_api.delete_namespaced_custom_object(
-                    PYTORCHJOB_GROUP,
-                    PYTORCHJOB_VERSION,
-                    namespace,
-                    PYTORCHJOB_PLURAL,
-                    job_name)
+                    PYTORCHJOB_GROUP, PYTORCHJOB_VERSION, namespace, PYTORCHJOB_PLURAL, job_name
+                )
             except Exception as e:
-                self.__logger.warning(f'Could not delete: {job_name}')
+                self.__logger.warning(f"Could not delete: {job_name}")
                 print(e)

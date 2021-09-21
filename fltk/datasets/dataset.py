@@ -6,7 +6,6 @@ from torch.utils.data import TensorDataset
 
 
 class Dataset:
-
     def __init__(self, config, learning_params, rank: int, world_size: int):
         self.config = config
         self.learning_params = learning_params

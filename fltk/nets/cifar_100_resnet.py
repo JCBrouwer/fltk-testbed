@@ -3,8 +3,7 @@ import torch.nn as nn
 
 
 class BasicBlock(nn.Module):
-    """Basic Block for resnet 18 and resnet 34
-    """
+    """Basic Block for resnet 18 and resnet 34"""
 
     # BasicBlock and BottleNeck block
     # have different output size
@@ -21,7 +20,7 @@ class BasicBlock(nn.Module):
             nn.BatchNorm2d(out_channels),
             nn.ReLU(inplace=True),
             nn.Conv2d(out_channels, out_channels * BasicBlock.expansion, kernel_size=3, padding=1, bias=False),
-            nn.BatchNorm2d(out_channels * BasicBlock.expansion)
+            nn.BatchNorm2d(out_channels * BasicBlock.expansion),
         )
 
         # shortcut
@@ -32,7 +31,7 @@ class BasicBlock(nn.Module):
         if stride != 1 or in_channels != BasicBlock.expansion * out_channels:
             self.shortcut = nn.Sequential(
                 nn.Conv2d(in_channels, out_channels * BasicBlock.expansion, kernel_size=1, stride=stride, bias=False),
-                nn.BatchNorm2d(out_channels * BasicBlock.expansion)
+                nn.BatchNorm2d(out_channels * BasicBlock.expansion),
             )
 
     def forward(self, x):
@@ -40,8 +39,8 @@ class BasicBlock(nn.Module):
 
 
 class Bottleneck(nn.Module):
-    """Residual block for resnet over 50 layers
-    """
+    """Residual block for resnet over 50 layers"""
+
     expansion = 4
 
     def __init__(self, in_channels, out_channels, stride=1):
@@ -62,7 +61,7 @@ class Bottleneck(nn.Module):
         if stride != 1 or in_channels != out_channels * Bottleneck.expansion:
             self.shortcut = nn.Sequential(
                 nn.Conv2d(in_channels, out_channels * Bottleneck.expansion, stride=stride, kernel_size=1, bias=False),
-                nn.BatchNorm2d(out_channels * Bottleneck.expansion)
+                nn.BatchNorm2d(out_channels * Bottleneck.expansion),
             )
 
     def forward(self, x):
@@ -70,7 +69,6 @@ class Bottleneck(nn.Module):
 
 
 class Cifar100ResNet(nn.Module):
-
     def __init__(self, block: Union[BasicBlock, Bottleneck], num_block=None, num_classes=100):
         super(Cifar100ResNet, self).__init__()
         if num_block is None:
@@ -79,9 +77,8 @@ class Cifar100ResNet(nn.Module):
         self.in_channels = 64
 
         self.conv1 = nn.Sequential(
-            nn.Conv2d(3, 64, kernel_size=3, padding=1, bias=False),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True))
+            nn.Conv2d(3, 64, kernel_size=3, padding=1, bias=False), nn.BatchNorm2d(64), nn.ReLU(inplace=True)
+        )
         # we use a different inputsize than the original paper
         # so conv2_x's stride is 1
         self.conv2_x = self._make_layer(block, 64, num_block[0], 1)
@@ -128,7 +125,6 @@ class Cifar100ResNet(nn.Module):
 
 
 class ResNet18(Cifar100ResNet):
-
     def __init__(self):
         super(ResNet18).__init__(BasicBlock, [2, 2, 2, 2])
 

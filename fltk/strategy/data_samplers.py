@@ -11,8 +11,7 @@ class DistributedSamplerWrapper(DistributedSampler):
     indices = []
     epoch_size = 1.0
 
-    def __init__(self, dataset: Dataset, num_replicas=None,
-                 rank=None, seed=0) -> None:
+    def __init__(self, dataset: Dataset, num_replicas=None, rank=None, seed=0) -> None:
         super().__init__(dataset, num_replicas=num_replicas, rank=rank)
 
         self.client_id = rank - 1
@@ -29,9 +28,9 @@ class DistributedSamplerWrapper(DistributedSampler):
         return ordered_by_label
 
     def set_epoch_size(self, epoch_size: float) -> None:
-        """ Sets the epoch size as relative to the local amount of data. 
-        1.5 will result in the __iter__ function returning the available 
-        indices with half appearing twice. 
+        """Sets the epoch size as relative to the local amount of data.
+        1.5 will result in the __iter__ function returning the available
+        indices with half appearing twice.
 
         Args:
             epoch_size (float): relative size of epoch
@@ -42,7 +41,7 @@ class DistributedSamplerWrapper(DistributedSampler):
         random.seed(self.rank + self.epoch)
         epochs_todo = self.epoch_size
         indices = []
-        while (epochs_todo > 0.0):
+        while epochs_todo > 0.0:
             random.shuffle(self.indices)
             if epochs_todo >= 1.0:
                 indices.extend(self.indices)
@@ -73,7 +72,9 @@ class LimitLabelsSampler(DistributedSamplerWrapper):
         if self.n_clients % self.n_labels != 0:
             logging.error(
                 "multiples of {} clients are needed for the 'limiting-labels' data distribution method, {} does not work".format(
-                    self.n_labels, self.n_clients))
+                    self.n_labels, self.n_clients
+                )
+            )
             return
 
         n_occurrences = limit * int(self.n_clients / self.n_labels)  # number of occurrences of each label
@@ -163,7 +164,9 @@ class Probability_q_Sampler(DistributedSamplerWrapper):
         if self.n_clients % self.n_labels != 0:
             logging.error(
                 "multiples of {} clients are needed for the 'probability-q-sampler' data distribution method, {} does not work".format(
-                    self.n_labels, self.n_clients))
+                    self.n_labels, self.n_clients
+                )
+            )
             return
 
         # divide data among groups
@@ -199,13 +202,12 @@ class Probability_q_Sampler(DistributedSamplerWrapper):
 
 
 class DirichletSampler(DistributedSamplerWrapper):
-    """ Generates a (non-iid) data distribution by sampling the dirichlet distribution. Dirichlet constructs a
-    vector of length num_clients, that sums to one. Decreasing alpha results in a more non-iid data set. 
-    This distribution method results in both label and quantity skew. 
+    """Generates a (non-iid) data distribution by sampling the dirichlet distribution. Dirichlet constructs a
+    vector of length num_clients, that sums to one. Decreasing alpha results in a more non-iid data set.
+    This distribution method results in both label and quantity skew.
     """
 
-    def __init__(self, dataset: Dataset, num_replicas=None,
-                 rank=None, args=(0.5, 42)) -> None:
+    def __init__(self, dataset: Dataset, num_replicas=None, rank=None, args=(0.5, 42)) -> None:
         alpha, seed = args
         super().__init__(dataset, num_replicas=num_replicas, rank=rank, seed=seed)
 
@@ -217,7 +219,7 @@ class DirichletSampler(DistributedSamplerWrapper):
             # generate an allocation by sampling dirichlet, which results in how many samples each client gets
             allocation = np.random.dirichlet([alpha] * self.n_clients) * n_samples
             allocation = allocation.astype(int)
-            start_index = allocation[0:self.client_id].sum()
+            start_index = allocation[0 : self.client_id].sum()
             end_index = 0
             if self.client_id + 1 == self.n_clients:  # last client
                 end_index = n_samples
@@ -241,27 +243,29 @@ class UniformSampler(DistributedSamplerWrapper):
     def __init__(self, dataset, num_replicas=None, rank=None, seed=0):
         super().__init__(dataset, num_replicas=num_replicas, rank=rank, seed=seed)
         indices = list(range(len(self.dataset)))
-        self.indices = indices[self.rank:self.total_size:self.num_replicas]
+        self.indices = indices[self.rank : self.total_size : self.num_replicas]
 
 
 def get_sampler(dataset, args):
     sampler = None
     if args.get_distributed():
         method = args.get_sampler()
-        args.get_logger().info(
-            "Using {} sampler method, with args: {}".format(method, args.get_sampler_args()))
+        args.get_logger().info("Using {} sampler method, with args: {}".format(method, args.get_sampler_args()))
 
         if method == "uniform":
             sampler = UniformSampler(dataset, num_replicas=args.get_world_size(), rank=args.get_rank())
         elif method == "q sampler":
-            sampler = Probability_q_Sampler(dataset, num_replicas=args.get_world_size(), rank=args.get_rank(),
-                                            args=args.get_sampler_args())
+            sampler = Probability_q_Sampler(
+                dataset, num_replicas=args.get_world_size(), rank=args.get_rank(), args=args.get_sampler_args()
+            )
         elif method == "limit labels":
-            sampler = LimitLabelsSampler(dataset, num_replicas=args.get_world_size(), rank=args.get_rank(),
-                                         args=args.get_sampler_args())
+            sampler = LimitLabelsSampler(
+                dataset, num_replicas=args.get_world_size(), rank=args.get_rank(), args=args.get_sampler_args()
+            )
         elif method == "dirichlet":
-            sampler = DirichletSampler(dataset, num_replicas=args.get_world_size(), rank=args.get_rank(),
-                                       args=args.get_sampler_args())
+            sampler = DirichletSampler(
+                dataset, num_replicas=args.get_world_size(), rank=args.get_rank(), args=args.get_sampler_args()
+            )
         else:  # default
             args().get_logger().warning("Unknown sampler " + method + ", using uniform instead")
             sampler = UniformSampler(dataset, num_replicas=args.get_world_size(), rank=args.get_rank())

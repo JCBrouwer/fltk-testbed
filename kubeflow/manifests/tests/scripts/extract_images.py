@@ -14,9 +14,7 @@ exclude_dirs = [
     "tests",
 ]
 
-accepted_kinds = [
-    "statefulset", "deployment", "daemonSet", "replicaset", "job", "cronjob"
-]
+accepted_kinds = ["statefulset", "deployment", "daemonSet", "replicaset", "job", "cronjob"]
 
 
 def image_from_string(img_str):
@@ -79,9 +77,9 @@ def scan_kustomization_for_images(kust_dir):
     # Get local resource files
     (_, _, filenames) = next(walk(kust_dir))
     filenames = [
-        filename for filename in filenames
-        if filename != "kustomization.yaml" and filename != "params.yaml" and
-        filename.endswith(".yaml")
+        filename
+        for filename in filenames
+        if filename != "kustomization.yaml" and filename != "params.yaml" and filename.endswith(".yaml")
     ]
 
     for filename in filenames:
@@ -120,7 +118,6 @@ def check_kustomize_dir(d):
 
 
 def get_kustomization_dirs(root):
-
     def helper(root, dirs):
         (curr, folders, _) = next(walk(root))
         (is_kustomize_dir, kust_dirs) = check_kustomize_dir(curr)
@@ -140,9 +137,8 @@ def get_kustomization_dirs(root):
 if __name__ == "__main__":
     log.basicConfig(
         level=log.INFO,
-        format=('%(levelname)s|%(asctime)s'
-                '|%(pathname)s|%(lineno)d| %(message)s'),
-        datefmt='%Y-%m-%dT%H:%M:%S',
+        format=("%(levelname)s|%(asctime)s" "|%(pathname)s|%(lineno)d| %(message)s"),
+        datefmt="%Y-%m-%dT%H:%M:%S",
     )
     log.getLogger().setLevel(log.INFO)
 

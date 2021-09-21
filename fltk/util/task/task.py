@@ -14,6 +14,7 @@ class ArrivalTask:
         * Dataset
         * Hyper-parameters
     """
+
     priority: int
     id: UUID = field(compare=False)
     network: str = field(compare=False)

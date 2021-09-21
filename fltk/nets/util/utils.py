@@ -102,15 +102,17 @@ def test_model(model, epoch, writer: SummaryWriter = None) -> EpochData:
     """
     # Test interleaved to speed up execution, i.e. don't keep the clients waiting.
     accuracy, loss, class_precision, class_recall = model.test()
-    data = EpochData(epoch_id=epoch,
-                     duration_train=0,
-                     duration_test=0,
-                     loss_train=0,
-                     accuracy=accuracy,
-                     loss=loss,
-                     class_precision=class_precision,
-                     class_recall=class_recall,
-                     client_id='federator')
+    data = EpochData(
+        epoch_id=epoch,
+        duration_train=0,
+        duration_test=0,
+        loss_train=0,
+        accuracy=accuracy,
+        loss=loss,
+        class_precision=class_precision,
+        class_recall=class_recall,
+        client_id="federator",
+    )
     if writer:
-        writer.add_scalar('accuracy per epoch', accuracy, epoch)
+        writer.add_scalar("accuracy per epoch", accuracy, epoch)
     return data
