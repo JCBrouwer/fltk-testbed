@@ -85,13 +85,13 @@ def launch_orchestrator(args: Namespace = None, conf: BareConfig = None):
 
     orchestrator = Orchestrator(cluster_manager, arrival_generator, conf)
 
-    pool = ThreadPool(3)
-    logging.info("Starting cluster manager")
-    pool.apply(cluster_manager.start)
-    logging.info("Starting arrival generator")
-    pool.apply_async(arrival_generator.start, args=[conf.get_duration()])
-    logging.info("Starting orchestrator")
-    pool.apply(orchestrator.run)
+    with ThreadPool(3) as pool:
+        logging.info("Starting cluster manager")
+        pool.apply(cluster_manager.start)
+        logging.info("Starting arrival generator")
+        pool.apply_async(arrival_generator.start, args=[conf.get_duration()])
+        logging.info("Starting orchestrator")
+        pool.apply(orchestrator.run)
     pool.join()
 
     logging.info("Stopped execution of Orchestrator...")

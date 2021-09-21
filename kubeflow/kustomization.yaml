@@ -8,7 +8,7 @@ resources:
 - manifests/common/istio-1-9/istio-namespace/base
 - manifests/common/istio-1-9/istio-install/base
 - manifests/common/dex/overlays/istio
-- manifests/common/oidc-authservice/base
+# - manifests/common/oidc-authservice/base
 - manifests/common/knative/knative-serving/base
 - manifests/common/istio-1-9/cluster-local-gateway/base
 - manifests/common/kubeflow-namespace/base

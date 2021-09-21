@@ -1,0 +1,15 @@
+[submodule "fltk/nets/gan/StyleMapGAN"]
+	path = fltk/nets/gan/StyleMapGAN
+	url = https://github.com/naver-ai/StyleMapGAN.git
+[submodule "fltk/nets/gan/anycost-gan"]
+	path = fltk/nets/gan/anycost-gan
+	url = https://github.com/mit-han-lab/anycost-gan.git
+[submodule "fltk/nets/gan/MobileStyleGAN.pytorch"]
+	path = fltk/nets/gan/MobileStyleGAN.pytorch
+	url = https://github.com/bes-dev/MobileStyleGAN.pytorch.git
+[submodule "fltk/nets/gan/stylegan2-pytorch"]
+	path = fltk/nets/gan/stylegan2-pytorch
+	url = https://github.com/rosinality/stylegan2-pytorch.git
+[submodule "fltk/nets/gan/style-based-gan-pytorch"]
+	path = fltk/nets/gan/style-based-gan-pytorch
+	url = https://github.com/rosinality/style-based-gan-pytorch.git

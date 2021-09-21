@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
 
 # Who maintains this DockerFile
 MAINTAINER Jeroen Galjaard <J.M.Galjaard-1@student.tudelft.nl>
@@ -11,7 +11,7 @@ WORKDIR /opt/federation-lab
 
 # Update the Ubuntu software repository and fetch packages
 RUN apt-get update \
-  && apt-get install -y curl python3 python3-pip net-tools iproute2
+  && apt-get install -y curl python3 python3-pip net-tools iproute2 git
 
 # Add Pre-downloaded models (otherwise needs be run every-time)
 ADD data/ data/
