@@ -1,15 +1,9 @@
-print("style1")
+from functools import partial
 
-import os
-import sys
+from .base import InferenceGenerator, import_from
 
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "style-based-gan-pytorch"))
-
-from model import Generator
-
-sys.path = sys.path[:-1]
-
-from .base import InferenceGenerator
+with import_from("style-based-gan-pytorch"):
+    from model import Generator
 
 
 class Style1Generator(InferenceGenerator):

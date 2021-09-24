@@ -1,17 +1,9 @@
-print("mobile")
-
-import os
-import sys
-
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "MobileStyleGAN.pytorch"))
-
-from core.models.mobile_synthesis_network import MobileSynthesisNetwork
-
-sys.path = sys.path[:-1]
-
 from functools import partial
 
-from .base import InferenceGenerator
+from .base import InferenceGenerator, import_from
+
+with import_from("MobileStyleGAN.pytorch"):
+    from core.models.mobile_synthesis_network import MobileSynthesisNetwork
 
 
 class MobileStyleGenerator(InferenceGenerator):

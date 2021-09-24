@@ -1,13 +1,7 @@
-import os
-import sys
+from .base import InferenceGenerator, import_from
 
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "anycost-gan"))
-
-from models.anycost_gan import Generator
-
-sys.path = sys.path[:-1]
-
-from .base import InferenceGenerator
+with import_from("anycost-gan"):
+    from models.anycost_gan import Generator
 
 
 class AnyCostGenerator(InferenceGenerator):
