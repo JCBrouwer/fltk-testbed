@@ -1,3 +1,5 @@
+cog
+redis
 absl-py==0.12.0
 addict==2.2.1
 aiohttp==3.7.4.post0
@@ -14,12 +16,12 @@ dlib
 flask==1.0.2
 fsspec==2021.7.0
 future==0.18.2
-gdown==3.12.2
+gdown
 git+git://github.com/fbcotter/pytorch_wavelets.git
 google-auth-oauthlib==0.4.4
 google-auth==1.30.0
 grpcio==1.37.1
-horovod
+#horovod
 idna==2.10
 ipywidgets
 iteration-utilities==0.11.0
@@ -58,7 +60,6 @@ pyparsing==2.4.7
 PyQt5
 python-dateutil==2.8.2
 python-dotenv==0.17.1
-pytorch
 pytorch-lightning==1.4.4
 pytorch_fid
 pytz==2021.1

@@ -94,21 +94,18 @@ class Orchestrator(object):
                 self.__logger.info(f"Scheduling arrival of Arrival: {curr_task.id}")
                 job_to_start = construct_job(self._config, curr_task)
 
+                # TODO gavel scheduler
+
                 # Hack to overcome limitation of KubeFlow version (Made for older version of Kubernetes)
                 self.__logger.info(f"Deploying on cluster: {curr_task.id}")
                 self.__client.create(job_to_start, namespace=self._config.cluster_config.namespace)
                 self.deployed_tasks.append(curr_task)
 
-                # TODO: Extend this logic in your real project, this is only meant for demo purposes
-                # For now we exit the thread after scheduling a single task.
-
-                self.stop()
-                return
-
             self.__logger.debug("Still alive...")
             time.sleep(5)
 
         logging.info(f"Experiment completed, currently does not support waiting.")
+        self.stop()
 
     def __clear_jobs(self):
         """

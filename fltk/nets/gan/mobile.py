@@ -1,8 +1,12 @@
 from functools import partial
+from importlib import reload
 
 from .base import InferenceGenerator, import_from
 
 with import_from("MobileStyleGAN.pytorch"):
+    import core
+
+    reload(core)
     from core.models.mobile_synthesis_network import MobileSynthesisNetwork
 
 

@@ -12,9 +12,8 @@ class import_from:
         sys.path.append(self.submodule)
 
         # reload all modules/packages to avoid importing wrong files that happen to have the same name in previous paths
-        for _, name, _ in pkgutil.walk_packages(path=[self.submodule]):
-            print(name)
-            importlib.reload(importlib.import_module(name))
+        # for _, name, _ in pkgutil.walk_packages(path=[self.submodule]):
+        #     importlib.reload(importlib.import_module(name))
 
     def __enter__(self):
         return self

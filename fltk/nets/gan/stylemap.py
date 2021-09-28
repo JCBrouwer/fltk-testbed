@@ -1,8 +1,12 @@
 from functools import partial
+from importlib import reload
 
 from .base import InferenceGenerator, import_from
 
 with import_from("StyleMapGAN"):
+    import training
+
+    reload(training)
     from training.model import Generator
 
 

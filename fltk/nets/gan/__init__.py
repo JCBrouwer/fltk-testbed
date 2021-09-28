@@ -1,6 +1,6 @@
 import os
 import re
-import sys
+from time import time
 
 # monkey patch all the custom CUDA ops to build into their own separate directory to avoid having to rebuild EVERY time
 for filename in [
@@ -26,10 +26,13 @@ for filename in [
     with open(filename, "w") as file:
         file.write(filedata)
 
-
+t = time()
+print("importing")
 from .anycost import AnyCostGenerator
 from .mobile import MobileStyleGenerator
 from .style1 import Style1Generator
 from .style2 import Style2Generator
 from .stylemap import StyleMapGenerator
 from .swa import SWAGenerator
+
+print(time() - t)

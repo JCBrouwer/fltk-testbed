@@ -1,8 +1,12 @@
 from functools import partial
+from importlib import reload
 
 from .base import InferenceGenerator, import_from
 
 with import_from("stylegan2-pytorch"):
+    import model
+
+    reload(model)
     from model import Generator
 
 
