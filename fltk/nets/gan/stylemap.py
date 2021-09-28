@@ -1,17 +1,13 @@
 from functools import partial
-from importlib import reload
 
 from .base import InferenceGenerator, import_from
-
-with import_from("StyleMapGAN"):
-    import training
-
-    reload(training)
-    from training.model import Generator
 
 
 class StyleMapGenerator(InferenceGenerator):
     def __init__(self, size):
+        with import_from("StyleMapGAN"):
+            from training.model import Generator
+
         super().__init__(
             partial(
                 Generator,
@@ -27,4 +23,4 @@ class StyleMapGenerator(InferenceGenerator):
 
     def forward(self, latent, noise):
         # StyleMapGAN doesn't use noise!
-        return self.module(latent)
+        return self.module(latent)[0]

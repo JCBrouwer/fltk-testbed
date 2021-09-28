@@ -1,6 +1,4 @@
-import importlib
 import os
-import pkgutil
 import sys
 
 import torch
@@ -11,7 +9,8 @@ class import_from:
         self.submodule = os.path.join(os.path.dirname(os.path.abspath(__file__)), submodule_name)
         sys.path.append(self.submodule)
 
-        # reload all modules/packages to avoid importing wrong files that happen to have the same name in previous paths
+        # # reload all modules/packages to avoid importing wrong files that happen to have the same name in previous paths
+        # import importlib, pkgutil
         # for _, name, _ in pkgutil.walk_packages(path=[self.submodule]):
         #     importlib.reload(importlib.import_module(name))
 

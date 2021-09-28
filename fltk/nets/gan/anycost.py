@@ -1,14 +1,11 @@
 from .base import InferenceGenerator, import_from
-from importlib import reload
-
-with import_from("anycost-gan"):
-    import models
-
-    reload(models)
-
-    from models.anycost_gan import Generator
 
 
 class AnyCostGenerator(InferenceGenerator):
     def __init__(self, size):
+        with import_from("anycost-gan"):
+            from models.anycost_gan import Generator
         super().__init__(Generator, size)
+
+    def forward(self, latent, noise):
+        return self.module(latent[:, None], noise=noise)[0]

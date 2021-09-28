@@ -1,6 +1,5 @@
 import os
 import re
-from time import time
 
 # monkey patch all the custom CUDA ops to build into their own separate directory to avoid having to rebuild EVERY time
 for filename in [
@@ -23,16 +22,17 @@ for filename in [
         r'\1\n    build_directory="' + build_dir + '",\n)',
         filedata,
     )
+    filedata = filedata.replace(
+        'if any(torch.__version__.startswith(x) for x in ["1.7.", "1.8."]):',
+        'if any(torch.__version__.startswith(x) for x in ["1.7.", "1.8.", "1.9."]):',
+    )
     with open(filename, "w") as file:
         file.write(filedata)
 
-t = time()
-print("importing")
+
 from .anycost import AnyCostGenerator
 from .mobile import MobileStyleGenerator
 from .style1 import Style1Generator
 from .style2 import Style2Generator
 from .stylemap import StyleMapGenerator
 from .swa import SWAGenerator
-
-print(time() - t)
