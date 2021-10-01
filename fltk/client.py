@@ -7,13 +7,15 @@ import numpy as np
 import torch
 import torch.distributed as dist
 from sklearn.metrics import confusion_matrix
+from torch._C import device
 from torch.utils.tensorboard import SummaryWriter
 
+from fltk.nets.gan.util import gaussian_filter
 from fltk.nets.util.evaluation import calculate_class_precision, calculate_class_recall
 from fltk.nets.util.utils import load_model_from_file, save_model
 from fltk.schedulers import MinCapableStepLR
 from fltk.schedulers.min_lr_step import LearningScheduler
-from fltk.util.config.arguments import LearningParameters
+from fltk.util.config.arguments import LearningParameters, StyleGANInferenceParameters
 from fltk.util.config.base_config import BareConfig
 from fltk.util.results import EpochData
 
@@ -283,4 +285,101 @@ class Client(object):
         @rtype: None
         """
         self.tb_writer.add_scalar("training loss per epoch", epoch_data.loss_train, epoch)
+        self.tb_writer.add_scalar("accuracy per epoch", epoch_data.accuracy, epoch)
+
+
+class StyleGANInferenceClient(object):
+    def __init__(
+        self,
+        rank: int,
+        task_id: str,
+        world_size: int,
+        config: BareConfig = None,
+        inference_params: StyleGANInferenceParameters = None,
+        device=torch.device("cpu"),
+    ):
+        self._logger = logging.getLogger(f"Client-{rank}-{task_id}")
+
+        self._logger.info("Initializing learning client")
+        self._id = rank
+        self._world_size = world_size
+        self._task_id = task_id
+
+        self.config = config
+        self.inference_params = inference_params
+        self.model = self.inference_params.get_model_class()(self.inference_params.size)
+        self.device = self._init_device(device)
+        self.tb_writer: SummaryWriter
+
+    def prepare_learner(self, distributed: bool = False) -> None:
+        self._logger.info(f"Preparing learner model with distributed={distributed}")
+        self.model.to(self.device)
+        if distributed:
+            self.model = torch.nn.parallel.DistributedDataParallel(self.model)
+        self.tb_writer = SummaryWriter(
+            str(self.config.get_log_path(self._task_id, self._id, self.inference_params.model))
+        )
+
+    def stop_learner(self):
+        self._logger.info(f"Tearing down Client {self._id}")
+        self.tb_writer.close()
+
+    def _init_device(self, cuda_device: torch.device = torch.device("cuda")):
+        if self.config.cuda_enabled() and torch.cuda.is_available():
+            return torch.device(cuda_device)
+        else:
+            # Force usage of CPU
+            torch.cuda.is_available = lambda: False
+            return torch.device("cpu")
+
+    def load_default_model(self):
+        model_file = Path(f"{self.model.__name__}.model")
+        default_model_path = Path(self.config.get_default_model_folder_path()).joinpath(model_file)
+        load_model_from_file(self.model, default_model_path)
+
+    def run_epochs(self) -> List[EpochData]:
+        start_time = datetime.datetime.now()
+
+        # PHASE 1
+
+        if self.inference_params.job == "random":
+            latents = torch.randn(self.inference_params.num, 512, device=self.device)
+
+        elif self.inference_params.job == "interpolation":
+            latents = torch.randn(self.inference_params.num, 512, device=self.device)
+            latents = gaussian_filter(latents, 20)
+
+        elif self.inference_params.job == "audio-reactive":
+            raise NotImplementedError
+
+        # PHASE 2
+
+        output = []
+        for i in range(0, self.inference_params.num, self.inference_params.batch_size):
+            output.append(self.model(latents.narrow(0, i, self.inference_params.batch_size).to(self.device)))
+
+        # EPILOG
+
+        elapsed_time_ms = int((datetime.datetime.now() - start_time).total_seconds() * 1000)
+        data = EpochData(
+            epoch_id=0,
+            duration_train=-1,
+            duration_test=elapsed_time_ms,
+            loss_train=-1,
+            accuracy=-1,
+            loss=-1,
+            class_precision=-1,
+            class_recall=-1,
+            confusion_mat=-1,
+        )
+        if self._id == 0:
+            self.log_progress(data, 0)
+        return [data]
+
+    def save_model(self, epoch):
+        self._logger.debug(f"Saving model to flat file storage. Saved at epoch #{epoch}")
+        save_model(self.model, self.config.get_save_model_folder_path(), epoch)
+
+    def log_progress(self, epoch_data: EpochData, epoch: int):
+        self.tb_writer.add_scalar("inference loss per epoch", epoch_data.loss_train, epoch)
         self.tb_writer.add_scalar("accuracy per epoch", epoch_data.accuracy, epoch)

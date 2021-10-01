@@ -1,0 +1,295 @@
+device                         model                           size           batch_size           ms / img (sync)            std dev (sync)        ms / img (no sync)         std dev (no sync)
+RTX 3090                       AnyCostGenerator                 256                    1                    11.299                     0.421                    10.777                     0.228
+RTX 3090                       AnyCostGenerator                 512                    1                    19.715                     0.557                    18.916                     0.772
+RTX 3090                       AnyCostGenerator                1024                    1                    27.797                     1.290                    24.806                     1.482
+RTX 3090                       AnyCostGenerator                 256                    2                     8.146                     0.391                     7.827                     0.071
+RTX 3090                       AnyCostGenerator                 512                    2                    16.762                     0.328                    15.930                     0.152
+RTX 3090                       AnyCostGenerator                1024                    2                    24.139                     0.301                    21.432                     0.187
+RTX 3090                       AnyCostGenerator                 256                    4                     7.028                     0.135                     6.697                     0.114
+RTX 3090                       AnyCostGenerator                 512                    4                    15.523                     0.120                    14.843                     0.159
+RTX 3090                       AnyCostGenerator                1024                    4                    22.892                     0.123                    20.128                     0.084
+RTX 3090                       AnyCostGenerator                 256                    8                     6.414                     0.043                     6.224                     0.017
+RTX 3090                       AnyCostGenerator                 512                    8                    15.147                     0.087                    14.409                     0.057
+RTX 3090                       AnyCostGenerator                1024                    8                    22.570                     0.226                    19.751                     0.078
+RTX 3090                       AnyCostGenerator                 256                   16                     6.192                     0.094                     5.969                     0.021
+RTX 3090                       AnyCostGenerator                 512                   16                    14.813                     0.080                    14.130                     0.028
+RTX 3090                       AnyCostGenerator                1024                   16                    24.559                     0.161                    19.471                     0.097
+RTX 3090                       AnyCostGenerator                 256                   24                     6.058                     0.010                     5.886                     0.021
+RTX 3090                       AnyCostGenerator                 512                   24                    14.717                     0.076                    14.019                     0.021
+RTX 3090                       AnyCostGenerator                1024                   24                    24.398                     0.144                    19.348                     0.116
+RTX 3090                       AnyCostGenerator                 256                   32                     6.070                     0.038                     5.910                     0.014
+RTX 3090                       AnyCostGenerator                 512                   32                    14.708                     0.051                    14.044                     0.036
+RTX 3090                       AnyCostGenerator                1024                   32                    24.489                     0.081                    19.411                     0.069
+RTX 3090                       Style1Generator                  256                    1                     6.840                     1.227                     6.296                     0.845
+RTX 3090                       Style1Generator                  512                    1                     9.158                     0.718                     7.396                     0.926
+RTX 3090                       Style1Generator                 1024                    1                    20.712                     0.569                    10.960                     3.563
+RTX 3090                       Style1Generator                  256                    2                     3.425                     0.597                     3.147                     0.290
+RTX 3090                       Style1Generator                  512                    2                     5.802                     0.640                     3.360                     0.046
+RTX 3090                       Style1Generator                 1024                    2                    16.502                     0.392                     8.959                     4.063
+RTX 3090                       Style1Generator                  256                    4                     1.999                     0.293                     1.548                     0.078
+RTX 3090                       Style1Generator                  512                    4                     4.307                     0.228                     2.338                     0.754
+RTX 3090                       Style1Generator                 1024                    4                    14.499                     0.548                     7.911                     4.154
+RTX 3090                       Style1Generator                  256                    8                     1.341                     0.076                     0.774                     0.024
+RTX 3090                       Style1Generator                  512                    8                     3.738                     0.047                     2.064                     0.951
+RTX 3090                       Style1Generator                 1024                    8                    15.390                     0.148                     7.320                     4.078
+RTX 3090                       Style1Generator                  256                   16                     1.024                     0.027                     0.546                     0.185
+RTX 3090                       Style1Generator                  512                   16                     4.005                     0.064                     1.898                     0.984
+RTX 3090                       Style1Generator                 1024                   16                    14.319                     0.134                     6.748                     3.972
+RTX 3090                       Style1Generator                  256                   24                     0.935                     0.023                     0.503                     0.213
+RTX 3090                       Style1Generator                  512                   24                     3.816                     0.037                     1.817                     0.951
+RTX 3090                       Style1Generator                 1024                   24                    14.102                     0.104                     6.671                     4.036
+RTX 3090                       Style1Generator                  256                   32                     0.929                     0.070                     0.505                     0.224
+RTX 3090                       Style1Generator                  512                   32                     3.811                     0.040                     2.196                     0.744
+RTX 3090                       Style1Generator                 1024                   32                    13.885                     0.044                     6.467                     3.978
+RTX 3090                       Style2Generator                  256                    1                    11.580                     0.117                    11.302                     0.186
+RTX 3090                       Style2Generator                  512                    1                    20.130                     0.162                    19.195                     0.142
+RTX 3090                       Style2Generator                 1024                    1                    27.907                     0.243                    24.800                     0.204
+RTX 3090                       Style2Generator                  256                    2                     8.076                     0.051                     7.822                     0.047
+RTX 3090                       Style2Generator                  512                    2                    16.873                     0.188                    16.159                     0.342
+RTX 3090                       Style2Generator                 1024                    2                    24.494                     0.884                    21.477                     0.089
+RTX 3090                       Style2Generator                  256                    4                     6.879                     0.087                     6.662                     0.067
+RTX 3090                       Style2Generator                  512                    4                    15.544                     0.023                    14.827                     0.079
+RTX 3090                       Style2Generator                 1024                    4                    25.761                     0.120                    20.228                     0.206
+RTX 3090                       Style2Generator                  256                    8                     6.420                     0.019                     6.230                     0.026
+RTX 3090                       Style2Generator                  512                    8                    15.132                     0.089                    14.426                     0.077
+RTX 3090                       Style2Generator                 1024                    8                    25.135                     0.120                    19.762                     0.130
+RTX 3090                       Style2Generator                  256                   16                     6.157                     0.022                     6.001                     0.037
+RTX 3090                       Style2Generator                  512                   16                    15.523                     0.030                    14.144                     0.050
+RTX 3090                       Style2Generator                 1024                   16                    24.736                     0.202                    19.519                     0.135
+RTX 3090                       Style2Generator                  256                   24                     6.071                     0.010                     5.882                     0.021
+RTX 3090                       Style2Generator                  512                   24                    15.521                     0.047                    14.003                     0.059
+RTX 3090                       Style2Generator                 1024                   24                    24.644                     0.076                    19.374                     0.167
+RTX 3090                       Style2Generator                  256                   32                     6.065                     0.016                     5.908                     0.015
+RTX 3090                       Style2Generator                  512                   32                    15.465                     0.027                    14.078                     0.040
+RTX 3090                       Style2Generator                 1024                   32                    24.720                     0.066                    19.454                     0.102
+RTX 3090                       Style2ADAGenerator               256                    1                    11.925                     0.239                    10.681                     1.000
+RTX 3090                       Style2ADAGenerator               512                    1                    21.206                     1.050                    12.402                     0.375
+RTX 3090                       Style2ADAGenerator              1024                    1                    29.069                     0.378                    16.370                     4.037
+RTX 3090                       Style2ADAGenerator               256                    2                     8.408                     0.613                     5.174                     0.098
+RTX 3090                       Style2ADAGenerator               512                    2                    17.358                     0.379                    10.619                     4.275
+RTX 3090                       Style2ADAGenerator              1024                    2                    25.497                     0.480                    15.172                     6.664
+RTX 3090                       Style2ADAGenerator               256                    4                     6.646                     0.276                     3.760                     1.437
+RTX 3090                       Style2ADAGenerator               512                    4                    10.037                     0.118                     6.219                     2.665
+RTX 3090                       Style2ADAGenerator              1024                    4                    21.240                     0.197                    10.576                     5.173
+RTX 3090                       Style2ADAGenerator               256                    8                     5.905                     0.100                     3.840                     1.969
+RTX 3090                       Style2ADAGenerator               512                    8                     9.335                     0.101                     5.948                     3.068
+RTX 3090                       Style2ADAGenerator              1024                    8                    19.225                     0.116                     9.903                     5.214
+RTX 3090                       Style2ADAGenerator               256                   16                     5.072                     0.027                     3.378                     1.835
+RTX 3090                       Style2ADAGenerator               512                   16                     9.283                     0.083                     5.515                     3.078
+RTX 3090                       Style2ADAGenerator              1024                   16                    18.954                     0.119                    10.107                     5.720
+RTX 3090                       Style2ADAGenerator               256                   24                     5.375                     0.014                     3.627                     2.090
+RTX 3090                       Style2ADAGenerator               512                   24                     9.540                     0.083                     5.750                     3.377
+RTX 3090                       Style2ADAGenerator              1024                   24                    18.591                     0.070                    10.012                     5.493
+RTX 3090                       Style2ADAGenerator               256                   32                     5.095                     0.018                     3.427                     2.022
+RTX 3090                       Style2ADAGenerator               512                   32                     9.226                     0.045                     5.567                     3.307
+RTX 3090                       Style2ADAGenerator              1024                   32                    18.855                     1.559                     9.805                     5.427
+RTX 3090                       SWAGenerator                     256                    1                    15.445                     0.778                    14.304                     0.179
+RTX 3090                       SWAGenerator                     512                    1                    18.660                     0.644                    17.694                     0.674
+RTX 3090                       SWAGenerator                    1024                    1                    29.470                     0.559                    26.057                     0.397
+RTX 3090                       SWAGenerator                     256                    2                     9.035                     0.338                     8.718                     0.080
+RTX 3090                       SWAGenerator                     512                    2                    12.244                     0.421                    11.077                     0.192
+RTX 3090                       SWAGenerator                    1024                    2                    22.474                     0.377                    19.478                     0.124
+RTX 3090                       SWAGenerator                     256                    4                     6.281                     0.174                     5.944                     0.045
+RTX 3090                       SWAGenerator                     512                    4                     8.894                     0.084                     8.123                     0.081
+RTX 3090                       SWAGenerator                    1024                    4                    22.985                     0.362                    16.776                     0.189
+RTX 3090                       SWAGenerator                     256                    8                     5.166                     0.082                     4.926                     0.043
+RTX 3090                       SWAGenerator                     512                    8                     7.713                     0.060                     6.992                     0.070
+RTX 3090                       SWAGenerator                    1024                    8                    21.496                     0.162                    15.616                     0.179
+RTX 3090                       SWAGenerator                     256                   16                     4.589                     0.045                     4.405                     0.037
+RTX 3090                       SWAGenerator                     512                   16                     7.958                     0.065                     6.434                     0.038
+RTX 3090                       SWAGenerator                    1024                   16                    20.472                     0.109                    15.059                     0.120
+RTX 3090                       SWAGenerator                     256                   24                     4.428                     0.026                     4.254                     0.014
+RTX 3090                       SWAGenerator                     512                   24                     7.745                     0.039                     6.227                     0.060
+RTX 3090                       SWAGenerator                    1024                   24                    20.081                     0.094                    14.836                     0.105
+RTX 3090                       SWAGenerator                     256                   32                     4.351                     0.010                     4.187                     0.013
+RTX 3090                       SWAGenerator                     512                   32                     7.645                     0.065                     6.183                     0.042
+RTX 3090                       SWAGenerator                    1024                   32                    19.900                     0.100                    14.829                     0.079
+RTX 3090                       StyleMapGenerator                256                    1                    78.149                     0.489                    75.095                     4.518
+RTX 3090                       StyleMapGenerator                512                    1                   157.930                     0.345                   153.203                     9.185
+RTX 3090                       StyleMapGenerator               1024                    1                   295.657                     0.479                   285.521                    18.650
+RTX 3090                       StyleMapGenerator                256                    2                    48.372                     0.233                    46.876                     2.599
+RTX 3090                       StyleMapGenerator                512                    2                    99.197                     0.512                    96.178                     5.273
+RTX 3090                       StyleMapGenerator               1024                    2                   177.643                     0.352                   170.983                    10.316
+RTX 3090                       StyleMapGenerator                256                    4                    34.112                     0.146                    33.127                     1.662
+RTX 3090                       StyleMapGenerator                512                    4                    70.519                     0.297                    68.671                     2.854
+RTX 3090                       StyleMapGenerator               1024                    4                   123.039                     0.443                   115.036                     5.893
+RTX 3090                       StyleMapGenerator                256                    8                    26.777                     0.133                    26.113                     1.106
+RTX 3090                       StyleMapGenerator                512                    8                    55.996                     0.250                    54.505                     1.886
+RTX 3090                       StyleMapGenerator               1024                    8                    93.648                     0.299                    86.796                     3.475
+RTX 3090                       StyleMapGenerator                256                   16                    20.040                     0.044                    19.535                     0.820
+RTX 3090                       StyleMapGenerator                512                   16                    46.438                     0.117                    44.519                     1.427
+RTX 3090                       StyleMapGenerator               1024                   16                                                                                      CUDA out of memory
+RTX 3090                       StyleMapGenerator                256                   24                    20.395                     0.022                    19.969                     0.791
+RTX 3090                       StyleMapGenerator                512                   24                    45.746                     0.061                    43.870                     1.242
+RTX 3090                       StyleMapGenerator               1024                   24                                                                                      CUDA out of memory
+RTX 3090                       StyleMapGenerator                256                   32                    18.344                     0.023                    17.907                     0.694
+RTX 3090                       StyleMapGenerator                512                   32                                                                                      CUDA out of memory
+RTX 3090                       StyleMapGenerator               1024                   32                                                                                      CUDA out of memory
+RTX 3090                       MobileStyleGenerator             256                    1                     9.280                     1.071                     8.430                     0.209
+RTX 3090                       MobileStyleGenerator             512                    1                    13.046                     1.205                    11.337                     0.754
+RTX 3090                       MobileStyleGenerator            1024                    1                    24.689                     0.691                    18.725                     0.468
+RTX 3090                       MobileStyleGenerator             256                    2                     4.627                     0.523                     4.261                     0.059
+RTX 3090                       MobileStyleGenerator             512                    2                     7.180                     0.852                     5.513                     0.142
+RTX 3090                       MobileStyleGenerator            1024                    2                    16.239                     0.564                    11.955                     0.282
+RTX 3090                       MobileStyleGenerator             256                    4                     4.221                     0.253                     3.889                     0.067
+RTX 3090                       MobileStyleGenerator             512                    4                     6.491                     0.601                     5.184                     0.202
+RTX 3090                       MobileStyleGenerator            1024                    4                    18.409                     0.549                    11.892                     1.044
+RTX 3090                       MobileStyleGenerator             256                    8                     1.488                     0.143                     1.179                     0.080
+RTX 3090                       MobileStyleGenerator             512                    8                     3.716                     0.125                     2.695                     0.263
+RTX 3090                       MobileStyleGenerator            1024                    8                    15.113                     0.270                     9.327                     1.296
+RTX 3090                       MobileStyleGenerator             256                   16                     1.033                     0.047                     0.741                     0.028
+RTX 3090                       MobileStyleGenerator             512                   16                     3.804                     0.091                     2.207                     0.191
+RTX 3090                       MobileStyleGenerator            1024                   16                    13.700                     0.263                     8.155                     1.198
+RTX 3090                       MobileStyleGenerator             256                   24                     0.900                     0.050                     0.641                     0.052
+RTX 3090                       MobileStyleGenerator             512                   24                     3.798                     0.059                     2.286                     0.316
+RTX 3090                       MobileStyleGenerator            1024                   24                    14.539                     0.053                     9.022                     1.435
+RTX 3090                       MobileStyleGenerator             256                   32                     0.836                     0.033                     0.593                     0.057
+RTX 3090                       MobileStyleGenerator             512                   32                     3.695                     0.031                     2.228                     0.331
+RTX 3090                       MobileStyleGenerator            1024                   32                    14.411                     0.083                     8.942                     1.457
+GTX 1080 Ti                    AnyCostGenerator                 256                    1                    17.495                     0.676                    17.139                     1.013
+GTX 1080 Ti                    AnyCostGenerator                 512                    1                    25.231                     0.859                    23.550                     0.085
+GTX 1080 Ti                    AnyCostGenerator                1024                    1                    40.884                     1.699                    36.247                     1.687
+GTX 1080 Ti                    AnyCostGenerator                 256                    2                    15.584                     0.363                    15.043                     0.070
+GTX 1080 Ti                    AnyCostGenerator                 512                    2                    23.086                     0.808                    21.582                     0.207
+GTX 1080 Ti                    AnyCostGenerator                1024                    2                    36.955                     1.576                    33.540                     0.155
+GTX 1080 Ti                    AnyCostGenerator                 256                    4                    14.445                     0.121                    14.224                     0.114
+GTX 1080 Ti                    AnyCostGenerator                 512                    4                    21.399                     0.253                    20.548                     0.121
+GTX 1080 Ti                    AnyCostGenerator                1024                    4                    38.269                     0.968                    32.583                     0.246
+GTX 1080 Ti                    AnyCostGenerator                 256                    8                    14.016                     0.133                    13.827                     0.131
+GTX 1080 Ti                    AnyCostGenerator                 512                    8                    20.895                     0.200                    20.279                     0.148
+GTX 1080 Ti                    AnyCostGenerator                1024                    8                    37.571                     0.160                    32.270                     0.128
+GTX 1080 Ti                    AnyCostGenerator                 256                   10                    14.001                     0.170                    13.779                     0.167
+GTX 1080 Ti                    AnyCostGenerator                 512                   10                    20.895                     0.176                    20.204                     0.202
+GTX 1080 Ti                    AnyCostGenerator                1024                   10                    37.472                     0.162                    32.347                     0.191
+GTX 1080 Ti                    AnyCostGenerator                 256                   12                    13.853                     0.076                    13.726                     0.077
+GTX 1080 Ti                    AnyCostGenerator                 512                   12                    21.465                     0.171                    20.136                     0.184
+GTX 1080 Ti                    AnyCostGenerator                1024                   12                    37.170                     0.154                    32.181                     0.184
+GTX 1080 Ti                    AnyCostGenerator                 256                   14                    13.950                     0.162                    13.673                     0.141
+GTX 1080 Ti                    AnyCostGenerator                 512                   14                    21.453                     0.134                    20.060                     0.138
+GTX 1080 Ti                    AnyCostGenerator                1024                   14                    37.217                     0.155                    32.189                     0.186
+GTX 1080 Ti                    Style1Generator                  256                    1                     6.953                     0.810                     6.060                     1.111
+GTX 1080 Ti                    Style1Generator                  512                    1                    15.688                     0.773                     9.638                     3.401
+GTX 1080 Ti                    Style1Generator                 1024                    1                    39.117                     1.989                    23.785                    12.144
+GTX 1080 Ti                    Style1Generator                  256                    2                     4.136                     0.484                     2.719                     0.137
+GTX 1080 Ti                    Style1Generator                  512                    2                    11.010                     0.231                     6.864                     3.128
+GTX 1080 Ti                    Style1Generator                 1024                    2                    34.900                     1.557                    21.727                    12.080
+GTX 1080 Ti                    Style1Generator                  256                    4                     3.111                     0.177                     1.726                     0.605
+GTX 1080 Ti                    Style1Generator                  512                    4                     9.443                     0.201                     5.936                     3.112
+GTX 1080 Ti                    Style1Generator                 1024                    4                    35.606                     0.702                    20.976                    12.616
+GTX 1080 Ti                    Style1Generator                  256                    8                     2.544                     0.031                     1.450                     0.757
+GTX 1080 Ti                    Style1Generator                  512                    8                     8.711                     0.102                     5.521                     3.160
+GTX 1080 Ti                    Style1Generator                 1024                    8                    34.745                     0.145                    20.769                    12.954
+GTX 1080 Ti                    Style1Generator                  256                   10                     2.438                     0.098                     1.382                     0.786
+GTX 1080 Ti                    Style1Generator                  512                   10                     8.523                     0.036                     5.426                     3.183
+GTX 1080 Ti                    Style1Generator                 1024                   10                    34.119                     0.115                    20.542                    12.935
+GTX 1080 Ti                    Style1Generator                  256                   12                     2.363                     0.045                     1.344                     0.781
+GTX 1080 Ti                    Style1Generator                  512                   12                     8.430                     0.122                     5.363                     3.174
+GTX 1080 Ti                    Style1Generator                 1024                   12                    33.931                     0.126                    20.320                    12.840
+GTX 1080 Ti                    Style1Generator                  256                   14                     2.317                     0.017                     1.328                     0.791
+GTX 1080 Ti                    Style1Generator                  512                   14                     8.348                     0.035                     5.316                     3.201
+GTX 1080 Ti                    Style1Generator                 1024                   14                    33.872                     0.059                    20.250                    12.858
+GTX 1080 Ti                    Style2Generator                  256                    1                    17.260                     0.088                    17.025                     0.130
+GTX 1080 Ti                    Style2Generator                  512                    1                    24.671                     0.250                    23.805                     0.178
+GTX 1080 Ti                    Style2Generator                 1024                    1                    39.237                     0.122                    35.919                     0.220
+GTX 1080 Ti                    Style2Generator                  256                    2                    15.374                     0.082                    15.129                     0.061
+GTX 1080 Ti                    Style2Generator                  512                    2                    22.322                     0.089                    21.535                     0.069
+GTX 1080 Ti                    Style2Generator                 1024                    2                    36.653                     0.088                    33.702                     0.045
+GTX 1080 Ti                    Style2Generator                  256                    4                    14.469                     0.084                    14.280                     0.126
+GTX 1080 Ti                    Style2Generator                  512                    4                    21.564                     0.162                    20.814                     0.156
+GTX 1080 Ti                    Style2Generator                 1024                    4                    38.181                     0.234                    32.798                     0.215
+GTX 1080 Ti                    Style2Generator                  256                    8                    14.207                     0.276                    13.908                     0.135
+GTX 1080 Ti                    Style2Generator                  512                    8                    21.096                     0.204                    20.363                     0.182
+GTX 1080 Ti                    Style2Generator                 1024                    8                    37.849                     0.197                    32.384                     0.146
+GTX 1080 Ti                    Style2Generator                  256                   10                    14.102                     0.229                    13.855                     0.125
+GTX 1080 Ti                    Style2Generator                  512                   10                    20.904                     0.127                    20.237                     0.179
+GTX 1080 Ti                    Style2Generator                 1024                   10                    37.482                     0.183                    32.416                     0.247
+GTX 1080 Ti                    Style2Generator                  256                   12                    13.904                     0.108                    13.690                     0.137
+GTX 1080 Ti                    Style2Generator                  512                   12                    21.414                     0.144                    20.173                     0.201
+GTX 1080 Ti                    Style2Generator                 1024                   12                    37.394                     0.199                    32.130                     0.138
+GTX 1080 Ti                    Style2Generator                  256                   14                    13.892                     0.087                    13.737                     0.104
+GTX 1080 Ti                    Style2Generator                  512                   14                    21.512                     0.174                    20.053                     0.167
+GTX 1080 Ti                    Style2Generator                 1024                   14                    37.038                     0.128                    32.145                     0.107
+GTX 1080 Ti                    Style2ADAGenerator               256                    1                    17.716                     0.178                    11.503                     1.700
+GTX 1080 Ti                    Style2ADAGenerator               512                    1                    25.671                     0.216                    15.574                     4.878
+GTX 1080 Ti                    Style2ADAGenerator              1024                    1                    41.969                     0.315                    25.845                    10.645
+GTX 1080 Ti                    Style2ADAGenerator               256                    2                    15.539                     1.264                     9.089                     4.162
+GTX 1080 Ti                    Style2ADAGenerator               512                    2                    23.106                     0.422                    15.103                     7.531
+GTX 1080 Ti                    Style2ADAGenerator              1024                    2                    38.986                     0.255                    25.153                    12.941
+GTX 1080 Ti                    Style2ADAGenerator               256                    4                    14.086                     0.462                     8.557                     5.034
+GTX 1080 Ti                    Style2ADAGenerator               512                    4                    21.735                     0.216                    14.341                     7.863
+GTX 1080 Ti                    Style2ADAGenerator              1024                    4                    39.863                     0.181                    24.340                    13.894
+GTX 1080 Ti                    Style2ADAGenerator               256                    8                    13.728                     0.081                     8.550                     5.896
+GTX 1080 Ti                    Style2ADAGenerator               512                    8                    21.789                     0.270                    14.643                     8.730
+GTX 1080 Ti                    Style2ADAGenerator              1024                    8                    40.046                     0.148                    24.618                    14.983
+GTX 1080 Ti                    Style2ADAGenerator               256                   10                    13.315                     0.071                     8.289                     5.754
+GTX 1080 Ti                    Style2ADAGenerator               512                   10                    21.410                     0.276                    14.390                     8.598
+GTX 1080 Ti                    Style2ADAGenerator              1024                   10                    39.568                     0.152                    24.331                    14.990
+GTX 1080 Ti                    Style2ADAGenerator               256                   12                    12.207                     0.110                     7.768                     5.077
+GTX 1080 Ti                    Style2ADAGenerator               512                   12                    20.897                     0.219                    13.574                     8.237
+GTX 1080 Ti                    Style2ADAGenerator              1024                   12                    38.499                     0.151                    23.534                    14.596
+GTX 1080 Ti                    Style2ADAGenerator               256                   14                    11.922                     0.058                     7.592                     4.999
+GTX 1080 Ti                    Style2ADAGenerator               512                   14                    20.500                     0.133                    13.431                     8.232
+GTX 1080 Ti                    Style2ADAGenerator              1024                   14                    38.217                     0.119                    23.376                    14.624
+GTX 1080 Ti                    SWAGenerator                     256                    1                    18.410                     0.472                    18.089                     0.509
+GTX 1080 Ti                    SWAGenerator                     512                    1                    24.327                     0.765                    22.727                     0.312
+GTX 1080 Ti                    SWAGenerator                    1024                    1                    34.181                     0.528                    30.735                     0.240
+GTX 1080 Ti                    SWAGenerator                     256                    2                    14.031                     0.319                    13.791                     0.281
+GTX 1080 Ti                    SWAGenerator                     512                    2                    18.894                     0.116                    18.213                     0.236
+GTX 1080 Ti                    SWAGenerator                    1024                    2                    29.197                     0.701                    25.843                     0.236
+GTX 1080 Ti                    SWAGenerator                     256                    4                    11.796                     0.131                    11.593                     0.115
+GTX 1080 Ti                    SWAGenerator                     512                    4                    16.631                     0.175                    15.808                     0.107
+GTX 1080 Ti                    SWAGenerator                    1024                    4                    28.971                     0.725                    23.470                     0.148
+GTX 1080 Ti                    SWAGenerator                     256                    8                    10.824                     0.123                    10.647                     0.185
+GTX 1080 Ti                    SWAGenerator                     512                    8                    15.657                     0.245                    14.828                     0.182
+GTX 1080 Ti                    SWAGenerator                    1024                    8                    27.321                     0.168                    22.422                     0.232
+GTX 1080 Ti                    SWAGenerator                     256                   10                    10.680                     0.184                    10.447                     0.161
+GTX 1080 Ti                    SWAGenerator                     512                   10                    15.519                     0.185                    14.610                     0.167
+GTX 1080 Ti                    SWAGenerator                    1024                   10                    27.139                     0.272                    22.167                     0.121
+GTX 1080 Ti                    SWAGenerator                     256                   12                    10.469                     0.145                    10.228                     0.124
+GTX 1080 Ti                    SWAGenerator                     512                   12                    15.773                     0.219                    14.440                     0.117
+GTX 1080 Ti                    SWAGenerator                    1024                   12                    26.981                     0.310                    21.917                     0.144
+GTX 1080 Ti                    SWAGenerator                     256                   14                    10.470                     0.146                    10.180                     0.138
+GTX 1080 Ti                    SWAGenerator                     512                   14                    15.739                     0.186                    14.456                     0.117
+GTX 1080 Ti                    SWAGenerator                    1024                   14                    26.932                     0.123                    21.884                     0.161
+GTX 1080 Ti                    StyleMapGenerator                256                    1                    91.204                     0.132                    88.948                     4.567
+GTX 1080 Ti                    StyleMapGenerator                512                    1                   164.532                     0.798                   159.290                     9.074
+GTX 1080 Ti                    StyleMapGenerator               1024                    1                   307.828                     0.239                   297.528                    18.351
+GTX 1080 Ti                    StyleMapGenerator                256                    2                    67.331                     0.566                    65.801                     2.983
+GTX 1080 Ti                    StyleMapGenerator                512                    2                   115.029                     0.600                   112.441                     5.296
+GTX 1080 Ti                    StyleMapGenerator               1024                    2                   207.985                     0.675                   200.814                    10.926
+GTX 1080 Ti                    StyleMapGenerator                256                    4                    56.139                     0.341                    55.216                     2.149
+GTX 1080 Ti                    StyleMapGenerator                512                    4                    91.843                     0.437                    89.603                     3.816
+GTX 1080 Ti                    StyleMapGenerator               1024                    4                   161.223                     0.481                   153.992                     7.183
+GTX 1080 Ti                    StyleMapGenerator                256                    8                    49.288                     0.336                    48.327                     1.780
+GTX 1080 Ti                    StyleMapGenerator                512                    8                    78.722                     0.249                    76.913                     2.953
+GTX 1080 Ti                    StyleMapGenerator               1024                    8                                                                                      CUDA out of memory
+GTX 1080 Ti                    StyleMapGenerator                256                   10                    46.716                     0.121                    46.040                     1.628
+GTX 1080 Ti                    StyleMapGenerator                512                   10                    75.098                     0.133                    73.335                     2.770
+GTX 1080 Ti                    StyleMapGenerator               1024                   10                                                                                      CUDA out of memory
+GTX 1080 Ti                    StyleMapGenerator                256                   12                    44.332                     0.149                    43.539                     1.606
+GTX 1080 Ti                    StyleMapGenerator                512                   12                    71.980                     0.173                    69.817                     2.461
+GTX 1080 Ti                    StyleMapGenerator               1024                   12                                                                                      CUDA out of memory
+GTX 1080 Ti                    StyleMapGenerator                256                   14                    42.524                     0.143                    41.621                     1.486
+GTX 1080 Ti                    StyleMapGenerator                512                   14                                                                                      CUDA out of memory
+GTX 1080 Ti                    StyleMapGenerator               1024                   14                                                                                      CUDA out of memory
+GTX 1080 Ti                    MobileStyleGenerator             256                    1                    16.597                     0.789                    15.980                     0.587
+GTX 1080 Ti                    MobileStyleGenerator             512                    1                    26.766                     4.456                    23.089                     1.302
+GTX 1080 Ti                    MobileStyleGenerator            1024                    1                    51.981                     2.294                    46.244                     4.433
+GTX 1080 Ti                    MobileStyleGenerator             256                    2                     9.222                     0.836                     8.108                     0.506
+GTX 1080 Ti                    MobileStyleGenerator             512                    2                    16.385                     1.459                    14.543                     0.214
+GTX 1080 Ti                    MobileStyleGenerator            1024                    2                    41.248                     0.705                    36.073                     4.509
+GTX 1080 Ti                    MobileStyleGenerator             256                    4                     5.523                     0.185                     5.003                     0.344
+GTX 1080 Ti                    MobileStyleGenerator             512                    4                    12.916                     0.463                    11.297                     1.209
+GTX 1080 Ti                    MobileStyleGenerator            1024                    4                    42.980                     0.537                    35.648                     5.257
+GTX 1080 Ti                    MobileStyleGenerator             256                    8                     3.286                     0.121                     2.856                     0.237
+GTX 1080 Ti                    MobileStyleGenerator             512                    8                     9.626                     0.307                     8.352                     1.077
+GTX 1080 Ti                    MobileStyleGenerator            1024                    8                    35.444                     0.123                    28.849                     4.517
+GTX 1080 Ti                    MobileStyleGenerator             256                   10                     2.861                     0.119                     2.432                     0.184
+GTX 1080 Ti                    MobileStyleGenerator             512                   10                     8.223                     0.262                     6.939                     0.859
+GTX 1080 Ti                    MobileStyleGenerator            1024                   10                    30.712                     0.120                    24.221                     3.662
+GTX 1080 Ti                    MobileStyleGenerator             256                   12                     2.854                     0.071                     2.461                     0.283
+GTX 1080 Ti                    MobileStyleGenerator             512                   12                     9.644                     0.111                     7.826                     1.097
+GTX 1080 Ti                    MobileStyleGenerator            1024                   12                    35.708                     0.276                    28.929                     4.691
+GTX 1080 Ti                    MobileStyleGenerator             256                   14                     2.757                     0.026                     2.392                     0.287
+GTX 1080 Ti                    MobileStyleGenerator             512                   14                     9.549                     0.091                     7.760                     1.105
+GTX 1080 Ti                    MobileStyleGenerator            1024                   14                    35.493                     0.052                    28.807                     4.708

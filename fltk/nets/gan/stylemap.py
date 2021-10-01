@@ -1,4 +1,5 @@
 from functools import partial
+from importlib import reload
 
 from .base import InferenceGenerator, import_from
 
@@ -6,6 +7,9 @@ from .base import InferenceGenerator, import_from
 class StyleMapGenerator(InferenceGenerator):
     def __init__(self, size):
         with import_from("StyleMapGAN"):
+            import training
+
+            reload(training)
             from training.model import Generator
 
         super().__init__(

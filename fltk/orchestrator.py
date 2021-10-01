@@ -91,10 +91,19 @@ class Orchestrator(object):
             while not self.pending_tasks.empty():
                 # Do blocking request to priority queue
                 curr_task = self.pending_tasks.get()
+
+                # edit self._config, curr_task, or jobs_to_start to schedule to a device
+
+                # random scheduling
+
+                # greedy scheduling
+                #   VRAM check
+                #   best device with space
+
+                # gavel scheduling
+
                 self.__logger.info(f"Scheduling arrival of Arrival: {curr_task.id}")
                 job_to_start = construct_job(self._config, curr_task)
-
-                # TODO gavel scheduler
 
                 # Hack to overcome limitation of KubeFlow version (Made for older version of Kubernetes)
                 self.__logger.info(f"Deploying on cluster: {curr_task.id}")

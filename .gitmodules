@@ -13,3 +13,6 @@
 [submodule "fltk/nets/gan/style-based-gan-pytorch"]
 	path = fltk/nets/gan/style-based-gan-pytorch
 	url = https://github.com/rosinality/style-based-gan-pytorch.git
+[submodule "fltk/nets/gan/stylegan2-ada-pytorch"]
+	path = fltk/nets/gan/stylegan2-ada-pytorch
+	url = https://github.com/NVlabs/stylegan2-ada-pytorch

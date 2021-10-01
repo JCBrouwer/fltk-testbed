@@ -75,6 +75,50 @@ class LearningParameters:
         return self._available_optimizer.get(self.optimizer)
 
 
+INFERENCE_CLIENT_ARGS: List[Tuple[str, str, str, type]] = [
+    ("model", "md", "Which model to train", str),
+    ("dataset", "ds", "Which dataset to train the model on", str),
+    (
+        "batch_size",
+        "bs",
+        "Number that are 'batched' together in a single forward/backward pass during the optimization steps.",
+        int,
+    ),
+    (
+        "max_epoch",
+        "ep",
+        "Maximum number of times that the 'training' set instances can be used during the optimization steps",
+        int,
+    ),
+    ("learning_rate", "lr", "Factor to limit the step size that is taken during each gradient descent step.", float),
+    ("decay", "dc", "Rate at which the learning rate decreases (i.e. the optimization takes smaller steps", float),
+    ("loss", "ls", "Loss function to use for optimization steps", str),
+    ("optimizer", "op", "Which optimizer to use during the training process", str),
+]
+
+
+@dataclass(frozen=True)
+class StyleGANInferenceParameters:
+    model: str
+    batch_size: int
+    size: int
+    job: str
+    num: int
+
+    _available_nets = {
+        "style1": nets.gan.Style1Generator,
+        "style2": nets.gan.Style2Generator,
+        "style2ada": nets.gan.Style2ADAGenerator,
+        "anycost": nets.gan.AnyCostGenerator,
+        "stylemap": nets.gan.StyleMapGenerator,
+        "swa": nets.gan.SWAGenerator,
+        "mobile": nets.gan.MobileStyleGenerator,
+    }
+
+    def get_model_class(self) -> Type[torch.nn.Module]:
+        return self._available_nets.get(self.model)
+
+
 def extract_learning_parameters(args: Namespace) -> LearningParameters:
     """
     Function to extract the learning hyper-parameters from the Namespace object for the passed arguments.
@@ -97,6 +141,25 @@ def extract_learning_parameters(args: Namespace) -> LearningParameters:
 def create_extractor_parser(subparsers):
     extractor_parser = subparsers.add_parser("extractor")
     extractor_parser.add_argument("config", type=str)
+
+
+def create_inference_client_parser(subparsers) -> None:
+    client_parser = subparsers.add_parser("client")
+    client_parser.add_argument("config", type=str)
+    client_parser.add_argument("task_id", type=str)
+
+    # Add hyper-parameters
+    for long, short, hlp, tpe in INFERENCE_CLIENT_ARGS:
+        client_parser.add_argument(f"-{short}", f"--{long}", type=tpe, help=hlp, required=True)
+
+    # Add parameter parser for backend
+    client_parser.add_argument(
+        "--backend",
+        type=str,
+        help="Distributed backend",
+        choices=[dist.Backend.GLOO, dist.Backend.NCCL, dist.Backend.MPI],
+        default=dist.Backend.GLOO,
+    )
 
 
 def create_client_parser(subparsers) -> None:
