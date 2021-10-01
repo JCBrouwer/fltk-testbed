@@ -6,13 +6,13 @@ from multiprocessing.pool import ThreadPool
 import torch.distributed as dist
 from kubernetes import config
 
-from fltk.client import Client
+from fltk.client import Client, StyleGANInferenceClient
 from fltk.extractor import download_datasets
 from fltk.orchestrator import Orchestrator
 from fltk.util.cluster.client import ClusterManager
-from fltk.util.config.arguments import LearningParameters
+from fltk.util.config.arguments import LearningParameters, StyleGANInferenceParameters
 from fltk.util.config.base_config import BareConfig
-from fltk.util.task.generator.arrival_generator import ExperimentGenerator
+from fltk.util.task.generator.arrival_generator import ExperimentGenerator, StyleGANExperimentGenerator
 
 
 def should_distribute() -> bool:
@@ -26,6 +26,37 @@ def should_distribute() -> bool:
     """
     world_size = int(os.environ.get("WORLD_SIZE", 1))
     return dist.is_available() and world_size > 1
+
+
+def launch_inference_client(
+    task_id: str,
+    config: BareConfig = None,
+    inference_params: StyleGANInferenceParameters = None,
+    namespace: Namespace = None,
+):
+    """
+    @param task_id: String representation (should be unique) corresponding to a client.
+    @type task_id: str
+    @param config: Configuration for components, needed for spinning up components of the Orchestrator.
+    @type config: BareConfig
+    @param inference_params: Parsed configuration of Hyper-Parameters for inference.
+    @type: StyleGANInferenceParameters
+    @return: None
+    @rtype: None
+    """
+    logging.info(f'Starting with host={os.environ["MASTER_ADDR"]} and port={os.environ["MASTER_PORT"]}')
+    rank, world_size, backend = 0, None, None
+    distributed = should_distribute()
+    if distributed:
+        dist.init_process_group(namespace.backend)
+        rank = dist.get_rank()
+        world_size = dist.get_world_size()
+        backend = dist.get_backend()
+    logging.info(f"Starting StyleGAN client with {rank}")
+    client = StyleGANInferenceClient(rank, task_id, world_size, config, inference_params)
+    client.prepare_learner(distributed)
+    epoch_data = client.run_epochs()
+    print(epoch_data)
 
 
 def launch_client(
@@ -80,7 +111,9 @@ def launch_orchestrator(args: Namespace = None, conf: BareConfig = None):
         conf.cluster_config.load_incluster_namespace()
         conf.cluster_config.load_incluster_image()
 
-    arrival_generator = ExperimentGenerator()
+    arrival_generator = StyleGANExperimentGenerator(
+        batch_size=4, parallelism=1, arrival_statistic=0.4
+    )  # TODO find better way to specify main experiment parameters?
     cluster_manager = ClusterManager()
 
     orchestrator = Orchestrator(cluster_manager, arrival_generator, conf)

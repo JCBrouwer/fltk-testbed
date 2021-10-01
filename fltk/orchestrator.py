@@ -5,12 +5,11 @@ from queue import PriorityQueue
 from typing import List
 
 from kubeflow.pytorchjob import PyTorchJobClient
-from kubeflow.pytorchjob.constants.constants import PYTORCHJOB_GROUP, PYTORCHJOB_VERSION, PYTORCHJOB_PLURAL
-from kubernetes import client
+from kubeflow.pytorchjob.constants.constants import PYTORCHJOB_GROUP, PYTORCHJOB_PLURAL, PYTORCHJOB_VERSION
 
-from fltk.util.cluster.client import construct_job, ClusterManager
+from fltk.util.cluster.client import ClusterManager, construct_inference_job
 from fltk.util.config.base_config import BareConfig
-from fltk.util.task.generator.arrival_generator import ArrivalGenerator, Arrival
+from fltk.util.task.generator.arrival_generator import Arrival, ArrivalGenerator
 from fltk.util.task.task import ArrivalTask
 
 
@@ -92,7 +91,10 @@ class Orchestrator(object):
                 # Do blocking request to priority queue
                 curr_task = self.pending_tasks.get()
 
-                # edit self._config, curr_task, or jobs_to_start to schedule to a device
+                # edit curr_task to schedule to a device with some batch size and parallelism
+                device = "cpu"  # or "cuda:0", "cuda:1", etc.
+                curr_task.param_conf.bs = 4
+                curr_task.sys_conf.data_parallelism = 1
 
                 # random scheduling
 
@@ -103,7 +105,7 @@ class Orchestrator(object):
                 # gavel scheduling
 
                 self.__logger.info(f"Scheduling arrival of Arrival: {curr_task.id}")
-                job_to_start = construct_job(self._config, curr_task)
+                job_to_start = construct_inference_job(self._config, curr_task, device)
 
                 # Hack to overcome limitation of KubeFlow version (Made for older version of Kubernetes)
                 self.__logger.info(f"Deploying on cluster: {curr_task.id}")

@@ -26,6 +26,14 @@ class HyperParameters:
 
 @dataclass_json
 @dataclass(frozen=True)
+class InferenceParameters(HyperParameters):
+    image_size: int = field(metadata=config(field_name="imageSize"))
+    job_type: str = field(metadata=config(field_name="jobType"))
+    num_imgs: str = field(metadata=config(field_name="numImages"))
+
+
+@dataclass_json
+@dataclass(frozen=True)
 class Priority:
     """
     Job class priority, indicating the presedence of one arrival over another.

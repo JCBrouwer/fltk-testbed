@@ -374,3 +374,17 @@ def construct_job(conf: BareConfig, task: ArrivalTask) -> V1PyTorchJob:
     job = dp_builder.construct()
     job.openapi_types = job.swagger_types
     return job
+
+
+def construct_inference_job(conf: BareConfig, task: ArrivalTask, device: str) -> V1PyTorchJob:
+    # TODO create own DeploymentBuilder to extract the InferenceParameter information from the ArrivalTask (ArrivalTask.param_conf)
+    dp_builder = DeploymentBuilder()
+    dp_builder.create_identifier(task)
+    dp_builder.build_resources(task)
+    dp_builder.build_container(task, conf)
+    dp_builder.build_tolerations()
+    dp_builder.build_template()
+    dp_builder.build_spec(task)
+    job = dp_builder.construct()
+    job.openapi_types = job.swagger_types
+    return job

@@ -75,50 +75,6 @@ class LearningParameters:
         return self._available_optimizer.get(self.optimizer)
 
 
-INFERENCE_CLIENT_ARGS: List[Tuple[str, str, str, type]] = [
-    ("model", "md", "Which model to train", str),
-    ("dataset", "ds", "Which dataset to train the model on", str),
-    (
-        "batch_size",
-        "bs",
-        "Number that are 'batched' together in a single forward/backward pass during the optimization steps.",
-        int,
-    ),
-    (
-        "max_epoch",
-        "ep",
-        "Maximum number of times that the 'training' set instances can be used during the optimization steps",
-        int,
-    ),
-    ("learning_rate", "lr", "Factor to limit the step size that is taken during each gradient descent step.", float),
-    ("decay", "dc", "Rate at which the learning rate decreases (i.e. the optimization takes smaller steps", float),
-    ("loss", "ls", "Loss function to use for optimization steps", str),
-    ("optimizer", "op", "Which optimizer to use during the training process", str),
-]
-
-
-@dataclass(frozen=True)
-class StyleGANInferenceParameters:
-    model: str
-    batch_size: int
-    size: int
-    job: str
-    num: int
-
-    _available_nets = {
-        "style1": nets.gan.Style1Generator,
-        "style2": nets.gan.Style2Generator,
-        "style2ada": nets.gan.Style2ADAGenerator,
-        "anycost": nets.gan.AnyCostGenerator,
-        "stylemap": nets.gan.StyleMapGenerator,
-        "swa": nets.gan.SWAGenerator,
-        "mobile": nets.gan.MobileStyleGenerator,
-    }
-
-    def get_model_class(self) -> Type[torch.nn.Module]:
-        return self._available_nets.get(self.model)
-
-
 def extract_learning_parameters(args: Namespace) -> LearningParameters:
     """
     Function to extract the learning hyper-parameters from the Namespace object for the passed arguments.
@@ -136,6 +92,50 @@ def extract_learning_parameters(args: Namespace) -> LearningParameters:
     loss = args.loss
     optimizer = args.optimizer
     return LearningParameters(model, dataset, batch_size, epoch, lr, decay, loss, optimizer)
+
+
+INFERENCE_CLIENT_ARGS: List[Tuple[str, str, str, type]] = [
+    ("model", "md", "Which model to train", str),
+    ("batch_size", "bs", "Number that are 'batched' together in a single forward pass.", int),
+    ("image_size", "s", "Output image size of GAN. Choices=[256, 512, 1024]", int),
+    ("job_type", "j", "Type of inference job to run. Choices=[random, interpolation, audio-reactive]", str),
+    ("num_imgs", "n", "Number of images to generate", int),
+    ("device", "d", "PyTorch device to execute on. (e.g. 'cpu', 'cuda:0', 'cuda:1', etc.)", str),
+]
+
+
+@dataclass(frozen=True)
+class StyleGANInferenceParameters:
+    model: str
+    batch_size: int
+    image_size: int
+    job_type: str
+    num_imgs: int
+    device: str
+
+    _available_nets = {
+        "style1": nets.gan.Style1Generator,
+        "style2": nets.gan.Style2Generator,
+        "style2ada": nets.gan.Style2ADAGenerator,
+        "anycost": nets.gan.AnyCostGenerator,
+        "stylemap": nets.gan.StyleMapGenerator,
+        "swa": nets.gan.SWAGenerator,
+        "mobile": nets.gan.MobileStyleGenerator,
+    }
+
+    def get_model_class(self) -> Type[torch.nn.Module]:
+        return self._available_nets.get(self.model)
+
+
+def extract_inference_parameters(args: Namespace) -> StyleGANInferenceParameters:
+    """
+    Function to extract the Inference hyper-parameters from the Namespace object for the passed arguments.
+    @param args: Namespace environment for running the Client.
+    @type args: Namespace
+    @return: Parsed Inference parameters.
+    @rtype: StyleGANInferenceParameters
+    """
+    return StyleGANInferenceParameters(**vars(args))
 
 
 def create_extractor_parser(subparsers):

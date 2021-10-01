@@ -10,7 +10,19 @@ from typing import Dict, List, Union
 
 import numpy as np
 from fltk.util.singleton import Singleton
-from fltk.util.task.config.parameter import ExperimentParser, JobClassParameter, JobDescription, TrainTask
+from fltk.util.task.config.parameter import (
+    ExperimentParser,
+    InferenceJobDescription,
+    InferenceJobParameter,
+    InferenceParameters,
+    JobClassParameter,
+    JobDescription,
+    NetworkConfiguration,
+    Priority,
+    StyleGANTask,
+    SystemParameters,
+    TrainTask,
+)
 
 
 @dataclass
@@ -175,4 +187,35 @@ class ExperimentGenerator(ArrivalGenerator):
         self.stop_time = time.time()
         self.logger.info(
             f"Stopped execution at: {self.stop_time}, duration: {self.stop_time - self.start_time}/{duration}"
+        )
+
+
+class StyleGANExperimentGenerator(ExperimentGenerator):
+    def __init__(self, batch_size=4, parallelism=1, arrival_statistic=0.4):
+        super().__init__()
+        self.job_dict["StyleGAN Inference Job"] = JobDescription(
+            JobClassParameter(
+                network_configuration=NetworkConfiguration(network=choices([], weights=[]), dataset="none"),
+                system_parameters=SystemParameters(
+                    data_parallelism=-1, executor_cores="750m", executor_memory="1Gi", action="inference"
+                ),
+                hyper_parameters=InferenceParameters(
+                    bs=-1,
+                    image_size=choices([256, 512, 1024], weights=[1, 2, 1]),
+                    job_type=choices(["random", "interpolation"], weights=[1, 2]),
+                    num_imgs=choices([100, 200, 400, 800, 1600, 3200, 6400, 12800], weights=[3, 3, 4, 4, 3, 3, 2, 1]),
+                    max_epoch=-1,
+                    lr=-1,
+                    lr_decay=-1,
+                ),
+                class_probability=1,
+                priorities=[
+                    Priority(priority=1, probability=10),
+                    Priority(priority=2, probability=5),
+                    Priority(priority=3, probability=3),
+                    Priority(priority=4, probability=1),
+                ],
+            ),
+            arrival_statistic=arrival_statistic,
+            preemtible_jobs=0,
         )

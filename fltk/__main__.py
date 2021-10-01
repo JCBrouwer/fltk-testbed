@@ -1,14 +1,16 @@
 import json
 import logging
-from argparse import Namespace, ArgumentParser
+from argparse import ArgumentParser, Namespace
 from pathlib import Path
 
-from fltk.launch import launch_client, launch_orchestrator, launch_extractor
+from fltk.launch import launch_client, launch_extractor, launch_inference_client, launch_orchestrator
 from fltk.util.config.arguments import (
     create_client_parser,
     create_cluster_parser,
-    extract_learning_parameters,
     create_extractor_parser,
+    create_inference_parser,
+    extract_inference_parameters,
+    extract_learning_parameters,
 )
 from fltk.util.config.base_config import BareConfig
 
@@ -17,6 +19,7 @@ def __main__():
     parser = ArgumentParser(description="Experiment launcher for the Federated Learning Testbed")
     subparsers = parser.add_subparsers(dest="mode")
     create_client_parser(subparsers)
+    create_inference_parser(subparsers)
     create_cluster_parser(subparsers)
     create_extractor_parser(subparsers)
     """
@@ -38,6 +41,11 @@ def __main__():
         client_start(arguments, config)
         logging.info("Stopping client...")
         exit(0)
+    elif arguments.mode == "inference":
+        logging.info("Starting in inference mode")
+        inference_client_start(arguments, config)
+        logging.info("Stopping inference...")
+        exit(0)
     elif arguments.mode == "extractor":
         launch_extractor(arguments, config)
     else:
@@ -58,6 +66,12 @@ def client_start(args: Namespace, configuration: BareConfig):
     learning_params = extract_learning_parameters(args)
     task_id = args.task_id
     launch_client(task_id, config=configuration, learning_params=learning_params, namespace=args)
+
+
+def inference_client_start(args: Namespace, configuration: BareConfig):
+    launch_inference_client(
+        args.task_id, config=configuration, inference_params=extract_inference_parameters(args), namespace=args
+    )
 
 
 if __name__ == "__main__":

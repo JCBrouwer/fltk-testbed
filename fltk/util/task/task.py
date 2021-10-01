@@ -1,7 +1,7 @@
-from dataclasses import field, dataclass
+from dataclasses import dataclass, field
 from uuid import UUID
 
-from fltk.util.task.config.parameter import SystemParameters, HyperParameters
+from fltk.util.task.config.parameter import HyperParameters, InferenceParameters, SystemParameters
 
 
 @dataclass(order=True)

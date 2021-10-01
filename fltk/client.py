@@ -296,7 +296,6 @@ class StyleGANInferenceClient(object):
         world_size: int,
         config: BareConfig = None,
         inference_params: StyleGANInferenceParameters = None,
-        device=torch.device("cpu"),
     ):
         self._logger = logging.getLogger(f"Client-{rank}-{task_id}")
 
@@ -308,7 +307,7 @@ class StyleGANInferenceClient(object):
         self.config = config
         self.inference_params = inference_params
         self.model = self.inference_params.get_model_class()(self.inference_params.size)
-        self.device = self._init_device(device)
+        self.device = self._init_device(torch.device(self.inference_params.device))
         self.tb_writer: SummaryWriter
 
     def prepare_learner(self, distributed: bool = False) -> None:
@@ -342,20 +341,20 @@ class StyleGANInferenceClient(object):
 
         # PHASE 1
 
-        if self.inference_params.job == "random":
-            latents = torch.randn(self.inference_params.num, 512, device=self.device)
+        if self.inference_params.job_type == "random":
+            latents = torch.randn(self.inference_params.num_imgs, 512, device=self.device)
 
-        elif self.inference_params.job == "interpolation":
-            latents = torch.randn(self.inference_params.num, 512, device=self.device)
+        elif self.inference_params.job_type == "interpolation":
+            latents = torch.randn(self.inference_params.num_imgs, 512, device=self.device)
             latents = gaussian_filter(latents, 20)
 
-        elif self.inference_params.job == "audio-reactive":
+        elif self.inference_params.job_type == "audio-reactive":
             raise NotImplementedError
 
         # PHASE 2
 
         output = []
-        for i in range(0, self.inference_params.num, self.inference_params.batch_size):
+        for i in range(0, self.inference_params.num_imgs, self.inference_params.batch_size):
             output.append(self.model(latents.narrow(0, i, self.inference_params.batch_size).to(self.device)))
 
         # EPILOG
