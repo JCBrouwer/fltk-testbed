@@ -8,7 +8,7 @@ from fltk.util.config.arguments import (
     create_client_parser,
     create_cluster_parser,
     create_extractor_parser,
-    create_inference_parser,
+    create_inference_client_parser,
     extract_inference_parameters,
     extract_learning_parameters,
 )
@@ -19,7 +19,7 @@ def __main__():
     parser = ArgumentParser(description="Experiment launcher for the Federated Learning Testbed")
     subparsers = parser.add_subparsers(dest="mode")
     create_client_parser(subparsers)
-    create_inference_parser(subparsers)
+    create_inference_client_parser(subparsers)
     create_cluster_parser(subparsers)
     create_extractor_parser(subparsers)
     """

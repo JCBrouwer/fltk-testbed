@@ -58,7 +58,7 @@ class ExecutionConfig:
 
     duration: int
     experiment_prefix: str = "experiment"
-    cuda: bool = False
+    cuda: bool = True
     default_model_folder_path = "default_models"
     epoch_save_end_suffix = "epoch_end"
     save_model_path = "models"

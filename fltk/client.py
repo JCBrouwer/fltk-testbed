@@ -299,19 +299,19 @@ class StyleGANInferenceClient(object):
     ):
         self._logger = logging.getLogger(f"Client-{rank}-{task_id}")
 
-        self._logger.info("Initializing learning client")
+        self._logger.info("Initializing inference client")
         self._id = rank
         self._world_size = world_size
         self._task_id = task_id
 
         self.config = config
         self.inference_params = inference_params
-        self.model = self.inference_params.get_model_class()(self.inference_params.size)
+        self.model = self.inference_params.get_model_class()(self.inference_params.image_size)
         self.device = self._init_device(torch.device(self.inference_params.device))
         self.tb_writer: SummaryWriter
 
     def prepare_learner(self, distributed: bool = False) -> None:
-        self._logger.info(f"Preparing learner model with distributed={distributed}")
+        self._logger.info(f"Preparing learner model with distributed={distributed} on device={self.device}")
         self.model.to(self.device)
         if distributed:
             self.model = torch.nn.parallel.DistributedDataParallel(self.model)
@@ -325,6 +325,7 @@ class StyleGANInferenceClient(object):
 
     def _init_device(self, cuda_device: torch.device = torch.device("cuda")):
         if self.config.cuda_enabled() and torch.cuda.is_available():
+
             return torch.device(cuda_device)
         else:
             # Force usage of CPU
@@ -339,25 +340,31 @@ class StyleGANInferenceClient(object):
     def run_epochs(self) -> List[EpochData]:
         start_time = datetime.datetime.now()
 
-        # PHASE 1
+        with torch.inference_mode():
 
-        if self.inference_params.job_type == "random":
-            latents = torch.randn(self.inference_params.num_imgs, 512, device=self.device)
+            # PHASE 1
+            self._logger.info(f"Phase 1")
 
-        elif self.inference_params.job_type == "interpolation":
-            latents = torch.randn(self.inference_params.num_imgs, 512, device=self.device)
-            latents = gaussian_filter(latents, 20)
+            if self.inference_params.job_type == "random":
+                latents = torch.randn(self.inference_params.num_imgs, 512, device="cpu")
 
-        elif self.inference_params.job_type == "audio-reactive":
-            raise NotImplementedError
+            elif self.inference_params.job_type == "interpolation":
+                latents = torch.randn(self.inference_params.num_imgs, 512, device="cpu")
+                latents = gaussian_filter(latents, 20)
 
-        # PHASE 2
+            elif self.inference_params.job_type == "audio-reactive":
+                raise NotImplementedError
 
-        output = []
-        for i in range(0, self.inference_params.num_imgs, self.inference_params.batch_size):
-            output.append(self.model(latents.narrow(0, i, self.inference_params.batch_size).to(self.device)))
+            # PHASE 2
+            self._logger.info(f"Phase 2: {self.inference_params.num_imgs}")
+
+            output = []
+            for i in range(0, self.inference_params.num_imgs, self.inference_params.batch_size):
+                latent_batch = latents[i : i + self.inference_params.batch_size]
+                output.append(self.model(latent_batch.to(self.device), None).cpu().numpy())
 
         # EPILOG
+        self._logger.info(f"Epilog")
 
         elapsed_time_ms = int((datetime.datetime.now() - start_time).total_seconds() * 1000)
         data = EpochData(
@@ -380,5 +387,4 @@ class StyleGANInferenceClient(object):
         save_model(self.model, self.config.get_save_model_folder_path(), epoch)
 
     def log_progress(self, epoch_data: EpochData, epoch: int):
-        self.tb_writer.add_scalar("inference loss per epoch", epoch_data.loss_train, epoch)
-        self.tb_writer.add_scalar("accuracy per epoch", epoch_data.accuracy, epoch)
+        self.tb_writer.add_scalar("elapsed time", epoch_data.duration_test, epoch)

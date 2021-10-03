@@ -376,9 +376,9 @@ def construct_job(conf: BareConfig, task: ArrivalTask) -> V1PyTorchJob:
     return job
 
 
-def construct_inference_job(conf: BareConfig, task: ArrivalTask, device: str) -> V1PyTorchJob:
+def construct_inference_job(conf: BareConfig, task: ArrivalTask) -> V1PyTorchJob:
     # TODO create own DeploymentBuilder to extract the InferenceParameter information from the ArrivalTask (ArrivalTask.param_conf)
-    dp_builder = DeploymentBuilder()
+    dp_builder = InferenceDeploymentBuilder()
     dp_builder.create_identifier(task)
     dp_builder.build_resources(task)
     dp_builder.build_container(task, conf)
@@ -388,3 +388,14 @@ def construct_inference_job(conf: BareConfig, task: ArrivalTask, device: str) ->
     job = dp_builder.construct()
     job.openapi_types = job.swagger_types
     return job
+
+
+class InferenceDeploymentBuilder(DeploymentBuilder):
+    def _generate_command(self, config: BareConfig, task: ArrivalTask):
+        command = (
+            f"python3 -m fltk inference {config.config_path} {task.id} "
+            f"-md {task.network} -bs {task.param_conf.bs} -s {task.param_conf.image_size} "
+            f"-j {task.param_conf.job_type} -n {task.param_conf.num_imgs} -d {task.param_conf.device} "
+            "--backend gloo"
+        )
+        return command.split(" ")

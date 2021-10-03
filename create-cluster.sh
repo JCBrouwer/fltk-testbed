@@ -38,7 +38,7 @@ kustomize build kubeflow | kubectl apply -f -
 done
 
 pip install -r requirements.txt
-DOCKER_BUILDKIT=1 docker build . --tag 192.168.1.187:6000/fltk/fltk
+docker build . --tag 192.168.1.187:6000/fltk/fltk
 docker push 192.168.1.187:6000/fltk/fltk
 sleep 3
 

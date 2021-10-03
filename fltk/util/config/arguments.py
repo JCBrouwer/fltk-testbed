@@ -135,7 +135,14 @@ def extract_inference_parameters(args: Namespace) -> StyleGANInferenceParameters
     @return: Parsed Inference parameters.
     @rtype: StyleGANInferenceParameters
     """
-    return StyleGANInferenceParameters(**vars(args))
+    return StyleGANInferenceParameters(
+        model=args.model,
+        batch_size=args.batch_size,
+        image_size=args.image_size,
+        job_type=args.job_type,
+        num_imgs=args.num_imgs,
+        device=args.device,
+    )
 
 
 def create_extractor_parser(subparsers):
@@ -144,7 +151,7 @@ def create_extractor_parser(subparsers):
 
 
 def create_inference_client_parser(subparsers) -> None:
-    client_parser = subparsers.add_parser("client")
+    client_parser = subparsers.add_parser("inference")
     client_parser.add_argument("config", type=str)
     client_parser.add_argument("task_id", type=str)
 

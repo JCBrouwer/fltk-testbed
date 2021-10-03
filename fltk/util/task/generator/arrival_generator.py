@@ -5,21 +5,18 @@ from abc import abstractmethod
 from dataclasses import dataclass
 from pathlib import Path
 from queue import Queue
-from random import choices
+from random import choice, choices
 from typing import Dict, List, Union
 
 import numpy as np
 from fltk.util.singleton import Singleton
 from fltk.util.task.config.parameter import (
     ExperimentParser,
-    InferenceJobDescription,
-    InferenceJobParameter,
     InferenceParameters,
     JobClassParameter,
     JobDescription,
     NetworkConfiguration,
     Priority,
-    StyleGANTask,
     SystemParameters,
     TrainTask,
 )
@@ -127,6 +124,7 @@ class ExperimentGenerator(ArrivalGenerator):
         priority = choices(parameters.priorities, [prio.probability for prio in parameters.priorities], k=1)[0]
 
         inter_arrival_ticks = np.random.poisson(lam=job.arrival_statistic)
+
         train_task = TrainTask(task_id, parameters, priority)
 
         return Arrival(inter_arrival_ticks, train_task, task_id)
@@ -162,6 +160,7 @@ class ExperimentGenerator(ArrivalGenerator):
         np.random.seed(42)
         self.start_time = time.time()
         self.logger.info("Populating tick lists with initial arrivals")
+        self.logger.info(f"{self.job_dict}")
         for task_id in self.job_dict.keys():
             new_arrival: Arrival = self.generate_arrival(task_id)
             self._tick_list.append(new_arrival)
@@ -193,29 +192,43 @@ class ExperimentGenerator(ArrivalGenerator):
 class StyleGANExperimentGenerator(ExperimentGenerator):
     def __init__(self, batch_size=4, parallelism=1, arrival_statistic=0.4):
         super().__init__()
-        self.job_dict["StyleGAN Inference Job"] = JobDescription(
-            JobClassParameter(
-                network_configuration=NetworkConfiguration(network=choices([], weights=[]), dataset="none"),
-                system_parameters=SystemParameters(
-                    data_parallelism=-1, executor_cores="750m", executor_memory="1Gi", action="inference"
-                ),
-                hyper_parameters=InferenceParameters(
-                    bs=-1,
-                    image_size=choices([256, 512, 1024], weights=[1, 2, 1]),
-                    job_type=choices(["random", "interpolation"], weights=[1, 2]),
-                    num_imgs=choices([100, 200, 400, 800, 1600, 3200, 6400, 12800], weights=[3, 3, 4, 4, 3, 3, 2, 1]),
-                    max_epoch=-1,
-                    lr=-1,
-                    lr_decay=-1,
-                ),
-                class_probability=1,
-                priorities=[
-                    Priority(priority=1, probability=10),
-                    Priority(priority=2, probability=5),
-                    Priority(priority=3, probability=3),
-                    Priority(priority=4, probability=1),
+        self.job_dict = dict(
+            StyleGANInferenceJob=JobDescription(
+                [
+                    JobClassParameter(
+                        network_configuration=NetworkConfiguration(
+                            network=choices(
+                                ["style1", "style2", "style2ada", "anycost", "swa", "mobile", "stylemap"],
+                                weights=[1, 1, 1, 1, 1, 1, 1],
+                            )[0],
+                            dataset="none",
+                        ),
+                        system_parameters=SystemParameters(
+                            data_parallelism=-1, executor_cores="1000m", executor_memory="8Gi", action="inference"
+                        ),
+                        hyper_parameters=InferenceParameters(
+                            bs=4,
+                            image_size=choices([256, 512, 1024], weights=[1, 2, 1])[0],
+                            job_type=choices(["random", "interpolation"], weights=[1, 2])[0],
+                            num_imgs=choices(
+                                [100, 200, 400, 800, 1600, 3200, 6400, 12800], weights=[3, 3, 4, 4, 3, 3, 2, 1]
+                            )[0],
+                            device="cuda:0",
+                            max_epoch=-1,
+                            lr=-1,
+                            lr_decay=-1,
+                        ),
+                        class_probability=1,
+                        priorities=[
+                            Priority(priority=1, probability=10),
+                            Priority(priority=2, probability=5),
+                            Priority(priority=3, probability=3),
+                            Priority(priority=4, probability=1),
+                        ],
+                    )
+                    for _ in range(20)
                 ],
-            ),
-            arrival_statistic=arrival_statistic,
-            preemtible_jobs=0,
+                arrival_statistic=arrival_statistic,
+                preemtible_jobs=0,
+            )
         )

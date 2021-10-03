@@ -1,4 +1,5 @@
 import logging
+import random
 import time
 import uuid
 from queue import PriorityQueue
@@ -87,12 +88,11 @@ class Orchestrator(object):
                 self.__logger.debug(f"Arrival of: {task}")
                 self.pending_tasks.put(task)
 
-            while not self.pending_tasks.empty():
                 # Do blocking request to priority queue
                 curr_task = self.pending_tasks.get()
 
                 # edit curr_task to schedule to a device with some batch size and parallelism
-                device = "cpu"  # or "cuda:0", "cuda:1", etc.
+                curr_task.param_conf.device = f"cuda:{random.choice([0, 1])}"  # or "cuda:0", "cuda:1", etc.
                 curr_task.param_conf.bs = 4
                 curr_task.sys_conf.data_parallelism = 1
 
@@ -105,7 +105,7 @@ class Orchestrator(object):
                 # gavel scheduling
 
                 self.__logger.info(f"Scheduling arrival of Arrival: {curr_task.id}")
-                job_to_start = construct_inference_job(self._config, curr_task, device)
+                job_to_start = construct_inference_job(self._config, curr_task)
 
                 # Hack to overcome limitation of KubeFlow version (Made for older version of Kubernetes)
                 self.__logger.info(f"Deploying on cluster: {curr_task.id}")
@@ -113,7 +113,7 @@ class Orchestrator(object):
                 self.deployed_tasks.append(curr_task)
 
             self.__logger.debug("Still alive...")
-            time.sleep(5)
+            time.sleep(1)
 
         logging.info(f"Experiment completed, currently does not support waiting.")
         self.stop()

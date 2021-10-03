@@ -7,7 +7,7 @@ from dataclasses_json import config, dataclass_json
 
 
 @dataclass_json
-@dataclass(frozen=True)
+@dataclass()
 class HyperParameters:
     """
     Learning HyperParameters.
@@ -25,15 +25,16 @@ class HyperParameters:
 
 
 @dataclass_json
-@dataclass(frozen=True)
+@dataclass()
 class InferenceParameters(HyperParameters):
     image_size: int = field(metadata=config(field_name="imageSize"))
     job_type: str = field(metadata=config(field_name="jobType"))
     num_imgs: str = field(metadata=config(field_name="numImages"))
+    device: str = field(metadata=config(field_name="device"))
 
 
 @dataclass_json
-@dataclass(frozen=True)
+@dataclass()
 class Priority:
     """
     Job class priority, indicating the presedence of one arrival over another.
@@ -44,7 +45,7 @@ class Priority:
 
 
 @dataclass_json
-@dataclass(frozen=True)
+@dataclass()
 class SystemParameters:
     """
     System parameters to spawn pods with.
@@ -61,7 +62,7 @@ class SystemParameters:
 
 
 @dataclass_json
-@dataclass(frozen=True)
+@dataclass()
 class NetworkConfiguration:
     """
     Dataclass describing the network and dataset that is 'trained' for a task.
@@ -72,7 +73,7 @@ class NetworkConfiguration:
 
 
 @dataclass_json
-@dataclass(frozen=True)
+@dataclass()
 class JobClassParameter:
     """
     Dataclass describing the job specific parameters (system and hyper).
@@ -86,7 +87,7 @@ class JobClassParameter:
 
 
 @dataclass_json
-@dataclass(frozen=True)
+@dataclass()
 class JobDescription:
     """
     Dataclass describing the characteristics of a Job type, as well as the corresponding arrival statistic.

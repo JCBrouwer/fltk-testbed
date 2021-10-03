@@ -22,7 +22,8 @@ for filename in [
 ]:
     with open(filename, "r") as file:
         filedata = file.read()
-    build_dir = os.path.abspath("/".join(file.name.split("/")[:4])) + "/opbuild/"
+    # build_dir = os.path.abspath("/".join(file.name.split("/")[:4])) + "/opbuild/"
+    build_dir = "/".join(file.name.split("/")[:4]) + "/opbuild/"
     os.makedirs(build_dir, exist_ok=True)
     filedata = re.sub(
         r"(load\(\n.*\n.*\n.*\n.*\n.*],)\n\)",
@@ -49,6 +50,6 @@ from .anycost import AnyCostGenerator
 from .mobile import MobileStyleGenerator
 from .style1 import Style1Generator
 from .style2 import Style2Generator
+from .style2ada import Style2ADAGenerator
 from .stylemap import StyleMapGenerator
 from .swa import SWAGenerator
-from .style2ada import Style2ADAGenerator
