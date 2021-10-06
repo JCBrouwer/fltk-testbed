@@ -2,11 +2,16 @@ import logging
 import time
 from collections import defaultdict
 from dataclasses import dataclass
+from datetime import datetime
 from multiprocessing.pool import ThreadPool
 from typing import Dict, List, Optional, Tuple
 from uuid import UUID
 
+from pynvml import nvmlDeviceGetHandleByIndex, nvmlDeviceGetMemoryInfo, nvmlInit
+
+
 import schedule
+import torch
 from fltk.util.cluster.conversion import Convert
 from fltk.util.config import BareConfig
 from fltk.util.singleton import Singleton
@@ -34,6 +39,8 @@ class Resource:
     memory_requested: int
     cpu_limit: int
     memory_limit: int
+    vram_free: List[float]
+    vram_total: List[float]
 
 
 class BuildDescription:
@@ -60,6 +67,7 @@ class ResourceWatchDog:
     _time: float = -1
     _node_lookup: Dict[str, client.V1Node] = dict()
     _resource_lookup: Dict[str, Resource] = dict()
+    _finish_times: Dict[str, Tuple[datetime, datetime]] = dict()
 
     def __init__(self):
         """
@@ -69,6 +77,7 @@ class ResourceWatchDog:
         self._v1: client.CoreV1Api
         self._logger = logging.getLogger("ResourceWatchDog")
         self._Q = Convert()
+        nvmlInit()
 
     def stop(self) -> None:
         """
@@ -93,6 +102,7 @@ class ResourceWatchDog:
         self.__monitor_nodes()
 
         # Every 10 seconds we check the nodes with all the pods.
+        schedule.every(10).seconds.do(self.__monitor_finish_times).tag("job-monitoring")
         schedule.every(10).seconds.do(self.__monitor_pods).tag("node-monitoring")
         # Every 1 minutes we check all the pods (in case the topology changes).
         schedule.every(1).minutes.do(self.__monitor_pods).tag("pod-monitoring")
@@ -130,10 +140,9 @@ class ResourceWatchDog:
         node: client.V1Node
         new_resource_mapper = {}
 
-        self._logger.info("Fetching pod information of cluster...")
+        self._logger.info("Fetching resource information of cluster...")
         for node_name, node in self._node_lookup.items():
             try:
-
                 # Create field selector to only get active pods that 'request' memory
                 selector = f"status.phase!=Succeeded,status.phase!=Failed,spec.nodeName={node_name}"
                 # Select pods from all namespaces on specific Kubernetes node
@@ -151,13 +160,47 @@ class ResourceWatchDog:
                         mem_req += self._Q(reqs["memory"])
                         core_lim += self._Q(lmts["cpu"])
                         mem_lim += self._Q(lmts["memory"])
-                resource = Resource(node_name, alloc_cpu, alloc_mem, core_req, mem_req, core_lim, mem_lim)
+                handles = [nvmlDeviceGetHandleByIndex(device) for device in range(torch.cuda.device_count())]
+                vram_free = [nvmlDeviceGetMemoryInfo(h).free / 1024 / 1024 for h in handles]
+                vram_total = [nvmlDeviceGetMemoryInfo(h).total / 1024 / 1024 for h in handles]
+                resource = Resource(
+                    node_name, alloc_cpu, alloc_mem, core_req, mem_req, core_lim, mem_lim, vram_free, vram_total
+                )
                 new_resource_mapper[node_name] = resource
             except Exception as e:
                 self._logger.error(f"Namespace lookup for {node_name} failed. Reason: {e}")
 
         self._resource_lookup = new_resource_mapper
-        self._logger.debug(self._resource_lookup)
+        self._logger.info(self._resource_lookup)
+
+    def __monitor_finish_times(self) -> None:
+        self._logger.info("Fetching job finish times...")
+        new_finish_times = {}
+        for node_name in self._node_lookup:
+            try:
+                for pod in self._v1.list_pod_for_all_namespaces(
+                    watch=False, field_selector=f"spec.nodeName={node_name}"
+                ).items:
+                    for container in pod.status.container_statuses:
+                        if not container.name == "pytorch":
+                            continue
+                        if container.state.terminated is None:
+                            continue
+                        if container.state.terminated.reason == "Completed":
+                            started_at = container.state.terminated.started_at
+                            finished_at = container.state.terminated.finished_at
+                            new_finish_times[pod.metadata.name.replace("-master-0", "")] = (started_at, finished_at)
+
+            except Exception as e:
+                self._logger.error(f"Finish time lookup for {node_name} failed. Reason: {e}")
+
+        self._finish_times = new_finish_times
+
+    def get_resources(self):
+        return self._resource_lookup
+
+    def get_finish_times(self):
+        return self._finish_times
 
 
 class ClusterManager(metaclass=Singleton):
@@ -186,10 +229,11 @@ class ClusterManager(metaclass=Singleton):
         self.__thread_pool.apply_async(self._watchdog.start)
         self.__thread_pool.apply_async(self._run)
 
-    def _stop(self):
+    def stop(self):
         self._logger.info("Stopping execution of ClusterManager, halting components...")
         self._watchdog.stop()
         self.__alive = False
+        self.__thread_pool.close()
         self.__thread_pool.join()
         self._logger.info("Successfully stopped execution of ClusterManager")
 
@@ -198,7 +242,13 @@ class ClusterManager(metaclass=Singleton):
             self._logger.info("Still alive...")
             time.sleep(10)
 
-        self._stop()
+        self.stop()
+
+    def get_resources(self):
+        return self._watchdog.get_resources()
+
+    def get_finish_times(self):
+        return self._watchdog.get_finish_times()
 
 
 class DeploymentBuilder:
@@ -380,7 +430,6 @@ def construct_inference_job(conf: BareConfig, task: ArrivalTask) -> V1PyTorchJob
     # TODO create own DeploymentBuilder to extract the InferenceParameter information from the ArrivalTask (ArrivalTask.param_conf)
     dp_builder = InferenceDeploymentBuilder()
     dp_builder.create_identifier(task)
-    dp_builder.build_resources(task)
     dp_builder.build_container(task, conf)
     dp_builder.build_tolerations()
     dp_builder.build_template()
@@ -399,3 +448,17 @@ class InferenceDeploymentBuilder(DeploymentBuilder):
             "--backend gloo"
         )
         return command.split(" ")
+
+    def build_resources(self, arrival_task: ArrivalTask) -> None:
+        pass
+
+    def _build_container(
+        self, conf: BareConfig, task: ArrivalTask, name: str = "pytorch", vol_mnts: List[V1VolumeMount] = None
+    ) -> V1Container:
+        return V1Container(
+            name=name,
+            image=conf.cluster_config.image,
+            command=self._generate_command(conf, task),
+            image_pull_policy="Always",
+            volume_mounts=vol_mnts,
+        )

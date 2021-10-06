@@ -1,0 +1,2 @@
+device,model,size,batch_size,ms / img,std dev,MB VRAM allocated,MB RAM allocated
+AMD Ryzen Threadripper 1920X 12-Core Processor,AnyCostGenerator,256,1,688.996,17.160,0,24

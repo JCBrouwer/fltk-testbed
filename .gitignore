@@ -1,4 +1,10 @@
 .vscode/
+kubeflow/manifests/tests
+**doc
+*doc
+**/doc
+*/doc
+doc
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

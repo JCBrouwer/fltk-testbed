@@ -2,11 +2,12 @@ sudo service docker start
 sudo service kubelet start
 
 sudo kubeadm reset
+
+export KUBELET_KUBEADM_ARGS="--eviction-hard=memory.available<1Ki --eviction-hard=nodefs.available<0.01% --eviction-hard=imagefs.available<0.01% --eviction-hard=nodefs.inodesFree<0.01% --eviction-soft=memory.available<1Mi --eviction-soft=nodefs.available<0.1% --eviction-soft=imagefs.available<0.1% --eviction-soft=nodefs.inodesFree<0.1%"
 sudo kubeadm init
 sleep 1
 
-mv  $HOME/.kube $HOME/.kube.bak
-mkdir $HOME/.kube
+rm -rf $HOME/.kube/*
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 export KUBECONFIG=$HOME/.kube/config
@@ -29,6 +30,27 @@ kubectl create -f device-plugin-ds.yaml
 
 kubectl label nodes --all gpushare=true 
 
+# echo """
+# evictionSoft:
+#   memory.available: "10Mi"
+#   nodefs.available: "10Mi"
+#   nodefs.inodesFree: "1%"
+#   imagefs.available: "10Mi"
+#   imagefs.inodesFree: "1%"
+# evictionSoftGracePeriod:
+#   memory.available: 60m
+#   nodefs.available: 60m
+#   nodefs.inodesFree: 60m
+#   imagefs.available: 60m
+#   imagefs.inodesFree: 60m
+# evictionHard:
+#   memory.available: "1Mi"
+#   nodefs.available: "1Mi"
+#   nodefs.inodesFree: "1%"
+#   imagefs.available: "1Mi"
+#   imagefs.inodesFree: "1%"
+# """ >> /var/lib/kubelet/config.yaml
+
 helm install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
 # helm install nfs-server kvaps/nfs-server-provisioner --set persistence.enabled=true,persistence.storageClass=standard,persistence.size=20Gi
 helm install nfs-server kvaps/nfs-server-provisioner
@@ -38,8 +60,7 @@ kustomize build kubeflow | kubectl apply -f -
 done
 
 pip install -r requirements.txt
-docker build . --tag 192.168.1.187:6000/fltk/fltk
-docker push 192.168.1.187:6000/fltk/fltk
+DOCKER_BUILDKIT=1 docker buildx build . --tag 192.168.1.187:6000/fltk/fltk
 sleep 3
 
 cd charts

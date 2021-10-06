@@ -8,13 +8,13 @@
         },
         "systemParameters": {
           "dataParallelism": "1",
-          "executorCores": "1000m",
-          "executorMemory": "8Gi",
-          "action": "train"
+          "executorCores": "4",
+          "executorMemory": "16Gi",
+          "action": "inference"
         },
         "hyperParameters": {
-          "batchSize": "128",
-          "maxEpoch": "5",
+          "batchSize": "8",
+          "maxEpoch": "-1",
           "learningRate": "0.01",
           "learningrateDecay": "0.0002"
         },

@@ -160,11 +160,10 @@ class ExperimentGenerator(ArrivalGenerator):
         np.random.seed(42)
         self.start_time = time.time()
         self.logger.info("Populating tick lists with initial arrivals")
-        self.logger.info(f"{self.job_dict}")
         for task_id in self.job_dict.keys():
             new_arrival: Arrival = self.generate_arrival(task_id)
             self._tick_list.append(new_arrival)
-            self.logger.info(f"Arrival {new_arrival} arrives at {new_arrival.ticks} seconds")
+            # self.logger.info(f"Arrival {new_arrival} arrives at {new_arrival.ticks} seconds")
         event = multiprocessing.Event()
         while self._alive and time.time() - self.start_time < duration:
             save_time = time.time()
@@ -176,7 +175,7 @@ class ExperimentGenerator(ArrivalGenerator):
                     self.arrivals.put(entry)
                     new_arrival = self.generate_arrival(entry.task_id)
                     new_scheduled.append(new_arrival)
-                    self.logger.info(f"Arrival {new_arrival} arrives at {new_arrival.ticks} seconds")
+                    # self.logger.info(f"Arrival {new_arrival} arrives at {new_arrival.ticks} seconds")
                 else:
                     new_scheduled.append(entry)
             self._tick_list = new_scheduled
@@ -190,7 +189,7 @@ class ExperimentGenerator(ArrivalGenerator):
 
 
 class StyleGANExperimentGenerator(ExperimentGenerator):
-    def __init__(self, batch_size=4, parallelism=1, arrival_statistic=0.4):
+    def __init__(self, batch_size=4, parallelism=1, arrival_statistic=2):
         super().__init__()
         self.job_dict = dict(
             StyleGANInferenceJob=JobDescription(
@@ -199,20 +198,19 @@ class StyleGANExperimentGenerator(ExperimentGenerator):
                         network_configuration=NetworkConfiguration(
                             network=choices(
                                 ["style1", "style2", "style2ada", "anycost", "swa", "mobile", "stylemap"],
+                                # ["style1", "style1", "style1", "style1", "style1", "style1", "style1"],
                                 weights=[1, 1, 1, 1, 1, 1, 1],
                             )[0],
                             dataset="none",
                         ),
                         system_parameters=SystemParameters(
-                            data_parallelism=-1, executor_cores="1000m", executor_memory="8Gi", action="inference"
+                            data_parallelism=1, executor_cores=8, executor_memory=17179869184, action="inference"
                         ),
                         hyper_parameters=InferenceParameters(
                             bs=4,
-                            image_size=choices([256, 512, 1024], weights=[1, 2, 1])[0],
-                            job_type=choices(["random", "interpolation"], weights=[1, 2])[0],
-                            num_imgs=choices(
-                                [100, 200, 400, 800, 1600, 3200, 6400, 12800], weights=[3, 3, 4, 4, 3, 3, 2, 1]
-                            )[0],
+                            image_size=choices([256, 512, 1024], weights=[1, 1, 1])[0],
+                            job_type=choices(["random", "interpolation"], weights=[1, 1])[0],
+                            num_imgs=choices([100, 200, 400, 800, 1600, 3200], weights=[1, 1, 1, 1, 1, 1])[0],
                             device="cuda:0",
                             max_epoch=-1,
                             lr=-1,
@@ -226,7 +224,7 @@ class StyleGANExperimentGenerator(ExperimentGenerator):
                             Priority(priority=4, probability=1),
                         ],
                     )
-                    for _ in range(20)
+                    for _ in range(100)
                 ],
                 arrival_statistic=arrival_statistic,
                 preemtible_jobs=0,

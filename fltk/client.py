@@ -358,10 +358,9 @@ class StyleGANInferenceClient(object):
             # PHASE 2
             self._logger.info(f"Phase 2: {self.inference_params.num_imgs}")
 
-            output = []
             for i in range(0, self.inference_params.num_imgs, self.inference_params.batch_size):
                 latent_batch = latents[i : i + self.inference_params.batch_size]
-                output.append(self.model(latent_batch.to(self.device), None).cpu().numpy())
+                output = self.model(latent_batch.to(self.device), None).cpu().numpy()
 
         # EPILOG
         self._logger.info(f"Epilog")

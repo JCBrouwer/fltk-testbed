@@ -27,4 +27,4 @@ class StyleMapGenerator(InferenceGenerator):
 
     def forward(self, latent, noise):
         # StyleMapGAN doesn't use noise!
-        return self.module(latent)[0]
+        return self.module(latent[:, :64])[0]
