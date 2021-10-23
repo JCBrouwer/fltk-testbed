@@ -149,3 +149,7 @@ for var, (sum_sq, df, f, p) in list(aov.iterrows()):
         f"{sum_sq / total * 100:.2f}%",
     )
 #%%
+results[(results.image_size == 1024)].groupby(["gpu", "model", "batch_size", "num_img"])["time"].agg(
+    ["min", "median", "mean", "std", "max", "size"]
+).to_csv("grouped_times.csv")
+# %%

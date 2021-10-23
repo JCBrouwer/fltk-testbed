@@ -77,7 +77,7 @@ class ExperimentGenerator(ArrivalGenerator):
 
     _tick_list: List[Arrival] = []
     _alive: bool = False
-    _decrement = 10
+    _decrement = 1
     __default_config: Path = Path("configs/tasks/example_arrival_config.json")
 
     def __init__(self, custom_config: Path = None):
@@ -123,6 +123,7 @@ class ExperimentGenerator(ArrivalGenerator):
         )[0]
         priority = choices(parameters.priorities, [prio.probability for prio in parameters.priorities], k=1)[0]
 
+        print(job.arrival_statistic)
         inter_arrival_ticks = np.random.poisson(lam=job.arrival_statistic)
 
         train_task = TrainTask(task_id, parameters, priority)

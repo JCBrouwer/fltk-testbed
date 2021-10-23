@@ -58,9 +58,12 @@ class Orchestrator(object):
         @return:
         @rtype:
         """
-        self.__logger.info("Received stop signal for the Orchestrator. Waiting 1 minute for jobs to finish")
+        self.__logger.info("Received stop signal for the Orchestrator. Waiting 2 minutes for jobs to finish")
         time.sleep(120)
         times = self.__cluster_mgr.get_finish_times()
+        print("\n\n\n")
+        print("task_info", self.task_info)
+        print("arrival_times", self.arrival_times)
         print("\n\n\n")
         print("id,network,job_type,image_size,num_imgs,device,batch_size,data_parallelism,response_time")
         for id, arrival in self.arrival_times.items():

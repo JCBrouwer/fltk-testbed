@@ -32,21 +32,21 @@ for filename in [
         r'\1\n    build_directory="' + build_dir + '",\n)',
         filedata,
     ).replace("fltk/ops/stylegan2-pytorch/", build_dir)
-    filedata = filedata.replace(
-        'if any(torch.__version__.startswith(x) for x in ["1.7.", "1.8."]):',
-        'if any(torch.__version__.startswith(x) for x in ["1.7.", "1.8.", "1.9.", "1.10.", "1.11."]):',
-    ).replace(
-        "if any(torch.__version__.startswith(x) for x in ['1.7.', '1.8.', '1.9']):",
-        'if any(torch.__version__.startswith(x) for x in ["1.7.", "1.8.", "1.9.", "1.10.", "1.11."]):',
-    )
+    # filedata = filedata.replace(
+    #     'if any(torch.__version__.startswith(x) for x in ["1.7.", "1.8."]):',
+    #     'if any(torch.__version__.startswith(x) for x in ["1.7.", "1.8.", "1.9.", "1.10.", "1.11."]):',
+    # ).replace(
+    #     "if any(torch.__version__.startswith(x) for x in ['1.7.', '1.8.', '1.9']):",
+    #     'if any(torch.__version__.startswith(x) for x in ["1.7.", "1.8.", "1.9.", "1.10.", "1.11."]):',
+    # )
     filedata = filedata.replace(
         "verbosity = 'brief'",
         "verbosity = 'none'",
     )
-    filedata = filedata.replace(
-        "enabled = False",
-        "enabled = True",
-    )
+    # filedata = filedata.replace(
+    #     "enabled = False",
+    #     "enabled = True",
+    # )
     with open(filename, "w") as file:
         file.write(filedata)
 

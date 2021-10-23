@@ -57,6 +57,7 @@ class ExecutionConfig:
     tensorboard: TensorboardConfig
 
     duration: int
+    arrival_statistic: int
     experiment_prefix: str = "experiment"
     cuda: bool = True
     default_model_folder_path = "default_models"
@@ -64,7 +65,6 @@ class ExecutionConfig:
     save_model_path = "models"
     data_path = "data"
     log_path = "logging"
-    arrival_statistic = 2
 
 
 @dataclass_json
