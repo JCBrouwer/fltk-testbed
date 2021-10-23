@@ -64,6 +64,7 @@ class ExecutionConfig:
     save_model_path = "models"
     data_path = "data"
     log_path = "logging"
+    arrival_statistic = 2
 
 
 @dataclass_json

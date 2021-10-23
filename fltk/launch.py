@@ -112,7 +112,7 @@ def launch_orchestrator(args: Namespace = None, conf: BareConfig = None):
         conf.cluster_config.load_incluster_image()
 
     arrival_generator = StyleGANExperimentGenerator(
-        batch_size=4, parallelism=1, arrival_statistic=0.4
+        arrival_statistic=conf.execution_config.arrival_statistic
     )  # TODO find better way to specify main experiment parameters?
     cluster_manager = ClusterManager()
 

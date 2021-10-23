@@ -30,6 +30,7 @@
       "reproducibility": {
          "torch_seed": 42,
          "arrival_seed": 123
-      }
+      },
+      "arrival_statistic": 2
    }
 }

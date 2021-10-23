@@ -346,10 +346,10 @@ class StyleGANInferenceClient(object):
             self._logger.info(f"Phase 1")
 
             if self.inference_params.job_type == "random":
-                latents = torch.randn(self.inference_params.num_imgs, 512, device="cpu")
+                latents = torch.randn(self.inference_params.num_imgs, 512, device=self.device)
 
             elif self.inference_params.job_type == "interpolation":
-                latents = torch.randn(self.inference_params.num_imgs, 512, device="cpu")
+                latents = torch.randn(self.inference_params.num_imgs, 512, device=self.device)
                 latents = gaussian_filter(latents, 20)
 
             elif self.inference_params.job_type == "audio-reactive":

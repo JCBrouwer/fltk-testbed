@@ -189,18 +189,14 @@ class ExperimentGenerator(ArrivalGenerator):
 
 
 class StyleGANExperimentGenerator(ExperimentGenerator):
-    def __init__(self, batch_size=4, parallelism=1, arrival_statistic=2):
+    def __init__(self, arrival_statistic):
         super().__init__()
         self.job_dict = dict(
             StyleGANInferenceJob=JobDescription(
                 [
                     JobClassParameter(
                         network_configuration=NetworkConfiguration(
-                            network=choices(
-                                ["style1", "style2", "style2ada", "anycost", "swa", "mobile", "stylemap"],
-                                # ["style1", "style1", "style1", "style1", "style1", "style1", "style1"],
-                                weights=[1, 1, 1, 1, 1, 1, 1],
-                            )[0],
+                            network=network,
                             dataset="none",
                         ),
                         system_parameters=SystemParameters(
@@ -208,23 +204,21 @@ class StyleGANExperimentGenerator(ExperimentGenerator):
                         ),
                         hyper_parameters=InferenceParameters(
                             bs=4,
-                            image_size=choices([256, 512, 1024], weights=[1, 1, 1])[0],
-                            job_type=choices(["random", "interpolation"], weights=[1, 1])[0],
-                            num_imgs=choices([100, 200, 400, 800, 1600, 3200], weights=[1, 1, 1, 1, 1, 1])[0],
+                            image_size=image_size,
+                            job_type=job_type,
+                            num_imgs=num_imgs,
                             device="cuda:0",
                             max_epoch=-1,
                             lr=-1,
                             lr_decay=-1,
                         ),
                         class_probability=1,
-                        priorities=[
-                            Priority(priority=1, probability=10),
-                            Priority(priority=2, probability=5),
-                            Priority(priority=3, probability=3),
-                            Priority(priority=4, probability=1),
-                        ],
+                        priorities=[Priority(priority=1, probability=1)],
                     )
-                    for _ in range(100)
+                    for network in ["style1", "style2", "style2ada", "anycost", "swa", "mobile", "stylemap"]
+                    for image_size in [256, 512, 1024]
+                    for job_type in ["random", "interpolation"]
+                    for num_imgs in [100, 200, 400, 800]
                 ],
                 arrival_statistic=arrival_statistic,
                 preemtible_jobs=0,

@@ -16,14 +16,14 @@ tracemalloc.start()
 print("device", "model", "size", "batch_size", "ms / img", "std dev", "MB VRAM allocated", "MB RAM allocated", sep=",")
 with torch.no_grad(), torch.inference_mode():
     for gs in [
-#        [
-#            AnyCostGenerator,
-#            Style1Generator,
-#            Style2Generator,
-#            Style2ADAGenerator,
-#            SWAGenerator,
-#            StyleMapGenerator,
-#        ],
+        #        [
+        #            AnyCostGenerator,
+        #            Style1Generator,
+        #            Style2Generator,
+        #            Style2ADAGenerator,
+        #            SWAGenerator,
+        #            StyleMapGenerator,
+        #        ],
         [MobileStyleGenerator],
     ]:
         for device in ["cpu"] + list(range(torch.cuda.device_count())):

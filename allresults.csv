@@ -6,6 +6,27 @@ NVIDIA GeForce RTX 3090,AnyCostGenerator,256,8,6.250,0.080,924,24
 NVIDIA GeForce RTX 3090,AnyCostGenerator,256,16,6.123,0.032,1677,24
 NVIDIA GeForce RTX 3090,AnyCostGenerator,256,24,6.458,0.046,2458,24
 NVIDIA GeForce RTX 3090,AnyCostGenerator,256,32,6.296,0.054,3238,24
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,256,1,9.280,1.071,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,512,1,13.046,1.205,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,1024,1,24.689,0.691,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,256,2,4.627,0.523,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,512,2,7.180,0.852,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,1024,2,16.239,0.564,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,256,4,4.221,0.253,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,512,4,6.491,0.601,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,1024,4,18.409,0.549,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,256,8,1.488,0.143,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,512,8,3.716,0.125,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,1024,8,15.113,0.270,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,256,16,1.033,0.047,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,512,16,3.804,0.091,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,1024,16,13.700,0.263,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,256,24,0.900,0.050,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,512,24,3.798,0.059,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,1024,24,14.539,0.053,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,256,32,0.836,0.033,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,512,32,3.695,0.031,-1,-1
+NVIDIA GeForce RTX 3090,MobileStyleGenerator,1024,32,14.411,0.083,-1,-1
 NVIDIA GeForce RTX 3090,Style1Generator,256,1,8.816,0.903,155,24
 NVIDIA GeForce RTX 3090,Style1Generator,256,2,4.477,0.453,157,24
 NVIDIA GeForce RTX 3090,Style1Generator,256,4,2.585,0.328,173,24
@@ -269,3 +290,24 @@ NVIDIA GeForce GTX 1080 Ti,StyleMapGenerator,1024,10,-1,-1,9604,31
 NVIDIA GeForce GTX 1080 Ti,StyleMapGenerator,1024,12,-1,-1,9604,31
 NVIDIA GeForce GTX 1080 Ti,StyleMapGenerator,1024,14,-1,-1,9604,31
 NVIDIA GeForce GTX 1080 Ti,StyleMapGenerator,1024,16,-1,-1,9604,31
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,256,1,16.597,0.789,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,512,1,26.766,4.456,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,1024,1,51.981,2.294,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,256,2,9.222,0.836,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,512,2,16.385,1.459,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,1024,2,41.248,0.705,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,256,4,5.523,0.185,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,512,4,12.916,0.463,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,1024,4,42.980,0.537,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,256,8,3.286,0.121,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,512,8,9.626,0.307,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,1024,8,35.444,0.123,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,256,10,2.861,0.119,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,512,10,8.223,0.262,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,1024,10,30.712,0.120,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,256,12,2.854,0.071,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,512,12,9.644,0.111,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,1024,12,35.708,0.276,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,256,16,2.757,0.026,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,512,16,9.549,0.091,-1,-1
+NVIDIA GeForce GTX 1080 Ti,MobileStyleGenerator,1024,16,35.493,0.052,-1,-1

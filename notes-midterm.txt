@@ -1,0 +1,8 @@
+DoE model per device
+    2^(k-p): batch_size, num_images, model, etc.
+    Gives regression model!
+
+Focus on rigorous analysis + writing report rather than fancy kubernetes stuff
+    First model simple system with the techniques from the course
+    Then maybe at the end throw out all the stops for the scheduling manager analysis
+
