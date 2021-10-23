@@ -1,0 +1,18 @@
+Expected time: ~4.166666666666667 hours
+
+Measured times
+      batch_size            model  ...                         gpu      time
+0              1     SWAGenerator  ...     NVIDIA GeForce RTX 3090  1.354010
+1              1     SWAGenerator  ...     NVIDIA GeForce RTX 3090  1.352032
+2              1     SWAGenerator  ...     NVIDIA GeForce RTX 3090  1.325958
+3              1     SWAGenerator  ...     NVIDIA GeForce RTX 3090  1.337051
+4              1     SWAGenerator  ...     NVIDIA GeForce RTX 3090  1.328218
+...          ...              ...  ...                         ...       ...
+2995           8  Style2Generator  ...  NVIDIA GeForce GTX 1080 Ti  7.529429
+2996           8  Style2Generator  ...  NVIDIA GeForce GTX 1080 Ti  7.503102
+2997           8  Style2Generator  ...  NVIDIA GeForce GTX 1080 Ti  7.518918
+2998           8  Style2Generator  ...  NVIDIA GeForce GTX 1080 Ti  7.519506
+2999           8  Style2Generator  ...  NVIDIA GeForce GTX 1080 Ti  7.525169
+
+[3000 rows x 7 columns]
+min 0.17s    median 4.25s    mean 6.83s    max 32.44s

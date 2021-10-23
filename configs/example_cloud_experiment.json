@@ -13,7 +13,7 @@
    },
    "execution_config": {
       "duration": 600,
-      "arrival_statistic": 15,
+      "arrival_statistic": 5,
       "experiment_prefix": "cloud_experiment",
       "cuda": true,
       "tensorboard": {
@@ -30,7 +30,7 @@
       },
       "reproducibility": {
          "torch_seed": 42,
-         "arrival_seed": 234
+         "arrival_seed": 567
       }
    }
 }
