@@ -1,0 +1,1214 @@
+/usr/local/lib/python3.8/dist-packages/dataclasses_json/core.py:171: RuntimeWarning: `NoneType` object value of non-optional type config_path detected when decoding BareConfig.
+  warnings.warn(f"`NoneType` object {warning}.", RuntimeWarning)
+10-23-2021 16:27:03 root         INFO     Starting in cluster mode.
+10-23-2021 16:27:03 root         INFO     Starting as Orchestrator
+10-23-2021 16:27:03 root         INFO     Starting Orchestrator, initializing resources....
+10-23-2021 16:27:03 root         INFO     Loading in cluster configuration file
+10-23-2021 16:27:03 root         INFO     Pointing configuration to in cluster configuration.
+10-23-2021 16:27:03 root         INFO     Starting cluster manager
+10-23-2021 16:27:03 ClusterManager INFO     Spinning up cluster manager...
+10-23-2021 16:27:03 ResourceWatchDog INFO     Starting resource watchdog
+10-23-2021 16:27:03 ResourceWatchDog INFO     Fetching node information of cluster...
+10-23-2021 16:27:03 ClusterManager INFO     Still alive...
+10-23-2021 16:27:03 root         INFO     Starting arrival generator
+10-23-2021 16:27:03 root         INFO     Starting orchestrator
+10-23-2021 16:27:03 StyleGANExperimentGenerator INFO     Starting execution of arrival generator...
+10-23-2021 16:27:03 Orchestrator INFO     Clearing old jobs in current namespace: default
+10-23-2021 16:27:03 StyleGANExperimentGenerator INFO     Populating tick lists with initial arrivals
+10-23-2021 16:27:03 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:03 ResourceWatchDog INFO     Starting with watching resources
+3
+10-23-2021 16:27:06 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:27:07 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:08 Orchestrator INFO     Scheduling arrival of Arrival: 7a73a21a-9e7b-4247-9b36-3c73f5f53f3b
+10-23-2021 16:27:08 Orchestrator INFO     Deploying on cluster: 7a73a21a-9e7b-4247-9b36-3c73f5f53f3b
+10-23-2021 16:27:08 Orchestrator INFO     Scheduling arrival of Arrival: 544b4081-6518-4b5e-9b6c-5e9ce2f83674
+10-23-2021 16:27:08 Orchestrator INFO     Deploying on cluster: 544b4081-6518-4b5e-9b6c-5e9ce2f83674
+10-23-2021 16:27:10 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+3
+10-23-2021 16:27:13 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:27:13 ClusterManager INFO     Still alive...
+10-23-2021 16:27:13 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:27:13 Orchestrator INFO     Scheduling arrival of Arrival: d9c1e0df-42f4-4098-aafb-a12b4915df99
+10-23-2021 16:27:13 Orchestrator INFO     Deploying on cluster: d9c1e0df-42f4-4098-aafb-a12b4915df99
+10-23-2021 16:27:13 Orchestrator INFO     Scheduling arrival of Arrival: 26f2b7ec-66fd-48df-89a6-3d64029635e6
+10-23-2021 16:27:13 Orchestrator INFO     Deploying on cluster: 26f2b7ec-66fd-48df-89a6-3d64029635e6
+10-23-2021 16:27:14 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:27:14 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[10569.4375, 23383.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:27:15 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+3
+10-23-2021 16:27:18 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:27:18 Orchestrator INFO     Scheduling arrival of Arrival: 8aa3bf78-83b6-418c-88be-21c753f9a80f
+10-23-2021 16:27:18 Orchestrator INFO     Deploying on cluster: 8aa3bf78-83b6-418c-88be-21c753f9a80f
+10-23-2021 16:27:18 Orchestrator INFO     Scheduling arrival of Arrival: 279d923d-f7cc-4e40-a6a1-6497ea66d028
+10-23-2021 16:27:18 Orchestrator INFO     Deploying on cluster: 279d923d-f7cc-4e40-a6a1-6497ea66d028
+10-23-2021 16:27:20 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:23 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:23 ClusterManager INFO     Still alive...
+10-23-2021 16:27:24 Orchestrator INFO     Scheduling arrival of Arrival: e14e0e59-7468-40a3-87cc-97b55669084a
+10-23-2021 16:27:24 Orchestrator INFO     Deploying on cluster: e14e0e59-7468-40a3-87cc-97b55669084a
+10-23-2021 16:27:24 Orchestrator INFO     Scheduling arrival of Arrival: 4a4c25da-85ad-4538-ac2e-fcc0162301d8
+10-23-2021 16:27:24 Orchestrator INFO     Deploying on cluster: 4a4c25da-85ad-4538-ac2e-fcc0162301d8
+10-23-2021 16:27:24 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:27:24 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:27:24 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[4896.4375, 13086.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:27:24 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:26 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:29 Orchestrator INFO     Scheduling arrival of Arrival: 699dc232-0fb4-4f4d-aec1-c21289912461
+10-23-2021 16:27:29 Orchestrator INFO     Deploying on cluster: 699dc232-0fb4-4f4d-aec1-c21289912461
+10-23-2021 16:27:29 Orchestrator INFO     Scheduling arrival of Arrival: 637ba351-182c-4584-b41e-d5db9e6cfec9
+10-23-2021 16:27:29 Orchestrator INFO     Deploying on cluster: 637ba351-182c-4584-b41e-d5db9e6cfec9
+10-23-2021 16:27:30 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:32 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:33 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:33 ClusterManager INFO     Still alive...
+10-23-2021 16:27:34 Orchestrator INFO     Scheduling arrival of Arrival: 660d842a-396d-454c-bd4f-9432e89b65c5
+10-23-2021 16:27:34 Orchestrator INFO     Deploying on cluster: 660d842a-396d-454c-bd4f-9432e89b65c5
+10-23-2021 16:27:34 Orchestrator INFO     Scheduling arrival of Arrival: 63c9c8a2-2d8d-4bc0-af57-a3432125ff9e
+10-23-2021 16:27:34 Orchestrator INFO     Deploying on cluster: 63c9c8a2-2d8d-4bc0-af57-a3432125ff9e
+10-23-2021 16:27:34 Orchestrator INFO     Scheduling arrival of Arrival: f1bbedab-639c-448b-9577-7c0f0ec5bb63
+10-23-2021 16:27:34 Orchestrator INFO     Deploying on cluster: f1bbedab-639c-448b-9577-7c0f0ec5bb63
+10-23-2021 16:27:34 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:27:34 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:27:34 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[2439.4375, 64.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:27:36 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:39 Orchestrator INFO     Scheduling arrival of Arrival: 314ff658-ca7c-455d-938a-aa6a8cae7835
+10-23-2021 16:27:39 Orchestrator INFO     Deploying on cluster: 314ff658-ca7c-455d-938a-aa6a8cae7835
+10-23-2021 16:27:40 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:43 ClusterManager INFO     Still alive...
+10-23-2021 16:27:44 Orchestrator INFO     Scheduling arrival of Arrival: a509841a-f92f-4f60-b9a7-99f3a11f8c37
+10-23-2021 16:27:44 Orchestrator INFO     Deploying on cluster: a509841a-f92f-4f60-b9a7-99f3a11f8c37
+10-23-2021 16:27:44 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:45 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:27:45 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:27:45 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:27:45 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[101.4375, 9577.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:27:45 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:47 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:49 Orchestrator INFO     Scheduling arrival of Arrival: 78abd25f-0e14-4190-bb5b-38443e87a002
+10-23-2021 16:27:49 Orchestrator INFO     Deploying on cluster: 78abd25f-0e14-4190-bb5b-38443e87a002
+10-23-2021 16:27:49 Orchestrator INFO     Scheduling arrival of Arrival: 0ed57a76-93ef-4648-af11-f02fe1480279
+10-23-2021 16:27:49 Orchestrator INFO     Deploying on cluster: 0ed57a76-93ef-4648-af11-f02fe1480279
+10-23-2021 16:27:49 Orchestrator INFO     Scheduling arrival of Arrival: 7c291f3e-f95a-4c00-acb7-9a9b9fa994c5
+10-23-2021 16:27:49 Orchestrator INFO     Deploying on cluster: 7c291f3e-f95a-4c00-acb7-9a9b9fa994c5
+10-23-2021 16:27:50 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:52 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:53 ClusterManager INFO     Still alive...
+10-23-2021 16:27:54 Orchestrator INFO     Scheduling arrival of Arrival: 7c68c5c3-9307-4b7d-a79c-476fc2c5d523
+10-23-2021 16:27:54 Orchestrator INFO     Deploying on cluster: 7c68c5c3-9307-4b7d-a79c-476fc2c5d523
+10-23-2021 16:27:54 Orchestrator INFO     Scheduling arrival of Arrival: f838f763-5567-4d15-b29a-1d436eaeff35
+10-23-2021 16:27:54 Orchestrator INFO     Deploying on cluster: f838f763-5567-4d15-b29a-1d436eaeff35
+10-23-2021 16:27:55 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:27:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:27:55 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:27:55 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:27:56 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[9055.4375, 867.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:27:59 Orchestrator INFO     Scheduling arrival of Arrival: 8dac33bb-03f1-4e59-8c60-7679df58c502
+10-23-2021 16:27:59 Orchestrator INFO     Deploying on cluster: 8dac33bb-03f1-4e59-8c60-7679df58c502
+10-23-2021 16:27:59 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:00 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:03 ClusterManager INFO     Still alive...
+10-23-2021 16:28:03 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:04 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:28:04 Orchestrator INFO     Scheduling arrival of Arrival: 572540a9-8ced-48e0-bf9f-7ddaf9542b18
+10-23-2021 16:28:04 Orchestrator INFO     Deploying on cluster: 572540a9-8ced-48e0-bf9f-7ddaf9542b18
+10-23-2021 16:28:04 Orchestrator INFO     Scheduling arrival of Arrival: 837f1622-893e-43a7-8027-dbfca8a33fdf
+10-23-2021 16:28:04 Orchestrator INFO     Deploying on cluster: 837f1622-893e-43a7-8027-dbfca8a33fdf
+10-23-2021 16:28:04 Orchestrator INFO     Scheduling arrival of Arrival: d0780181-0275-48c4-9891-1306a3751a8c
+10-23-2021 16:28:04 Orchestrator INFO     Deploying on cluster: d0780181-0275-48c4-9891-1306a3751a8c
+10-23-2021 16:28:04 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[7882.4375, 16945.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:28:06 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:28:06 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:28:06 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:28:06 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[9776.4375, 14456.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:28:06 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:09 Orchestrator INFO     Scheduling arrival of Arrival: b039622d-c326-4cf9-a88f-3a5df71a7d8e
+10-23-2021 16:28:09 Orchestrator INFO     Deploying on cluster: b039622d-c326-4cf9-a88f-3a5df71a7d8e
+10-23-2021 16:28:09 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:13 ClusterManager INFO     Still alive...
+10-23-2021 16:28:14 Orchestrator INFO     Scheduling arrival of Arrival: d71f3315-6b6d-4277-bcc5-0b0f2d224804
+10-23-2021 16:28:14 Orchestrator INFO     Deploying on cluster: d71f3315-6b6d-4277-bcc5-0b0f2d224804
+10-23-2021 16:28:14 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:15 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:16 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:28:16 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:16 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:28:16 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:28:17 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[7907.4375, 21541.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:28:19 Orchestrator INFO     Scheduling arrival of Arrival: 98413e72-a8a9-463e-ac5d-fbec4bf1c269
+10-23-2021 16:28:19 Orchestrator INFO     Deploying on cluster: 98413e72-a8a9-463e-ac5d-fbec4bf1c269
+10-23-2021 16:28:19 Orchestrator INFO     Scheduling arrival of Arrival: ea11ed96-b53b-4d16-a4b3-8f513d8d2071
+10-23-2021 16:28:19 Orchestrator INFO     Deploying on cluster: ea11ed96-b53b-4d16-a4b3-8f513d8d2071
+10-23-2021 16:28:19 Orchestrator INFO     Scheduling arrival of Arrival: 987bad87-26a7-4666-b45c-a252e7f59ae1
+10-23-2021 16:28:19 Orchestrator INFO     Deploying on cluster: 987bad87-26a7-4666-b45c-a252e7f59ae1
+10-23-2021 16:28:20 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:23 ClusterManager INFO     Still alive...
+10-23-2021 16:28:23 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:24 Orchestrator INFO     Scheduling arrival of Arrival: 61f131dc-fa6c-439a-937b-364a2db44611
+10-23-2021 16:28:24 Orchestrator INFO     Deploying on cluster: 61f131dc-fa6c-439a-937b-364a2db44611
+10-23-2021 16:28:24 Orchestrator INFO     Scheduling arrival of Arrival: 4ad0d7ad-56a8-4f19-941f-f2230273fa85
+10-23-2021 16:28:24 Orchestrator INFO     Deploying on cluster: 4ad0d7ad-56a8-4f19-941f-f2230273fa85
+10-23-2021 16:28:24 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:27 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:28:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:28:27 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:28:27 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[3771.4375, 4675.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:28:29 Orchestrator INFO     Scheduling arrival of Arrival: 08861f71-d288-43c4-9ea5-4b8a059c0906
+10-23-2021 16:28:29 Orchestrator INFO     Deploying on cluster: 08861f71-d288-43c4-9ea5-4b8a059c0906
+10-23-2021 16:28:31 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:33 ClusterManager INFO     Still alive...
+10-23-2021 16:28:34 Orchestrator INFO     Scheduling arrival of Arrival: 64d68b82-f063-499c-aa77-0c96aa170bf9
+10-23-2021 16:28:34 Orchestrator INFO     Deploying on cluster: 64d68b82-f063-499c-aa77-0c96aa170bf9
+10-23-2021 16:28:34 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:37 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:28:37 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:28:38 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[146.4375, 3740.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:28:38 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:39 Orchestrator INFO     Scheduling arrival of Arrival: 77428587-a59e-499a-affb-0bec34944608
+10-23-2021 16:28:39 Orchestrator INFO     Deploying on cluster: 77428587-a59e-499a-affb-0bec34944608
+10-23-2021 16:28:39 Orchestrator INFO     Scheduling arrival of Arrival: b1aabaf0-3a26-40b1-ab23-39957eeaa42b
+10-23-2021 16:28:39 Orchestrator INFO     Deploying on cluster: b1aabaf0-3a26-40b1-ab23-39957eeaa42b
+10-23-2021 16:28:40 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:41 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:43 ClusterManager INFO     Still alive...
+10-23-2021 16:28:44 Orchestrator INFO     Scheduling arrival of Arrival: 26397366-5fb4-4706-ae40-a5cf778fedd8
+10-23-2021 16:28:44 Orchestrator INFO     Deploying on cluster: 26397366-5fb4-4706-ae40-a5cf778fedd8
+10-23-2021 16:28:44 Orchestrator INFO     Scheduling arrival of Arrival: a26d179a-4e21-4361-9459-ace14c2440a0
+10-23-2021 16:28:44 Orchestrator INFO     Deploying on cluster: a26d179a-4e21-4361-9459-ace14c2440a0
+3
+10-23-2021 16:28:45 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:28:48 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:28:48 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:28:48 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:28:48 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[238.4375, 8713.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:28:49 Orchestrator INFO     Scheduling arrival of Arrival: 591df2ad-5efc-48e6-856b-cdd1ea6b1fd6
+10-23-2021 16:28:49 Orchestrator INFO     Deploying on cluster: 591df2ad-5efc-48e6-856b-cdd1ea6b1fd6
+10-23-2021 16:28:49 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:50 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:52 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:53 ClusterManager INFO     Still alive...
+10-23-2021 16:28:54 Orchestrator INFO     Scheduling arrival of Arrival: 6338fc32-b430-4cb4-b77d-32fbb2feae7b
+10-23-2021 16:28:54 Orchestrator INFO     Deploying on cluster: 6338fc32-b430-4cb4-b77d-32fbb2feae7b
+10-23-2021 16:28:54 Orchestrator INFO     Scheduling arrival of Arrival: 5a1b0381-0bc4-425d-ba2c-5d76a27d8fa8
+10-23-2021 16:28:54 Orchestrator INFO     Deploying on cluster: 5a1b0381-0bc4-425d-ba2c-5d76a27d8fa8
+10-23-2021 16:28:54 Orchestrator INFO     Scheduling arrival of Arrival: 4e4776e2-d976-4a10-b303-9aeff010fb23
+10-23-2021 16:28:54 Orchestrator INFO     Deploying on cluster: 4e4776e2-d976-4a10-b303-9aeff010fb23
+10-23-2021 16:28:55 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:28:58 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:28:59 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:28:59 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:28:59 Orchestrator INFO     Scheduling arrival of Arrival: f79b0b6b-ac8d-48ab-8ce6-272c0a1878f8
+10-23-2021 16:28:59 Orchestrator INFO     Deploying on cluster: f79b0b6b-ac8d-48ab-8ce6-272c0a1878f8
+10-23-2021 16:28:59 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[8332.4375, 13778.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:29:00 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:03 ClusterManager INFO     Still alive...
+10-23-2021 16:29:04 Orchestrator INFO     Scheduling arrival of Arrival: 8f7db2b7-3a57-434d-b30e-e596a4937597
+10-23-2021 16:29:04 Orchestrator INFO     Deploying on cluster: 8f7db2b7-3a57-434d-b30e-e596a4937597
+10-23-2021 16:29:04 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:29:04 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[8332.4375, 8777.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:29:05 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:08 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:09 Orchestrator INFO     Scheduling arrival of Arrival: bc3d1cd3-8e37-4f77-be34-e303ad398021
+10-23-2021 16:29:09 Orchestrator INFO     Deploying on cluster: bc3d1cd3-8e37-4f77-be34-e303ad398021
+10-23-2021 16:29:09 Orchestrator INFO     Scheduling arrival of Arrival: 46e560bb-42f9-4341-9b55-9e2216d95c0c
+10-23-2021 16:29:09 Orchestrator INFO     Deploying on cluster: 46e560bb-42f9-4341-9b55-9e2216d95c0c
+10-23-2021 16:29:09 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:29:10 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:29:10 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:29:10 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[11174.4375, 5330.6875], vram_total=[11178.5, 24268.3125])}
+3
+10-23-2021 16:29:10 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:29:13 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:13 ClusterManager INFO     Still alive...
+10-23-2021 16:29:14 Orchestrator INFO     Scheduling arrival of Arrival: c5405daa-af3f-4a26-80d0-ff4337381cc9
+10-23-2021 16:29:14 Orchestrator INFO     Deploying on cluster: c5405daa-af3f-4a26-80d0-ff4337381cc9
+10-23-2021 16:29:14 Orchestrator INFO     Scheduling arrival of Arrival: 5f69e1ce-29eb-4b3b-845d-5649bd99cc42
+10-23-2021 16:29:14 Orchestrator INFO     Deploying on cluster: 5f69e1ce-29eb-4b3b-845d-5649bd99cc42
+10-23-2021 16:29:16 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:17 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:19 Orchestrator INFO     Scheduling arrival of Arrival: ac6e508b-2cc8-47d4-bbf3-2fe3d6a799c8
+10-23-2021 16:29:19 Orchestrator INFO     Deploying on cluster: ac6e508b-2cc8-47d4-bbf3-2fe3d6a799c8
+10-23-2021 16:29:19 Orchestrator INFO     Scheduling arrival of Arrival: e4824a5f-d103-4f87-a45d-b81380ae711d
+10-23-2021 16:29:19 Orchestrator INFO     Deploying on cluster: e4824a5f-d103-4f87-a45d-b81380ae711d
+10-23-2021 16:29:20 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:29:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:29:20 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:29:21 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[9923.4375, 14973.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:29:23 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:23 ClusterManager INFO     Still alive...
+10-23-2021 16:29:24 Orchestrator INFO     Scheduling arrival of Arrival: 248a1f22-b90e-4842-993d-1f01264e9f25
+10-23-2021 16:29:24 Orchestrator INFO     Deploying on cluster: 248a1f22-b90e-4842-993d-1f01264e9f25
+10-23-2021 16:29:24 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:29 Orchestrator INFO     Scheduling arrival of Arrival: 4180f85c-772a-4ee1-a6e8-8837a8fb7624
+10-23-2021 16:29:29 Orchestrator INFO     Deploying on cluster: 4180f85c-772a-4ee1-a6e8-8837a8fb7624
+10-23-2021 16:29:29 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:31 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:29:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:29:31 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:29:31 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[68.4375, 6395.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:29:33 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:33 ClusterManager INFO     Still alive...
+10-23-2021 16:29:34 Orchestrator INFO     Scheduling arrival of Arrival: a3667db3-4a03-4577-bab5-998ba659e9d0
+10-23-2021 16:29:34 Orchestrator INFO     Deploying on cluster: a3667db3-4a03-4577-bab5-998ba659e9d0
+10-23-2021 16:29:34 Orchestrator INFO     Scheduling arrival of Arrival: 2196d86c-0c7c-421c-85ba-1012f55ff9a6
+10-23-2021 16:29:34 Orchestrator INFO     Deploying on cluster: 2196d86c-0c7c-421c-85ba-1012f55ff9a6
+10-23-2021 16:29:36 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:38 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:39 Orchestrator INFO     Scheduling arrival of Arrival: f81afc68-dfaa-4287-b234-4529d4a0cf89
+10-23-2021 16:29:39 Orchestrator INFO     Deploying on cluster: f81afc68-dfaa-4287-b234-4529d4a0cf89
+10-23-2021 16:29:39 Orchestrator INFO     Scheduling arrival of Arrival: f80041f4-27fd-4004-9673-5567a5d72bb8
+10-23-2021 16:29:39 Orchestrator INFO     Deploying on cluster: f80041f4-27fd-4004-9673-5567a5d72bb8
+10-23-2021 16:29:41 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:29:41 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:29:42 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:29:42 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[6800.4375, 16236.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:29:43 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:43 ClusterManager INFO     Still alive...
+10-23-2021 16:29:44 Orchestrator INFO     Scheduling arrival of Arrival: 3a97c4a1-ca65-4e2e-a18b-2def6cdf0460
+10-23-2021 16:29:44 Orchestrator INFO     Deploying on cluster: 3a97c4a1-ca65-4e2e-a18b-2def6cdf0460
+10-23-2021 16:29:44 Orchestrator INFO     Scheduling arrival of Arrival: 689c5881-fb9a-43f4-9506-ae4bc597677f
+10-23-2021 16:29:44 Orchestrator INFO     Deploying on cluster: 689c5881-fb9a-43f4-9506-ae4bc597677f
+10-23-2021 16:29:49 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:51 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:52 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:29:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:29:52 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:29:52 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1821.4375, 8873.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:29:53 ClusterManager INFO     Still alive...
+10-23-2021 16:29:54 Orchestrator INFO     Scheduling arrival of Arrival: dcddb59d-aedf-46fd-b88b-7a96aa434cba
+10-23-2021 16:29:54 Orchestrator INFO     Deploying on cluster: dcddb59d-aedf-46fd-b88b-7a96aa434cba
+10-23-2021 16:29:54 Orchestrator INFO     Scheduling arrival of Arrival: c13bd857-6b8f-4a03-81f7-96598336ac9c
+10-23-2021 16:29:54 Orchestrator INFO     Deploying on cluster: c13bd857-6b8f-4a03-81f7-96598336ac9c
+10-23-2021 16:29:57 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:29:59 Orchestrator INFO     Scheduling arrival of Arrival: a0e72839-1dd3-4bfd-92d2-e3aab91462bc
+10-23-2021 16:29:59 Orchestrator INFO     Deploying on cluster: a0e72839-1dd3-4bfd-92d2-e3aab91462bc
+10-23-2021 16:30:00 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:01 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:02 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:30:03 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:30:03 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:30:03 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[449.4375, 756.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:30:04 ClusterManager INFO     Still alive...
+10-23-2021 16:30:04 Orchestrator INFO     Scheduling arrival of Arrival: 62814363-28fd-4f5f-a40b-fdea0530f352
+10-23-2021 16:30:04 Orchestrator INFO     Deploying on cluster: 62814363-28fd-4f5f-a40b-fdea0530f352
+10-23-2021 16:30:04 Orchestrator INFO     Scheduling arrival of Arrival: b95da39c-0e75-4e58-affb-79ad9fe49b03
+10-23-2021 16:30:04 Orchestrator INFO     Deploying on cluster: b95da39c-0e75-4e58-affb-79ad9fe49b03
+10-23-2021 16:30:05 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:30:05 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[449.4375, 2486.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:30:06 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:07 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:09 Orchestrator INFO     Scheduling arrival of Arrival: 0b6be844-7310-4b2c-a499-da4d72697c75
+10-23-2021 16:30:09 Orchestrator INFO     Deploying on cluster: 0b6be844-7310-4b2c-a499-da4d72697c75
+10-23-2021 16:30:09 Orchestrator INFO     Scheduling arrival of Arrival: c3f19edc-3301-4875-8452-25fda7f9fa00
+10-23-2021 16:30:09 Orchestrator INFO     Deploying on cluster: c3f19edc-3301-4875-8452-25fda7f9fa00
+10-23-2021 16:30:13 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:30:13 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:14 ClusterManager INFO     Still alive...
+10-23-2021 16:30:14 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:30:14 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:30:14 Orchestrator INFO     Scheduling arrival of Arrival: 511dcb71-704e-4301-b163-ed79fc1679e5
+10-23-2021 16:30:14 Orchestrator INFO     Deploying on cluster: 511dcb71-704e-4301-b163-ed79fc1679e5
+10-23-2021 16:30:14 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[414.4375, 12.6875], vram_total=[11178.5, 24268.3125])}
+3
+10-23-2021 16:30:15 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:30:19 Orchestrator INFO     Scheduling arrival of Arrival: ce3e561e-d623-4f77-9ac5-1e23cf6629bf
+10-23-2021 16:30:19 Orchestrator INFO     Deploying on cluster: ce3e561e-d623-4f77-9ac5-1e23cf6629bf
+10-23-2021 16:30:19 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:22 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:24 ClusterManager INFO     Still alive...
+10-23-2021 16:30:24 Orchestrator INFO     Scheduling arrival of Arrival: 39effae5-d832-4d43-8037-a7a6b8a9a912
+10-23-2021 16:30:24 Orchestrator INFO     Deploying on cluster: 39effae5-d832-4d43-8037-a7a6b8a9a912
+10-23-2021 16:30:24 Orchestrator INFO     Scheduling arrival of Arrival: c88673cf-35b7-4f41-8d90-ab5686a4141a
+10-23-2021 16:30:24 Orchestrator INFO     Deploying on cluster: c88673cf-35b7-4f41-8d90-ab5686a4141a
+10-23-2021 16:30:24 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:30:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:30:25 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:30:25 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[6194.4375, 14673.6875], vram_total=[11178.5, 24268.3125])}
+3
+10-23-2021 16:30:27 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:30:29 Orchestrator INFO     Scheduling arrival of Arrival: 9e547492-c4d8-4e01-89eb-54d973fad137
+10-23-2021 16:30:29 Orchestrator INFO     Deploying on cluster: 9e547492-c4d8-4e01-89eb-54d973fad137
+10-23-2021 16:30:34 ClusterManager INFO     Still alive...
+10-23-2021 16:30:35 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:30:36 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:30:36 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:30:36 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[564.4375, 7992.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:30:39 Orchestrator INFO     Scheduling arrival of Arrival: 3d424c9d-e6f6-4d63-83fa-d9c13b0bbb55
+10-23-2021 16:30:39 Orchestrator INFO     Deploying on cluster: 3d424c9d-e6f6-4d63-83fa-d9c13b0bbb55
+10-23-2021 16:30:40 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:41 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:44 ClusterManager INFO     Still alive...
+10-23-2021 16:30:44 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:44 Orchestrator INFO     Scheduling arrival of Arrival: 6a738302-1b45-4016-9858-a82da5fe8d6e
+10-23-2021 16:30:44 Orchestrator INFO     Deploying on cluster: 6a738302-1b45-4016-9858-a82da5fe8d6e
+10-23-2021 16:30:44 Orchestrator INFO     Scheduling arrival of Arrival: 6610994c-0b98-405a-afee-3ede6fb4269c
+10-23-2021 16:30:44 Orchestrator INFO     Deploying on cluster: 6610994c-0b98-405a-afee-3ede6fb4269c
+10-23-2021 16:30:44 Orchestrator INFO     Scheduling arrival of Arrival: d295678a-a673-4dba-b0d6-971bfdee9386
+10-23-2021 16:30:44 Orchestrator INFO     Deploying on cluster: d295678a-a673-4dba-b0d6-971bfdee9386
+10-23-2021 16:30:45 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:46 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:46 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:30:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:30:46 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:30:46 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1849.4375, 3945.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:30:48 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:49 Orchestrator INFO     Scheduling arrival of Arrival: 5c390c0b-5715-41db-b10a-dedb92afa6cf
+10-23-2021 16:30:49 Orchestrator INFO     Deploying on cluster: 5c390c0b-5715-41db-b10a-dedb92afa6cf
+10-23-2021 16:30:49 Orchestrator INFO     Scheduling arrival of Arrival: 1a4b4f0f-8759-4eb3-9155-532e46aba2f3
+10-23-2021 16:30:49 Orchestrator INFO     Deploying on cluster: 1a4b4f0f-8759-4eb3-9155-532e46aba2f3
+10-23-2021 16:30:49 Orchestrator INFO     Scheduling arrival of Arrival: 04dd263b-f31a-4964-adc7-a8c83ee48255
+10-23-2021 16:30:49 Orchestrator INFO     Deploying on cluster: 04dd263b-f31a-4964-adc7-a8c83ee48255
+10-23-2021 16:30:52 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:53 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:54 ClusterManager INFO     Still alive...
+10-23-2021 16:30:54 Orchestrator INFO     Scheduling arrival of Arrival: a17a88aa-c5ba-40a7-b356-ff94f79d04e0
+10-23-2021 16:30:54 Orchestrator INFO     Deploying on cluster: a17a88aa-c5ba-40a7-b356-ff94f79d04e0
+10-23-2021 16:30:54 Orchestrator INFO     Scheduling arrival of Arrival: 4a6c586c-442b-4915-a843-6eab77af198a
+10-23-2021 16:30:54 Orchestrator INFO     Deploying on cluster: 4a6c586c-442b-4915-a843-6eab77af198a
+10-23-2021 16:30:56 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:30:57 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:30:57 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:30:57 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1061.4375, 9487.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:30:58 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:30:59 Orchestrator INFO     Scheduling arrival of Arrival: 38cd18c0-8fba-4b2e-9542-7a50cba7e20d
+10-23-2021 16:30:59 Orchestrator INFO     Deploying on cluster: 38cd18c0-8fba-4b2e-9542-7a50cba7e20d
+10-23-2021 16:31:01 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+3
+10-23-2021 16:31:02 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:31:04 ClusterManager INFO     Still alive...
+10-23-2021 16:31:04 Orchestrator INFO     Scheduling arrival of Arrival: 1498c18d-ad8e-4de1-babf-91bb54e0ad23
+10-23-2021 16:31:04 Orchestrator INFO     Deploying on cluster: 1498c18d-ad8e-4de1-babf-91bb54e0ad23
+10-23-2021 16:31:04 Orchestrator INFO     Scheduling arrival of Arrival: c21b69b3-bb92-4754-84ca-7c8871dbd509
+10-23-2021 16:31:04 Orchestrator INFO     Deploying on cluster: c21b69b3-bb92-4754-84ca-7c8871dbd509
+10-23-2021 16:31:06 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:06 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:31:07 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1300.4375, 3131.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:31:07 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:08 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:31:08 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:31:08 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:31:08 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1031.4375, 552.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:31:09 Orchestrator INFO     Scheduling arrival of Arrival: 757a9442-6c6b-419e-9584-a6154a18896a
+10-23-2021 16:31:09 Orchestrator INFO     Deploying on cluster: 757a9442-6c6b-419e-9584-a6154a18896a
+10-23-2021 16:31:09 Orchestrator INFO     Scheduling arrival of Arrival: b3c945e8-3df7-4c47-9ba0-a520ee2268c6
+10-23-2021 16:31:09 Orchestrator INFO     Deploying on cluster: b3c945e8-3df7-4c47-9ba0-a520ee2268c6
+10-23-2021 16:31:13 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:14 ClusterManager INFO     Still alive...
+10-23-2021 16:31:14 Orchestrator INFO     Scheduling arrival of Arrival: 6c0eee5b-4d7f-4b07-bd24-a1a1923a2ae1
+10-23-2021 16:31:14 Orchestrator INFO     Deploying on cluster: 6c0eee5b-4d7f-4b07-bd24-a1a1923a2ae1
+10-23-2021 16:31:16 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:17 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:18 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:18 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:31:19 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:19 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:31:19 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:31:19 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[6961.4375, 2453.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:31:19 Orchestrator INFO     Scheduling arrival of Arrival: bd60ab71-9420-4a2f-bcdd-572381c9686b
+10-23-2021 16:31:19 Orchestrator INFO     Deploying on cluster: bd60ab71-9420-4a2f-bcdd-572381c9686b
+10-23-2021 16:31:19 Orchestrator INFO     Scheduling arrival of Arrival: 5a7c07ce-6420-47b9-8782-f1bb79fba416
+10-23-2021 16:31:19 Orchestrator INFO     Deploying on cluster: 5a7c07ce-6420-47b9-8782-f1bb79fba416
+10-23-2021 16:31:19 Orchestrator INFO     Scheduling arrival of Arrival: 8c0d6c9c-8496-49af-a99b-b96e58f432d4
+10-23-2021 16:31:19 Orchestrator INFO     Deploying on cluster: 8c0d6c9c-8496-49af-a99b-b96e58f432d4
+10-23-2021 16:31:19 Orchestrator INFO     Scheduling arrival of Arrival: 01bfab6b-e21a-4933-b166-b81252ebabd6
+10-23-2021 16:31:19 Orchestrator INFO     Deploying on cluster: 01bfab6b-e21a-4933-b166-b81252ebabd6
+10-23-2021 16:31:22 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:24 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:24 ClusterManager INFO     Still alive...
+10-23-2021 16:31:24 Orchestrator INFO     Scheduling arrival of Arrival: ab432c0f-e984-447b-b2fe-1d9f0c904d52
+10-23-2021 16:31:24 Orchestrator INFO     Deploying on cluster: ab432c0f-e984-447b-b2fe-1d9f0c904d52
+10-23-2021 16:31:25 Orchestrator INFO     Scheduling arrival of Arrival: e1d5b984-74f8-4a19-8880-53c8fe27d678
+10-23-2021 16:31:25 Orchestrator INFO     Deploying on cluster: e1d5b984-74f8-4a19-8880-53c8fe27d678
+10-23-2021 16:31:28 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:29 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:31:30 Orchestrator INFO     Scheduling arrival of Arrival: 0d170058-a5c5-4a7f-8e21-34cd7d990b81
+10-23-2021 16:31:30 Orchestrator INFO     Deploying on cluster: 0d170058-a5c5-4a7f-8e21-34cd7d990b81
+10-23-2021 16:31:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:31:30 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:31:30 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[133.4375, 1563.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:31:33 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:34 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:34 ClusterManager INFO     Still alive...
+10-23-2021 16:31:35 Orchestrator INFO     Scheduling arrival of Arrival: 6a04491a-8b76-4fc8-9a0b-79f86a75f453
+10-23-2021 16:31:35 Orchestrator INFO     Deploying on cluster: 6a04491a-8b76-4fc8-9a0b-79f86a75f453
+10-23-2021 16:31:35 Orchestrator INFO     Scheduling arrival of Arrival: 280cc135-dc44-4e73-9ca2-6764bf9bce83
+10-23-2021 16:31:35 Orchestrator INFO     Deploying on cluster: 280cc135-dc44-4e73-9ca2-6764bf9bce83
+10-23-2021 16:31:35 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:40 Orchestrator INFO     Scheduling arrival of Arrival: 376ec017-1a5f-4e10-9762-7a2ef4c35371
+10-23-2021 16:31:40 Orchestrator INFO     Deploying on cluster: 376ec017-1a5f-4e10-9762-7a2ef4c35371
+10-23-2021 16:31:40 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:40 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:31:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:31:40 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:31:41 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[10961.4375, 7001.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:31:44 ClusterManager INFO     Still alive...
+10-23-2021 16:31:45 Orchestrator INFO     Scheduling arrival of Arrival: c16fbeeb-6f0d-4b3f-b608-0fbd31d32ef1
+10-23-2021 16:31:45 Orchestrator INFO     Deploying on cluster: c16fbeeb-6f0d-4b3f-b608-0fbd31d32ef1
+10-23-2021 16:31:45 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:46 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:47 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+3
+10-23-2021 16:31:49 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:31:50 Orchestrator INFO     Scheduling arrival of Arrival: dd029979-7b11-4b0a-ad12-54774d3dd336
+10-23-2021 16:31:50 Orchestrator INFO     Deploying on cluster: dd029979-7b11-4b0a-ad12-54774d3dd336
+10-23-2021 16:31:50 Orchestrator INFO     Scheduling arrival of Arrival: 00fff513-7d3d-4d8f-a7ce-b0f33a8c8476
+10-23-2021 16:31:50 Orchestrator INFO     Deploying on cluster: 00fff513-7d3d-4d8f-a7ce-b0f33a8c8476
+10-23-2021 16:31:50 Orchestrator INFO     Scheduling arrival of Arrival: e5a084da-ce8f-44a8-8ce9-cc6d2d994da6
+10-23-2021 16:31:50 Orchestrator INFO     Deploying on cluster: e5a084da-ce8f-44a8-8ce9-cc6d2d994da6
+10-23-2021 16:31:50 Orchestrator INFO     Scheduling arrival of Arrival: c54f1504-c92e-4a42-ac72-3b643d611ae1
+10-23-2021 16:31:50 Orchestrator INFO     Deploying on cluster: c54f1504-c92e-4a42-ac72-3b643d611ae1
+10-23-2021 16:31:51 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:51 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:31:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:31:51 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:31:52 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[2856.4375, 4726.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:31:53 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:31:54 ClusterManager INFO     Still alive...
+10-23-2021 16:31:55 Orchestrator INFO     Scheduling arrival of Arrival: ac34656f-f4ff-4532-8fe8-e6d8de623028
+10-23-2021 16:31:55 Orchestrator INFO     Deploying on cluster: ac34656f-f4ff-4532-8fe8-e6d8de623028
+10-23-2021 16:31:55 Orchestrator INFO     Scheduling arrival of Arrival: a1a60657-fcb9-4ff8-9d06-23f5ff64d2c3
+10-23-2021 16:31:55 Orchestrator INFO     Deploying on cluster: a1a60657-fcb9-4ff8-9d06-23f5ff64d2c3
+3
+10-23-2021 16:31:59 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:32:00 Orchestrator INFO     Scheduling arrival of Arrival: a2daaf4b-0d33-4ebb-a3a7-4f130ce9af9a
+10-23-2021 16:32:00 Orchestrator INFO     Deploying on cluster: a2daaf4b-0d33-4ebb-a3a7-4f130ce9af9a
+10-23-2021 16:32:02 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:32:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:32:02 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:32:03 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[10725.4375, 3699.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:32:04 ClusterManager INFO     Still alive...
+10-23-2021 16:32:05 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:05 Orchestrator INFO     Scheduling arrival of Arrival: 8cec7848-27e6-46ff-8bb8-c9d576e7f1a1
+10-23-2021 16:32:05 Orchestrator INFO     Deploying on cluster: 8cec7848-27e6-46ff-8bb8-c9d576e7f1a1
+10-23-2021 16:32:07 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:32:07 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1662.4375, 518.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:32:10 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:10 Orchestrator INFO     Scheduling arrival of Arrival: 3e8238f7-83a3-4859-88d5-adcc584ccd37
+10-23-2021 16:32:10 Orchestrator INFO     Deploying on cluster: 3e8238f7-83a3-4859-88d5-adcc584ccd37
+10-23-2021 16:32:13 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:32:14 ClusterManager INFO     Still alive...
+10-23-2021 16:32:14 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:32:14 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:32:14 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[275.4375, 4932.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:32:15 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:15 Orchestrator INFO     Scheduling arrival of Arrival: 5a6acc05-38df-480c-8b42-6a6adecbf961
+10-23-2021 16:32:15 Orchestrator INFO     Deploying on cluster: 5a6acc05-38df-480c-8b42-6a6adecbf961
+10-23-2021 16:32:16 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:18 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:20 Orchestrator INFO     Scheduling arrival of Arrival: f784e177-49cd-460b-9057-eb63ce1727c1
+10-23-2021 16:32:20 Orchestrator INFO     Deploying on cluster: f784e177-49cd-460b-9057-eb63ce1727c1
+10-23-2021 16:32:20 Orchestrator INFO     Scheduling arrival of Arrival: 698a17ed-43f3-4627-99ac-8fc819056bb7
+10-23-2021 16:32:20 Orchestrator INFO     Deploying on cluster: 698a17ed-43f3-4627-99ac-8fc819056bb7
+10-23-2021 16:32:23 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:24 ClusterManager INFO     Still alive...
+10-23-2021 16:32:24 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:32:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:32:25 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:32:25 Orchestrator INFO     Scheduling arrival of Arrival: de485935-d4cf-4d5b-87b1-bef88b4ea769
+10-23-2021 16:32:25 Orchestrator INFO     Deploying on cluster: de485935-d4cf-4d5b-87b1-bef88b4ea769
+10-23-2021 16:32:25 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[880.4375, 13432.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:32:28 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:29 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:30 Orchestrator INFO     Scheduling arrival of Arrival: ecc93109-654e-4e91-87c0-84ab2c006ade
+10-23-2021 16:32:30 Orchestrator INFO     Deploying on cluster: ecc93109-654e-4e91-87c0-84ab2c006ade
+10-23-2021 16:32:30 Orchestrator INFO     Scheduling arrival of Arrival: c45374eb-9d4a-41e2-9d8f-a30178334b3c
+10-23-2021 16:32:30 Orchestrator INFO     Deploying on cluster: c45374eb-9d4a-41e2-9d8f-a30178334b3c
+10-23-2021 16:32:33 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:34 ClusterManager INFO     Still alive...
+10-23-2021 16:32:35 Orchestrator INFO     Scheduling arrival of Arrival: efc2970f-09bd-48d6-b36f-f75be48da506
+10-23-2021 16:32:35 Orchestrator INFO     Deploying on cluster: efc2970f-09bd-48d6-b36f-f75be48da506
+10-23-2021 16:32:35 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:32:36 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:32:36 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:32:36 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[344.4375, 253.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:32:38 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:40 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:40 Orchestrator INFO     Scheduling arrival of Arrival: 8a4f5177-43eb-4c2e-b911-a6708b544a75
+10-23-2021 16:32:40 Orchestrator INFO     Deploying on cluster: 8a4f5177-43eb-4c2e-b911-a6708b544a75
+10-23-2021 16:32:40 Orchestrator INFO     Scheduling arrival of Arrival: 92fe0fe4-0f29-43d3-8663-0a781a1d0595
+10-23-2021 16:32:40 Orchestrator INFO     Deploying on cluster: 92fe0fe4-0f29-43d3-8663-0a781a1d0595
+10-23-2021 16:32:40 Orchestrator INFO     Scheduling arrival of Arrival: 5861ddfb-5119-49aa-baa5-3bf6db54f38c
+10-23-2021 16:32:40 Orchestrator INFO     Deploying on cluster: 5861ddfb-5119-49aa-baa5-3bf6db54f38c
+3
+10-23-2021 16:32:42 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:32:44 ClusterManager INFO     Still alive...
+10-23-2021 16:32:45 Orchestrator INFO     Scheduling arrival of Arrival: 925f1bf6-067f-49ce-b393-830cf323fceb
+10-23-2021 16:32:45 Orchestrator INFO     Deploying on cluster: 925f1bf6-067f-49ce-b393-830cf323fceb
+10-23-2021 16:32:46 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:32:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:32:47 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:32:47 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[324.4375, 7018.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:32:48 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:50 Orchestrator INFO     Scheduling arrival of Arrival: bda08a28-8270-4f10-ab6f-acb6bf9ff83a
+10-23-2021 16:32:50 Orchestrator INFO     Deploying on cluster: bda08a28-8270-4f10-ab6f-acb6bf9ff83a
+10-23-2021 16:32:52 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:53 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:54 ClusterManager INFO     Still alive...
+3
+10-23-2021 16:32:54 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:32:55 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:32:55 Orchestrator INFO     Scheduling arrival of Arrival: f2c581f0-844c-4473-bf39-7ea424f8b8ab
+10-23-2021 16:32:55 Orchestrator INFO     Deploying on cluster: f2c581f0-844c-4473-bf39-7ea424f8b8ab
+10-23-2021 16:32:55 Orchestrator INFO     Scheduling arrival of Arrival: 6d1efab3-2541-484c-903a-1b655f781013
+10-23-2021 16:32:55 Orchestrator INFO     Deploying on cluster: 6d1efab3-2541-484c-903a-1b655f781013
+10-23-2021 16:32:55 Orchestrator INFO     Scheduling arrival of Arrival: d1936623-a2b1-4d57-bdfd-bb3e8f3196c7
+10-23-2021 16:32:55 Orchestrator INFO     Deploying on cluster: d1936623-a2b1-4d57-bdfd-bb3e8f3196c7
+10-23-2021 16:32:55 Orchestrator INFO     Scheduling arrival of Arrival: 77b7835e-fcfa-4f1c-9c2d-6aa7cbd6832a
+10-23-2021 16:32:55 Orchestrator INFO     Deploying on cluster: 77b7835e-fcfa-4f1c-9c2d-6aa7cbd6832a
+10-23-2021 16:32:57 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:32:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:32:58 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:32:59 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[10.4375, 4401.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:33:00 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:00 Orchestrator INFO     Scheduling arrival of Arrival: b156685e-c947-40b7-8eaf-ef520c252736
+10-23-2021 16:33:00 Orchestrator INFO     Deploying on cluster: b156685e-c947-40b7-8eaf-ef520c252736
+3
+10-23-2021 16:33:03 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:33:04 ClusterManager INFO     Still alive...
+10-23-2021 16:33:04 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:05 Orchestrator INFO     Scheduling arrival of Arrival: 93e4ea9c-df0b-4b77-a36e-310f17a18135
+10-23-2021 16:33:05 Orchestrator INFO     Deploying on cluster: 93e4ea9c-df0b-4b77-a36e-310f17a18135
+10-23-2021 16:33:05 Orchestrator INFO     Scheduling arrival of Arrival: c095876a-d2d2-4bdf-b63b-b8547201190c
+10-23-2021 16:33:05 Orchestrator INFO     Deploying on cluster: c095876a-d2d2-4bdf-b63b-b8547201190c
+10-23-2021 16:33:07 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:08 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:33:08 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[2626.4375, 15614.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:33:09 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:33:10 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:33:10 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:33:10 Orchestrator INFO     Scheduling arrival of Arrival: 2ccb5474-7086-4150-91a9-73e44b0baea2
+10-23-2021 16:33:10 Orchestrator INFO     Deploying on cluster: 2ccb5474-7086-4150-91a9-73e44b0baea2
+10-23-2021 16:33:10 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[46.4375, 22717.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:33:13 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:14 ClusterManager INFO     Still alive...
+10-23-2021 16:33:15 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:15 Orchestrator INFO     Scheduling arrival of Arrival: deea5a46-05f2-4492-bd65-b03a9e495c51
+10-23-2021 16:33:15 Orchestrator INFO     Deploying on cluster: deea5a46-05f2-4492-bd65-b03a9e495c51
+10-23-2021 16:33:15 Orchestrator INFO     Scheduling arrival of Arrival: 6c5a5b79-9eae-4cd8-9d74-8e126a6c86b4
+10-23-2021 16:33:15 Orchestrator INFO     Deploying on cluster: 6c5a5b79-9eae-4cd8-9d74-8e126a6c86b4
+10-23-2021 16:33:20 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:20 Orchestrator INFO     Scheduling arrival of Arrival: abb9e159-d1b1-476b-abab-ac6c75b6ac3a
+10-23-2021 16:33:20 Orchestrator INFO     Deploying on cluster: abb9e159-d1b1-476b-abab-ac6c75b6ac3a
+10-23-2021 16:33:20 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:33:21 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:33:21 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:33:22 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[374.4375, 7475.6875], vram_total=[11178.5, 24268.3125])}
+3
+10-23-2021 16:33:22 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:33:23 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:24 ClusterManager INFO     Still alive...
+10-23-2021 16:33:25 Orchestrator INFO     Scheduling arrival of Arrival: 6f9c586c-02e7-4512-879f-891c223733da
+10-23-2021 16:33:25 Orchestrator INFO     Deploying on cluster: 6f9c586c-02e7-4512-879f-891c223733da
+10-23-2021 16:33:25 Orchestrator INFO     Scheduling arrival of Arrival: faa8338a-1d25-44f5-9369-d32e37ade807
+10-23-2021 16:33:25 Orchestrator INFO     Deploying on cluster: faa8338a-1d25-44f5-9369-d32e37ade807
+10-23-2021 16:33:30 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:30 Orchestrator INFO     Scheduling arrival of Arrival: 4f7ec7e6-88c0-4a2a-80e2-dff9c97b6876
+10-23-2021 16:33:30 Orchestrator INFO     Deploying on cluster: 4f7ec7e6-88c0-4a2a-80e2-dff9c97b6876
+10-23-2021 16:33:32 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:33:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:33:32 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:33:33 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[10336.4375, 2463.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:33:34 ClusterManager INFO     Still alive...
+10-23-2021 16:33:38 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:39 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:40 Orchestrator INFO     Scheduling arrival of Arrival: d62840f7-d062-4831-a018-29249bf220c1
+10-23-2021 16:33:40 Orchestrator INFO     Deploying on cluster: d62840f7-d062-4831-a018-29249bf220c1
+10-23-2021 16:33:40 Orchestrator INFO     Scheduling arrival of Arrival: 6a12af29-962c-4402-89f8-25e5dd61d09b
+10-23-2021 16:33:40 Orchestrator INFO     Deploying on cluster: 6a12af29-962c-4402-89f8-25e5dd61d09b
+10-23-2021 16:33:42 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:43 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:33:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:33:44 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:33:44 ClusterManager INFO     Still alive...
+10-23-2021 16:33:44 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[83.4375, 867.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:33:45 Orchestrator INFO     Scheduling arrival of Arrival: 4b60b0d4-8340-4f07-83fa-b6d416e348d3
+10-23-2021 16:33:45 Orchestrator INFO     Deploying on cluster: 4b60b0d4-8340-4f07-83fa-b6d416e348d3
+10-23-2021 16:33:48 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:49 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:33:50 Orchestrator INFO     Scheduling arrival of Arrival: 29a904db-9079-4263-8fe5-13feca03b5ea
+10-23-2021 16:33:50 Orchestrator INFO     Deploying on cluster: 29a904db-9079-4263-8fe5-13feca03b5ea
+10-23-2021 16:33:50 Orchestrator INFO     Scheduling arrival of Arrival: 24d29e66-8718-40ea-aa69-265760017a3b
+10-23-2021 16:33:50 Orchestrator INFO     Deploying on cluster: 24d29e66-8718-40ea-aa69-265760017a3b
+10-23-2021 16:33:54 ClusterManager INFO     Still alive...
+10-23-2021 16:33:54 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:33:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:33:55 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:33:55 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[4752.4375, 12917.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:33:58 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:00 Orchestrator INFO     Scheduling arrival of Arrival: 64e11704-85b9-4d06-a0c6-329f98856e4a
+10-23-2021 16:34:00 Orchestrator INFO     Deploying on cluster: 64e11704-85b9-4d06-a0c6-329f98856e4a
+10-23-2021 16:34:01 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:04 ClusterManager INFO     Still alive...
+3
+10-23-2021 16:34:04 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:34:05 Orchestrator INFO     Scheduling arrival of Arrival: e29f662d-08c2-49ce-a6dc-5bc978920ed0
+10-23-2021 16:34:05 Orchestrator INFO     Deploying on cluster: e29f662d-08c2-49ce-a6dc-5bc978920ed0
+10-23-2021 16:34:05 Orchestrator INFO     Scheduling arrival of Arrival: c27b27a3-15d1-48b5-b21c-28ed78ddc817
+10-23-2021 16:34:05 Orchestrator INFO     Deploying on cluster: c27b27a3-15d1-48b5-b21c-28ed78ddc817
+10-23-2021 16:34:05 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:34:06 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:34:06 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:34:07 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[409.4375, 1422.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:34:09 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:34:09 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[15.4375, 2359.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:34:10 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:10 Orchestrator INFO     Scheduling arrival of Arrival: ea2d85c8-9fce-4ad0-9a24-efc09a56c73a
+10-23-2021 16:34:10 Orchestrator INFO     Deploying on cluster: ea2d85c8-9fce-4ad0-9a24-efc09a56c73a
+10-23-2021 16:34:12 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:13 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:14 ClusterManager INFO     Still alive...
+10-23-2021 16:34:15 Orchestrator INFO     Scheduling arrival of Arrival: d33b5456-45d7-4544-a253-8fb36d9597e7
+10-23-2021 16:34:15 Orchestrator INFO     Deploying on cluster: d33b5456-45d7-4544-a253-8fb36d9597e7
+10-23-2021 16:34:15 Orchestrator INFO     Scheduling arrival of Arrival: 3c608171-4e3a-4144-82ef-60dc23233eed
+10-23-2021 16:34:15 Orchestrator INFO     Deploying on cluster: 3c608171-4e3a-4144-82ef-60dc23233eed
+10-23-2021 16:34:17 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:17 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:34:18 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:34:18 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:34:18 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:19 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[5436.4375, 14423.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:34:20 Orchestrator INFO     Scheduling arrival of Arrival: 91bc7127-4fde-4a4e-b566-1fa65138280d
+10-23-2021 16:34:20 Orchestrator INFO     Deploying on cluster: 91bc7127-4fde-4a4e-b566-1fa65138280d
+10-23-2021 16:34:20 Orchestrator INFO     Scheduling arrival of Arrival: 1c4ddc98-7114-4930-b1d5-36bd98087fcf
+10-23-2021 16:34:20 Orchestrator INFO     Deploying on cluster: 1c4ddc98-7114-4930-b1d5-36bd98087fcf
+3
+10-23-2021 16:34:21 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:34:24 ClusterManager INFO     Still alive...
+10-23-2021 16:34:25 Orchestrator INFO     Scheduling arrival of Arrival: fc349960-b47f-49df-beae-8244e07ad0ff
+10-23-2021 16:34:25 Orchestrator INFO     Deploying on cluster: fc349960-b47f-49df-beae-8244e07ad0ff
+3
+10-23-2021 16:34:26 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:34:29 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:34:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:34:29 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:34:30 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1048.4375, 11.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:34:30 Orchestrator INFO     Scheduling arrival of Arrival: 0112efbe-eee6-48e3-96f2-93ee48406796
+10-23-2021 16:34:30 Orchestrator INFO     Deploying on cluster: 0112efbe-eee6-48e3-96f2-93ee48406796
+10-23-2021 16:34:31 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:34 ClusterManager INFO     Still alive...
+10-23-2021 16:34:35 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:35 Orchestrator INFO     Scheduling arrival of Arrival: 943bb807-22f1-467a-b35d-41a31edbb13a
+10-23-2021 16:34:35 Orchestrator INFO     Deploying on cluster: 943bb807-22f1-467a-b35d-41a31edbb13a
+10-23-2021 16:34:35 Orchestrator INFO     Scheduling arrival of Arrival: 470793ef-b39e-4385-a0e2-669fa88a0afd
+10-23-2021 16:34:35 Orchestrator INFO     Deploying on cluster: 470793ef-b39e-4385-a0e2-669fa88a0afd
+10-23-2021 16:34:36 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+3
+10-23-2021 16:34:37 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:34:38 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:40 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:40 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:34:40 Orchestrator INFO     Scheduling arrival of Arrival: aa47cbdc-7862-44ac-9cca-3475861e0205
+10-23-2021 16:34:40 Orchestrator INFO     Deploying on cluster: aa47cbdc-7862-44ac-9cca-3475861e0205
+10-23-2021 16:34:40 Orchestrator INFO     Scheduling arrival of Arrival: 3abfdf19-a699-4b26-803a-a2d123ca87d8
+10-23-2021 16:34:40 Orchestrator INFO     Deploying on cluster: 3abfdf19-a699-4b26-803a-a2d123ca87d8
+10-23-2021 16:34:40 Orchestrator INFO     Scheduling arrival of Arrival: 521de628-e5ee-4821-a47f-d01860c577b4
+10-23-2021 16:34:40 Orchestrator INFO     Deploying on cluster: 521de628-e5ee-4821-a47f-d01860c577b4
+10-23-2021 16:34:40 Orchestrator INFO     Scheduling arrival of Arrival: 1e2749b8-6aec-4f68-a672-59ce550b6b30
+10-23-2021 16:34:40 Orchestrator INFO     Deploying on cluster: 1e2749b8-6aec-4f68-a672-59ce550b6b30
+10-23-2021 16:34:41 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:34:41 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:34:41 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[682.4375, 1523.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:34:43 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:44 ClusterManager INFO     Still alive...
+3
+10-23-2021 16:34:44 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:34:45 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:45 Orchestrator INFO     Scheduling arrival of Arrival: bd23f967-a2bb-4675-930b-1b95e1f37357
+10-23-2021 16:34:45 Orchestrator INFO     Deploying on cluster: bd23f967-a2bb-4675-930b-1b95e1f37357
+10-23-2021 16:34:45 Orchestrator INFO     Scheduling arrival of Arrival: 78923803-de23-45ec-a205-318fc6e626ee
+10-23-2021 16:34:45 Orchestrator INFO     Deploying on cluster: 78923803-de23-45ec-a205-318fc6e626ee
+10-23-2021 16:34:45 Orchestrator INFO     Scheduling arrival of Arrival: caa8faa0-5ed5-418b-b6ce-c64bc173ef7b
+10-23-2021 16:34:45 Orchestrator INFO     Deploying on cluster: caa8faa0-5ed5-418b-b6ce-c64bc173ef7b
+10-23-2021 16:34:46 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:48 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:50 Orchestrator INFO     Scheduling arrival of Arrival: dd682af3-b503-49af-a8d3-19ea71804825
+10-23-2021 16:34:50 Orchestrator INFO     Deploying on cluster: dd682af3-b503-49af-a8d3-19ea71804825
+10-23-2021 16:34:50 Orchestrator INFO     Scheduling arrival of Arrival: b5eb7e61-deec-43a1-85f7-60456294ab27
+10-23-2021 16:34:51 Orchestrator INFO     Deploying on cluster: b5eb7e61-deec-43a1-85f7-60456294ab27
+3
+10-23-2021 16:34:51 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:34:52 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:34:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:34:52 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:34:53 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[3966.4375, 10512.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:34:53 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:54 ClusterManager INFO     Still alive...
+10-23-2021 16:34:55 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:34:56 Orchestrator INFO     Scheduling arrival of Arrival: 7dae11f9-566c-4e8d-a02f-1a978dad2e22
+10-23-2021 16:34:56 Orchestrator INFO     Deploying on cluster: 7dae11f9-566c-4e8d-a02f-1a978dad2e22
+10-23-2021 16:34:56 Orchestrator INFO     Scheduling arrival of Arrival: 3688a1ef-e9ad-4070-9787-0b0d36225e27
+10-23-2021 16:34:56 Orchestrator INFO     Deploying on cluster: 3688a1ef-e9ad-4070-9787-0b0d36225e27
+10-23-2021 16:34:56 Orchestrator INFO     Scheduling arrival of Arrival: 0e1617b6-ee60-4d6d-8498-2134cd3ee614
+10-23-2021 16:34:56 Orchestrator INFO     Deploying on cluster: 0e1617b6-ee60-4d6d-8498-2134cd3ee614
+10-23-2021 16:34:58 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+3
+10-23-2021 16:35:00 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:35:01 Orchestrator INFO     Scheduling arrival of Arrival: c0515153-ba6f-48b0-a77d-c038cf9d8a34
+10-23-2021 16:35:01 Orchestrator INFO     Deploying on cluster: c0515153-ba6f-48b0-a77d-c038cf9d8a34
+10-23-2021 16:35:01 Orchestrator INFO     Scheduling arrival of Arrival: cabf456e-f5af-4f87-a4ed-020ddb16bbf3
+10-23-2021 16:35:01 Orchestrator INFO     Deploying on cluster: cabf456e-f5af-4f87-a4ed-020ddb16bbf3
+10-23-2021 16:35:03 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:35:04 ClusterManager INFO     Still alive...
+10-23-2021 16:35:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:35:04 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:35:04 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:04 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[2046.4375, 1804.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:35:06 Orchestrator INFO     Scheduling arrival of Arrival: 9d0b3219-0803-43cb-9551-148ea05f50da
+10-23-2021 16:35:06 Orchestrator INFO     Deploying on cluster: 9d0b3219-0803-43cb-9551-148ea05f50da
+10-23-2021 16:35:08 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:09 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:09 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:35:10 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[373.4375, 9530.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:35:11 Orchestrator INFO     Scheduling arrival of Arrival: 59a8a736-07a4-4663-87c7-3328574a1dd4
+10-23-2021 16:35:11 Orchestrator INFO     Deploying on cluster: 59a8a736-07a4-4663-87c7-3328574a1dd4
+10-23-2021 16:35:11 Orchestrator INFO     Scheduling arrival of Arrival: a0af8ba8-deba-4c8c-a084-1e77043689b3
+10-23-2021 16:35:11 Orchestrator INFO     Deploying on cluster: a0af8ba8-deba-4c8c-a084-1e77043689b3
+10-23-2021 16:35:11 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:12 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:14 ClusterManager INFO     Still alive...
+3
+10-23-2021 16:35:14 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:35:14 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:35:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:35:16 Orchestrator INFO     Scheduling arrival of Arrival: 6e7000af-e919-4e23-832e-b6d3ecaa3d52
+10-23-2021 16:35:16 Orchestrator INFO     Deploying on cluster: 6e7000af-e919-4e23-832e-b6d3ecaa3d52
+10-23-2021 16:35:16 Orchestrator INFO     Scheduling arrival of Arrival: 27941a87-4fdf-4ae4-994d-aadfaf3d861b
+10-23-2021 16:35:16 Orchestrator INFO     Deploying on cluster: 27941a87-4fdf-4ae4-994d-aadfaf3d861b
+10-23-2021 16:35:16 Orchestrator INFO     Scheduling arrival of Arrival: 8115dcc1-980f-46fa-9ff0-18a2384db5c8
+10-23-2021 16:35:16 Orchestrator INFO     Deploying on cluster: 8115dcc1-980f-46fa-9ff0-18a2384db5c8
+10-23-2021 16:35:16 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:35:17 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1718.4375, 3957.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:35:17 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:19 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:21 Orchestrator INFO     Scheduling arrival of Arrival: d83acb36-49c0-4c8c-873c-bab3d71f4761
+10-23-2021 16:35:21 Orchestrator INFO     Deploying on cluster: d83acb36-49c0-4c8c-873c-bab3d71f4761
+10-23-2021 16:35:21 Orchestrator INFO     Scheduling arrival of Arrival: 4f75eaea-ae44-47c1-9c7b-0fb4c761d73e
+10-23-2021 16:35:21 Orchestrator INFO     Deploying on cluster: 4f75eaea-ae44-47c1-9c7b-0fb4c761d73e
+10-23-2021 16:35:23 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:24 ClusterManager INFO     Still alive...
+10-23-2021 16:35:26 Orchestrator INFO     Scheduling arrival of Arrival: 45807fdf-6a57-41bb-be74-af75307e2ae6
+10-23-2021 16:35:26 Orchestrator INFO     Deploying on cluster: 45807fdf-6a57-41bb-be74-af75307e2ae6
+10-23-2021 16:35:26 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:35:26 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:35:28 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:35:28 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[10165.4375, 14368.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:35:30 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:31 Orchestrator INFO     Scheduling arrival of Arrival: 62113359-0b5a-4f98-9ab7-462eb06127ed
+10-23-2021 16:35:31 Orchestrator INFO     Deploying on cluster: 62113359-0b5a-4f98-9ab7-462eb06127ed
+10-23-2021 16:35:31 Orchestrator INFO     Scheduling arrival of Arrival: 55d410b9-7129-45c3-90b6-2ea183f5c9a8
+10-23-2021 16:35:31 Orchestrator INFO     Deploying on cluster: 55d410b9-7129-45c3-90b6-2ea183f5c9a8
+10-23-2021 16:35:31 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:32 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:33 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:34 ClusterManager INFO     Still alive...
+3
+10-23-2021 16:35:35 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:35:36 Orchestrator INFO     Scheduling arrival of Arrival: e756cb26-e5a0-4753-8d0f-ed9f3b1ca170
+10-23-2021 16:35:36 Orchestrator INFO     Deploying on cluster: e756cb26-e5a0-4753-8d0f-ed9f3b1ca170
+10-23-2021 16:35:36 Orchestrator INFO     Scheduling arrival of Arrival: f6ba81f6-4565-4f0d-b7f8-02632c47876f
+10-23-2021 16:35:36 Orchestrator INFO     Deploying on cluster: f6ba81f6-4565-4f0d-b7f8-02632c47876f
+10-23-2021 16:35:36 Orchestrator INFO     Scheduling arrival of Arrival: dea921e8-4be3-4d6b-8077-4712cc1e0e75
+10-23-2021 16:35:36 Orchestrator INFO     Deploying on cluster: dea921e8-4be3-4d6b-8077-4712cc1e0e75
+10-23-2021 16:35:36 Orchestrator INFO     Scheduling arrival of Arrival: a8cf9227-cb45-4431-9cf6-17917bce65d9
+10-23-2021 16:35:36 Orchestrator INFO     Deploying on cluster: a8cf9227-cb45-4431-9cf6-17917bce65d9
+10-23-2021 16:35:37 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:37 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:35:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:35:39 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:35:40 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[2338.4375, 2529.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:35:41 Orchestrator INFO     Scheduling arrival of Arrival: bd2bc4fc-a5fa-4e05-b6bf-0e85ae7f20ba
+10-23-2021 16:35:41 Orchestrator INFO     Deploying on cluster: bd2bc4fc-a5fa-4e05-b6bf-0e85ae7f20ba
+10-23-2021 16:35:42 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:44 ClusterManager INFO     Still alive...
+10-23-2021 16:35:46 Orchestrator INFO     Scheduling arrival of Arrival: a3f2a65c-e182-455f-8c32-158fa1e5321f
+10-23-2021 16:35:46 Orchestrator INFO     Deploying on cluster: a3f2a65c-e182-455f-8c32-158fa1e5321f
+10-23-2021 16:35:47 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:49 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:35:49 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:50 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:35:51 Orchestrator INFO     Scheduling arrival of Arrival: d8865c23-d9ca-475e-aa08-a5c97e251175
+10-23-2021 16:35:51 Orchestrator INFO     Deploying on cluster: d8865c23-d9ca-475e-aa08-a5c97e251175
+10-23-2021 16:35:51 Orchestrator INFO     Scheduling arrival of Arrival: 7696c0a1-ff37-4eca-b8fe-8b6c83e67ec5
+10-23-2021 16:35:51 Orchestrator INFO     Deploying on cluster: 7696c0a1-ff37-4eca-b8fe-8b6c83e67ec5
+10-23-2021 16:35:51 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:35:51 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:52 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[544.4375, 9664.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:35:54 ClusterManager INFO     Still alive...
+10-23-2021 16:35:54 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:56 Orchestrator INFO     Scheduling arrival of Arrival: 0065a74a-e350-4757-a974-fc4d0cf0843f
+10-23-2021 16:35:56 Orchestrator INFO     Deploying on cluster: 0065a74a-e350-4757-a974-fc4d0cf0843f
+10-23-2021 16:35:56 Orchestrator INFO     Scheduling arrival of Arrival: 70327c60-88bc-40d4-bfba-2e2bb3905b2d
+10-23-2021 16:35:56 Orchestrator INFO     Deploying on cluster: 70327c60-88bc-40d4-bfba-2e2bb3905b2d
+10-23-2021 16:35:56 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:35:57 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+3
+10-23-2021 16:35:59 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:36:01 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:36:01 Orchestrator INFO     Scheduling arrival of Arrival: 2d19d956-1e76-44cd-bc02-ed67a797bcc9
+10-23-2021 16:36:01 Orchestrator INFO     Deploying on cluster: 2d19d956-1e76-44cd-bc02-ed67a797bcc9
+10-23-2021 16:36:01 Orchestrator INFO     Scheduling arrival of Arrival: 3b5e0309-3043-40bd-adae-932a173533f1
+10-23-2021 16:36:01 Orchestrator INFO     Deploying on cluster: 3b5e0309-3043-40bd-adae-932a173533f1
+10-23-2021 16:36:01 Orchestrator INFO     Scheduling arrival of Arrival: 248e4b48-741a-42a1-b3de-612e18e9cd2d
+10-23-2021 16:36:01 Orchestrator INFO     Deploying on cluster: 248e4b48-741a-42a1-b3de-612e18e9cd2d
+10-23-2021 16:36:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:36:03 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:36:03 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[29.4375, 26.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:36:04 ClusterManager INFO     Still alive...
+10-23-2021 16:36:04 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:06 Orchestrator INFO     Scheduling arrival of Arrival: 98d53ac8-0885-48fd-b71d-16ef69b9fc6e
+10-23-2021 16:36:06 Orchestrator INFO     Deploying on cluster: 98d53ac8-0885-48fd-b71d-16ef69b9fc6e
+10-23-2021 16:36:09 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:10 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:36:11 Orchestrator INFO     Scheduling arrival of Arrival: 0b6dfeb6-6e96-442c-8246-7b7118ea010f
+10-23-2021 16:36:11 Orchestrator INFO     Deploying on cluster: 0b6dfeb6-6e96-442c-8246-7b7118ea010f
+10-23-2021 16:36:11 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[313.4375, 16741.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:36:12 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:36:12 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:36:14 ClusterManager INFO     Still alive...
+10-23-2021 16:36:14 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:36:15 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[3706.4375, 12050.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:36:16 Orchestrator INFO     Scheduling arrival of Arrival: fa40c807-6702-4629-9e90-4f487ffca80e
+10-23-2021 16:36:16 Orchestrator INFO     Deploying on cluster: fa40c807-6702-4629-9e90-4f487ffca80e
+10-23-2021 16:36:16 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:17 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:20 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:21 Orchestrator INFO     Scheduling arrival of Arrival: e9104b73-8085-4b44-aa2f-16ea96663d16
+10-23-2021 16:36:21 Orchestrator INFO     Deploying on cluster: e9104b73-8085-4b44-aa2f-16ea96663d16
+10-23-2021 16:36:21 Orchestrator INFO     Scheduling arrival of Arrival: e2262856-9287-4a7e-b305-28c826beb531
+10-23-2021 16:36:21 Orchestrator INFO     Deploying on cluster: e2262856-9287-4a7e-b305-28c826beb531
+10-23-2021 16:36:21 Orchestrator INFO     Scheduling arrival of Arrival: e9f175fc-0533-4258-9454-623f04895270
+10-23-2021 16:36:21 Orchestrator INFO     Deploying on cluster: e9f175fc-0533-4258-9454-623f04895270
+10-23-2021 16:36:24 ClusterManager INFO     Still alive...
+10-23-2021 16:36:24 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:36:24 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:36:26 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:36:26 Orchestrator INFO     Scheduling arrival of Arrival: 7cb1adbe-ccff-4416-8152-2f5ca3404f3d
+10-23-2021 16:36:26 Orchestrator INFO     Deploying on cluster: 7cb1adbe-ccff-4416-8152-2f5ca3404f3d
+10-23-2021 16:36:27 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1415.4375, 1888.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:36:27 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:30 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:31 Orchestrator INFO     Scheduling arrival of Arrival: 58714fea-2241-465d-9deb-61c2e7d26f6c
+10-23-2021 16:36:31 Orchestrator INFO     Deploying on cluster: 58714fea-2241-465d-9deb-61c2e7d26f6c
+10-23-2021 16:36:31 Orchestrator INFO     Scheduling arrival of Arrival: ce3957f5-3476-46a9-8e79-81f89b124152
+10-23-2021 16:36:31 Orchestrator INFO     Deploying on cluster: ce3957f5-3476-46a9-8e79-81f89b124152
+10-23-2021 16:36:33 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:34 ClusterManager INFO     Still alive...
+10-23-2021 16:36:36 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:36:36 Orchestrator INFO     Scheduling arrival of Arrival: 6e4f7278-64b8-4c38-ab9b-e674394b76b5
+10-23-2021 16:36:36 Orchestrator INFO     Deploying on cluster: 6e4f7278-64b8-4c38-ab9b-e674394b76b5
+3
+10-23-2021 16:36:36 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:36:37 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:36:38 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:36:38 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[2289.4375, 6686.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:36:41 Orchestrator INFO     Scheduling arrival of Arrival: f6eba8b3-bd69-4cb2-ae80-d82ac2987915
+10-23-2021 16:36:41 Orchestrator INFO     Deploying on cluster: f6eba8b3-bd69-4cb2-ae80-d82ac2987915
+10-23-2021 16:36:41 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:44 ClusterManager INFO     Still alive...
+10-23-2021 16:36:44 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:36:46 Orchestrator INFO     Scheduling arrival of Arrival: 3dbec5d3-3fdf-43c1-b65d-7cb028b6204a
+10-23-2021 16:36:46 Orchestrator INFO     Deploying on cluster: 3dbec5d3-3fdf-43c1-b65d-7cb028b6204a
+10-23-2021 16:36:46 Orchestrator INFO     Scheduling arrival of Arrival: 41bbd06c-6b36-4a19-bd26-de5a6bf323be
+10-23-2021 16:36:46 Orchestrator INFO     Deploying on cluster: 41bbd06c-6b36-4a19-bd26-de5a6bf323be
+10-23-2021 16:36:47 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:36:48 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+3
+10-23-2021 16:36:49 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:36:49 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:36:50 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[7827.4375, 18254.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:36:51 Orchestrator INFO     Scheduling arrival of Arrival: 4b51ec53-3356-4e1d-959f-6126a38d37b2
+10-23-2021 16:36:51 Orchestrator INFO     Deploying on cluster: 4b51ec53-3356-4e1d-959f-6126a38d37b2
+10-23-2021 16:36:51 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+3
+10-23-2021 16:36:53 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:36:54 ClusterManager INFO     Still alive...
+10-23-2021 16:36:56 Orchestrator INFO     Scheduling arrival of Arrival: 8e13edc0-3d3e-4798-bd3b-481727395418
+10-23-2021 16:36:56 Orchestrator INFO     Deploying on cluster: 8e13edc0-3d3e-4798-bd3b-481727395418
+10-23-2021 16:36:56 Orchestrator INFO     Scheduling arrival of Arrival: 2a15c80e-437e-4846-82ee-aa9325098876
+10-23-2021 16:36:56 Orchestrator INFO     Deploying on cluster: 2a15c80e-437e-4846-82ee-aa9325098876
+3
+10-23-2021 16:36:58 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+10-23-2021 16:36:59 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:37:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:37:01 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:37:01 Orchestrator INFO     Scheduling arrival of Arrival: aa01701c-3cbe-49bd-a8d5-a38d0b3f432b
+10-23-2021 16:37:01 Orchestrator INFO     Deploying on cluster: aa01701c-3cbe-49bd-a8d5-a38d0b3f432b
+10-23-2021 16:37:01 StyleGANExperimentGenerator INFO     Creating task for StyleGANInferenceJob
+3
+10-23-2021 16:37:01 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[807.4375, 10246.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:37:03 StyleGANExperimentGenerator INFO     Stopped execution at: 1635007023.867392, duration: 600.0092012882233/600
+10-23-2021 16:37:04 ClusterManager INFO     Still alive...
+10-23-2021 16:37:06 Orchestrator INFO     Received stop signal for the Orchestrator. Waiting 2 minutes for jobs to finish
+10-23-2021 16:37:10 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:37:12 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:37:13 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:37:13 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1068.4375, 5786.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:37:13 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:37:14 ClusterManager INFO     Still alive...
+10-23-2021 16:37:14 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[866.4375, 4740.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:37:22 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:37:23 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:37:24 ClusterManager INFO     Still alive...
+10-23-2021 16:37:24 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:37:25 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[9514.4375, 20344.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:37:34 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:37:34 ClusterManager INFO     Still alive...
+10-23-2021 16:37:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:37:36 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:37:36 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1873.4375, 4424.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:37:44 ClusterManager INFO     Still alive...
+10-23-2021 16:37:45 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:37:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:37:47 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:37:48 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[9214.4375, 1374.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:37:54 ClusterManager INFO     Still alive...
+10-23-2021 16:37:57 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:37:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:37:59 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:37:59 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[157.4375, 2574.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:38:04 ClusterManager INFO     Still alive...
+10-23-2021 16:38:08 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:38:10 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:38:11 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:38:11 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[3374.4375, 6041.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:38:14 ClusterManager INFO     Still alive...
+10-23-2021 16:38:14 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:38:15 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[3366.4375, 1000.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:38:20 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:38:21 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:38:22 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:38:22 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1392.4375, 8397.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:38:24 ClusterManager INFO     Still alive...
+10-23-2021 16:38:31 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:38:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:38:33 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:38:33 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1233.4375, 7755.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:38:34 ClusterManager INFO     Still alive...
+10-23-2021 16:38:42 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:38:43 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:38:44 ClusterManager INFO     Still alive...
+10-23-2021 16:38:44 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:38:45 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[1364.4375, 22.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:38:54 ClusterManager INFO     Still alive...
+10-23-2021 16:38:54 ResourceWatchDog INFO     Fetching job finish times...
+10-23-2021 16:38:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025 failed. Reason: 'NoneType' object is not iterable
+10-23-2021 16:38:57 ResourceWatchDog INFO     Fetching resource information of cluster...
+10-23-2021 16:38:57 ResourceWatchDog INFO     {'ubuntu94025': Resource(node_name='ubuntu94025', cpu_allocatable=<Quantity(24, 'dimensionless')>, memory_allocatable=<Quantity(65626416, 'Ki')>, cpu_requested=<Quantity(2.72, 'dimensionless')>, memory_requested=<Quantity(3570766848, 'dimensionless')>, cpu_limit=<Quantity(22.4, 'dimensionless')>, memory_limit=<Quantity(15637779456, 'dimensionless')>, vram_free=[10.4375, 8301.6875], vram_total=[11178.5, 24268.3125])}
+10-23-2021 16:39:04 ClusterManager INFO     Still alive...
+10-23-2021 16:39:06 ResourceWatchDog INFO     Fetching job finish times...
+
+
+
+
+task_info {UUID('544b4081-6518-4b5e-9b6c-5e9ce2f83674'): ('style2', 512, 'random', 100, 'cuda:1', 8, 1), UUID('26f2b7ec-66fd-48df-89a6-3d64029635e6'): ('style2', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('279d923d-f7cc-4e40-a6a1-6497ea66d028'): ('style2ada', 512, 'interpolation', 200, 'cuda:1', 8, 1), UUID('4a4c25da-85ad-4538-ac2e-fcc0162301d8'): ('style2', 256, 'random', 200, 'cuda:1', 8, 1), UUID('637ba351-182c-4584-b41e-d5db9e6cfec9'): ('swa', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('f1bbedab-639c-448b-9577-7c0f0ec5bb63'): ('style2ada', 256, 'interpolation', 100, 'cuda:0', 8, 1), UUID('314ff658-ca7c-455d-938a-aa6a8cae7835'): ('swa', 256, 'interpolation', 100, 'cuda:0', 8, 1), UUID('a509841a-f92f-4f60-b9a7-99f3a11f8c37'): ('swa', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('7c291f3e-f95a-4c00-acb7-9a9b9fa994c5'): ('swa', 256, 'random', 100, 'cuda:0', 8, 1), UUID('f838f763-5567-4d15-b29a-1d436eaeff35'): ('swa', 256, 'interpolation', 800, 'cuda:1', 8, 1), UUID('8dac33bb-03f1-4e59-8c60-7679df58c502'): ('style2', 512, 'random', 200, 'cuda:0', 8, 1), UUID('d0780181-0275-48c4-9891-1306a3751a8c'): ('style2', 1024, 'interpolation', 200, 'cuda:1', 8, 1), UUID('b039622d-c326-4cf9-a88f-3a5df71a7d8e'): ('stylemap', 256, 'random', 200, 'cuda:0', 8, 1), UUID('d71f3315-6b6d-4277-bcc5-0b0f2d224804'): ('style2ada', 256, 'interpolation', 100, 'cuda:1', 8, 1), UUID('987bad87-26a7-4666-b45c-a252e7f59ae1'): ('style2ada', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('4ad0d7ad-56a8-4f19-941f-f2230273fa85'): ('swa', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('08861f71-d288-43c4-9ea5-4b8a059c0906'): ('style2ada', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('64d68b82-f063-499c-aa77-0c96aa170bf9'): ('swa', 1024, 'interpolation', 200, 'cuda:0', 8, 1), UUID('b1aabaf0-3a26-40b1-ab23-39957eeaa42b'): ('style2', 256, 'interpolation', 100, 'cuda:0', 8, 1), UUID('a26d179a-4e21-4361-9459-ace14c2440a0'): ('swa', 256, 'interpolation', 400, 'cuda:0', 8, 1), UUID('591df2ad-5efc-48e6-856b-cdd1ea6b1fd6'): ('style2ada', 1024, 'interpolation', 400, 'cuda:0', 8, 1), UUID('4e4776e2-d976-4a10-b303-9aeff010fb23'): ('style2ada', 1024, 'random', 400, 'cuda:0', 8, 1), UUID('f79b0b6b-ac8d-48ab-8ce6-272c0a1878f8'): ('style1', 1024, 'interpolation', 800, 'cuda:1', 8, 1), UUID('8f7db2b7-3a57-434d-b30e-e596a4937597'): ('style1', 256, 'random', 800, 'cuda:0', 8, 1), UUID('46e560bb-42f9-4341-9b55-9e2216d95c0c'): ('style2ada', 512, 'random', 200, 'cuda:1', 8, 1), UUID('5f69e1ce-29eb-4b3b-845d-5649bd99cc42'): ('style1', 512, 'random', 800, 'cuda:0', 8, 1), UUID('e4824a5f-d103-4f87-a45d-b81380ae711d'): ('mobile', 1024, 'interpolation', 800, 'cuda:0', 8, 1), UUID('248a1f22-b90e-4842-993d-1f01264e9f25'): ('style2', 1024, 'random', 200, 'cuda:1', 8, 1), UUID('4180f85c-772a-4ee1-a6e8-8837a8fb7624'): ('stylemap', 1024, 'interpolation', 400, 'cuda:0', 8, 1), UUID('2196d86c-0c7c-421c-85ba-1012f55ff9a6'): ('style2ada', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('f80041f4-27fd-4004-9673-5567a5d72bb8'): ('swa', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('689c5881-fb9a-43f4-9506-ae4bc597677f'): ('style1', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('c13bd857-6b8f-4a03-81f7-96598336ac9c'): ('stylemap', 1024, 'random', 200, 'cuda:1', 8, 1), UUID('a0e72839-1dd3-4bfd-92d2-e3aab91462bc'): ('anycost', 512, 'interpolation', 800, 'cuda:1', 8, 1), UUID('b95da39c-0e75-4e58-affb-79ad9fe49b03'): ('style2', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('c3f19edc-3301-4875-8452-25fda7f9fa00'): ('style2', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('511dcb71-704e-4301-b163-ed79fc1679e5'): ('style2ada', 256, 'random', 100, 'cuda:0', 8, 1), UUID('ce3e561e-d623-4f77-9ac5-1e23cf6629bf'): ('style2ada', 256, 'random', 800, 'cuda:0', 8, 1), UUID('c88673cf-35b7-4f41-8d90-ab5686a4141a'): ('stylemap', 512, 'random', 800, 'cuda:1', 8, 1), UUID('9e547492-c4d8-4e01-89eb-54d973fad137'): ('stylemap', 256, 'random', 100, 'cuda:0', 8, 1), UUID('3d424c9d-e6f6-4d63-83fa-d9c13b0bbb55'): ('mobile', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('d295678a-a673-4dba-b0d6-971bfdee9386'): ('anycost', 1024, 'interpolation', 400, 'cuda:0', 8, 1), UUID('04dd263b-f31a-4964-adc7-a8c83ee48255'): ('style2ada', 256, 'random', 200, 'cuda:1', 8, 1), UUID('4a6c586c-442b-4915-a843-6eab77af198a'): ('stylemap', 256, 'random', 800, 'cuda:1', 8, 1), UUID('38cd18c0-8fba-4b2e-9542-7a50cba7e20d'): ('style1', 1024, 'random', 400, 'cuda:1', 8, 1), UUID('c21b69b3-bb92-4754-84ca-7c8871dbd509'): ('swa', 256, 'random', 100, 'cuda:1', 8, 1), UUID('b3c945e8-3df7-4c47-9ba0-a520ee2268c6'): ('swa', 256, 'interpolation', 400, 'cuda:1', 8, 1), UUID('6c0eee5b-4d7f-4b07-bd24-a1a1923a2ae1'): ('swa', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('01bfab6b-e21a-4933-b166-b81252ebabd6'): ('style2ada', 1024, 'interpolation', 800, 'cuda:0', 8, 1), UUID('e1d5b984-74f8-4a19-8880-53c8fe27d678'): ('anycost', 1024, 'interpolation', 200, 'cuda:0', 8, 1), UUID('0d170058-a5c5-4a7f-8e21-34cd7d990b81'): ('style1', 1024, 'interpolation', 100, 'cuda:1', 8, 1), UUID('280cc135-dc44-4e73-9ca2-6764bf9bce83'): ('style1', 256, 'interpolation', 400, 'cuda:0', 8, 1), UUID('376ec017-1a5f-4e10-9762-7a2ef4c35371'): ('anycost', 512, 'interpolation', 800, 'cuda:1', 8, 1), UUID('c16fbeeb-6f0d-4b3f-b608-0fbd31d32ef1'): ('style1', 512, 'interpolation', 100, 'cuda:1', 8, 1), UUID('c54f1504-c92e-4a42-ac72-3b643d611ae1'): ('anycost', 1024, 'random', 200, 'cuda:1', 8, 1), UUID('a1a60657-fcb9-4ff8-9d06-23f5ff64d2c3'): ('mobile', 256, 'random', 400, 'cuda:1', 8, 1), UUID('a2daaf4b-0d33-4ebb-a3a7-4f130ce9af9a'): ('style1', 256, 'interpolation', 800, 'cuda:0', 8, 1), UUID('8cec7848-27e6-46ff-8bb8-c9d576e7f1a1'): ('stylemap', 1024, 'random', 400, 'cuda:1', 8, 1), UUID('3e8238f7-83a3-4859-88d5-adcc584ccd37'): ('style2ada', 256, 'interpolation', 800, 'cuda:0', 8, 1), UUID('5a6acc05-38df-480c-8b42-6a6adecbf961'): ('swa', 256, 'interpolation', 100, 'cuda:0', 8, 1), UUID('698a17ed-43f3-4627-99ac-8fc819056bb7'): ('anycost', 1024, 'random', 400, 'cuda:1', 8, 1), UUID('de485935-d4cf-4d5b-87b1-bef88b4ea769'): ('style1', 256, 'random', 100, 'cuda:0', 8, 1), UUID('c45374eb-9d4a-41e2-9d8f-a30178334b3c'): ('mobile', 256, 'random', 200, 'cuda:0', 8, 1), UUID('efc2970f-09bd-48d6-b36f-f75be48da506'): ('style1', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('5861ddfb-5119-49aa-baa5-3bf6db54f38c'): ('style1', 1024, 'interpolation', 800, 'cuda:0', 8, 1), UUID('925f1bf6-067f-49ce-b393-830cf323fceb'): ('style2ada', 256, 'interpolation', 200, 'cuda:0', 8, 1), UUID('bda08a28-8270-4f10-ab6f-acb6bf9ff83a'): ('style2ada', 512, 'interpolation', 200, 'cuda:0', 8, 1), UUID('77b7835e-fcfa-4f1c-9c2d-6aa7cbd6832a'): ('stylemap', 256, 'interpolation', 400, 'cuda:0', 8, 1), UUID('b156685e-c947-40b7-8eaf-ef520c252736'): ('stylemap', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('c095876a-d2d2-4bdf-b63b-b8547201190c'): ('mobile', 256, 'interpolation', 100, 'cuda:0', 8, 1), UUID('2ccb5474-7086-4150-91a9-73e44b0baea2'): ('style2ada', 1024, 'random', 100, 'cuda:0', 8, 1), UUID('6c5a5b79-9eae-4cd8-9d74-8e126a6c86b4'): ('swa', 512, 'interpolation', 100, 'cuda:1', 8, 1), UUID('abb9e159-d1b1-476b-abab-ac6c75b6ac3a'): ('stylemap', 1024, 'random', 200, 'cuda:1', 8, 1), UUID('faa8338a-1d25-44f5-9369-d32e37ade807'): ('mobile', 1024, 'interpolation', 100, 'cuda:1', 8, 1), UUID('4f7ec7e6-88c0-4a2a-80e2-dff9c97b6876'): ('style2ada', 256, 'interpolation', 400, 'cuda:1', 8, 1), UUID('6a12af29-962c-4402-89f8-25e5dd61d09b'): ('mobile', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('4b60b0d4-8340-4f07-83fa-b6d416e348d3'): ('style2ada', 1024, 'random', 100, 'cuda:1', 8, 1), UUID('24d29e66-8718-40ea-aa69-265760017a3b'): ('style1', 256, 'random', 400, 'cuda:0', 8, 1), UUID('64e11704-85b9-4d06-a0c6-329f98856e4a'): ('style2ada', 256, 'random', 400, 'cuda:0', 8, 1), UUID('c27b27a3-15d1-48b5-b21c-28ed78ddc817'): ('stylemap', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('ea2d85c8-9fce-4ad0-9a24-efc09a56c73a'): ('style2ada', 1024, 'interpolation', 800, 'cuda:0', 8, 1), UUID('3c608171-4e3a-4144-82ef-60dc23233eed'): ('mobile', 512, 'interpolation', 800, 'cuda:1', 8, 1), UUID('1c4ddc98-7114-4930-b1d5-36bd98087fcf'): ('style2ada', 512, 'random', 800, 'cuda:1', 8, 1), UUID('fc349960-b47f-49df-beae-8244e07ad0ff'): ('style1', 256, 'interpolation', 800, 'cuda:0', 8, 1), UUID('0112efbe-eee6-48e3-96f2-93ee48406796'): ('style2ada', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('470793ef-b39e-4385-a0e2-669fa88a0afd'): ('mobile', 1024, 'random', 800, 'cuda:1', 8, 1), UUID('1e2749b8-6aec-4f68-a672-59ce550b6b30'): ('stylemap', 512, 'random', 800, 'cuda:0', 8, 1), UUID('caa8faa0-5ed5-418b-b6ce-c64bc173ef7b'): ('swa', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('b5eb7e61-deec-43a1-85f7-60456294ab27'): ('anycost', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('0e1617b6-ee60-4d6d-8498-2134cd3ee614'): ('style2ada', 512, 'random', 100, 'cuda:1', 8, 1), UUID('cabf456e-f5af-4f87-a4ed-020ddb16bbf3'): ('style2', 256, 'random', 100, 'cuda:1', 8, 1), UUID('9d0b3219-0803-43cb-9551-148ea05f50da'): ('style2', 512, 'random', 800, 'cuda:0', 8, 1), UUID('a0af8ba8-deba-4c8c-a084-1e77043689b3'): ('style2', 1024, 'interpolation', 200, 'cuda:1', 8, 1), UUID('8115dcc1-980f-46fa-9ff0-18a2384db5c8'): ('anycost', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('4f75eaea-ae44-47c1-9c7b-0fb4c761d73e'): ('stylemap', 256, 'random', 800, 'cuda:0', 8, 1), UUID('45807fdf-6a57-41bb-be74-af75307e2ae6'): ('stylemap', 512, 'random', 200, 'cuda:1', 8, 1), UUID('55d410b9-7129-45c3-90b6-2ea183f5c9a8'): ('swa', 256, 'random', 100, 'cuda:1', 8, 1), UUID('a8cf9227-cb45-4431-9cf6-17917bce65d9'): ('style2', 256, 'random', 400, 'cuda:0', 8, 1), UUID('bd2bc4fc-a5fa-4e05-b6bf-0e85ae7f20ba'): ('style2ada', 256, 'random', 100, 'cuda:0', 8, 1), UUID('a3f2a65c-e182-455f-8c32-158fa1e5321f'): ('style2ada', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('7696c0a1-ff37-4eca-b8fe-8b6c83e67ec5'): ('stylemap', 512, 'interpolation', 100, 'cuda:1', 8, 1), UUID('70327c60-88bc-40d4-bfba-2e2bb3905b2d'): ('style2ada', 256, 'interpolation', 200, 'cuda:0', 8, 1), UUID('248e4b48-741a-42a1-b3de-612e18e9cd2d'): ('swa', 1024, 'interpolation', 800, 'cuda:0', 8, 1), UUID('98d53ac8-0885-48fd-b71d-16ef69b9fc6e'): ('style2', 512, 'random', 400, 'cuda:0', 8, 1), UUID('0b6dfeb6-6e96-442c-8246-7b7118ea010f'): ('anycost', 1024, 'random', 100, 'cuda:0', 8, 1), UUID('fa40c807-6702-4629-9e90-4f487ffca80e'): ('mobile', 512, 'random', 100, 'cuda:0', 8, 1), UUID('e9f175fc-0533-4258-9454-623f04895270'): ('mobile', 512, 'interpolation', 200, 'cuda:0', 8, 1), UUID('7cb1adbe-ccff-4416-8152-2f5ca3404f3d'): ('style2ada', 512, 'interpolation', 100, 'cuda:0', 8, 1), UUID('ce3957f5-3476-46a9-8e79-81f89b124152'): ('swa', 256, 'random', 400, 'cuda:1', 8, 1), UUID('6e4f7278-64b8-4c38-ab9b-e674394b76b5'): ('mobile', 1024, 'interpolation', 800, 'cuda:0', 8, 1), UUID('f6eba8b3-bd69-4cb2-ae80-d82ac2987915'): ('mobile', 256, 'random', 400, 'cuda:0', 8, 1), UUID('41bbd06c-6b36-4a19-bd26-de5a6bf323be'): ('style1', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('4b51ec53-3356-4e1d-959f-6126a38d37b2'): ('style2', 512, 'interpolation', 100, 'cuda:1', 8, 1), UUID('2a15c80e-437e-4846-82ee-aa9325098876'): ('style2', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('aa01701c-3cbe-49bd-a8d5-a38d0b3f432b'): ('stylemap', 1024, 'interpolation', 100, 'cuda:0', 8, 1)}
+arrival_times {UUID('7a73a21a-9e7b-4247-9b36-3c73f5f53f3b'): datetime.datetime(2021, 10, 23, 16, 27, 8, 885230), UUID('544b4081-6518-4b5e-9b6c-5e9ce2f83674'): datetime.datetime(2021, 10, 23, 16, 27, 8, 885284), UUID('d9c1e0df-42f4-4098-aafb-a12b4915df99'): datetime.datetime(2021, 10, 23, 16, 27, 13, 915877), UUID('26f2b7ec-66fd-48df-89a6-3d64029635e6'): datetime.datetime(2021, 10, 23, 16, 27, 13, 915932), UUID('8aa3bf78-83b6-418c-88be-21c753f9a80f'): datetime.datetime(2021, 10, 23, 16, 27, 18, 986839), UUID('279d923d-f7cc-4e40-a6a1-6497ea66d028'): datetime.datetime(2021, 10, 23, 16, 27, 18, 986893), UUID('e14e0e59-7468-40a3-87cc-97b55669084a'): datetime.datetime(2021, 10, 23, 16, 27, 24, 2789), UUID('4a4c25da-85ad-4538-ac2e-fcc0162301d8'): datetime.datetime(2021, 10, 23, 16, 27, 24, 2839), UUID('699dc232-0fb4-4f4d-aec1-c21289912461'): datetime.datetime(2021, 10, 23, 16, 27, 29, 21208), UUID('637ba351-182c-4584-b41e-d5db9e6cfec9'): datetime.datetime(2021, 10, 23, 16, 27, 29, 21257), UUID('660d842a-396d-454c-bd4f-9432e89b65c5'): datetime.datetime(2021, 10, 23, 16, 27, 34, 38863), UUID('63c9c8a2-2d8d-4bc0-af57-a3432125ff9e'): datetime.datetime(2021, 10, 23, 16, 27, 34, 38922), UUID('f1bbedab-639c-448b-9577-7c0f0ec5bb63'): datetime.datetime(2021, 10, 23, 16, 27, 34, 38959), UUID('314ff658-ca7c-455d-938a-aa6a8cae7835'): datetime.datetime(2021, 10, 23, 16, 27, 39, 62781), UUID('a509841a-f92f-4f60-b9a7-99f3a11f8c37'): datetime.datetime(2021, 10, 23, 16, 27, 44, 74848), UUID('78abd25f-0e14-4190-bb5b-38443e87a002'): datetime.datetime(2021, 10, 23, 16, 27, 49, 89778), UUID('0ed57a76-93ef-4648-af11-f02fe1480279'): datetime.datetime(2021, 10, 23, 16, 27, 49, 89826), UUID('7c291f3e-f95a-4c00-acb7-9a9b9fa994c5'): datetime.datetime(2021, 10, 23, 16, 27, 49, 89860), UUID('7c68c5c3-9307-4b7d-a79c-476fc2c5d523'): datetime.datetime(2021, 10, 23, 16, 27, 54, 110857), UUID('f838f763-5567-4d15-b29a-1d436eaeff35'): datetime.datetime(2021, 10, 23, 16, 27, 54, 110894), UUID('8dac33bb-03f1-4e59-8c60-7679df58c502'): datetime.datetime(2021, 10, 23, 16, 27, 59, 126839), UUID('572540a9-8ced-48e0-bf9f-7ddaf9542b18'): datetime.datetime(2021, 10, 23, 16, 28, 4, 144271), UUID('837f1622-893e-43a7-8027-dbfca8a33fdf'): datetime.datetime(2021, 10, 23, 16, 28, 4, 144335), UUID('d0780181-0275-48c4-9891-1306a3751a8c'): datetime.datetime(2021, 10, 23, 16, 28, 4, 144368), UUID('b039622d-c326-4cf9-a88f-3a5df71a7d8e'): datetime.datetime(2021, 10, 23, 16, 28, 9, 242910), UUID('d71f3315-6b6d-4277-bcc5-0b0f2d224804'): datetime.datetime(2021, 10, 23, 16, 28, 14, 256761), UUID('98413e72-a8a9-463e-ac5d-fbec4bf1c269'): datetime.datetime(2021, 10, 23, 16, 28, 19, 270940), UUID('ea11ed96-b53b-4d16-a4b3-8f513d8d2071'): datetime.datetime(2021, 10, 23, 16, 28, 19, 270996), UUID('987bad87-26a7-4666-b45c-a252e7f59ae1'): datetime.datetime(2021, 10, 23, 16, 28, 19, 271032), UUID('61f131dc-fa6c-439a-937b-364a2db44611'): datetime.datetime(2021, 10, 23, 16, 28, 24, 298851), UUID('4ad0d7ad-56a8-4f19-941f-f2230273fa85'): datetime.datetime(2021, 10, 23, 16, 28, 24, 298908), UUID('08861f71-d288-43c4-9ea5-4b8a059c0906'): datetime.datetime(2021, 10, 23, 16, 28, 29, 318853), UUID('64d68b82-f063-499c-aa77-0c96aa170bf9'): datetime.datetime(2021, 10, 23, 16, 28, 34, 330861), UUID('77428587-a59e-499a-affb-0bec34944608'): datetime.datetime(2021, 10, 23, 16, 28, 39, 342789), UUID('b1aabaf0-3a26-40b1-ab23-39957eeaa42b'): datetime.datetime(2021, 10, 23, 16, 28, 39, 342839), UUID('26397366-5fb4-4706-ae40-a5cf778fedd8'): datetime.datetime(2021, 10, 23, 16, 28, 44, 358878), UUID('a26d179a-4e21-4361-9459-ace14c2440a0'): datetime.datetime(2021, 10, 23, 16, 28, 44, 358926), UUID('591df2ad-5efc-48e6-856b-cdd1ea6b1fd6'): datetime.datetime(2021, 10, 23, 16, 28, 49, 378868), UUID('6338fc32-b430-4cb4-b77d-32fbb2feae7b'): datetime.datetime(2021, 10, 23, 16, 28, 54, 395054), UUID('5a1b0381-0bc4-425d-ba2c-5d76a27d8fa8'): datetime.datetime(2021, 10, 23, 16, 28, 54, 395110), UUID('4e4776e2-d976-4a10-b303-9aeff010fb23'): datetime.datetime(2021, 10, 23, 16, 28, 54, 395146), UUID('f79b0b6b-ac8d-48ab-8ce6-272c0a1878f8'): datetime.datetime(2021, 10, 23, 16, 28, 59, 431915), UUID('8f7db2b7-3a57-434d-b30e-e596a4937597'): datetime.datetime(2021, 10, 23, 16, 29, 4, 474823), UUID('bc3d1cd3-8e37-4f77-be34-e303ad398021'): datetime.datetime(2021, 10, 23, 16, 29, 9, 490864), UUID('46e560bb-42f9-4341-9b55-9e2216d95c0c'): datetime.datetime(2021, 10, 23, 16, 29, 9, 490915), UUID('c5405daa-af3f-4a26-80d0-ff4337381cc9'): datetime.datetime(2021, 10, 23, 16, 29, 14, 510917), UUID('5f69e1ce-29eb-4b3b-845d-5649bd99cc42'): datetime.datetime(2021, 10, 23, 16, 29, 14, 510974), UUID('ac6e508b-2cc8-47d4-bbf3-2fe3d6a799c8'): datetime.datetime(2021, 10, 23, 16, 29, 19, 527019), UUID('e4824a5f-d103-4f87-a45d-b81380ae711d'): datetime.datetime(2021, 10, 23, 16, 29, 19, 527076), UUID('248a1f22-b90e-4842-993d-1f01264e9f25'): datetime.datetime(2021, 10, 23, 16, 29, 24, 544461), UUID('4180f85c-772a-4ee1-a6e8-8837a8fb7624'): datetime.datetime(2021, 10, 23, 16, 29, 29, 556647), UUID('a3667db3-4a03-4577-bab5-998ba659e9d0'): datetime.datetime(2021, 10, 23, 16, 29, 34, 570950), UUID('2196d86c-0c7c-421c-85ba-1012f55ff9a6'): datetime.datetime(2021, 10, 23, 16, 29, 34, 570998), UUID('f81afc68-dfaa-4287-b234-4529d4a0cf89'): datetime.datetime(2021, 10, 23, 16, 29, 39, 595485), UUID('f80041f4-27fd-4004-9673-5567a5d72bb8'): datetime.datetime(2021, 10, 23, 16, 29, 39, 595848), UUID('3a97c4a1-ca65-4e2e-a18b-2def6cdf0460'): datetime.datetime(2021, 10, 23, 16, 29, 44, 626860), UUID('689c5881-fb9a-43f4-9506-ae4bc597677f'): datetime.datetime(2021, 10, 23, 16, 29, 44, 626912), UUID('dcddb59d-aedf-46fd-b88b-7a96aa434cba'): datetime.datetime(2021, 10, 23, 16, 29, 54, 650841), UUID('c13bd857-6b8f-4a03-81f7-96598336ac9c'): datetime.datetime(2021, 10, 23, 16, 29, 54, 650895), UUID('a0e72839-1dd3-4bfd-92d2-e3aab91462bc'): datetime.datetime(2021, 10, 23, 16, 29, 59, 666878), UUID('62814363-28fd-4f5f-a40b-fdea0530f352'): datetime.datetime(2021, 10, 23, 16, 30, 4, 674897), UUID('b95da39c-0e75-4e58-affb-79ad9fe49b03'): datetime.datetime(2021, 10, 23, 16, 30, 4, 674947), UUID('0b6be844-7310-4b2c-a499-da4d72697c75'): datetime.datetime(2021, 10, 23, 16, 30, 9, 694830), UUID('c3f19edc-3301-4875-8452-25fda7f9fa00'): datetime.datetime(2021, 10, 23, 16, 30, 9, 694879), UUID('511dcb71-704e-4301-b163-ed79fc1679e5'): datetime.datetime(2021, 10, 23, 16, 30, 14, 732075), UUID('ce3e561e-d623-4f77-9ac5-1e23cf6629bf'): datetime.datetime(2021, 10, 23, 16, 30, 19, 746864), UUID('39effae5-d832-4d43-8037-a7a6b8a9a912'): datetime.datetime(2021, 10, 23, 16, 30, 24, 758988), UUID('c88673cf-35b7-4f41-8d90-ab5686a4141a'): datetime.datetime(2021, 10, 23, 16, 30, 24, 759054), UUID('9e547492-c4d8-4e01-89eb-54d973fad137'): datetime.datetime(2021, 10, 23, 16, 30, 29, 778901), UUID('3d424c9d-e6f6-4d63-83fa-d9c13b0bbb55'): datetime.datetime(2021, 10, 23, 16, 30, 39, 794864), UUID('6a738302-1b45-4016-9858-a82da5fe8d6e'): datetime.datetime(2021, 10, 23, 16, 30, 44, 810052), UUID('6610994c-0b98-405a-afee-3ede6fb4269c'): datetime.datetime(2021, 10, 23, 16, 30, 44, 810108), UUID('d295678a-a673-4dba-b0d6-971bfdee9386'): datetime.datetime(2021, 10, 23, 16, 30, 44, 810146), UUID('5c390c0b-5715-41db-b10a-dedb92afa6cf'): datetime.datetime(2021, 10, 23, 16, 30, 49, 838936), UUID('1a4b4f0f-8759-4eb3-9155-532e46aba2f3'): datetime.datetime(2021, 10, 23, 16, 30, 49, 838997), UUID('04dd263b-f31a-4964-adc7-a8c83ee48255'): datetime.datetime(2021, 10, 23, 16, 30, 49, 839035), UUID('a17a88aa-c5ba-40a7-b356-ff94f79d04e0'): datetime.datetime(2021, 10, 23, 16, 30, 54, 863624), UUID('4a6c586c-442b-4915-a843-6eab77af198a'): datetime.datetime(2021, 10, 23, 16, 30, 54, 863682), UUID('38cd18c0-8fba-4b2e-9542-7a50cba7e20d'): datetime.datetime(2021, 10, 23, 16, 30, 59, 882863), UUID('1498c18d-ad8e-4de1-babf-91bb54e0ad23'): datetime.datetime(2021, 10, 23, 16, 31, 4, 894962), UUID('c21b69b3-bb92-4754-84ca-7c8871dbd509'): datetime.datetime(2021, 10, 23, 16, 31, 4, 895038), UUID('757a9442-6c6b-419e-9584-a6154a18896a'): datetime.datetime(2021, 10, 23, 16, 31, 9, 914868), UUID('b3c945e8-3df7-4c47-9ba0-a520ee2268c6'): datetime.datetime(2021, 10, 23, 16, 31, 9, 914917), UUID('6c0eee5b-4d7f-4b07-bd24-a1a1923a2ae1'): datetime.datetime(2021, 10, 23, 16, 31, 14, 943710), UUID('bd60ab71-9420-4a2f-bcdd-572381c9686b'): datetime.datetime(2021, 10, 23, 16, 31, 19, 954870), UUID('8c0d6c9c-8496-49af-a99b-b96e58f432d4'): datetime.datetime(2021, 10, 23, 16, 31, 19, 954922), UUID('5a7c07ce-6420-47b9-8782-f1bb79fba416'): datetime.datetime(2021, 10, 23, 16, 31, 19, 954961), UUID('01bfab6b-e21a-4933-b166-b81252ebabd6'): datetime.datetime(2021, 10, 23, 16, 31, 19, 954994), UUID('ab432c0f-e984-447b-b2fe-1d9f0c904d52'): datetime.datetime(2021, 10, 23, 16, 31, 24, 982865), UUID('e1d5b984-74f8-4a19-8880-53c8fe27d678'): datetime.datetime(2021, 10, 23, 16, 31, 24, 982911), UUID('0d170058-a5c5-4a7f-8e21-34cd7d990b81'): datetime.datetime(2021, 10, 23, 16, 31, 30, 19885), UUID('6a04491a-8b76-4fc8-9a0b-79f86a75f453'): datetime.datetime(2021, 10, 23, 16, 31, 35, 38859), UUID('280cc135-dc44-4e73-9ca2-6764bf9bce83'): datetime.datetime(2021, 10, 23, 16, 31, 35, 38898), UUID('376ec017-1a5f-4e10-9762-7a2ef4c35371'): datetime.datetime(2021, 10, 23, 16, 31, 40, 54838), UUID('c16fbeeb-6f0d-4b3f-b608-0fbd31d32ef1'): datetime.datetime(2021, 10, 23, 16, 31, 45, 71449), UUID('dd029979-7b11-4b0a-ad12-54774d3dd336'): datetime.datetime(2021, 10, 23, 16, 31, 50, 82811), UUID('e5a084da-ce8f-44a8-8ce9-cc6d2d994da6'): datetime.datetime(2021, 10, 23, 16, 31, 50, 82865), UUID('00fff513-7d3d-4d8f-a7ce-b0f33a8c8476'): datetime.datetime(2021, 10, 23, 16, 31, 50, 82902), UUID('c54f1504-c92e-4a42-ac72-3b643d611ae1'): datetime.datetime(2021, 10, 23, 16, 31, 50, 82936), UUID('ac34656f-f4ff-4532-8fe8-e6d8de623028'): datetime.datetime(2021, 10, 23, 16, 31, 55, 122850), UUID('a1a60657-fcb9-4ff8-9d06-23f5ff64d2c3'): datetime.datetime(2021, 10, 23, 16, 31, 55, 122911), UUID('a2daaf4b-0d33-4ebb-a3a7-4f130ce9af9a'): datetime.datetime(2021, 10, 23, 16, 32, 0, 139895), UUID('8cec7848-27e6-46ff-8bb8-c9d576e7f1a1'): datetime.datetime(2021, 10, 23, 16, 32, 5, 151483), UUID('3e8238f7-83a3-4859-88d5-adcc584ccd37'): datetime.datetime(2021, 10, 23, 16, 32, 10, 162857), UUID('5a6acc05-38df-480c-8b42-6a6adecbf961'): datetime.datetime(2021, 10, 23, 16, 32, 15, 174877), UUID('f784e177-49cd-460b-9057-eb63ce1727c1'): datetime.datetime(2021, 10, 23, 16, 32, 20, 186928), UUID('698a17ed-43f3-4627-99ac-8fc819056bb7'): datetime.datetime(2021, 10, 23, 16, 32, 20, 186985), UUID('de485935-d4cf-4d5b-87b1-bef88b4ea769'): datetime.datetime(2021, 10, 23, 16, 32, 25, 268594), UUID('ecc93109-654e-4e91-87c0-84ab2c006ade'): datetime.datetime(2021, 10, 23, 16, 32, 30, 302897), UUID('c45374eb-9d4a-41e2-9d8f-a30178334b3c'): datetime.datetime(2021, 10, 23, 16, 32, 30, 302936), UUID('efc2970f-09bd-48d6-b36f-f75be48da506'): datetime.datetime(2021, 10, 23, 16, 32, 35, 318936), UUID('8a4f5177-43eb-4c2e-b911-a6708b544a75'): datetime.datetime(2021, 10, 23, 16, 32, 40, 332559), UUID('92fe0fe4-0f29-43d3-8663-0a781a1d0595'): datetime.datetime(2021, 10, 23, 16, 32, 40, 332616), UUID('5861ddfb-5119-49aa-baa5-3bf6db54f38c'): datetime.datetime(2021, 10, 23, 16, 32, 40, 332662), UUID('925f1bf6-067f-49ce-b393-830cf323fceb'): datetime.datetime(2021, 10, 23, 16, 32, 45, 364329), UUID('bda08a28-8270-4f10-ab6f-acb6bf9ff83a'): datetime.datetime(2021, 10, 23, 16, 32, 50, 378810), UUID('f2c581f0-844c-4473-bf39-7ea424f8b8ab'): datetime.datetime(2021, 10, 23, 16, 32, 55, 390832), UUID('d1936623-a2b1-4d57-bdfd-bb3e8f3196c7'): datetime.datetime(2021, 10, 23, 16, 32, 55, 390890), UUID('6d1efab3-2541-484c-903a-1b655f781013'): datetime.datetime(2021, 10, 23, 16, 32, 55, 390927), UUID('77b7835e-fcfa-4f1c-9c2d-6aa7cbd6832a'): datetime.datetime(2021, 10, 23, 16, 32, 55, 390963), UUID('b156685e-c947-40b7-8eaf-ef520c252736'): datetime.datetime(2021, 10, 23, 16, 33, 0, 422872), UUID('93e4ea9c-df0b-4b77-a36e-310f17a18135'): datetime.datetime(2021, 10, 23, 16, 33, 5, 438804), UUID('c095876a-d2d2-4bdf-b63b-b8547201190c'): datetime.datetime(2021, 10, 23, 16, 33, 5, 438852), UUID('2ccb5474-7086-4150-91a9-73e44b0baea2'): datetime.datetime(2021, 10, 23, 16, 33, 10, 484118), UUID('deea5a46-05f2-4492-bd65-b03a9e495c51'): datetime.datetime(2021, 10, 23, 16, 33, 15, 527119), UUID('6c5a5b79-9eae-4cd8-9d74-8e126a6c86b4'): datetime.datetime(2021, 10, 23, 16, 33, 15, 527173), UUID('abb9e159-d1b1-476b-abab-ac6c75b6ac3a'): datetime.datetime(2021, 10, 23, 16, 33, 20, 550807), UUID('6f9c586c-02e7-4512-879f-891c223733da'): datetime.datetime(2021, 10, 23, 16, 33, 25, 562978), UUID('faa8338a-1d25-44f5-9369-d32e37ade807'): datetime.datetime(2021, 10, 23, 16, 33, 25, 563035), UUID('4f7ec7e6-88c0-4a2a-80e2-dff9c97b6876'): datetime.datetime(2021, 10, 23, 16, 33, 30, 582889), UUID('d62840f7-d062-4831-a018-29249bf220c1'): datetime.datetime(2021, 10, 23, 16, 33, 40, 598922), UUID('6a12af29-962c-4402-89f8-25e5dd61d09b'): datetime.datetime(2021, 10, 23, 16, 33, 40, 598985), UUID('4b60b0d4-8340-4f07-83fa-b6d416e348d3'): datetime.datetime(2021, 10, 23, 16, 33, 45, 620445), UUID('29a904db-9079-4263-8fe5-13feca03b5ea'): datetime.datetime(2021, 10, 23, 16, 33, 50, 630959), UUID('24d29e66-8718-40ea-aa69-265760017a3b'): datetime.datetime(2021, 10, 23, 16, 33, 50, 631017), UUID('64e11704-85b9-4d06-a0c6-329f98856e4a'): datetime.datetime(2021, 10, 23, 16, 34, 0, 660595), UUID('e29f662d-08c2-49ce-a6dc-5bc978920ed0'): datetime.datetime(2021, 10, 23, 16, 34, 5, 676695), UUID('c27b27a3-15d1-48b5-b21c-28ed78ddc817'): datetime.datetime(2021, 10, 23, 16, 34, 5, 677022), UUID('ea2d85c8-9fce-4ad0-9a24-efc09a56c73a'): datetime.datetime(2021, 10, 23, 16, 34, 10, 698822), UUID('d33b5456-45d7-4544-a253-8fb36d9597e7'): datetime.datetime(2021, 10, 23, 16, 34, 15, 710909), UUID('3c608171-4e3a-4144-82ef-60dc23233eed'): datetime.datetime(2021, 10, 23, 16, 34, 15, 710986), UUID('91bc7127-4fde-4a4e-b566-1fa65138280d'): datetime.datetime(2021, 10, 23, 16, 34, 20, 734822), UUID('1c4ddc98-7114-4930-b1d5-36bd98087fcf'): datetime.datetime(2021, 10, 23, 16, 34, 20, 734866), UUID('fc349960-b47f-49df-beae-8244e07ad0ff'): datetime.datetime(2021, 10, 23, 16, 34, 25, 750913), UUID('0112efbe-eee6-48e3-96f2-93ee48406796'): datetime.datetime(2021, 10, 23, 16, 34, 30, 762832), UUID('943bb807-22f1-467a-b35d-41a31edbb13a'): datetime.datetime(2021, 10, 23, 16, 34, 35, 775031), UUID('470793ef-b39e-4385-a0e2-669fa88a0afd'): datetime.datetime(2021, 10, 23, 16, 34, 35, 775086), UUID('aa47cbdc-7862-44ac-9cca-3475861e0205'): datetime.datetime(2021, 10, 23, 16, 34, 40, 810022), UUID('521de628-e5ee-4821-a47f-d01860c577b4'): datetime.datetime(2021, 10, 23, 16, 34, 40, 810104), UUID('3abfdf19-a699-4b26-803a-a2d123ca87d8'): datetime.datetime(2021, 10, 23, 16, 34, 40, 810156), UUID('1e2749b8-6aec-4f68-a672-59ce550b6b30'): datetime.datetime(2021, 10, 23, 16, 34, 40, 810215), UUID('bd23f967-a2bb-4675-930b-1b95e1f37357'): datetime.datetime(2021, 10, 23, 16, 34, 45, 934912), UUID('78923803-de23-45ec-a205-318fc6e626ee'): datetime.datetime(2021, 10, 23, 16, 34, 45, 934970), UUID('caa8faa0-5ed5-418b-b6ce-c64bc173ef7b'): datetime.datetime(2021, 10, 23, 16, 34, 45, 935013), UUID('dd682af3-b503-49af-a8d3-19ea71804825'): datetime.datetime(2021, 10, 23, 16, 34, 50, 990888), UUID('b5eb7e61-deec-43a1-85f7-60456294ab27'): datetime.datetime(2021, 10, 23, 16, 34, 50, 990929), UUID('7dae11f9-566c-4e8d-a02f-1a978dad2e22'): datetime.datetime(2021, 10, 23, 16, 34, 56, 10969), UUID('3688a1ef-e9ad-4070-9787-0b0d36225e27'): datetime.datetime(2021, 10, 23, 16, 34, 56, 11015), UUID('0e1617b6-ee60-4d6d-8498-2134cd3ee614'): datetime.datetime(2021, 10, 23, 16, 34, 56, 11045), UUID('c0515153-ba6f-48b0-a77d-c038cf9d8a34'): datetime.datetime(2021, 10, 23, 16, 35, 1, 42872), UUID('cabf456e-f5af-4f87-a4ed-020ddb16bbf3'): datetime.datetime(2021, 10, 23, 16, 35, 1, 42926), UUID('9d0b3219-0803-43cb-9551-148ea05f50da'): datetime.datetime(2021, 10, 23, 16, 35, 6, 62897), UUID('59a8a736-07a4-4663-87c7-3328574a1dd4'): datetime.datetime(2021, 10, 23, 16, 35, 11, 78885), UUID('a0af8ba8-deba-4c8c-a084-1e77043689b3'): datetime.datetime(2021, 10, 23, 16, 35, 11, 78950), UUID('6e7000af-e919-4e23-832e-b6d3ecaa3d52'): datetime.datetime(2021, 10, 23, 16, 35, 16, 107129), UUID('27941a87-4fdf-4ae4-994d-aadfaf3d861b'): datetime.datetime(2021, 10, 23, 16, 35, 16, 107203), UUID('8115dcc1-980f-46fa-9ff0-18a2384db5c8'): datetime.datetime(2021, 10, 23, 16, 35, 16, 107245), UUID('d83acb36-49c0-4c8c-873c-bab3d71f4761'): datetime.datetime(2021, 10, 23, 16, 35, 21, 146952), UUID('4f75eaea-ae44-47c1-9c7b-0fb4c761d73e'): datetime.datetime(2021, 10, 23, 16, 35, 21, 147025), UUID('45807fdf-6a57-41bb-be74-af75307e2ae6'): datetime.datetime(2021, 10, 23, 16, 35, 26, 174826), UUID('62113359-0b5a-4f98-9ab7-462eb06127ed'): datetime.datetime(2021, 10, 23, 16, 35, 31, 187009), UUID('55d410b9-7129-45c3-90b6-2ea183f5c9a8'): datetime.datetime(2021, 10, 23, 16, 35, 31, 187084), UUID('e756cb26-e5a0-4753-8d0f-ed9f3b1ca170'): datetime.datetime(2021, 10, 23, 16, 35, 36, 220379), UUID('dea921e8-4be3-4d6b-8077-4712cc1e0e75'): datetime.datetime(2021, 10, 23, 16, 35, 36, 220431), UUID('f6ba81f6-4565-4f0d-b7f8-02632c47876f'): datetime.datetime(2021, 10, 23, 16, 35, 36, 220470), UUID('a8cf9227-cb45-4431-9cf6-17917bce65d9'): datetime.datetime(2021, 10, 23, 16, 35, 36, 220503), UUID('bd2bc4fc-a5fa-4e05-b6bf-0e85ae7f20ba'): datetime.datetime(2021, 10, 23, 16, 35, 41, 254199), UUID('a3f2a65c-e182-455f-8c32-158fa1e5321f'): datetime.datetime(2021, 10, 23, 16, 35, 46, 274971), UUID('d8865c23-d9ca-475e-aa08-a5c97e251175'): datetime.datetime(2021, 10, 23, 16, 35, 51, 296966), UUID('7696c0a1-ff37-4eca-b8fe-8b6c83e67ec5'): datetime.datetime(2021, 10, 23, 16, 35, 51, 297024), UUID('0065a74a-e350-4757-a974-fc4d0cf0843f'): datetime.datetime(2021, 10, 23, 16, 35, 56, 314926), UUID('70327c60-88bc-40d4-bfba-2e2bb3905b2d'): datetime.datetime(2021, 10, 23, 16, 35, 56, 315010), UUID('2d19d956-1e76-44cd-bc02-ed67a797bcc9'): datetime.datetime(2021, 10, 23, 16, 36, 1, 354776), UUID('3b5e0309-3043-40bd-adae-932a173533f1'): datetime.datetime(2021, 10, 23, 16, 36, 1, 360009), UUID('248e4b48-741a-42a1-b3de-612e18e9cd2d'): datetime.datetime(2021, 10, 23, 16, 36, 1, 360072), UUID('98d53ac8-0885-48fd-b71d-16ef69b9fc6e'): datetime.datetime(2021, 10, 23, 16, 36, 6, 462900), UUID('0b6dfeb6-6e96-442c-8246-7b7118ea010f'): datetime.datetime(2021, 10, 23, 16, 36, 11, 480022), UUID('fa40c807-6702-4629-9e90-4f487ffca80e'): datetime.datetime(2021, 10, 23, 16, 36, 16, 518015), UUID('e9104b73-8085-4b44-aa2f-16ea96663d16'): datetime.datetime(2021, 10, 23, 16, 36, 21, 530874), UUID('e2262856-9287-4a7e-b305-28c826beb531'): datetime.datetime(2021, 10, 23, 16, 36, 21, 530924), UUID('e9f175fc-0533-4258-9454-623f04895270'): datetime.datetime(2021, 10, 23, 16, 36, 21, 530956), UUID('7cb1adbe-ccff-4416-8152-2f5ca3404f3d'): datetime.datetime(2021, 10, 23, 16, 36, 26, 564048), UUID('58714fea-2241-465d-9deb-61c2e7d26f6c'): datetime.datetime(2021, 10, 23, 16, 36, 31, 598942), UUID('ce3957f5-3476-46a9-8e79-81f89b124152'): datetime.datetime(2021, 10, 23, 16, 36, 31, 599014), UUID('6e4f7278-64b8-4c38-ab9b-e674394b76b5'): datetime.datetime(2021, 10, 23, 16, 36, 36, 624025), UUID('f6eba8b3-bd69-4cb2-ae80-d82ac2987915'): datetime.datetime(2021, 10, 23, 16, 36, 41, 658812), UUID('3dbec5d3-3fdf-43c1-b65d-7cb028b6204a'): datetime.datetime(2021, 10, 23, 16, 36, 46, 674640), UUID('41bbd06c-6b36-4a19-bd26-de5a6bf323be'): datetime.datetime(2021, 10, 23, 16, 36, 46, 674698), UUID('4b51ec53-3356-4e1d-959f-6126a38d37b2'): datetime.datetime(2021, 10, 23, 16, 36, 51, 694834), UUID('8e13edc0-3d3e-4798-bd3b-481727395418'): datetime.datetime(2021, 10, 23, 16, 36, 56, 711009), UUID('2a15c80e-437e-4846-82ee-aa9325098876'): datetime.datetime(2021, 10, 23, 16, 36, 56, 711082), UUID('aa01701c-3cbe-49bd-a8d5-a38d0b3f432b'): datetime.datetime(2021, 10, 23, 16, 37, 1, 739969)}
+
+
+
+
+id,network,job_type,image_size,num_imgs,device,batch_size,data_parallelism,response_time
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/federation-lab/fltk/__main__.py", line 86, in <module>
+    __main__()
+  File "/opt/federation-lab/fltk/__main__.py", line 38, in __main__
+    cluster_start(arguments, config)
+  File "/opt/federation-lab/fltk/__main__.py", line 62, in cluster_start
+    launch_orchestrator(args=args, conf=configuration)
+  File "/opt/federation-lab/fltk/launch.py", line 127, in launch_orchestrator
+    pool.apply(orchestrator.run)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 357, in apply
+    return self.apply_async(func, args, kwds).get()
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/opt/federation-lab/fltk/orchestrator.py", line 168, in run
+    self.stop()
+  File "/opt/federation-lab/fltk/orchestrator.py", line 70, in stop
+    network, image_size, job_type, num_imgs, device, batch_size, data_parallelism = self.task_info[id]
+KeyError: UUID('7a73a21a-9e7b-4247-9b36-3c73f5f53f3b')

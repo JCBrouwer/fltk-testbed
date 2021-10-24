@@ -24,5 +24,6 @@ RUN python3 -m pip install -r requirements.txt
 ADD fltk fltk
 ADD configs configs
 ADD charts charts
+ADD allresults.csv allresults.csv
 # ENV TORCH_CUDA_ARCH_LIST="8.6;6.1"
 # RUN python3 -m fltk.nets.gan.compile

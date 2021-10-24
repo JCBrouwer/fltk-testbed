@@ -111,9 +111,7 @@ def launch_orchestrator(args: Namespace = None, conf: BareConfig = None):
         conf.cluster_config.load_incluster_namespace()
         conf.cluster_config.load_incluster_image()
 
-    arrival_generator = StyleGANExperimentGenerator(
-        arrival_statistic=conf.execution_config.arrival_statistic
-    )  # TODO find better way to specify main experiment parameters?
+    arrival_generator = StyleGANExperimentGenerator(arrival_statistic=conf.execution_config.arrival_statistic)
     cluster_manager = ClusterManager()
 
     orchestrator = Orchestrator(cluster_manager, arrival_generator, conf)

@@ -1,3 +1,7 @@
+until [ -z $(ps aux | grep kube | grep -v grep | awk '{print $2}') ]; do
+sudo kill $(ps aux | grep kube | grep -v grep | awk '{print $2}')
+done
+
 sudo cp daemon.json /etc/docker/
 
 sudo systemctl daemon-reload
@@ -19,19 +23,19 @@ sleep 5
 sudo cp kube-controller-manager.yaml /etc/kubernetes/manifests/
 sudo cp kube-apiserver.yaml /etc/kubernetes/manifests/
 echo """evictionSoft:
-  memory.available: "1000Mi"
+  memory.available: "16Gi"
   nodefs.available: "100Mi"
   nodefs.inodesFree: "1%"
   imagefs.available: "100Mi"
   imagefs.inodesFree: "1%"
 evictionSoftGracePeriod:
-  memory.available: 1m
+  memory.available: 5s
   nodefs.available: 1m
   nodefs.inodesFree: 1m
   imagefs.available: 1m
   imagefs.inodesFree: 1m
 evictionHard:
-  memory.available: "100Mi"
+  memory.available: "8Gi"
   nodefs.available: "10Mi"
   nodefs.inodesFree: "0.1%"
   imagefs.available: "10Mi"
@@ -57,7 +61,7 @@ kubectl label nodes --all gpushare=true
 # helm install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
 helm install nfs-server kvaps/nfs-server-provisioner
 
-for i in `seq 1 5`; do
+for _ in `seq 1 5`; do
 kustomize build kubeflow | kubectl apply -f -
 done
 

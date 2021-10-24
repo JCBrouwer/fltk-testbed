@@ -58,6 +58,7 @@ class ExecutionConfig:
 
     duration: int
     arrival_statistic: int
+    scheduling: str
     experiment_prefix: str = "experiment"
     cuda: bool = True
     default_model_folder_path = "default_models"

@@ -116,14 +116,13 @@ class ExperimentGenerator(ArrivalGenerator):
         @return: generated arrival corresponding to the unique task_id.
         @rtype: Arrival
         """
-        self.logger.info(f"Creating task for {task_id}")
+        # self.logger.info(f"Creating task for {task_id}")
         job: JobDescription = self.job_dict[task_id]
         parameters: JobClassParameter = choices(
             job.job_class_parameters, [param.class_probability for param in job.job_class_parameters]
         )[0]
         priority = choices(parameters.priorities, [prio.probability for prio in parameters.priorities], k=1)[0]
 
-        print(job.arrival_statistic)
         inter_arrival_ticks = np.random.poisson(lam=job.arrival_statistic)
 
         train_task = TrainTask(task_id, parameters, priority)
@@ -138,7 +137,7 @@ class ExperimentGenerator(ArrivalGenerator):
         """
         if not self.logger:
             self.set_logger()
-        self.logger.info("Starting execution of arrival generator...")
+        # self.logger.info("Starting execution of arrival generator...")
         self._alive = True
         self.run(duration)
 
@@ -148,7 +147,7 @@ class ExperimentGenerator(ArrivalGenerator):
         @return: None
         @rtype: None
         """
-        self.logger.info("Received stopping signal")
+        # self.logger.info("Received stopping signal")
         self._alive = False
 
     def run(self, duration: float):
@@ -160,7 +159,7 @@ class ExperimentGenerator(ArrivalGenerator):
         """
         np.random.seed(42)
         self.start_time = time.time()
-        self.logger.info("Populating tick lists with initial arrivals")
+        # self.logger.info("Populating tick lists with initial arrivals")
         for task_id in self.job_dict.keys():
             new_arrival: Arrival = self.generate_arrival(task_id)
             self._tick_list.append(new_arrival)
@@ -184,9 +183,9 @@ class ExperimentGenerator(ArrivalGenerator):
             correction_time = time.time() - save_time
             event.wait(timeout=self._decrement - correction_time)
         self.stop_time = time.time()
-        self.logger.info(
-            f"Stopped execution at: {self.stop_time}, duration: {self.stop_time - self.start_time}/{duration}"
-        )
+        # self.logger.info(
+        #     f"Stopped execution at: {self.stop_time}, duration: {self.stop_time - self.start_time}/{duration}"
+        # )
 
 
 class StyleGANExperimentGenerator(ExperimentGenerator):

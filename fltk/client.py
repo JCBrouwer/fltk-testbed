@@ -1,5 +1,6 @@
 import datetime
 import logging
+import random
 from pathlib import Path
 from typing import List, Tuple
 
@@ -306,6 +307,12 @@ class StyleGANInferenceClient(object):
 
         self.config = config
         self.inference_params = inference_params
+        self.batch_size = self.inference_params.batch_size
+        if random.uniform(0, 1) > 0.5:
+            self.batch_size //= 2
+            if random.uniform(0, 1) > 0.5:
+                self.batch_size //= 2
+        self.batch_size = max(1, self.batch_size)
         self.model = self.inference_params.get_model_class()(self.inference_params.image_size)
         self.device = self._init_device(torch.device(self.inference_params.device))
         self.tb_writer: SummaryWriter
@@ -358,8 +365,8 @@ class StyleGANInferenceClient(object):
             # PHASE 2
             self._logger.info(f"Phase 2: {self.inference_params.num_imgs}")
 
-            for i in range(0, self.inference_params.num_imgs, self.inference_params.batch_size):
-                latent_batch = latents[i : i + self.inference_params.batch_size]
+            for i in range(0, self.inference_params.num_imgs, self.batch_size):
+                latent_batch = latents[i : i + self.batch_size]
                 output = self.model(latent_batch.to(self.device), None).cpu().numpy()
 
         # EPILOG

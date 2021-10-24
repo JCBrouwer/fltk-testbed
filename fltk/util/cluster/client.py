@@ -86,7 +86,7 @@ class ResourceWatchDog:
         @return: None
         @rtype: None
         """
-        self._logger.info("[WatchDog] Received request to stop execution")
+        # self._logger.info("[WatchDog] Received request to stop execution")
         self._alive = False
 
     def start(self) -> None:
@@ -96,18 +96,18 @@ class ResourceWatchDog:
         @return: None
         @rtype: None
         """
-        self._logger.info("Starting resource watchdog")
+        # self._logger.info("Starting resource watchdog")
         self._alive = True
         self._v1 = client.CoreV1Api()
         self.__monitor_nodes()
+        self.__monitor_finish_times()
+        self.__monitor_pods()
 
-        # Every 10 seconds we check the nodes with all the pods.
-        schedule.every(10).seconds.do(self.__monitor_finish_times).tag("job-monitoring")
-        schedule.every(10).seconds.do(self.__monitor_pods).tag("node-monitoring")
-        # Every 1 minutes we check all the pods (in case the topology changes).
-        schedule.every(1).minutes.do(self.__monitor_pods).tag("pod-monitoring")
+        schedule.every(1).seconds.do(self.__monitor_finish_times).tag("job-monitoring")
+        schedule.every(10).seconds.do(self.__monitor_nodes).tag("node-monitoring")
+        schedule.every(1).seconds.do(self.__monitor_pods).tag("pod-monitoring")
 
-        self._logger.info("Starting with watching resources")
+        # self._logger.info("Starting with watching resources")
         while self._alive:
             schedule.run_pending()
             time.sleep(1)
@@ -119,12 +119,12 @@ class ResourceWatchDog:
         @return: None
         @rtype: None
         """
-        self._logger.info("Fetching node information of cluster...")
+        # self._logger.info("Fetching node information of cluster...")
         try:
             node_list: client.V1NodeList = self._v1.list_node(watch=False)
             self._node_lookup = {node.metadata.name: node for node in node_list.items}
             if not self._alive:
-                self._logger.info("Instructed to stop, stopping list_node watch on Kubernetes.")
+                # self._logger.info("Instructed to stop, stopping list_node watch on Kubernetes.")
                 return
         except Exception as e:
             self._logger.error(e)
@@ -140,7 +140,7 @@ class ResourceWatchDog:
         node: client.V1Node
         new_resource_mapper = {}
 
-        self._logger.info("Fetching resource information of cluster...")
+        # self._logger.info("Fetching resource information of cluster...")
         for node_name, node in self._node_lookup.items():
             try:
                 # Create field selector to only get active pods that 'request' memory
@@ -171,16 +171,16 @@ class ResourceWatchDog:
                 self._logger.error(f"Namespace lookup for {node_name} failed. Reason: {e}")
 
         self._resource_lookup = new_resource_mapper
-        self._logger.info(self._resource_lookup)
+        # self._logger.info(self._resource_lookup)
 
     def __monitor_finish_times(self) -> None:
-        self._logger.info("Fetching job finish times...")
+        # self._logger.info("Fetching job finish times...")
         new_finish_times = {}
         for node_name in self._node_lookup:
-            try:
-                for pod in self._v1.list_pod_for_all_namespaces(
-                    watch=False, field_selector=f"spec.nodeName={node_name}"
-                ).items:
+            for pod in self._v1.list_pod_for_all_namespaces(
+                watch=False, field_selector=f"spec.nodeName={node_name}"
+            ).items:
+                try:
                     for container in pod.status.container_statuses:
                         if not container.name == "pytorch":
                             continue
@@ -190,9 +190,10 @@ class ResourceWatchDog:
                             started_at = container.state.terminated.started_at
                             finished_at = container.state.terminated.finished_at
                             new_finish_times[pod.metadata.name.replace("-master-0", "")] = (started_at, finished_at)
-
-            except Exception as e:
-                self._logger.error(f"Finish time lookup for {node_name} failed. Reason: {e}")
+                except Exception as e:
+                    self._logger.error(
+                        f"Finish time lookup for {node_name}/{pod.metadata.labels['job-name']} failed. Reason: {e}"
+                    )
 
         self._finish_times = new_finish_times
 
@@ -221,7 +222,7 @@ class ClusterManager(metaclass=Singleton):
         self._watchdog = ResourceWatchDog()
 
     def start(self):
-        self._logger.info("Spinning up cluster manager...")
+        # self._logger.info("Spinning up cluster manager...")
         # Set debugging to WARNING only, as otherwise DEBUG statements will flood the logs.
         client.rest.logger.setLevel(logging.WARNING)
         self.__alive = True
@@ -230,16 +231,16 @@ class ClusterManager(metaclass=Singleton):
         self.__thread_pool.apply_async(self._run)
 
     def stop(self):
-        self._logger.info("Stopping execution of ClusterManager, halting components...")
+        # self._logger.info("Stopping execution of ClusterManager, halting components...")
         self._watchdog.stop()
         self.__alive = False
         self.__thread_pool.close()
         self.__thread_pool.join()
-        self._logger.info("Successfully stopped execution of ClusterManager")
+        # self._logger.info("Successfully stopped execution of ClusterManager")
 
     def _run(self):
         while self.__alive:
-            self._logger.info("Still alive...")
+            # self._logger.info("Still alive...")
             time.sleep(10)
 
         self.stop()
