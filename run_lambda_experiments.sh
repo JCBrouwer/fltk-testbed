@@ -1,13 +1,13 @@
 helm uninstall flearner
 kubectl delete pytorchjob --all
 
-for lambda in 15 10 5 3; do
+for lambda in 4 3; do # 15 10 5 3
     for schedule in vram-aware random; do
         for seed in 123 234 345 456 567; do
             sed -i 's|"arrival_statistic": .*,|"arrival_statistic": '${lambda}',|g' configs/example_cloud_experiment.json
-            sed -i 's|"scheduling": .*,|"scheduling": '${schedule}',|g' configs/example_cloud_experiment.json
+            sed -i 's|"scheduling": .*,|"scheduling": "'${schedule}'",|g' configs/example_cloud_experiment.json
             sed -i 's|"arrival_seed": .*|"arrival_seed": '${seed}'|g' configs/example_cloud_experiment.json
-            cat configs/example_cloud_experiment.json | grep arrival
+            cat configs/example_cloud_experiment.json | grep "arrival\|scheduling"
             
             docker build . --tag 192.168.1.187:6000/fltk/fltk
             docker push 192.168.1.187:6000/fltk/fltk

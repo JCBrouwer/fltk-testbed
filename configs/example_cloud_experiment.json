@@ -14,7 +14,7 @@
    "execution_config": {
       "duration": 600,
       "arrival_statistic": 3,
-      "scheduling": "vram-aware",
+      "scheduling": "random",
       "experiment_prefix": "cloud_experiment",
       "cuda": true,
       "tensorboard": {
