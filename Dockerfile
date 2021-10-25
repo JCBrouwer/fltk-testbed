@@ -25,5 +25,6 @@ ADD fltk fltk
 ADD configs configs
 ADD charts charts
 ADD allresults.csv allresults.csv
+RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
 # ENV TORCH_CUDA_ARCH_LIST="8.6;6.1"
 # RUN python3 -m fltk.nets.gan.compile

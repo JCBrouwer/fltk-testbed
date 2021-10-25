@@ -68,6 +68,7 @@ class ResourceWatchDog:
     _node_lookup: Dict[str, client.V1Node] = dict()
     _resource_lookup: Dict[str, Resource] = dict()
     _finish_times: Dict[str, Tuple[datetime, datetime]] = dict()
+    _failed: List[str] = list()
 
     def __init__(self):
         """
@@ -102,10 +103,12 @@ class ResourceWatchDog:
         self.__monitor_nodes()
         self.__monitor_finish_times()
         self.__monitor_pods()
+        self.__monitor_errors()
 
-        schedule.every(1).seconds.do(self.__monitor_finish_times).tag("job-monitoring")
         schedule.every(10).seconds.do(self.__monitor_nodes).tag("node-monitoring")
+        schedule.every(1).seconds.do(self.__monitor_finish_times).tag("job-monitoring")
         schedule.every(1).seconds.do(self.__monitor_pods).tag("pod-monitoring")
+        schedule.every(1).seconds.do(self.__monitor_errors).tag("error-monitoring")
 
         # self._logger.info("Starting with watching resources")
         while self._alive:
@@ -137,71 +140,108 @@ class ResourceWatchDog:
         @return: None
         @rtype: None
         """
-        node: client.V1Node
-        new_resource_mapper = {}
+        try:
+            node: client.V1Node
+            new_resource_mapper = {}
 
-        # self._logger.info("Fetching resource information of cluster...")
-        for node_name, node in self._node_lookup.items():
-            try:
-                # Create field selector to only get active pods that 'request' memory
-                selector = f"status.phase!=Succeeded,status.phase!=Failed,spec.nodeName={node_name}"
-                # Select pods from all namespaces on specific Kubernetes node
-                # try:
-                pod_list: client.V1PodList = self._v1.list_pod_for_all_namespaces(watch=False, field_selector=selector)
-                # Retrieve allocatable memory of node
-                alloc_cpu, alloc_mem = (self._Q(node.status.allocatable[item]) for item in ["cpu", "memory"])
-                core_req, core_lim, mem_req, mem_lim = 0, 0, 0, 0
-                for pod in pod_list.items:
-                    for container in pod.spec.containers:
-                        response = container.resources
-                        reqs = defaultdict(lambda: 0, response.requests or {})
-                        lmts = defaultdict(lambda: 0, response.limits or {})
-                        core_req += self._Q(reqs["cpu"])
-                        mem_req += self._Q(reqs["memory"])
-                        core_lim += self._Q(lmts["cpu"])
-                        mem_lim += self._Q(lmts["memory"])
-                handles = [nvmlDeviceGetHandleByIndex(device) for device in range(torch.cuda.device_count())]
-                vram_free = [nvmlDeviceGetMemoryInfo(h).free / 1024 / 1024 for h in handles]
-                vram_total = [nvmlDeviceGetMemoryInfo(h).total / 1024 / 1024 for h in handles]
-                resource = Resource(
-                    node_name, alloc_cpu, alloc_mem, core_req, mem_req, core_lim, mem_lim, vram_free, vram_total
-                )
-                new_resource_mapper[node_name] = resource
-            except Exception as e:
-                self._logger.error(f"Namespace lookup for {node_name} failed. Reason: {e}")
+            # self._logger.info("Fetching resource information of cluster...")
+            for node_name, node in self._node_lookup.items():
+                try:
+                    # Create field selector to only get active pods that 'request' memory
+                    selector = f"status.phase!=Succeeded,status.phase!=Failed,spec.nodeName={node_name}"
+                    # Select pods from all namespaces on specific Kubernetes node
+                    # try:
+                    pod_list: client.V1PodList = self._v1.list_pod_for_all_namespaces(
+                        watch=False, field_selector=selector
+                    )
+                    # Retrieve allocatable memory of node
+                    alloc_cpu, alloc_mem = (self._Q(node.status.allocatable[item]) for item in ["cpu", "memory"])
+                    core_req, core_lim, mem_req, mem_lim = 0, 0, 0, 0
+                    for pod in pod_list.items:
+                        for container in pod.spec.containers:
+                            response = container.resources
+                            reqs = defaultdict(lambda: 0, response.requests or {})
+                            lmts = defaultdict(lambda: 0, response.limits or {})
+                            core_req += self._Q(reqs["cpu"])
+                            mem_req += self._Q(reqs["memory"])
+                            core_lim += self._Q(lmts["cpu"])
+                            mem_lim += self._Q(lmts["memory"])
+                    handles = [nvmlDeviceGetHandleByIndex(device) for device in range(torch.cuda.device_count())]
+                    vram_free = [nvmlDeviceGetMemoryInfo(h).free / 1024 / 1024 for h in handles]
+                    vram_total = [nvmlDeviceGetMemoryInfo(h).total / 1024 / 1024 for h in handles]
+                    resource = Resource(
+                        node_name, alloc_cpu, alloc_mem, core_req, mem_req, core_lim, mem_lim, vram_free, vram_total
+                    )
+                    new_resource_mapper[node_name] = resource
+                except Exception as e:
+                    self._logger.error(f"Namespace lookup for {node_name} failed. Reason: {e}")
 
-        self._resource_lookup = new_resource_mapper
-        # self._logger.info(self._resource_lookup)
+            self._resource_lookup = new_resource_mapper
+            # self._logger.info(self._resource_lookup)
+        except Exception as e:
+            self._logger.error(e)
+            raise e
+
+    def __monitor_errors(self) -> None:
+        try:
+            new_failed = []
+            for node_name in self._node_lookup:
+                for pod in self._v1.list_pod_for_all_namespaces(
+                    watch=False, field_selector=f"spec.nodeName={node_name}"
+                ).items:
+                    try:
+                        for container in pod.status.container_statuses:
+                            if not container.name == "pytorch":
+                                continue
+                            if container.state.terminated is None:
+                                continue
+                            if container.state.terminated.reason == "Error":
+                                new_failed.append(pod.metadata.name.replace("-master-0", ""))
+                    except Exception as e:
+                        self._logger.error(
+                            f"Finish time lookup for {node_name}/{pod.metadata.labels['job-name']} failed. Reason: {e}"
+                        )
+            self._failed = new_failed
+        except Exception as e:
+            self._logger.error(e)
+            raise e
 
     def __monitor_finish_times(self) -> None:
-        # self._logger.info("Fetching job finish times...")
-        new_finish_times = {}
-        for node_name in self._node_lookup:
-            for pod in self._v1.list_pod_for_all_namespaces(
-                watch=False, field_selector=f"spec.nodeName={node_name}"
-            ).items:
-                try:
-                    for container in pod.status.container_statuses:
-                        if not container.name == "pytorch":
-                            continue
-                        if container.state.terminated is None:
-                            continue
-                        if container.state.terminated.reason == "Completed":
-                            started_at = container.state.terminated.started_at
-                            finished_at = container.state.terminated.finished_at
-                            new_finish_times[pod.metadata.name.replace("-master-0", "")] = (started_at, finished_at)
-                except Exception as e:
-                    self._logger.error(
-                        f"Finish time lookup for {node_name}/{pod.metadata.labels['job-name']} failed. Reason: {e}"
-                    )
+        try:
+            # self._logger.info("Fetching job finish times...")
+            new_finish_times = {}
+            for node_name in self._node_lookup:
+                for pod in self._v1.list_pod_for_all_namespaces(
+                    watch=False, field_selector=f"spec.nodeName={node_name}"
+                ).items:
+                    try:
+                        for container in pod.status.container_statuses:
+                            if not container.name == "pytorch":
+                                continue
+                            if container.state.terminated is None:
+                                continue
+                            if container.state.terminated.reason == "Completed":
+                                started_at = container.state.terminated.started_at
+                                finished_at = container.state.terminated.finished_at
+                                new_finish_times[pod.metadata.name.replace("-master-0", "")] = (started_at, finished_at)
+                    except Exception as e:
+                        self._logger.error(
+                            f"Finish time lookup for {node_name}/{pod.metadata.labels['job-name']} failed. Reason: {e}"
+                        )
 
-        self._finish_times = new_finish_times
+            self._finish_times = new_finish_times
+        except Exception as e:
+            self._logger.error(e)
+            raise e
 
     def get_resources(self):
         return self._resource_lookup
 
     def get_finish_times(self):
         return self._finish_times
+
+    def get_failed(self):
+        return self._failed
 
 
 class ClusterManager(metaclass=Singleton):
@@ -250,6 +290,9 @@ class ClusterManager(metaclass=Singleton):
 
     def get_finish_times(self):
         return self._watchdog.get_finish_times()
+
+    def get_failed(self):
+        return self._watchdog.get_failed()
 
 
 class DeploymentBuilder:
@@ -366,7 +409,7 @@ class DeploymentBuilder:
             ),
         )
 
-    def build_spec(self, task: ArrivalTask, restart_policy: str = "OnFailure") -> None:
+    def build_spec(self, task: ArrivalTask, restart_policy: str = "Never") -> None:
         master_repl_spec = V1ReplicaSpec(
             replicas=1, restart_policy=restart_policy, template=self._buildDescription.master_template
         )

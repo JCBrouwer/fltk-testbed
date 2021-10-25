@@ -1,0 +1,733 @@
+/usr/local/lib/python3.8/dist-packages/dataclasses_json/core.py:171: RuntimeWarning: `NoneType` object value of non-optional type config_path detected when decoding BareConfig.
+  warnings.warn(f"`NoneType` object {warning}.", RuntimeWarning)
+10-25-2021 17:28:13 root         INFO     Starting in cluster mode.
+10-25-2021 17:28:13 root         INFO     Starting as Orchestrator
+10-25-2021 17:28:13 root         INFO     Starting Orchestrator, initializing resources....
+10-25-2021 17:28:13 root         INFO     Loading in cluster configuration file
+10-25-2021 17:28:13 root         INFO     Pointing configuration to in cluster configuration.
+10-25-2021 17:28:13 root         INFO     Starting cluster manager
+10-25-2021 17:28:13 root         INFO     Starting arrival generator
+10-25-2021 17:28:13 root         INFO     Starting orchestrator
+[3 4]
+[3 4]
+[3 4]
+[3 4]
+[3 4]
+[3 4]
+[3 4]
+pending 0 deployed 0
+scheduling: anycost 512 100 4 cuda:0 1820
+[1823    4]
+pending 0 deployed 1
+scheduling: swa 1024 400 4 cuda:0 1908
+[3731    4]
+pending 0 deployed 2
+scheduling: mobile 512 100 4 cuda:0 684
+[4415    4]
+finished 4c9213d6-6799-41cc-a32d-d6ff8fd9ac5f
+[10748     4]
+10-25-2021 17:28:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c0789873-d76c-4fb9-9fec-f751a887eb80 failed. Reason: 'NoneType' object is not iterable
+pending 0 deployed 2
+scheduling: anycost 512 400 4 cuda:0 1820
+[12568     4]
+finished 5f1fe1c0-4fbc-45ac-a99e-82d61584f5ea
+[3 4]
+finished c0789873-d76c-4fb9-9fec-f751a887eb80
+[3 4]
+pending 0 deployed 1
+scheduling: mobile 256 200 4 cuda:0 218
+[221   4]
+pending 0 deployed 2
+scheduling: style1 512 400 4 cuda:0 878
+[1099    4]
+pending 0 deployed 3
+scheduling: anycost 512 200 4 cuda:0 1820
+[2919    4]
+finished 00877e13-0766-4057-a6db-cb717b465b94
+[3 4]
+finished 60743d92-c18f-4408-b735-c17b22fe9303
+[3 4]
+pending 0 deployed 2
+scheduling: swa 512 800 4 cuda:0 1060
+[1063    4]
+finished 2efde5f4-3f24-4c3e-ac2f-7b2568a8d385
+[10684     4]
+pending 0 deployed 2
+scheduling: stylemap 1024 800 4 cuda:0 11376
+[22060     4]
+finished d60aefbb-e92b-4c80-ab10-c148c5f1bde5
+[10534     4]
+pending 0 deployed 2
+scheduling: style2ada 1024 800 4 cuda:0 3996
+[14530     4]
+[15483     4]
+[19077     4]
+[19396     4]
+[19778     4]
+[20516     4]
+pending 0 deployed 3
+scheduling: anycost 1024 200 4 cuda:1 3518
+[20516  3522]
+pending 0 deployed 4
+scheduling: anycost 1024 200 4 cuda:1 3518
+[20516  7040]
+pending 0 deployed 5
+scheduling: style2 1024 800 4 cuda:1 3512
+[20516 10552]
+finished 7a26f641-8289-4fb4-94ee-8af76e0f75eb
+[11243  3940]
+pending 0 deployed 5
+scheduling: stylemap 512 800 4 cuda:0 5932
+[17175  3940]
+pending 0 deployed 6
+scheduling: swa 1024 100 4 cuda:1 1908
+[17175  5848]
+finished 75e0cf8d-f942-4713-82c1-a6c01f584347
+[21732  7530]
+pending 0 deployed 6
+scheduling: swa 512 200 4 cuda:1 1060
+[21732  8590]
+pending 0 deployed 7
+scheduling: style2ada 512 400 4 cuda:1 2078
+[21732 10668]
+pending 0 deployed 8
+scheduling: style2ada 1024 400 2 cuda:0 2126
+[23858 10668]
+finished 9dbb5a18-093b-4cd6-a216-e0a82cc952ee
+[21734  7064]
+pending 0 deployed 8
+scheduling: stylemap 512 200 2 cuda:1 3274
+[21734 10338]
+pending 0 deployed 9
+scheduling: anycost 512 200 4 cuda:0 1820
+[23554 10338]
+[24071  8948]
+[21734  9503]
+[22037  9763]
+pending 0 deployed 10
+scheduling: style2 512 800 4 cuda:0 1820
+[23857  9763]
+failed d3514edf-971a-48f8-b9c5-eee10557024c restarts: 1 1
+[22037  9763]
+pending 0 deployed 10
+scheduling: style2ada 1024 400 2 cuda:0 2126
+[24163  9763]
+pending 0 deployed 11
+scheduling: style2 256 400 4 cuda:1 1038
+[24163 10801]
+pending 0 deployed 12
+scheduling: mobile 256 400 4 cuda:1 218
+[24163 11019]
+failed 7b238849-8236-4d51-88b6-dcab2ebff955 restarts: 2 3
+[23363 10523]
+failed 9bcb70d9-26f2-4e0a-8638-48ff583411b6 restarts: 3 3
+[23363 10523]
+failed d6aa2598-0f22-41cb-ba6e-312386bee13a restarts: 4 3
+[23363 10523]
+pending 2 deployed 10
+all full: want [1942 3274 5932] with [23363 10523]
+pending 2 deployed 10
+all full: want [1942 3274 5932] with [23363 10523]
+pending 3 deployed 10
+all full: want [1942 3274 5932] with [23363 10523]
+pending 3 deployed 10
+all full: want [1942 3274 5932] with [23363 10523]
+pending 4 deployed 10
+all full: want [1942 3274 5932] with [23363 10523]
+pending 4 deployed 10
+all full: want [1942 3274 5932] with [23363 10523]
+[23628 10481]
+pending 4 deployed 10
+all full: want [1942 3274 5932] with [23628 10481]
+pending 4 deployed 10
+all full: want [1942 3274 5932] with [23628 10481]
+pending 5 deployed 10
+all full: want [1942 3274 5932] with [23628 10481]
+pending 5 deployed 10
+all full: want [1942 3274 5932] with [23628 10481]
+pending 5 deployed 10
+all full: want [1942 3274 5932] with [23628 10481]
+pending 5 deployed 10
+all full: want [1942 3274 5932] with [23628 10481]
+pending 6 deployed 10
+all full: want [1942 3274 5932] with [23628 10481]
+pending 6 deployed 10
+all full: want [1942 3274 5932] with [23628 10481]
+pending 6 deployed 10
+all full: want [1942 3274 5932] with [23628 10481]
+pending 6 deployed 10
+all full: want [1942 3274 5932] with [23628 10481]
+[21734     4]
+pending 7 deployed 10
+scheduling: stylemap 512 200 4 cuda:1 5932
+[21734  5936]
+failed d3514edf-971a-48f8-b9c5-eee10557024c restarts: 5 2
+[21734     4]
+failed d7d388b4-0704-4c2c-8a58-67399f35a108 restarts: 6 2
+[21734     4]
+finished 43864454-93ed-4a10-9c30-d7feca908521
+[21734     4]
+finished 6b800195-c2b5-4450-a2f3-6a3e464398dd
+[21734     4]
+finished 718bf891-93f8-4f9b-b9d2-0759c67af3aa
+[21734     4]
+finished 957c6d06-bf7d-474d-8193-87616af962d4
+[21734     4]
+finished a2fc06d5-ac24-4952-81a3-7f726168adc8
+[21734     4]
+pending 8 deployed 4
+scheduling: style2ada 1024 400 4 cuda:1 3996
+[21734  4000]
+pending 7 deployed 5
+scheduling: anycost 512 200 4 cuda:1 1820
+[21734  5820]
+pending 6 deployed 6
+scheduling: style2 512 800 4 cuda:1 1820
+[21734  7640]
+pending 5 deployed 7
+scheduling: mobile 256 400 4 cuda:1 218
+[21734  7858]
+pending 4 deployed 8
+scheduling: style1 1024 400 4 cuda:1 2842
+[21734 10700]
+10-25-2021 17:32:37 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d6aa2598-0f22-41cb-ba6e-312386bee13a failed. Reason: 'NoneType' object is not iterable
+pending 3 deployed 9
+all full: want [ 3304  5994 11376] with [21734 10700]
+10-25-2021 17:32:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d7d388b4-0704-4c2c-8a58-67399f35a108 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:32:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8a8b5849-749f-4e09-8193-3670097d6b30 failed. Reason: 'NoneType' object is not iterable
+pending 3 deployed 9
+all full: want [ 3304  5994 11376] with [21734 10700]
+pending 4 deployed 9
+all full: want [ 3304  5994 11376] with [21734 10700]
+pending 4 deployed 9
+all full: want [ 3304  5994 11376] with [21734 10700]
+[21734  9860]
+pending 4 deployed 9
+all full: want [ 3304  5994 11376] with [21734  9860]
+pending 4 deployed 9
+all full: want [ 3304  5994 11376] with [21734  9860]
+pending 5 deployed 9
+all full: want [ 3304  5994 11376] with [21734  9860]
+pending 5 deployed 9
+all full: want [ 3304  5994 11376] with [21734  9860]
+pending 5 deployed 9
+all full: want [ 3304  5994 11376] with [21734  9860]
+pending 6 deployed 9
+all full: want [ 3304  5994 11376] with [21734  9860]
+pending 6 deployed 9
+all full: want [ 3304  5994 11376] with [21734  9860]
+pending 7 deployed 9
+all full: want [ 3304  5994 11376] with [21734  9860]
+pending 7 deployed 9
+all full: want [ 3304  5994 11376] with [21734  9860]
+pending 7 deployed 9
+all full: want [ 3304  5994 11376] with [21734  9860]
+[10494  8786]
+pending 7 deployed 9
+scheduling: stylemap 1024 100 4 cuda:0 11376
+[21870  8786]
+failed 8a8b5849-749f-4e09-8193-3670097d6b30 restarts: 7 1
+[10494  8786]
+finished 35d80982-79b3-4152-a362-e06cdd5d7b68
+[10494  8786]
+finished 4dc923b8-1376-43a5-8049-e299f3cf1ebd
+[10494  8786]
+finished d7d388b4-0704-4c2c-8a58-67399f35a108
+[10494  8786]
+pending 8 deployed 6
+scheduling: style1 1024 400 4 cuda:0 2842
+[13336  8786]
+pending 7 deployed 7
+scheduling: stylemap 256 800 4 cuda:0 3226
+[16562  8786]
+pending 6 deployed 8
+scheduling: style2 256 800 4 cuda:0 1038
+[17600  8786]
+pending 5 deployed 9
+scheduling: anycost 512 200 4 cuda:0 1820
+[19420  8786]
+pending 4 deployed 10
+scheduling: stylemap 256 400 4 cuda:0 3226
+[22646  8786]
+pending 3 deployed 11
+scheduling: style1 256 400 4 cuda:1 346
+[22646  9132]
+pending 2 deployed 12
+scheduling: anycost 256 400 4 cuda:1 1040
+[22646 10172]
+pending 1 deployed 13
+scheduling: style1 512 400 4 cuda:0 878
+[23524 10172]
+pending 0 deployed 14
+scheduling: style1 256 100 4 cuda:1 346
+[23524 10518]
+[10494  8786]
+[10494  8786]
+10-25-2021 17:33:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bdf90d34-b36d-493d-a53a-a599ed711f33 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:33:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bdf90d34-b36d-493d-a53a-a599ed711f33 failed. Reason: 'NoneType' object is not iterable
+[10494  8786]
+10-25-2021 17:33:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/64bfc953-8d79-48c3-83f3-9af2bb3b20b8 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:33:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88fe9c87-87ca-4f5a-976f-bb6d2e109560 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:33:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/64bfc953-8d79-48c3-83f3-9af2bb3b20b8 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:33:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88fe9c87-87ca-4f5a-976f-bb6d2e109560 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:33:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/43272ae0-7c3b-4696-a753-e1d4875b50ac failed. Reason: 'NoneType' object is not iterable
+[10911  8786]
+10-25-2021 17:33:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/021aab11-26c8-41b3-b205-8d9686d93ae0 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:33:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/43272ae0-7c3b-4696-a753-e1d4875b50ac failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:33:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/021aab11-26c8-41b3-b205-8d9686d93ae0 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:33:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8a01ee00-6e27-42c6-a2e5-19358bd470e5 failed. Reason: 'NoneType' object is not iterable
+[12734  8786]
+10-25-2021 17:33:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8a01ee00-6e27-42c6-a2e5-19358bd470e5 failed. Reason: 'NoneType' object is not iterable
+[15948  8786]
+[20873  8987]
+[22213  9167]
+pending 0 deployed 15
+too many deployed jobs
+pending 0 deployed 15
+too many deployed jobs
+failed 021aab11-26c8-41b3-b205-8d9686d93ae0 restarts: 8 6
+[19190 10373]
+failed 56e2eeaa-b1de-402a-a37b-dc88b60d8ff6 restarts: 9 6
+[19190 10373]
+failed 8712206c-b056-43e3-ba54-06bd13030310 restarts: 10 6
+[19190 10373]
+failed 88fe9c87-87ca-4f5a-976f-bb6d2e109560 restarts: 11 6
+[19190 10373]
+failed 8a01ee00-6e27-42c6-a2e5-19358bd470e5 restarts: 12 6
+[19190 10373]
+failed bdf90d34-b36d-493d-a53a-a599ed711f33 restarts: 13 6
+[19190 10373]
+finished d6aa2598-0f22-41cb-ba6e-312386bee13a
+[20358 10373]
+pending 5 deployed 8
+scheduling: stylemap 1024 100 1 cuda:0 3304
+[23662 10373]
+pending 4 deployed 9
+scheduling: style2 256 800 2 cuda:1 634
+[23662 11007]
+pending 3 deployed 10
+all full: want [ 632 1030 1820] with [23662 11007]
+pending 3 deployed 10
+all full: want [ 632 1030 1820] with [23662 11007]
+pending 3 deployed 10
+all full: want [ 632 1030 1820] with [23662 11007]
+pending 3 deployed 10
+all full: want [ 632 1030 1820] with [23662 11007]
+[15362  7854]
+pending 4 deployed 10
+scheduling: anycost 512 200 4 cuda:0 1820
+[17182  7854]
+failed 43272ae0-7c3b-4696-a753-e1d4875b50ac restarts: 14 1
+[15362  7854]
+finished 64bfc953-8d79-48c3-83f3-9af2bb3b20b8
+[16010 10516]
+finished 8a8b5849-749f-4e09-8193-3670097d6b30
+[16010 10516]
+pending 4 deployed 8
+scheduling: stylemap 256 400 4 cuda:0 3226
+[19236 10516]
+pending 3 deployed 9
+scheduling: anycost 256 400 4 cuda:0 1040
+[20276 10516]
+pending 2 deployed 10
+scheduling: style1 512 400 4 cuda:0 878
+[21154 10516]
+pending 1 deployed 11
+scheduling: style1 256 100 4 cuda:0 346
+[21500 10516]
+pending 0 deployed 12
+scheduling: style2ada 1024 100 2 cuda:0 2126
+[23626 10516]
+10-25-2021 17:34:14 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8a01ee00-6e27-42c6-a2e5-19358bd470e5 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:34:14 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/cadc2a5a-cb0c-460f-a4d6-a462d20045c5 failed. Reason: 'NoneType' object is not iterable
+pending 0 deployed 13
+scheduling: anycost 256 100 2 cuda:1 636
+[23626 11152]
+pending 0 deployed 14
+scheduling: mobile 256 100 4 cuda:0 218
+[23844 11152]
+pending 0 deployed 15
+too many deployed jobs
+failed 021aab11-26c8-41b3-b205-8d9686d93ae0 restarts: 15 6
+[20326  5015]
+failed 43272ae0-7c3b-4696-a753-e1d4875b50ac restarts: 16 6
+[20326  5015]
+failed 88fe9c87-87ca-4f5a-976f-bb6d2e109560 restarts: 17 6
+[20326  5015]
+failed 8a01ee00-6e27-42c6-a2e5-19358bd470e5 restarts: 18 6
+[20326  5015]
+failed bdf90d34-b36d-493d-a53a-a599ed711f33 restarts: 19 6
+[20326  5015]
+failed cadc2a5a-cb0c-460f-a4d6-a462d20045c5 restarts: 20 6
+[20326  5015]
+finished 7b238849-8236-4d51-88b6-dcab2ebff955
+[21450  5015]
+finished d3514edf-971a-48f8-b9c5-eee10557024c
+[21450  5015]
+[21962  5015]
+pending 5 deployed 7
+scheduling: anycost 512 200 4 cuda:1 1820
+[21962  6835]
+pending 4 deployed 8
+scheduling: stylemap 256 400 4 cuda:1 3226
+[21962 10061]
+pending 3 deployed 9
+scheduling: anycost 256 400 4 cuda:0 1040
+[23002 10061]
+pending 2 deployed 10
+scheduling: style1 512 400 4 cuda:0 878
+[23880 10061]
+pending 1 deployed 11
+scheduling: style1 256 100 4 cuda:1 346
+[23880 10407]
+pending 0 deployed 12
+all full: want [1190 2126 3996] with [23880 10407]
+pending 0 deployed 12
+all full: want [1190 2126 3996] with [23880 10407]
+pending 1 deployed 12
+all full: want [1190 2126 3996] with [23880 10407]
+pending 1 deployed 12
+all full: want [1190 2126 3996] with [23880 10407]
+pending 2 deployed 12
+all full: want [1190 2126 3996] with [23880 10407]
+[24176 10469]
+pending 2 deployed 12
+all full: want [1190 2126 3996] with [24176 10469]
+pending 3 deployed 12
+all full: want [1190 2126 3996] with [24176 10469]
+pending 3 deployed 12
+all full: want [1190 2126 3996] with [24176 10469]
+pending 3 deployed 12
+all full: want [1190 2126 3996] with [24176 10469]
+pending 3 deployed 12
+all full: want [1190 2126 3996] with [24176 10469]
+pending 3 deployed 12
+all full: want [1190 2126 3996] with [24176 10469]
+pending 4 deployed 12
+all full: want [1190 2126 3996] with [24176 10469]
+pending 4 deployed 12
+all full: want [1190 2126 3996] with [24176 10469]
+pending 4 deployed 12
+all full: want [1190 2126 3996] with [24176 10469]
+pending 4 deployed 12
+all full: want [1190 2126 3996] with [24176 10469]
+[16188  4908]
+pending 4 deployed 12
+scheduling: style2ada 1024 100 4 cuda:0 3996
+[20184  4908]
+failed 43272ae0-7c3b-4696-a753-e1d4875b50ac restarts: 21 1
+[16188  4908]
+finished 021aab11-26c8-41b3-b205-8d9686d93ae0
+[14703  3405]
+finished 56e2eeaa-b1de-402a-a37b-dc88b60d8ff6
+[14703  3405]
+finished 8a01ee00-6e27-42c6-a2e5-19358bd470e5
+[14703  3405]
+finished 8e1018d1-ba39-40f8-a13b-c61cc64ad6a9
+[14703  3405]
+finished 9bcb70d9-26f2-4e0a-8638-48ff583411b6
+[14703  3405]
+finished b9626520-a95b-4961-978c-643508749a19
+[14703  3405]
+finished bdf90d34-b36d-493d-a53a-a599ed711f33
+[14703  3405]
+finished c1300d76-d025-4246-96a6-6b5ac71449e9
+[14703  3405]
+pending 5 deployed 4
+scheduling: anycost 256 400 4 cuda:0 1040
+[15743  3405]
+pending 4 deployed 5
+scheduling: anycost 1024 400 4 cuda:0 3518
+[19261  3405]
+pending 3 deployed 6
+scheduling: swa 256 400 4 cuda:1 632
+[19261  4037]
+pending 2 deployed 7
+scheduling: anycost 1024 800 4 cuda:1 3518
+[19261  7555]
+pending 1 deployed 8
+scheduling: mobile 256 400 4 cuda:0 218
+[19479  7555]
+pending 0 deployed 9
+scheduling: stylemap 1024 200 1 cuda:0 3304
+[22783  7555]
+10-25-2021 17:35:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f303de38-f83e-4e18-934c-a6c26e75e325 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:35:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e6b6880e-08ce-4d82-97f5-7545823bfac0 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:35:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/578ab5d9-95ff-4b06-becd-938d85b487da failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:35:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e6b6880e-08ce-4d82-97f5-7545823bfac0 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:35:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/578ab5d9-95ff-4b06-becd-938d85b487da failed. Reason: 'NoneType' object is not iterable
+pending 0 deployed 10
+10-25-2021 17:35:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/578ab5d9-95ff-4b06-becd-938d85b487da failed. Reason: 'NoneType' object is not iterable
+scheduling: stylemap 512 200 2 cuda:1 3274
+[22783 10829]
+10-25-2021 17:35:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/2645976c-daeb-4ffe-a7ec-506ce766323b failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:35:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/2645976c-daeb-4ffe-a7ec-506ce766323b failed. Reason: 'NoneType' object is not iterable
+pending 0 deployed 11
+scheduling: style2ada 1024 800 1 cuda:0 1190
+[23973 10829]
+finished 8712206c-b056-43e3-ba54-06bd13030310
+[23607 11043]
+pending 0 deployed 11
+scheduling: style2 256 400 2 cuda:0 634
+[24241 11043]
+failed 3f7d5416-3a86-4ba1-bee0-d28ce50a9bfd restarts: 22 3
+[21638 11166]
+failed 578ab5d9-95ff-4b06-becd-938d85b487da restarts: 23 3
+[21638 11166]
+failed e6b6880e-08ce-4d82-97f5-7545823bfac0 restarts: 24 3
+[21638 11166]
+finished cadc2a5a-cb0c-460f-a4d6-a462d20045c5
+[16251 11166]
+[16251 11166]
+pending 2 deployed 8
+scheduling: mobile 256 400 4 cuda:0 218
+[16469 11166]
+pending 1 deployed 9
+scheduling: stylemap 1024 200 2 cuda:0 5994
+[22463 11166]
+pending 0 deployed 10
+scheduling: style2ada 1024 800 1 cuda:0 1190
+[23653 11166]
+pending 0 deployed 11
+scheduling: style2ada 256 200 1 cuda:0 468
+[24121 11166]
+pending 0 deployed 12
+all full: want [ 632 1030 1820] with [24121 11166]
+pending 0 deployed 12
+all full: want [ 632 1030 1820] with [24121 11166]
+pending 0 deployed 12
+all full: want [ 632 1030 1820] with [24121 11166]
+pending 0 deployed 12
+all full: want [ 632 1030 1820] with [24121 11166]
+pending 1 deployed 12
+all full: want [ 632 1030 1820] with [24121 11166]
+pending 1 deployed 12
+all full: want [ 632 1030 1820] with [24121 11166]
+[19991  3703]
+pending 1 deployed 12
+scheduling: anycost 512 200 4 cuda:1 1820
+[19991  5523]
+failed 2645976c-daeb-4ffe-a7ec-506ce766323b restarts: 25 2
+[19991  3703]
+failed 38cf1b6d-87a6-4ebd-9976-b1983797228b restarts: 26 2
+[19991  3703]
+finished 43272ae0-7c3b-4696-a753-e1d4875b50ac
+[19991  3703]
+finished 687a3ca1-d46b-47e1-99aa-7ed8f435f3d0
+[19991  3703]
+finished 88fe9c87-87ca-4f5a-976f-bb6d2e109560
+[19991  3703]
+finished e6b6880e-08ce-4d82-97f5-7545823bfac0
+[19991  3703]
+finished f303de38-f83e-4e18-934c-a6c26e75e325
+[19991  3703]
+pending 2 deployed 6
+scheduling: stylemap 512 200 4 cuda:1 5932
+[19991  9635]
+pending 1 deployed 7
+scheduling: style2ada 256 200 4 cuda:0 1160
+[21151  9635]
+pending 0 deployed 8
+scheduling: style2ada 1024 400 2 cuda:0 2126
+[23277  9635]
+10-25-2021 17:36:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dde29e99-a50e-428f-a842-6ba96d108556 failed. Reason: 'NoneType' object is not iterable
+pending 0 deployed 9
+all full: want [1942 3274 5932] with [23277  9635]
+pending 0 deployed 9
+all full: want [1942 3274 5932] with [23277  9635]
+pending 0 deployed 9
+all full: want [1942 3274 5932] with [23277  9635]
+pending 0 deployed 9
+all full: want [1942 3274 5932] with [23277  9635]
+pending 1 deployed 9
+all full: want [1942 3274 5932] with [23277  9635]
+pending 1 deployed 9
+all full: want [1942 3274 5932] with [23277  9635]
+[22531  7002]
+pending 2 deployed 9
+scheduling: stylemap 512 100 2 cuda:1 3274
+[22531 10276]
+failed 2645976c-daeb-4ffe-a7ec-506ce766323b restarts: 27 2
+[22531  7002]
+failed dde29e99-a50e-428f-a842-6ba96d108556 restarts: 28 2
+[22531  7002]
+finished 62cc51cb-4317-4f8e-983c-45e13eb3a450
+[22351  3303]
+finished c4c6cc7c-d213-4061-86f4-757821a41ad5
+[22351  3303]
+pending 3 deployed 6
+scheduling: stylemap 512 200 4 cuda:1 5932
+[22351  9235]
+pending 2 deployed 7
+scheduling: style2ada 1024 400 1 cuda:1 1190
+[22351 10425]
+pending 1 deployed 8
+scheduling: anycost 512 100 4 cuda:0 1820
+[24171 10425]
+pending 0 deployed 9
+scheduling: style2 256 400 2 cuda:1 634
+[24171 11059]
+10-25-2021 17:37:08 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/881acd43-cdcc-4b9d-a342-6563be6a38a7 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:37:08 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/881acd43-cdcc-4b9d-a342-6563be6a38a7 failed. Reason: 'NoneType' object is not iterable
+pending 0 deployed 10
+all full: want [ 654 1074 1908] with [24171 11059]
+pending 1 deployed 10
+all full: want [ 654 1074 1908] with [24171 11059]
+pending 1 deployed 10
+all full: want [ 654 1074 1908] with [24171 11059]
+pending 1 deployed 10
+all full: want [ 654 1074 1908] with [24171 11059]
+pending 1 deployed 10
+all full: want [ 654 1074 1908] with [24171 11059]
+[10292  7047]
+pending 1 deployed 10
+scheduling: swa 1024 100 4 cuda:0 1908
+[12200  7047]
+failed 2645976c-daeb-4ffe-a7ec-506ce766323b restarts: 29 1
+[10292  7047]
+finished 38cf1b6d-87a6-4ebd-9976-b1983797228b
+[10292  7047]
+finished 578ab5d9-95ff-4b06-becd-938d85b487da
+[10292  7047]
+finished 602b1b09-3a19-47dc-a387-7fccf4d367cd
+[10292  7047]
+finished 8a12711f-8e75-497f-a262-b2092c3a0a8f
+[10292  7047]
+finished afcf7b64-1fc2-4455-8864-81425db5fb6b
+[10292  7047]
+pending 2 deployed 5
+scheduling: stylemap 512 200 4 cuda:0 5932
+[16224  7047]
+pending 1 deployed 6
+scheduling: style2 256 200 4 cuda:0 1038
+[17262  7047]
+pending 0 deployed 7
+scheduling: anycost 1024 400 4 cuda:0 3518
+[20780  7047]
+10-25-2021 17:37:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/62306815-ce3a-4eeb-a222-47430e0041a1 failed. Reason: 'NoneType' object is not iterable
+pending 0 deployed 8
+scheduling: style2 1024 100 4 cuda:1 3512
+[20780 10559]
+pending 0 deployed 9
+scheduling: stylemap 1024 200 1 cuda:0 3304
+[24084 10559]
+pending 0 deployed 10
+all full: want [ 632 1030 1820] with [24084 10559]
+pending 0 deployed 10
+all full: want [ 632 1030 1820] with [24084 10559]
+pending 0 deployed 10
+all full: want [ 632 1030 1820] with [24084 10559]
+pending 0 deployed 10
+all full: want [ 632 1030 1820] with [24084 10559]
+[10496  6189]
+pending 1 deployed 10
+scheduling: style2 512 100 4 cuda:0 1820
+[12316  6189]
+failed 2645976c-daeb-4ffe-a7ec-506ce766323b restarts: 30 3
+[10496  6189]
+failed 62306815-ce3a-4eeb-a222-47430e0041a1 restarts: 31 3
+[10496  6189]
+failed 9f40816a-3432-4165-a46c-0b9a1f616ea4 restarts: 32 3
+[10496  6189]
+finished 3f7d5416-3a86-4ba1-bee0-d28ce50a9bfd
+[11429  6189]
+finished 6dff1cd0-a58a-4bc2-be60-5d8ca64af9f7
+[11429  6189]
+finished c553f67f-73a5-4fd7-af15-266dd457d85b
+[11429  6189]
+pending 3 deployed 5
+scheduling: stylemap 512 200 4 cuda:0 5932
+[17361  6189]
+pending 2 deployed 6
+scheduling: style2 256 200 4 cuda:0 1038
+[18399  6189]
+pending 1 deployed 7
+scheduling: anycost 1024 400 4 cuda:0 3518
+[21917  6189]
+pending 0 deployed 8
+scheduling: style2 256 100 4 cuda:1 1038
+[21917  7227]
+pending 0 deployed 9
+scheduling: swa 1024 800 4 cuda:1 1908
+[21917  9135]
+10-25-2021 17:38:14 Orchestrator INFO     Received stop signal for the Orchestrator. Cleaning up...
+10-25-2021 17:38:14 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0e7cf996-f969-410c-a0de-d2b41044c3b3 failed. Reason: 'NoneType' object is not iterable
+10-25-2021 17:38:18 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/05b9dab3-d566-40d3-a4d4-44c6fedafd51 failed. Reason: 'NoneType' object is not iterable
+
+
+
+
+task_info={'4c9213d6-6799-41cc-a32d-d6ff8fd9ac5f': ('anycost', 512, 'interpolation', 100, 'cuda:0', 4, 1), '5f1fe1c0-4fbc-45ac-a99e-82d61584f5ea': ('swa', 1024, 'interpolation', 400, 'cuda:0', 4, 1), 'c0789873-d76c-4fb9-9fec-f751a887eb80': ('mobile', 512, 'interpolation', 100, 'cuda:0', 4, 1), '60743d92-c18f-4408-b735-c17b22fe9303': ('anycost', 512, 'interpolation', 400, 'cuda:0', 4, 1), '00877e13-0766-4057-a6db-cb717b465b94': ('mobile', 256, 'interpolation', 200, 'cuda:0', 4, 1), '2efde5f4-3f24-4c3e-ac2f-7b2568a8d385': ('style1', 512, 'random', 400, 'cuda:0', 4, 1), 'd60aefbb-e92b-4c80-ab10-c148c5f1bde5': ('anycost', 512, 'interpolation', 200, 'cuda:0', 4, 1), '7a26f641-8289-4fb4-94ee-8af76e0f75eb': ('swa', 512, 'random', 800, 'cuda:0', 4, 1), '4dc923b8-1376-43a5-8049-e299f3cf1ebd': ('stylemap', 1024, 'random', 800, 'cuda:0', 4, 1), '35d80982-79b3-4152-a362-e06cdd5d7b68': ('style2ada', 1024, 'random', 800, 'cuda:0', 4, 1), '75e0cf8d-f942-4713-82c1-a6c01f584347': ('anycost', 1024, 'random', 200, 'cuda:1', 4, 1), '9dbb5a18-093b-4cd6-a216-e0a82cc952ee': ('anycost', 1024, 'interpolation', 200, 'cuda:1', 4, 1), 'a2fc06d5-ac24-4952-81a3-7f726168adc8': ('style2', 1024, 'interpolation', 800, 'cuda:1', 4, 1), '687a3ca1-d46b-47e1-99aa-7ed8f435f3d0': ('stylemap', 512, 'random', 800, 'cuda:0', 4, 1), '718bf891-93f8-4f9b-b9d2-0759c67af3aa': ('swa', 1024, 'random', 100, 'cuda:1', 4, 1), '6b800195-c2b5-4450-a2f3-6a3e464398dd': ('swa', 512, 'interpolation', 200, 'cuda:1', 4, 1), '43864454-93ed-4a10-9c30-d7feca908521': ('style2ada', 512, 'random', 400, 'cuda:1', 4, 1), 'd3514edf-971a-48f8-b9c5-eee10557024c': ('style2ada', 1024, 'interpolation', 400, 'cuda:1', 4, 1), '7b238849-8236-4d51-88b6-dcab2ebff955': ('stylemap', 512, 'random', 200, 'cuda:1', 4, 1), 'd6aa2598-0f22-41cb-ba6e-312386bee13a': ('anycost', 512, 'interpolation', 200, 'cuda:1', 4, 1), '9bcb70d9-26f2-4e0a-8638-48ff583411b6': ('style2', 512, 'random', 800, 'cuda:1', 4, 1), '957c6d06-bf7d-474d-8193-87616af962d4': ('style2', 256, 'random', 400, 'cuda:1', 4, 1), 'd7d388b4-0704-4c2c-8a58-67399f35a108': ('mobile', 256, 'interpolation', 400, 'cuda:1', 4, 1), '8a8b5849-749f-4e09-8193-3670097d6b30': ('style1', 1024, 'random', 400, 'cuda:0', 4, 1), '8712206c-b056-43e3-ba54-06bd13030310': ('stylemap', 1024, 'random', 100, 'cuda:0', 1, 1), 'b9626520-a95b-4961-978c-643508749a19': ('stylemap', 256, 'random', 800, 'cuda:0', 4, 1), '56e2eeaa-b1de-402a-a37b-dc88b60d8ff6': ('style2', 256, 'interpolation', 800, 'cuda:1', 2, 1), 'bdf90d34-b36d-493d-a53a-a599ed711f33': ('anycost', 512, 'interpolation', 200, 'cuda:1', 4, 1), '88fe9c87-87ca-4f5a-976f-bb6d2e109560': ('stylemap', 256, 'interpolation', 400, 'cuda:1', 4, 1), '64bfc953-8d79-48c3-83f3-9af2bb3b20b8': ('style1', 256, 'random', 400, 'cuda:1', 4, 1), '43272ae0-7c3b-4696-a753-e1d4875b50ac': ('anycost', 256, 'interpolation', 400, 'cuda:0', 4, 1), '021aab11-26c8-41b3-b205-8d9686d93ae0': ('style1', 512, 'interpolation', 400, 'cuda:0', 4, 1), '8a01ee00-6e27-42c6-a2e5-19358bd470e5': ('style1', 256, 'interpolation', 100, 'cuda:1', 4, 1), '395e310e-ea7f-4eb2-8fde-f97f8cfe412b': ('style2ada', 512, 'interpolation', 200, -1, -1, 1), '362d5efd-9d78-453a-a7ac-f1c1e8083cba': ('style2ada', 1024, 'interpolation', 800, -1, -1, 1), 'cadc2a5a-cb0c-460f-a4d6-a462d20045c5': ('style2ada', 1024, 'random', 100, 'cuda:0', 4, 1), '8e1018d1-ba39-40f8-a13b-c61cc64ad6a9': ('anycost', 256, 'interpolation', 100, 'cuda:1', 2, 1), 'c1300d76-d025-4246-96a6-6b5ac71449e9': ('mobile', 256, 'random', 100, 'cuda:0', 4, 1), '9584f3d6-16ac-4cc7-a304-f94145515704': ('anycost', 1024, 'interpolation', 400, -1, -1, 1), 'c4c6cc7c-d213-4061-86f4-757821a41ad5': ('anycost', 1024, 'interpolation', 400, 'cuda:0', 4, 1), 'f303de38-f83e-4e18-934c-a6c26e75e325': ('swa', 256, 'random', 400, 'cuda:1', 4, 1), '602b1b09-3a19-47dc-a387-7fccf4d367cd': ('anycost', 1024, 'random', 800, 'cuda:1', 4, 1), 'e6b6880e-08ce-4d82-97f5-7545823bfac0': ('mobile', 256, 'interpolation', 400, 'cuda:0', 4, 1), '578ab5d9-95ff-4b06-becd-938d85b487da': ('stylemap', 1024, 'random', 200, 'cuda:0', 2, 1), '2645976c-daeb-4ffe-a7ec-506ce766323b': ('stylemap', 512, 'random', 200, 'cuda:0', 4, 1), '3f7d5416-3a86-4ba1-bee0-d28ce50a9bfd': ('style2ada', 1024, 'interpolation', 800, 'cuda:0', 1, 1), '62cc51cb-4317-4f8e-983c-45e13eb3a450': ('style2', 256, 'interpolation', 400, 'cuda:0', 2, 1), '38cf1b6d-87a6-4ebd-9976-b1983797228b': ('style2ada', 256, 'random', 200, 'cuda:0', 4, 1), '8a12711f-8e75-497f-a262-b2092c3a0a8f': ('anycost', 512, 'interpolation', 200, 'cuda:1', 4, 1), 'dde29e99-a50e-428f-a842-6ba96d108556': ('style2ada', 1024, 'random', 400, 'cuda:1', 1, 1), 'c553f67f-73a5-4fd7-af15-266dd457d85b': ('stylemap', 512, 'interpolation', 100, 'cuda:1', 2, 1), 'afcf7b64-1fc2-4455-8864-81425db5fb6b': ('anycost', 512, 'interpolation', 100, 'cuda:0', 4, 1), '881acd43-cdcc-4b9d-a342-6563be6a38a7': ('style2', 256, 'interpolation', 400, 'cuda:1', 2, 1), '6dff1cd0-a58a-4bc2-be60-5d8ca64af9f7': ('swa', 1024, 'interpolation', 100, 'cuda:0', 4, 1), '9f40816a-3432-4165-a46c-0b9a1f616ea4': ('style2', 256, 'interpolation', 200, 'cuda:0', 4, 1), '62306815-ce3a-4eeb-a222-47430e0041a1': ('anycost', 1024, 'interpolation', 400, 'cuda:0', 4, 1), 'f1dd3940-403d-4ea7-a6bf-faddd35c9990': ('style2', 1024, 'random', 100, 'cuda:1', 4, 1), 'fd456f48-6b0d-46f0-ac16-8cc1b0f0589e': ('stylemap', 1024, 'random', 200, 'cuda:0', 1, 1), '0491fbea-431e-43cb-8355-08907ff131b5': ('style2', 512, 'interpolation', 100, 'cuda:0', 4, 1), '0e7cf996-f969-410c-a0de-d2b41044c3b3': ('style2', 256, 'interpolation', 100, 'cuda:1', 4, 1), '05b9dab3-d566-40d3-a4d4-44c6fedafd51': ('swa', 1024, 'interpolation', 800, 'cuda:1', 4, 1)}
+arrival_times={'4c9213d6-6799-41cc-a32d-d6ff8fd9ac5f': datetime.datetime(2021, 10, 25, 17, 28, 25, 915161), '5f1fe1c0-4fbc-45ac-a99e-82d61584f5ea': datetime.datetime(2021, 10, 25, 17, 28, 30, 941127), 'c0789873-d76c-4fb9-9fec-f751a887eb80': datetime.datetime(2021, 10, 25, 17, 28, 42, 15341), '60743d92-c18f-4408-b735-c17b22fe9303': datetime.datetime(2021, 10, 25, 17, 28, 57, 71396), '00877e13-0766-4057-a6db-cb717b465b94': datetime.datetime(2021, 10, 25, 17, 29, 3, 92883), '2efde5f4-3f24-4c3e-ac2f-7b2568a8d385': datetime.datetime(2021, 10, 25, 17, 29, 11, 117595), 'd60aefbb-e92b-4c80-ab10-c148c5f1bde5': datetime.datetime(2021, 10, 25, 17, 29, 21, 195452), '7a26f641-8289-4fb4-94ee-8af76e0f75eb': datetime.datetime(2021, 10, 25, 17, 29, 31, 224607), '4dc923b8-1376-43a5-8049-e299f3cf1ebd': datetime.datetime(2021, 10, 25, 17, 29, 39, 296662), '35d80982-79b3-4152-a362-e06cdd5d7b68': datetime.datetime(2021, 10, 25, 17, 29, 49, 330948), '75e0cf8d-f942-4713-82c1-a6c01f584347': datetime.datetime(2021, 10, 25, 17, 29, 57, 471010), '9dbb5a18-093b-4cd6-a216-e0a82cc952ee': datetime.datetime(2021, 10, 25, 17, 30, 7, 553063), 'a2fc06d5-ac24-4952-81a3-7f726168adc8': datetime.datetime(2021, 10, 25, 17, 30, 18, 587026), '687a3ca1-d46b-47e1-99aa-7ed8f435f3d0': datetime.datetime(2021, 10, 25, 17, 30, 26, 785395), '718bf891-93f8-4f9b-b9d2-0759c67af3aa': datetime.datetime(2021, 10, 25, 17, 30, 38, 828936), '6b800195-c2b5-4450-a2f3-6a3e464398dd': datetime.datetime(2021, 10, 25, 17, 30, 44, 905341), '43864454-93ed-4a10-9c30-d7feca908521': datetime.datetime(2021, 10, 25, 17, 30, 51, 968151), 'd3514edf-971a-48f8-b9c5-eee10557024c': datetime.datetime(2021, 10, 25, 17, 30, 59, 993844), '7b238849-8236-4d51-88b6-dcab2ebff955': datetime.datetime(2021, 10, 25, 17, 31, 10, 19729), 'd6aa2598-0f22-41cb-ba6e-312386bee13a': datetime.datetime(2021, 10, 25, 17, 31, 15, 42063), '9bcb70d9-26f2-4e0a-8638-48ff583411b6': datetime.datetime(2021, 10, 25, 17, 31, 19, 80209), '957c6d06-bf7d-474d-8193-87616af962d4': datetime.datetime(2021, 10, 25, 17, 31, 27, 174347), 'd7d388b4-0704-4c2c-8a58-67399f35a108': datetime.datetime(2021, 10, 25, 17, 31, 40, 248490), '8a8b5849-749f-4e09-8193-3670097d6b30': datetime.datetime(2021, 10, 25, 17, 31, 49, 393508), '8712206c-b056-43e3-ba54-06bd13030310': datetime.datetime(2021, 10, 25, 17, 31, 55, 404132), 'b9626520-a95b-4961-978c-643508749a19': datetime.datetime(2021, 10, 25, 17, 32, 8, 453783), '56e2eeaa-b1de-402a-a37b-dc88b60d8ff6': datetime.datetime(2021, 10, 25, 17, 32, 20, 472972), 'bdf90d34-b36d-493d-a53a-a599ed711f33': datetime.datetime(2021, 10, 25, 17, 32, 32, 488530), '88fe9c87-87ca-4f5a-976f-bb6d2e109560': datetime.datetime(2021, 10, 25, 17, 32, 43, 64534), '64bfc953-8d79-48c3-83f3-9af2bb3b20b8': datetime.datetime(2021, 10, 25, 17, 32, 56, 293718), '43272ae0-7c3b-4696-a753-e1d4875b50ac': datetime.datetime(2021, 10, 25, 17, 33, 5, 388516), '021aab11-26c8-41b3-b205-8d9686d93ae0': datetime.datetime(2021, 10, 25, 17, 33, 11, 396469), '8a01ee00-6e27-42c6-a2e5-19358bd470e5': datetime.datetime(2021, 10, 25, 17, 33, 24, 484978), '395e310e-ea7f-4eb2-8fde-f97f8cfe412b': datetime.datetime(2021, 10, 25, 17, 33, 38, 695774), '362d5efd-9d78-453a-a7ac-f1c1e8083cba': datetime.datetime(2021, 10, 25, 17, 33, 51, 793991), 'cadc2a5a-cb0c-460f-a4d6-a462d20045c5': datetime.datetime(2021, 10, 25, 17, 34, 6, 996497), '8e1018d1-ba39-40f8-a13b-c61cc64ad6a9': datetime.datetime(2021, 10, 25, 17, 34, 15, 283922), 'c1300d76-d025-4246-96a6-6b5ac71449e9': datetime.datetime(2021, 10, 25, 17, 34, 23, 316547), '9584f3d6-16ac-4cc7-a304-f94145515704': datetime.datetime(2021, 10, 25, 17, 34, 38, 490277), 'c4c6cc7c-d213-4061-86f4-757821a41ad5': datetime.datetime(2021, 10, 25, 17, 34, 48, 740699), 'f303de38-f83e-4e18-934c-a6c26e75e325': datetime.datetime(2021, 10, 25, 17, 34, 54, 784659), '602b1b09-3a19-47dc-a387-7fccf4d367cd': datetime.datetime(2021, 10, 25, 17, 35, 1, 917740), 'e6b6880e-08ce-4d82-97f5-7545823bfac0': datetime.datetime(2021, 10, 25, 17, 35, 17, 182256), '578ab5d9-95ff-4b06-becd-938d85b487da': datetime.datetime(2021, 10, 25, 17, 35, 33, 415441), '2645976c-daeb-4ffe-a7ec-506ce766323b': datetime.datetime(2021, 10, 25, 17, 35, 38, 495403), '3f7d5416-3a86-4ba1-bee0-d28ce50a9bfd': datetime.datetime(2021, 10, 25, 17, 35, 45, 676660), '62cc51cb-4317-4f8e-983c-45e13eb3a450': datetime.datetime(2021, 10, 25, 17, 35, 54, 939033), '38cf1b6d-87a6-4ebd-9976-b1983797228b': datetime.datetime(2021, 10, 25, 17, 36, 1, 39933), '8a12711f-8e75-497f-a262-b2092c3a0a8f': datetime.datetime(2021, 10, 25, 17, 36, 17, 159796), 'dde29e99-a50e-428f-a842-6ba96d108556': datetime.datetime(2021, 10, 25, 17, 36, 29, 288516), 'c553f67f-73a5-4fd7-af15-266dd457d85b': datetime.datetime(2021, 10, 25, 17, 36, 44, 579369), 'afcf7b64-1fc2-4455-8864-81425db5fb6b': datetime.datetime(2021, 10, 25, 17, 36, 56, 749855), '881acd43-cdcc-4b9d-a342-6563be6a38a7': datetime.datetime(2021, 10, 25, 17, 37, 2, 797803), '6dff1cd0-a58a-4bc2-be60-5d8ca64af9f7': datetime.datetime(2021, 10, 25, 17, 37, 14, 2479), '9f40816a-3432-4165-a46c-0b9a1f616ea4': datetime.datetime(2021, 10, 25, 17, 37, 17, 13361), '62306815-ce3a-4eeb-a222-47430e0041a1': datetime.datetime(2021, 10, 25, 17, 37, 33, 178674), 'f1dd3940-403d-4ea7-a6bf-faddd35c9990': datetime.datetime(2021, 10, 25, 17, 37, 38, 378739), 'fd456f48-6b0d-46f0-ac16-8cc1b0f0589e': datetime.datetime(2021, 10, 25, 17, 37, 45, 577225), '0491fbea-431e-43cb-8355-08907ff131b5': datetime.datetime(2021, 10, 25, 17, 37, 54, 859059), '0e7cf996-f969-410c-a0de-d2b41044c3b3': datetime.datetime(2021, 10, 25, 17, 38, 7, 177840), '05b9dab3-d566-40d3-a4d4-44c6fedafd51': datetime.datetime(2021, 10, 25, 17, 38, 13, 269458)}
+finish_times={'00877e13-0766-4057-a6db-cb717b465b94': (datetime.datetime(2021, 10, 25, 17, 29, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 29, 14, tzinfo=tzlocal())), '021aab11-26c8-41b3-b205-8d9686d93ae0': (datetime.datetime(2021, 10, 25, 17, 34, 45, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 35, 3, tzinfo=tzlocal())), '2efde5f4-3f24-4c3e-ac2f-7b2568a8d385': (datetime.datetime(2021, 10, 25, 17, 29, 12, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 29, 20, tzinfo=tzlocal())), '35d80982-79b3-4152-a362-e06cdd5d7b68': (datetime.datetime(2021, 10, 25, 17, 29, 50, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 33, 3, tzinfo=tzlocal())), '38cf1b6d-87a6-4ebd-9976-b1983797228b': (datetime.datetime(2021, 10, 25, 17, 36, 42, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 37, 7, tzinfo=tzlocal())), '3f7d5416-3a86-4ba1-bee0-d28ce50a9bfd': (datetime.datetime(2021, 10, 25, 17, 36, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 37, 47, tzinfo=tzlocal())), '43272ae0-7c3b-4696-a753-e1d4875b50ac': (datetime.datetime(2021, 10, 25, 17, 35, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 36, 14, tzinfo=tzlocal())), '43864454-93ed-4a10-9c30-d7feca908521': (datetime.datetime(2021, 10, 25, 17, 30, 55, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 32, 2, tzinfo=tzlocal())), '4c9213d6-6799-41cc-a32d-d6ff8fd9ac5f': (datetime.datetime(2021, 10, 25, 17, 28, 28, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 28, 37, tzinfo=tzlocal())), '4dc923b8-1376-43a5-8049-e299f3cf1ebd': (datetime.datetime(2021, 10, 25, 17, 29, 40, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 33, 11, tzinfo=tzlocal())), '56e2eeaa-b1de-402a-a37b-dc88b60d8ff6': (datetime.datetime(2021, 10, 25, 17, 34, 1, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 35, 8, tzinfo=tzlocal())), '578ab5d9-95ff-4b06-becd-938d85b487da': (datetime.datetime(2021, 10, 25, 17, 36, 7, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 37, 25, tzinfo=tzlocal())), '5f1fe1c0-4fbc-45ac-a99e-82d61584f5ea': (datetime.datetime(2021, 10, 25, 17, 28, 32, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 28, 54, tzinfo=tzlocal())), '602b1b09-3a19-47dc-a387-7fccf4d367cd': (datetime.datetime(2021, 10, 25, 17, 35, 36, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 37, 6, tzinfo=tzlocal())), '60743d92-c18f-4408-b735-c17b22fe9303': (datetime.datetime(2021, 10, 25, 17, 28, 58, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 29, 15, tzinfo=tzlocal())), '62cc51cb-4317-4f8e-983c-45e13eb3a450': (datetime.datetime(2021, 10, 25, 17, 36, 6, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 36, 46, tzinfo=tzlocal())), '64bfc953-8d79-48c3-83f3-9af2bb3b20b8': (datetime.datetime(2021, 10, 25, 17, 33, 33, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 33, 56, tzinfo=tzlocal())), '687a3ca1-d46b-47e1-99aa-7ed8f435f3d0': (datetime.datetime(2021, 10, 25, 17, 30, 27, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 36, 4, tzinfo=tzlocal())), '6b800195-c2b5-4450-a2f3-6a3e464398dd': (datetime.datetime(2021, 10, 25, 17, 30, 46, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 32, 5, tzinfo=tzlocal())), '6dff1cd0-a58a-4bc2-be60-5d8ca64af9f7': (datetime.datetime(2021, 10, 25, 17, 37, 33, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 37, 49, tzinfo=tzlocal())), '718bf891-93f8-4f9b-b9d2-0759c67af3aa': (datetime.datetime(2021, 10, 25, 17, 30, 39, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 32, 5, tzinfo=tzlocal())), '75e0cf8d-f942-4713-82c1-a6c01f584347': (datetime.datetime(2021, 10, 25, 17, 29, 59, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 30, 35, tzinfo=tzlocal())), '7a26f641-8289-4fb4-94ee-8af76e0f75eb': (datetime.datetime(2021, 10, 25, 17, 29, 32, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 30, 7, tzinfo=tzlocal())), '7b238849-8236-4d51-88b6-dcab2ebff955': (datetime.datetime(2021, 10, 25, 17, 32, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 34, 33, tzinfo=tzlocal())), '8712206c-b056-43e3-ba54-06bd13030310': (datetime.datetime(2021, 10, 25, 17, 34, 2, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 35, 39, tzinfo=tzlocal())), '881acd43-cdcc-4b9d-a342-6563be6a38a7': (datetime.datetime(2021, 10, 25, 17, 37, 9, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 38, 18, tzinfo=tzlocal())), '88fe9c87-87ca-4f5a-976f-bb6d2e109560': (datetime.datetime(2021, 10, 25, 17, 34, 43, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 36, 11, tzinfo=tzlocal())), '8a01ee00-6e27-42c6-a2e5-19358bd470e5': (datetime.datetime(2021, 10, 25, 17, 34, 45, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 35, 8, tzinfo=tzlocal())), '8a12711f-8e75-497f-a262-b2092c3a0a8f': (datetime.datetime(2021, 10, 25, 17, 36, 37, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 37, 10, tzinfo=tzlocal())), '8a8b5849-749f-4e09-8193-3670097d6b30': (datetime.datetime(2021, 10, 25, 17, 33, 26, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 33, 54, tzinfo=tzlocal())), '8e1018d1-ba39-40f8-a13b-c61cc64ad6a9': (datetime.datetime(2021, 10, 25, 17, 34, 18, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 34, 43, tzinfo=tzlocal())), '957c6d06-bf7d-474d-8193-87616af962d4': (datetime.datetime(2021, 10, 25, 17, 31, 29, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 32, 15, tzinfo=tzlocal())), '9bcb70d9-26f2-4e0a-8638-48ff583411b6': (datetime.datetime(2021, 10, 25, 17, 32, 40, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 35, 22, tzinfo=tzlocal())), '9dbb5a18-093b-4cd6-a216-e0a82cc952ee': (datetime.datetime(2021, 10, 25, 17, 30, 8, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 30, 52, tzinfo=tzlocal())), 'a2fc06d5-ac24-4952-81a3-7f726168adc8': (datetime.datetime(2021, 10, 25, 17, 30, 19, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 32, 5, tzinfo=tzlocal())), 'afcf7b64-1fc2-4455-8864-81425db5fb6b': (datetime.datetime(2021, 10, 25, 17, 37, 9, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 37, 29, tzinfo=tzlocal())), 'b9626520-a95b-4961-978c-643508749a19': (datetime.datetime(2021, 10, 25, 17, 33, 27, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 35, 18, tzinfo=tzlocal())), 'bdf90d34-b36d-493d-a53a-a599ed711f33': (datetime.datetime(2021, 10, 25, 17, 34, 44, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 35, 30, tzinfo=tzlocal())), 'c0789873-d76c-4fb9-9fec-f751a887eb80': (datetime.datetime(2021, 10, 25, 17, 28, 43, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 28, 51, tzinfo=tzlocal())), 'c1300d76-d025-4246-96a6-6b5ac71449e9': (datetime.datetime(2021, 10, 25, 17, 34, 32, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 34, 47, tzinfo=tzlocal())), 'c4c6cc7c-d213-4061-86f4-757821a41ad5': (datetime.datetime(2021, 10, 25, 17, 35, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 36, 41, tzinfo=tzlocal())), 'c553f67f-73a5-4fd7-af15-266dd457d85b': (datetime.datetime(2021, 10, 25, 17, 37, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 37, 57, tzinfo=tzlocal())), 'cadc2a5a-cb0c-460f-a4d6-a462d20045c5': (datetime.datetime(2021, 10, 25, 17, 35, 31, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 35, 55, tzinfo=tzlocal())), 'd3514edf-971a-48f8-b9c5-eee10557024c': (datetime.datetime(2021, 10, 25, 17, 32, 37, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 34, 31, tzinfo=tzlocal())), 'd60aefbb-e92b-4c80-ab10-c148c5f1bde5': (datetime.datetime(2021, 10, 25, 17, 29, 22, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 29, 35, tzinfo=tzlocal())), 'd6aa2598-0f22-41cb-ba6e-312386bee13a': (datetime.datetime(2021, 10, 25, 17, 32, 37, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 33, 41, tzinfo=tzlocal())), 'd7d388b4-0704-4c2c-8a58-67399f35a108': (datetime.datetime(2021, 10, 25, 17, 32, 39, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 33, 1, tzinfo=tzlocal())), 'e6b6880e-08ce-4d82-97f5-7545823bfac0': (datetime.datetime(2021, 10, 25, 17, 36, 5, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 36, 25, tzinfo=tzlocal())), 'f1dd3940-403d-4ea7-a6bf-faddd35c9990': (datetime.datetime(2021, 10, 25, 17, 37, 41, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 38, 14, tzinfo=tzlocal())), 'f303de38-f83e-4e18-934c-a6c26e75e325': (datetime.datetime(2021, 10, 25, 17, 35, 35, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 17, 36, 34, tzinfo=tzlocal()))}
+restarts=32
+
+
+
+
+id,network,job_type,image_size,num_imgs,device,batch_size,data_parallelism,response_time
+4c9213d6,anycost,interpolation,512,100,cuda:0,4,1,11084
+5f1fe1c0,swa,interpolation,1024,400,cuda:0,4,1,23058
+c0789873,mobile,interpolation,512,100,cuda:0,4,1,8984
+60743d92,anycost,interpolation,512,400,cuda:0,4,1,17928
+00877e13,mobile,interpolation,256,200,cuda:0,4,1,10907
+2efde5f4,style1,random,512,400,cuda:0,4,1,8882
+d60aefbb,anycost,interpolation,512,200,cuda:0,4,1,13804
+7a26f641,swa,random,512,800,cuda:0,4,1,35775
+4dc923b8,stylemap,random,1024,800,cuda:0,4,1,211703
+35d80982,style2ada,random,1024,800,cuda:0,4,1,193669
+75e0cf8d,anycost,random,1024,200,cuda:1,4,1,37528
+9dbb5a18,anycost,interpolation,1024,200,cuda:1,4,1,44446
+a2fc06d5,style2,interpolation,1024,800,cuda:1,4,1,106412
+687a3ca1,stylemap,random,512,800,cuda:0,4,1,337214
+718bf891,swa,random,1024,100,cuda:1,4,1,86171
+6b800195,swa,interpolation,512,200,cuda:1,4,1,80094
+43864454,style2ada,random,512,400,cuda:1,4,1,70031
+d3514edf,style2ada,interpolation,1024,400,cuda:1,4,1,211006
+7b238849,stylemap,random,512,200,cuda:1,4,1,202980
+d6aa2598,anycost,interpolation,512,200,cuda:1,4,1,145957
+9bcb70d9,style2,random,512,800,cuda:1,4,1,242919
+957c6d06,style2,random,256,400,cuda:1,4,1,47825
+d7d388b4,mobile,interpolation,256,400,cuda:1,4,1,80751
+8a8b5849,style1,random,1024,400,cuda:0,4,1,124606
+8712206c,stylemap,random,1024,100,cuda:0,1,1,223595
+b9626520,stylemap,random,256,800,cuda:0,4,1,189546
+56e2eeaa,style2,interpolation,256,800,cuda:1,2,1,167527
+bdf90d34,anycost,interpolation,512,200,cuda:1,4,1,177511
+88fe9c87,stylemap,interpolation,256,400,cuda:1,4,1,207935
+64bfc953,style1,random,256,400,cuda:1,4,1,59706
+43272ae0,anycost,interpolation,256,400,cuda:0,4,1,188611
+021aab11,style1,interpolation,512,400,cuda:0,4,1,111603
+8a01ee00,style1,interpolation,256,100,cuda:1,4,1,103515
+395e310e,style2ada,interpolation,512,200,-1,-1,1,-1
+362d5efd,style2ada,interpolation,1024,800,-1,-1,1,-1
+cadc2a5a,style2ada,random,1024,100,cuda:0,4,1,108003
+8e1018d1,anycost,interpolation,256,100,cuda:1,2,1,27716
+c1300d76,mobile,random,256,100,cuda:0,4,1,23683
+9584f3d6,anycost,interpolation,1024,400,-1,-1,1,-1
+c4c6cc7c,anycost,interpolation,1024,400,cuda:0,4,1,112259
+f303de38,swa,random,256,400,cuda:1,4,1,99215
+602b1b09,anycost,random,1024,800,cuda:1,4,1,124082
+e6b6880e,mobile,interpolation,256,400,cuda:0,4,1,67817
+578ab5d9,stylemap,random,1024,200,cuda:0,2,1,111584
+2645976c,stylemap,random,512,200,cuda:0,4,1,-1
+3f7d5416,style2ada,interpolation,1024,800,cuda:0,1,1,121323
+62cc51cb,style2,interpolation,256,400,cuda:0,2,1,51060
+38cf1b6d,style2ada,random,256,200,cuda:0,4,1,65960
+8a12711f,anycost,interpolation,512,200,cuda:1,4,1,52840
+dde29e99,style2ada,random,1024,400,cuda:1,1,1,-1
+c553f67f,stylemap,interpolation,512,100,cuda:1,2,1,72420
+afcf7b64,anycost,interpolation,512,100,cuda:0,4,1,32250
+881acd43,style2,interpolation,256,400,cuda:1,2,1,75202
+6dff1cd0,swa,interpolation,1024,100,cuda:0,4,1,34997
+9f40816a,style2,interpolation,256,200,cuda:0,4,1,-1
+62306815,anycost,interpolation,1024,400,cuda:0,4,1,-1
+f1dd3940,style2,random,1024,100,cuda:1,4,1,35621
+fd456f48,stylemap,random,1024,200,cuda:0,1,1,-1
+0491fbea,style2,interpolation,512,100,cuda:0,4,1,-1
+0e7cf996,style2,interpolation,256,100,cuda:1,4,1,-1
+05b9dab3,swa,interpolation,1024,800,cuda:1,4,1,-1
+
+
+
+

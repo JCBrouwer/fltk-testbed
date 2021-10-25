@@ -40,12 +40,6 @@ spec:
             - mountPath: /opt/federation-lab/logging
               name: fl-log-claim
               readOnly: true                      # We mount log readOnly as this is for the Master worker nodes.
-          lifecycle:
-            # This pre-stop hook
-            preStop:
-              exec:
-                command:
-                  - "killall -9 tensorboard"
       volumes:
         - name: fl-server-claim
           persistentVolumeClaim:

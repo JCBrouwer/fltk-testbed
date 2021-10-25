@@ -135,11 +135,11 @@ time_lm = sm.formula.ols(
 ).fit()
 aov = sm.stats.anova_lm(time_lm, typ=2)
 print("\nANOVA")
-print(aov)
 aov.to_csv("anova.csv")
+aov
 #%%
 print("\nLinear model parameters")
-print(time_lm.params)
+time_lm.params
 #%%
 print("\nEffect sizes")
 total = aov["sum_sq"].sum()
@@ -152,4 +152,8 @@ for var, (sum_sq, df, f, p) in list(aov.iterrows()):
 results[(results.image_size == 1024)].groupby(["gpu", "model", "batch_size", "num_img"])["time"].agg(
     ["min", "median", "mean", "std", "max", "size"]
 ).to_csv("grouped_times.csv")
+# %%
+results[(results.image_size == 1024)].groupby(["gpu", "model", "batch_size", "num_img"])["time"].agg(
+    ["min", "median", "mean", "std", "max", "size"]
+)
 # %%

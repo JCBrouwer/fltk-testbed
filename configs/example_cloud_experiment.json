@@ -13,8 +13,8 @@
    },
    "execution_config": {
       "duration": 600,
-      "arrival_statistic": 4,
-      "scheduling": "random",
+      "arrival_statistic": 3,
+      "scheduling": "improved",
       "experiment_prefix": "cloud_experiment",
       "cuda": true,
       "tensorboard": {

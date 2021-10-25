@@ -1,9 +1,10 @@
+from copy import deepcopy
 import logging
 import random
 import time
 import uuid
 from datetime import datetime
-from queue import PriorityQueue
+from queue import Empty, PriorityQueue
 from typing import Dict
 
 import numpy as np
@@ -65,6 +66,11 @@ class Orchestrator(object):
             "mobile": "MobileStyleGenerator",
         }
 
+        self.deployed_tasks = {}
+        self.scheduled_vram = np.zeros(2)
+        self.finished_tasks = {}
+        self.restarts = 0
+
         # API to interact with the cluster.
         self.__client = PyTorchJobClient()
 
@@ -74,14 +80,20 @@ class Orchestrator(object):
         @return:
         @rtype:
         """
-        # self.__logger.info("Received stop signal for the Orchestrator. Cleaning up...")
+        self.__logger.info("Received stop signal for the Orchestrator. Cleaning up...")
         time.sleep(10)
 
-        times = self.__cluster_mgr.get_finish_times()
+        times = self.__cluster_mgr.get_finish_times()  # get most recent finish times
+        if len(times) == 0:
+            times = (
+                self.finished_tasks
+            )  # if cluster is under serious load, above can fail, use most recent version we have
+
         print("\n\n\n")
         print(f"task_info={self.task_info}")
         print(f"arrival_times={self.arrival_times}")
         print(f"finish_times={times}")
+        print(f"restarts={self.restarts}")
         print("\n\n\n")
         print("id,network,job_type,image_size,num_imgs,device,batch_size,data_parallelism,response_time")
         for id, arrival in self.arrival_times.items():
@@ -125,6 +137,9 @@ class Orchestrator(object):
         start_time = time.time()
         if clear:
             self.__clear_jobs()
+
+        counter = 0
+
         while self._alive and time.time() - start_time < self._config.get_duration():
             # 1. Check arrivals
             # If new arrivals, store them in arrival list
@@ -141,9 +156,9 @@ class Orchestrator(object):
                 )
 
                 self.__logger.debug(f"Arrival of: {task}")
-                self.pending_tasks.put(task)
-                self.arrival_times[task.id] = datetime.now()
-                self.task_info[task.id] = (
+                self.arrival_times[str(task.id)] = datetime.now()
+                self.pending_tasks.put((self.arrival_times[str(task.id)], task))
+                self.task_info[str(task.id)] = (
                     task.network,
                     task.param_conf.image_size,
                     task.param_conf.job_type,
@@ -153,36 +168,44 @@ class Orchestrator(object):
                     1,
                 )
 
-            while not self.pending_tasks.empty():
-                # Do blocking request to priority queue
-                curr_task = self.pending_tasks.get()
+            if counter % 10 == 0:
+                time.sleep(1)
+                resources = self.__cluster_mgr.get_resources()
+                if len(resources) == 0:
+                    print("no resources")
+                    continue
+                vram_free = np.flip(np.array(resources["ubuntu94025"].vram_free))
+                vram_total = np.flip(np.array(resources["ubuntu94025"].vram_total))
+                self.scheduled_vram = vram_total - vram_free
+                print(self.scheduled_vram.astype(int))
 
+            # Do blocking request to priority queue
+            try:
+                _, curr_task = self.pending_tasks.get(timeout=1)
+            except Empty:
+                continue
+            print("pending", self.pending_tasks.qsize(), "deployed", len(self.deployed_tasks))
+
+            if str(curr_task.id) in self.deployed_tasks or str(curr_task.id) in self.finished_tasks:
+                print("task already deployed or finished")
+                continue
+
+            if len(self.deployed_tasks) < 15:
                 if self._config.execution_config.scheduling == "random":
                     curr_task.param_conf.device = f"cuda:{0 if random.uniform(0, 1) < 2/3 else 1}"
                     curr_task.param_conf.bs = 8
                     curr_task.sys_conf.data_parallelism = 1
                 else:
-                    resources = self.__cluster_mgr.get_resources()
-                    if len(resources) == 0:
-                        continue
-                    vram_free = np.array(resources["ubuntu94025"].vram_free)
-                    # print(vram_free)
                     vram_by_batch_size = self.expected_vram_required.loc[
                         (self.expected_vram_required.model == self.model_name[curr_task.network])
                         & (self.expected_vram_required["size"] == curr_task.param_conf.image_size),
                         ["batch_size", "MB VRAM allocated"],
                     ]
-                    batch_sizes = vram_by_batch_size["batch_size"].values[:4]
-                    vram_required = (
-                        vram_by_batch_size["MB VRAM allocated"].values[:4] * 8
-                    )  # TODO need better VRAM estimates
-                    # print(batch_sizes)
-                    # print(vram_required)
-
-                    # print(vram_required[None, :] > vram_free[:, None])
+                    batch_sizes = vram_by_batch_size["batch_size"].values[:3]
+                    vram_required = vram_by_batch_size["MB VRAM allocated"].values[:3] * 2
 
                     # find first batch_size that is too large
-                    too_big = vram_required[None, :] > vram_free[:, None]
+                    too_big = vram_required[None, :] > (vram_total - self.scheduled_vram)[:, None]
                     max_batch_size_idxs = np.argmax(too_big, axis=1)
                     for i, not_enough_vram in enumerate(np.all(too_big, axis=1)):
                         if not_enough_vram:
@@ -191,17 +214,24 @@ class Orchestrator(object):
                             max_batch_size_idxs[i] = max_batch_size_idxs[i] - 1
                             if max_batch_size_idxs[i] == -1:
                                 max_batch_size_idxs[i] = len(batch_sizes) - 1
+
                     if np.all(max_batch_size_idxs == -1):
-                        time.sleep(2)
-                        continue  # not enough space for this job
-                    # print(max_batch_size_idxs)
-                    device_idx = np.argmax(max_batch_size_idxs)
-                    curr_task.param_conf.device = (
-                        f"cuda:{1 - device_idx}"  # resources returns in wrong order for some reason, so invert
-                    )
+                        print("all full: want", vram_required, "with", self.scheduled_vram.astype(int))
+                        self.pending_tasks.put((self.arrival_times[str(curr_task.id)], curr_task))
+                        time.sleep(3)
+                        counter += 1
+                        continue
+
+                    device_idx = np.argmax(vram_total - self.scheduled_vram)
+                    curr_task.param_conf.device = f"cuda:{device_idx}"
                     curr_task.param_conf.bs = batch_sizes[max_batch_size_idxs[device_idx]]
                     curr_task.sys_conf.data_parallelism = 1
+
+                    vram = np.zeros(2)
+                    vram[device_idx] = vram_required[max_batch_size_idxs[device_idx]]
+                    self.scheduled_vram += vram
                     print(
+                        "scheduling:",
                         curr_task.network,
                         curr_task.param_conf.image_size,
                         curr_task.param_conf.num_imgs,
@@ -209,8 +239,10 @@ class Orchestrator(object):
                         curr_task.param_conf.device,
                         vram_required[max_batch_size_idxs[device_idx]],
                     )
+                    print(self.scheduled_vram.astype(int))
+                    self.deployed_tasks[str(curr_task.id)] = curr_task
 
-                self.task_info[curr_task.id] = (
+                self.task_info[str(curr_task.id)] = (
                     curr_task.network,
                     curr_task.param_conf.image_size,
                     curr_task.param_conf.job_type,
@@ -220,15 +252,51 @@ class Orchestrator(object):
                     curr_task.sys_conf.data_parallelism,
                 )
 
-                # self.__logger.info(f"Scheduling arrival of Arrival: {curr_task.id}")
                 job_to_start = construct_inference_job(self._config, curr_task)
-
-                # Hack to overcome limitation of KubeFlow version (Made for older version of Kubernetes)
-                # self.__logger.info(f"Deploying on cluster: {curr_task.id}")
                 self.__client.create(job_to_start, namespace=self._config.cluster_config.namespace)
-                self.deployed_jobs[curr_task.id] = job_to_start
+                self.deployed_jobs[str(curr_task.id)] = job_to_start
+            else:
+                print("too many deployed jobs")
+                # self.pending_tasks.put((self.arrival_times[str(curr_task.id)], curr_task))
+                # time.sleep(3)
+                counter += 1
 
-            time.sleep(5)
+            failed_jobs = self.__cluster_mgr.get_failed()
+            needs_pause = False
+            for job_id in failed_jobs:
+                if not job_id in self.finished_tasks and job_id in self.deployed_tasks:
+                    self.restarts += 1
+                    needs_pause = True
+                    print("failed", job_id, "restarts:", self.restarts, len(failed_jobs))
+
+                    self.pending_tasks.put((self.arrival_times[job_id], self.deployed_tasks[job_id]))
+                    self.__client.delete(name=job_id, namespace="default")
+                    del self.deployed_tasks[job_id]
+
+                    resources = self.__cluster_mgr.get_resources()
+                    vram_free = np.flip(np.array(resources["ubuntu94025"].vram_free))
+                    vram_total = np.flip(np.array(resources["ubuntu94025"].vram_total))
+                    self.scheduled_vram = vram_total - vram_free
+                    print(self.scheduled_vram.astype(int))
+            if needs_pause:
+                time.sleep(3)
+
+            for job_id, times in self.__cluster_mgr.get_finish_times().items():
+                if not job_id in self.finished_tasks:
+                    print("finished", job_id)
+
+                    self.finished_tasks[job_id] = times
+
+                    if job_id in self.deployed_tasks:
+                        del self.deployed_tasks[job_id]
+
+                    resources = self.__cluster_mgr.get_resources()
+                    vram_free = np.flip(np.array(resources["ubuntu94025"].vram_free))
+                    vram_total = np.flip(np.array(resources["ubuntu94025"].vram_total))
+                    self.scheduled_vram = vram_total - vram_free
+                    print(self.scheduled_vram.astype(int))
+
+            counter += 1
 
         self.stop()
 

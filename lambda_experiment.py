@@ -8,19 +8,19 @@ import pandas as pd
 import seaborn as sns
 
 #%%
-# %%capture output
-# %%bash
-# . ~/.zshrc
-# {
-#     echo schedule,lambda,stat,num
-#     find lambda_results/* | \
-#         grep -v .log | grep -v .csv | \
-#         while read f; do
-#             echo $(echo ${f##*/} | cut -d_ -f1),$(echo $f | cut -d_ -f3),${f##*.},$(cat $f)
-#     done
-# } > lambda_results.csv
+%%capture output
+%%bash
+. ~/.zshrc
+{
+    echo schedule,lambda,stat,num
+    find lambda_results/* | \
+        grep -v .log | grep -v .csv | \
+        while read f; do
+            echo $(echo ${f##*/} | cut -d_ -f1),$(echo $f | cut -d_ -f3),${f##*.},$(cat $f)
+    done
+} > lambda_results_improved.csv
 #%%
-data = pd.read_csv("lambda_results.csv")
+data = pd.read_csv("lambda_results_improved.csv")
 #%%
 data.groupby(["schedule", "lambda", "stat"]).num.agg(["mean", "std"])
 #%%
@@ -60,8 +60,8 @@ columns = [
     "schedule",
     "lambda",
     "trials",
-    "failed",
-    "std failed",
+    "unfinished",
+    "std unfinished",
     "restarts",
     "std restarts",
     "completed",
@@ -79,8 +79,8 @@ widths = [len(col) + 3 for col in columns]
 print("".join([col.rjust(width) for col, width in zip(columns, widths)]))
 df = []
 for lambd in [15, 10, 5, 4, 3]:
-    for sched in ["random", "vram-aware"]:
-        times, perimg, perpix, runs, restarts, completed, evicted, failed = [], [], [], 0, [], [], [], []
+    for sched in ["random", "vram-aware",'improved']:
+        times, perimg, perpix, runs, restarts, completed, evicted, unfinished = [], [], [], 0, [], [], [], []
         for res in results:
             if res["arrival"] == lambd and res["schedule"] == sched:
                 times.extend(list(res["response_times"]))
@@ -90,7 +90,7 @@ for lambd in [15, 10, 5, 4, 3]:
                 restarts.append(res["restarts"])
                 completed.append(res["completed"])
                 evicted.append(res["evicted"])
-                failed.append((res["response_times"] == -1).sum())
+                unfinished.append((res["response_times"] == -1).sum())
         times, perimg, perpix = np.array(times), np.array(perimg), np.array(perpix)
         if len(times) == 0:
             continue
@@ -109,8 +109,8 @@ for lambd in [15, 10, 5, 4, 3]:
             sched,
             lambd,
             runs,
-            np.median(failed),
-            np.std(failed),
+            np.median(unfinished),
+            np.std(unfinished),
             np.median(restarts),
             np.std(restarts),
             np.median(completed),
@@ -137,31 +137,35 @@ df = pd.DataFrame(df, columns=columns)
 df.to_csv("lambda_response_times.csv")
 df
 #%%
-colors = ["tab:blue", "tab:orange"]
-x = list(reversed(np.sort(np.unique(df["lambda"])).astype(str)))
+colors = ["tab:blue", "tab:orange",'tab:green']
+x = np.flip(np.sort(np.unique(df["lambda"])))
 for title, col, std in [
     ("jobs completed", "completed", "std completed"),
     ("jobs restarted", "restarts", "std restarts"),
-    ("jobs failed", "failed", "std failed"),
+    ("jobs unfinished", "unfinished", "std unfinished"),
     ("response time (sec)", "time", "std time"),
     # ("response time per image (sec)", "time / img", "std / img"),
     # ("response time per megapixel (sec)", "time / megapixel", "std / megapixel"),
 ]:
     fig, ax = plt.subplots(figsize=(9, 5))
-    for s, sched in enumerate(["random", "vram-aware"]):
+    for s, sched in enumerate(["random", "vram-aware",'improved']):
         dat = df[df["schedule"] == sched]
 
         y = dat[col]
-        if len(y) < len(x):
+        if sched=='random':
             y = np.concatenate((y, [np.nan]))
+        elif sched =='improved':
+            y = np.concatenate(([np.nan],y))
 
         ax.plot(x, y, label=sched, color=colors[s])
         ax.plot(x, y, "o", color=colors[s])
 
         if std is not None:
             err = dat[std]
-            if len(err) < len(y):
+            if sched=='random':
                 err = np.concatenate((err, [np.nan]))
+            elif sched =='improved':
+                err = np.concatenate(([np.nan],err))
             lower = y - err
             upper = y + err
             ax.plot(x, lower, color=colors[s], alpha=0.1)
@@ -177,5 +181,7 @@ for title, col, std in [
     ax.set_title(title)
     plt.legend()
     plt.tight_layout()
+    ax.invert_xaxis()
+    ax.set_xticks(x)
     plt.savefig(f"{title}.pdf")
 # %%
