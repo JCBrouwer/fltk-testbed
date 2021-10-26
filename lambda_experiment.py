@@ -63,6 +63,8 @@ columns = [
     "schedule",
     "lambda",
     "trials",
+    "batch size",
+    "std batch size",
     "unfinished",
     "std unfinished",
     "restarts",
@@ -83,12 +85,23 @@ widths = [len(col) + 3 for col in columns]
 df = []
 for lambd in [10, 5, 4, 3, 2, 1]:
     for sched in ["random", "vram-aware", "improved"]:
-        times, perimg, perpix, runs, restarts, completed, evicted, unfinished = [], [], [], 0, [], [], [], []
+        times, perimg, perpix, runs, restarts, completed, evicted, unfinished, batch_sizes = (
+            [],
+            [],
+            [],
+            0,
+            [],
+            [],
+            [],
+            [],
+            [],
+        )
         for res in results:
             if res["arrival"] == lambd and res["schedule"] == sched:
                 times.extend(list(res["response_times"]))
                 perimg.extend(list(res["response_times"] / res["num_imgs"]))
                 perpix.extend(list(1_000_000 * res["response_times"] / (res["num_imgs"] * res["image_sizes"] ** 2)))
+                batch_sizes.extend(list(res["batch_size"]))
                 runs += 1
                 restarts.append(res["restarts"])
                 completed.append(res["completed"])
@@ -112,6 +125,8 @@ for lambd in [10, 5, 4, 3, 2, 1]:
             sched,
             lambd,
             runs,
+            np.mean(batch_sizes),
+            np.std(batch_sizes),
             np.median(unfinished),
             np.std(unfinished),
             np.median(restarts),
