@@ -1,11 +1,14 @@
 #%%
+import re
 from glob import glob
 from os import error
 
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from matplotlib.transforms import Affine2D
 
 # #%%
 # %%capture output
@@ -26,7 +29,7 @@ import seaborn as sns
 #%%
 
 results = []
-for csv in glob("lambda_results/*.csv"):
+for csv in glob("lambda_results/*.csv") + glob("lambda_results/first_runs/*.csv"):
     run_data = pd.read_csv(csv)
     run_num_imgs = np.nansum(run_data.num_imgs)
     run_num_pix = np.nansum(run_data.num_imgs * run_data.image_size.pow(2))
@@ -139,42 +142,44 @@ df
 #%%
 colors = ["tab:blue", "tab:orange", "tab:green"]
 x = np.flip(np.sort(np.unique(df["lambda"])))
-for title, col, std in [
-    ("jobs completed", "completed", "std completed"),
-    ("jobs restarted", "restarts", "std restarts"),
-    ("jobs unfinished", "unfinished", "std unfinished"),
-    ("response time (sec)", "time", "std time"),
+for title, ylabel, col, std in [
+    ("jobs completed", "number of jobs completed", "completed", "std completed"),
+    ("jobs restarted", "number of jobs restarted", "restarts", "std restarts"),
+    ("jobs unfinished", "number of jobs unfinished", "unfinished", "std unfinished"),
+    ("response time", "response time (sec)", "time", "std time"),
     # ("response time per image (sec)", "time / img", "std / img"),
     # ("response time per megapixel (sec)", "time / megapixel", "std / megapixel"),
 ]:
-    fig, ax = plt.subplots(figsize=(9, 5))
+    fig, ax = plt.subplots(figsize=(7, 5))
     for s, sched in enumerate(["random", "vram-aware", "improved"]):
         dat = df[df["schedule"] == sched]
 
         y = dat[col]
-        print(sched, y.shape, x.shape)
         if sched == "random":
-            y = np.concatenate((y, [np.nan]))
-        elif sched == "improved":
-            y = np.concatenate(y)
+            y = np.concatenate((y, [np.nan, np.nan, np.nan]))
+        elif sched == "vram-aware":
+            y = np.concatenate((y, [np.nan, np.nan]))
+        elif sched == "improved" and 15 in x:
+            y = np.concatenate(([np.nan], y))
 
         ax.plot(x, y, label=sched, color=colors[s])
         ax.plot(x, y, "o", color=colors[s])
 
-        if std is not None:
-            err = dat[std]
-            if sched == "random":
-                err = np.concatenate((err, [np.nan]))
-            elif sched == "improved":
-                err = np.concatenate(([np.nan], err))
-            lower = y - err
-            upper = y + err
-            ax.plot(x, lower, color=colors[s], alpha=0.1)
-            ax.plot(x, upper, color=colors[s], alpha=0.1)
-            ax.fill_between(x, lower, upper, alpha=0.2)
+        err = dat[std]
+        if sched == "random":
+            err = np.concatenate((err, [np.nan, np.nan, np.nan]))
+        elif sched == "vram-aware":
+            err = np.concatenate((err, [np.nan, np.nan]))
+        elif sched == "improved" and 15 in x:
+            err = np.concatenate(([np.nan], err))
+        lower = y - err
+        upper = y + err
+        ax.plot(x, lower, color=colors[s], alpha=0.1)
+        ax.plot(x, upper, color=colors[s], alpha=0.1)
+        ax.fill_between(x, lower, upper, alpha=0.2)
 
     ax.set_xlabel("arrival statistic")
-    ax.set_ylabel(col)
+    ax.set_ylabel(ylabel)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     ymin, ymax = ax.get_ylim()
@@ -185,4 +190,124 @@ for title, col, std in [
     ax.invert_xaxis()
     ax.set_xticks(x)
     plt.savefig(f"{title}.pdf")
+# %%
+
+fig, ax = plt.subplots(1, 2, figsize=(10, 6))
+scheds = ["random", "vram-aware", "improved"]
+scheds = ["random", "vram-aware", "improved"]
+lambdas = [10, 5, 4, 3, 2, 1]
+
+gpu_results = {}
+for csv in sorted(glob("lambda_results/*.csv"), key=lambda x: -int(x.split("/")[-1].split("_")[1])):
+    run_data = pd.read_csv(csv)
+    gpu_data = pd.read_csv(csv.replace(".csv", ".gpustats"))
+    gpu_data.columns = [re.sub("\[.*\]", "", col).replace(" ", "") for col in gpu_data.columns]
+    gpu_data["utilization.gpu"] = gpu_data["utilization.gpu"].apply(lambda x: int(x.replace(" %", "")))
+    gpu_data["utilization.memory"] = gpu_data["utilization.memory"].apply(lambda x: int(x.replace(" %", "")))
+    gpu_data["name"] = gpu_data["name"].apply(lambda x: x.replace(" NVIDIA GeForce ", ""))
+
+    sched, lambd, seed = csv.split("/")[-1].split("_")
+
+    if not (sched, lambd) in gpu_results:
+        gpu_results[(sched, lambd)] = [gpu_data[gpu_data.name == "RTX 3090"], gpu_data[gpu_data.name == "GTX 1080 Ti"]]
+    gpu_results[(sched, lambd)][0] = pd.concat((gpu_results[(sched, lambd)][0], gpu_data[gpu_data.name == "RTX 3090"]))
+    gpu_results[(sched, lambd)][1] = pd.concat(
+        (gpu_results[(sched, lambd)][1], gpu_data[gpu_data.name == "GTX 1080 Ti"])
+    )
+
+for (sched, lambd), (rtx3090, gtx1080ti) in gpu_results.items():
+    sched_idx = scheds.index(sched)
+    tform0o = Affine2D().translate(0.15 * sched_idx - 0.15, 0)
+    tform0x = Affine2D().translate(0.15 * sched_idx - 0.075, 0)
+    ax[0].errorbar(
+        [lambd],
+        [rtx3090["utilization.gpu"].mean()],
+        yerr=[rtx3090["utilization.gpu"].std()],
+        label=sched,
+        color=colors[sched_idx],
+        alpha=0.3,
+        marker="",
+        transform=tform0o + ax[0].transData,
+    )
+    ax[0].plot(
+        [lambd],
+        [rtx3090["utilization.gpu"].mean()],
+        label=sched,
+        color=colors[sched_idx],
+        marker="o",
+        transform=tform0o + ax[0].transData,
+    )
+    ax[0].errorbar(
+        [lambd],
+        [gtx1080ti["utilization.gpu"].mean()],
+        yerr=[gtx1080ti["utilization.gpu"].std()],
+        label=sched,
+        color=colors[sched_idx],
+        alpha=0.3,
+        marker="",
+        transform=tform0x + ax[0].transData,
+    )
+    ax[0].plot(
+        [lambd],
+        [gtx1080ti["utilization.gpu"].mean()],
+        label=sched,
+        color=colors[sched_idx],
+        marker="x",
+        transform=tform0x + ax[0].transData,
+    )
+    ax[0].set_ylim(0, 100)
+    ax[0].set_xlabel("Arrival Statistic")
+    ax[0].set_ylabel("GPU Utilization (%)")
+
+    ax[1].errorbar(
+        [lambd],
+        [rtx3090["utilization.memory"].mean()],
+        yerr=[rtx3090["utilization.memory"].std()],
+        label=sched,
+        color=colors[sched_idx],
+        alpha=0.3,
+        marker="",
+        transform=tform0o + ax[1].transData,
+    )
+    ax[1].plot(
+        [lambd],
+        [rtx3090["utilization.memory"].mean()],
+        label=sched,
+        color=colors[sched_idx],
+        marker="o",
+        transform=tform0o + ax[1].transData,
+    )
+    ax[1].errorbar(
+        [lambd],
+        [gtx1080ti["utilization.memory"].mean()],
+        yerr=[gtx1080ti["utilization.memory"].std()],
+        label=sched,
+        color=colors[sched_idx],
+        alpha=0.3,
+        marker="",
+        transform=tform0x + ax[1].transData,
+    )
+    ax[1].plot(
+        [lambd],
+        [gtx1080ti["utilization.memory"].mean()],
+        label=sched,
+        color=colors[sched_idx],
+        marker="x",
+        transform=tform0x + ax[1].transData,
+    )
+    ax[1].set_ylim(0, 100)
+    ax[1].set_xlabel("Arrival Statistic")
+    ax[1].set_ylabel("VRAM Utilization (%)")
+plt.legend(
+    handles=[matplotlib.patches.Patch(color=colors[scheds.index(sched)], label=sched) for sched in scheds]
+    + [
+        matplotlib.lines.Line2D(
+            [], [], color="black", marker=["o", "x"][c], linestyle="None", markersize=10, label=classifier
+        )
+        for c, classifier in enumerate(["RTX 3090", "GTX 1080 Ti"])
+    ]
+)
+plt.suptitle("GPU/VRAM utilization under different schedules")
+plt.tight_layout()
+plt.savefig("gputil.pdf")
 # %%
