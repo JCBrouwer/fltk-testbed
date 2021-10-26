@@ -150,7 +150,7 @@ for title, ylabel, col, std in [
     # ("response time per image (sec)", "time / img", "std / img"),
     # ("response time per megapixel (sec)", "time / megapixel", "std / megapixel"),
 ]:
-    fig, ax = plt.subplots(figsize=(7, 5))
+    fig, ax = plt.subplots(figsize=(7, 3.5))
     for s, sched in enumerate(["random", "vram-aware", "improved"]):
         dat = df[df["schedule"] == sched]
 
@@ -192,7 +192,7 @@ for title, ylabel, col, std in [
     plt.savefig(f"{title}.pdf")
 # %%
 
-fig, ax = plt.subplots(1, 2, figsize=(10, 6))
+fig, ax = plt.subplots(1, 2, figsize=(10, 4))
 scheds = ["random", "vram-aware", "improved"]
 scheds = ["random", "vram-aware", "improved"]
 lambdas = [10, 5, 4, 3, 2, 1]
