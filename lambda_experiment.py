@@ -7,29 +7,29 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-#%%
-%%capture output
-%%bash
-. ~/.zshrc
-{
-    echo schedule,lambda,stat,num
-    find lambda_results/* | \
-        grep -v .log | grep -v .csv | \
-        while read f; do
-            echo $(echo ${f##*/} | cut -d_ -f1),$(echo $f | cut -d_ -f3),${f##*.},$(cat $f)
-    done
-} > lambda_results_improved.csv
-#%%
-data = pd.read_csv("lambda_results_improved.csv")
-#%%
-data.groupby(["schedule", "lambda", "stat"]).num.agg(["mean", "std"])
+# #%%
+# %%capture output
+# %%bash
+# . ~/.zshrc
+# {
+#     echo schedule,lambda,stat,num
+#     find lambda_results/* | \
+#         grep -v .log | grep -v .csv | \
+#         while read f; do
+#             echo $(echo ${f##*/} | cut -d_ -f1),$(echo $f | cut -d_ -f3),${f##*.},$(cat $f)
+#     done
+# } > lambda_results_improved.csv
+# #%%
+# data = pd.read_csv("lambda_results_improved.csv")
+# #%%
+# data.groupby(["schedule", "lambda", "stat"]).num.agg(["mean", "std"])
 #%%
 
 results = []
 for csv in glob("lambda_results/*.csv"):
     run_data = pd.read_csv(csv)
-    run_num_imgs = run_data.num_imgs.sum()
-    run_num_pix = (run_data.num_imgs * run_data.image_size.pow(2)).sum()
+    run_num_imgs = np.nansum(run_data.num_imgs)
+    run_num_pix = np.nansum(run_data.num_imgs * run_data.image_size.pow(2))
     schedule, lambd, seed = csv.split("/")[-1].split("_")
 
     run_stats = {}
@@ -76,10 +76,10 @@ columns = [
     "std / megapixel",
 ]
 widths = [len(col) + 3 for col in columns]
-print("".join([col.rjust(width) for col, width in zip(columns, widths)]))
+# print("".join([col.rjust(width) for col, width in zip(columns, widths)]))
 df = []
-for lambd in [15, 10, 5, 4, 3]:
-    for sched in ["random", "vram-aware",'improved']:
+for lambd in [10, 5, 4, 3, 2, 1]:
+    for sched in ["random", "vram-aware", "improved"]:
         times, perimg, perpix, runs, restarts, completed, evicted, unfinished = [], [], [], 0, [], [], [], []
         for res in results:
             if res["arrival"] == lambd and res["schedule"] == sched:
@@ -137,7 +137,7 @@ df = pd.DataFrame(df, columns=columns)
 df.to_csv("lambda_response_times.csv")
 df
 #%%
-colors = ["tab:blue", "tab:orange",'tab:green']
+colors = ["tab:blue", "tab:orange", "tab:green"]
 x = np.flip(np.sort(np.unique(df["lambda"])))
 for title, col, std in [
     ("jobs completed", "completed", "std completed"),
@@ -148,24 +148,25 @@ for title, col, std in [
     # ("response time per megapixel (sec)", "time / megapixel", "std / megapixel"),
 ]:
     fig, ax = plt.subplots(figsize=(9, 5))
-    for s, sched in enumerate(["random", "vram-aware",'improved']):
+    for s, sched in enumerate(["random", "vram-aware", "improved"]):
         dat = df[df["schedule"] == sched]
 
         y = dat[col]
-        if sched=='random':
+        print(sched, y.shape, x.shape)
+        if sched == "random":
             y = np.concatenate((y, [np.nan]))
-        elif sched =='improved':
-            y = np.concatenate(([np.nan],y))
+        elif sched == "improved":
+            y = np.concatenate(y)
 
         ax.plot(x, y, label=sched, color=colors[s])
         ax.plot(x, y, "o", color=colors[s])
 
         if std is not None:
             err = dat[std]
-            if sched=='random':
+            if sched == "random":
                 err = np.concatenate((err, [np.nan]))
-            elif sched =='improved':
-                err = np.concatenate(([np.nan],err))
+            elif sched == "improved":
+                err = np.concatenate(([np.nan], err))
             lower = y - err
             upper = y + err
             ax.plot(x, lower, color=colors[s], alpha=0.1)
