@@ -1,0 +1,818 @@
+/usr/local/lib/python3.8/dist-packages/dataclasses_json/core.py:171: RuntimeWarning: `NoneType` object value of non-optional type config_path detected when decoding BareConfig.
+  warnings.warn(f"`NoneType` object {warning}.", RuntimeWarning)
+10-26-2021 00:09:18 root         INFO     Starting in cluster mode.
+10-26-2021 00:09:18 root         INFO     Starting as Orchestrator
+10-26-2021 00:09:18 root         INFO     Starting Orchestrator, initializing resources....
+10-26-2021 00:09:18 root         INFO     Loading in cluster configuration file
+10-26-2021 00:09:18 root         INFO     Pointing configuration to in cluster configuration.
+10-26-2021 00:09:18 root         INFO     Starting cluster manager
+10-26-2021 00:09:18 root         INFO     Starting arrival generator
+10-26-2021 00:09:18 root         INFO     Starting orchestrator
+10-26-2021 00:10:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ce3cf909-4786-4258-a0dd-7559680612f4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:10:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ce3cf909-4786-4258-a0dd-7559680612f4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:10:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ce3cf909-4786-4258-a0dd-7559680612f4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:10:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ce3cf909-4786-4258-a0dd-7559680612f4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:10:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/50dc27c9-8fc6-4dee-83f4-9f6579d98c39 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:10:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/05f0982b-2226-4df4-b858-a6af388155bb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:10:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/7332763a-fb2d-4021-9605-029a52511deb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:10:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/05f0982b-2226-4df4-b858-a6af388155bb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:10:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/75889bc1-5598-4de6-8acc-ca9a2263b2e5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:10:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/75889bc1-5598-4de6-8acc-ca9a2263b2e5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:12 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8f2fbb2f-05fb-4d39-98c5-ee73285b706d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:16 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e5d97529-5bd2-4a6b-8ee7-1419525662d6 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e5d97529-5bd2-4a6b-8ee7-1419525662d6 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:23 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/01bde85f-e005-43d7-9a89-f48ef7a0c8fc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:23 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d11116dd-af73-4459-a953-c2ff887be21f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/01bde85f-e005-43d7-9a89-f48ef7a0c8fc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/31f52ca9-0a29-43aa-aef3-f1b6d42d5e4f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d11116dd-af73-4459-a953-c2ff887be21f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/01bde85f-e005-43d7-9a89-f48ef7a0c8fc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/31f52ca9-0a29-43aa-aef3-f1b6d42d5e4f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/240f1036-c6d3-4b46-8c49-1ad3c63f1341 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:37 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/240f1036-c6d3-4b46-8c49-1ad3c63f1341 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/240f1036-c6d3-4b46-8c49-1ad3c63f1341 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a1d42320-b4c8-4ed8-9c78-3cb889bb4ade failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a1d42320-b4c8-4ed8-9c78-3cb889bb4ade failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ff269569-9dcb-4cca-93e3-a8218b1848c3 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:41 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a1d42320-b4c8-4ed8-9c78-3cb889bb4ade failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:43 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4abfb8fe-839c-4b80-8a17-e264bbbe51f7 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4abfb8fe-839c-4b80-8a17-e264bbbe51f7 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/86020c68-83e2-403b-a186-6b4d790f9dfc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4abfb8fe-839c-4b80-8a17-e264bbbe51f7 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/86020c68-83e2-403b-a186-6b4d790f9dfc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4abfb8fe-839c-4b80-8a17-e264bbbe51f7 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/86020c68-83e2-403b-a186-6b4d790f9dfc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0dae364c-22d9-42ce-a6ff-9424affe70e9 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/86020c68-83e2-403b-a186-6b4d790f9dfc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0dae364c-22d9-42ce-a6ff-9424affe70e9 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/86020c68-83e2-403b-a186-6b4d790f9dfc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0dae364c-22d9-42ce-a6ff-9424affe70e9 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/86020c68-83e2-403b-a186-6b4d790f9dfc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:54 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/801478d6-4789-40d1-9b10-faca7b0b3425 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:54 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/86020c68-83e2-403b-a186-6b4d790f9dfc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:11:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/801478d6-4789-40d1-9b10-faca7b0b3425 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:06 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a63a110a-7f70-47a7-9159-d9b5c2d7ae77 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0b398c3-89e7-4b69-a532-88bccef002fa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:19 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9c407ada-c48c-42df-a077-31b390b080f0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:21 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9c407ada-c48c-42df-a077-31b390b080f0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:23 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9c407ada-c48c-42df-a077-31b390b080f0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9c407ada-c48c-42df-a077-31b390b080f0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3e45d1c5-8613-474a-ac68-36fbdb391fc5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9c407ada-c48c-42df-a077-31b390b080f0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/559f7961-5d05-44c8-9e9c-c9cdcb347a31 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0bc35838-9b1e-46f2-b48b-4c9cc2eb0664 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0bc35838-9b1e-46f2-b48b-4c9cc2eb0664 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:54 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0bc35838-9b1e-46f2-b48b-4c9cc2eb0664 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0bc35838-9b1e-46f2-b48b-4c9cc2eb0664 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3d547e73-8f4a-4eb3-9f3a-66104e82ba1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:57 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3d547e73-8f4a-4eb3-9f3a-66104e82ba1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:12:59 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3d547e73-8f4a-4eb3-9f3a-66104e82ba1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5b1dbba6-2bb1-4078-ae50-b4ca39e1740f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4f8ad772-07a6-457d-95d2-dbbbd467344f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5b1dbba6-2bb1-4078-ae50-b4ca39e1740f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:14 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4f8ad772-07a6-457d-95d2-dbbbd467344f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:16 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4f8ad772-07a6-457d-95d2-dbbbd467344f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/df0b06b2-eb0a-4b4b-87ac-f0b2edb8cb72 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:19 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/df0b06b2-eb0a-4b4b-87ac-f0b2edb8cb72 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/df0b06b2-eb0a-4b4b-87ac-f0b2edb8cb72 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b4be1225-1b82-4580-acdb-ef16b05a8539 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/df0b06b2-eb0a-4b4b-87ac-f0b2edb8cb72 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b4be1225-1b82-4580-acdb-ef16b05a8539 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d4bbf25b-0642-4d65-a070-0c735c64e5de failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/df0b06b2-eb0a-4b4b-87ac-f0b2edb8cb72 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b4be1225-1b82-4580-acdb-ef16b05a8539 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d4bbf25b-0642-4d65-a070-0c735c64e5de failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b4be1225-1b82-4580-acdb-ef16b05a8539 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d4bbf25b-0642-4d65-a070-0c735c64e5de failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bef42c20-aaaa-4862-be72-d046a7899925 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d4bbf25b-0642-4d65-a070-0c735c64e5de failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bef42c20-aaaa-4862-be72-d046a7899925 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c2fd583b-687f-4f49-9519-e41a9a1e2426 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bef42c20-aaaa-4862-be72-d046a7899925 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c2fd583b-687f-4f49-9519-e41a9a1e2426 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0ce0700e-00ad-4205-ba8f-99fdc5e5588f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e4ba8644-f6ed-456f-b1c2-495337644042 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e66440b4-6d34-43da-bc8b-5203b9fe1a95 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:45 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e4ba8644-f6ed-456f-b1c2-495337644042 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:45 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e66440b4-6d34-43da-bc8b-5203b9fe1a95 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ce2df0da-ca23-4d9e-8b11-fa463e84768e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e4ba8644-f6ed-456f-b1c2-495337644042 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e66440b4-6d34-43da-bc8b-5203b9fe1a95 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f5cec852-fc6b-4e2e-a05a-2fce401270eb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:48 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b408c71e-ccfd-4d83-b1af-6dda71a4de96 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:48 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ce2df0da-ca23-4d9e-8b11-fa463e84768e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:48 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e4ba8644-f6ed-456f-b1c2-495337644042 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:48 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e66440b4-6d34-43da-bc8b-5203b9fe1a95 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:48 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f5cec852-fc6b-4e2e-a05a-2fce401270eb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:50 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b408c71e-ccfd-4d83-b1af-6dda71a4de96 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:50 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ce2df0da-ca23-4d9e-8b11-fa463e84768e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:50 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e66440b4-6d34-43da-bc8b-5203b9fe1a95 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:50 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f5cec852-fc6b-4e2e-a05a-2fce401270eb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/083df0ee-6905-4dcc-b729-fe189521c0a7 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b408c71e-ccfd-4d83-b1af-6dda71a4de96 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ce2df0da-ca23-4d9e-8b11-fa463e84768e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f5cec852-fc6b-4e2e-a05a-2fce401270eb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/083df0ee-6905-4dcc-b729-fe189521c0a7 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b408c71e-ccfd-4d83-b1af-6dda71a4de96 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f5cec852-fc6b-4e2e-a05a-2fce401270eb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/083df0ee-6905-4dcc-b729-fe189521c0a7 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b408c71e-ccfd-4d83-b1af-6dda71a4de96 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f5cec852-fc6b-4e2e-a05a-2fce401270eb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:57 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/083df0ee-6905-4dcc-b729-fe189521c0a7 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:57 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4516c021-a3aa-43c0-966b-cf0db5b0e927 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:57 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/504d48f9-c454-4f33-ba29-f2e2a575141e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:57 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b408c71e-ccfd-4d83-b1af-6dda71a4de96 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:57 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f5cec852-fc6b-4e2e-a05a-2fce401270eb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:59 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/083df0ee-6905-4dcc-b729-fe189521c0a7 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:59 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/136378c8-9756-49b7-80a9-3e44d810bb46 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:59 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4516c021-a3aa-43c0-966b-cf0db5b0e927 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:59 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/504d48f9-c454-4f33-ba29-f2e2a575141e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:59 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b408c71e-ccfd-4d83-b1af-6dda71a4de96 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:13:59 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f5cec852-fc6b-4e2e-a05a-2fce401270eb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/136378c8-9756-49b7-80a9-3e44d810bb46 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4516c021-a3aa-43c0-966b-cf0db5b0e927 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/504d48f9-c454-4f33-ba29-f2e2a575141e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b408c71e-ccfd-4d83-b1af-6dda71a4de96 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f5cec852-fc6b-4e2e-a05a-2fce401270eb failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/136378c8-9756-49b7-80a9-3e44d810bb46 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4516c021-a3aa-43c0-966b-cf0db5b0e927 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/504d48f9-c454-4f33-ba29-f2e2a575141e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b408c71e-ccfd-4d83-b1af-6dda71a4de96 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/136378c8-9756-49b7-80a9-3e44d810bb46 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/504d48f9-c454-4f33-ba29-f2e2a575141e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:06 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/136378c8-9756-49b7-80a9-3e44d810bb46 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:06 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/504d48f9-c454-4f33-ba29-f2e2a575141e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/504d48f9-c454-4f33-ba29-f2e2a575141e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/504d48f9-c454-4f33-ba29-f2e2a575141e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/504d48f9-c454-4f33-ba29-f2e2a575141e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:12 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/63f62c6e-d29d-45e3-912f-551da97981ab failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:14 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/63f62c6e-d29d-45e3-912f-551da97981ab failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:16 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/087aff5b-4d79-4596-9cbe-1ff1e4dbc95e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:16 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/63f62c6e-d29d-45e3-912f-551da97981ab failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/087aff5b-4d79-4596-9cbe-1ff1e4dbc95e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b95ed344-2f61-4068-9cac-0db16baef88e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:19 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/087aff5b-4d79-4596-9cbe-1ff1e4dbc95e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:19 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/69833478-2eda-4fc0-8093-de95743be5ac failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:19 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b95ed344-2f61-4068-9cac-0db16baef88e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/087aff5b-4d79-4596-9cbe-1ff1e4dbc95e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/69833478-2eda-4fc0-8093-de95743be5ac failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b95ed344-2f61-4068-9cac-0db16baef88e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/087aff5b-4d79-4596-9cbe-1ff1e4dbc95e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/69833478-2eda-4fc0-8093-de95743be5ac failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b95ed344-2f61-4068-9cac-0db16baef88e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/087aff5b-4d79-4596-9cbe-1ff1e4dbc95e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/69833478-2eda-4fc0-8093-de95743be5ac failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b95ed344-2f61-4068-9cac-0db16baef88e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/00f2b8d8-4d3d-49a3-9eb4-96c77bcfce0e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/087aff5b-4d79-4596-9cbe-1ff1e4dbc95e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5ac4214f-64d5-4080-99cd-97f657b6eb17 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b95ed344-2f61-4068-9cac-0db16baef88e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/00f2b8d8-4d3d-49a3-9eb4-96c77bcfce0e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5ac4214f-64d5-4080-99cd-97f657b6eb17 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/007b49f1-d842-4a61-806c-77f982845fb9 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/00f2b8d8-4d3d-49a3-9eb4-96c77bcfce0e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/144471f7-7bc2-49d2-9447-826e60bd41c2 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5ac4214f-64d5-4080-99cd-97f657b6eb17 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/007b49f1-d842-4a61-806c-77f982845fb9 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/00f2b8d8-4d3d-49a3-9eb4-96c77bcfce0e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/144471f7-7bc2-49d2-9447-826e60bd41c2 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5ac4214f-64d5-4080-99cd-97f657b6eb17 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ec7766fe-0133-43e7-8ed6-fd683a567cca failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/007b49f1-d842-4a61-806c-77f982845fb9 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/00f2b8d8-4d3d-49a3-9eb4-96c77bcfce0e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/144471f7-7bc2-49d2-9447-826e60bd41c2 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5ac4214f-64d5-4080-99cd-97f657b6eb17 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/007b49f1-d842-4a61-806c-77f982845fb9 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/144471f7-7bc2-49d2-9447-826e60bd41c2 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5ac4214f-64d5-4080-99cd-97f657b6eb17 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/007b49f1-d842-4a61-806c-77f982845fb9 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/144471f7-7bc2-49d2-9447-826e60bd41c2 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5ac4214f-64d5-4080-99cd-97f657b6eb17 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/007b49f1-d842-4a61-806c-77f982845fb9 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5ac4214f-64d5-4080-99cd-97f657b6eb17 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/007b49f1-d842-4a61-806c-77f982845fb9 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:45 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8a103a61-68e4-4a89-8426-e2db8573a588 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8a103a61-68e4-4a89-8426-e2db8573a588 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:48 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8a103a61-68e4-4a89-8426-e2db8573a588 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0ca31388-a9e7-4e3a-b64e-08ac764e9e38 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8a103a61-68e4-4a89-8426-e2db8573a588 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0ca31388-a9e7-4e3a-b64e-08ac764e9e38 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8a103a61-68e4-4a89-8426-e2db8573a588 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:54 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0ca31388-a9e7-4e3a-b64e-08ac764e9e38 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:54 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/85def2ab-5d30-4c7e-943e-f9ee5d241c85 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:54 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8a103a61-68e4-4a89-8426-e2db8573a588 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0ca31388-a9e7-4e3a-b64e-08ac764e9e38 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/85def2ab-5d30-4c7e-943e-f9ee5d241c85 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0ca31388-a9e7-4e3a-b64e-08ac764e9e38 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/6719caa6-6a6f-4cab-b729-6290b10de584 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/85def2ab-5d30-4c7e-943e-f9ee5d241c85 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:14:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1567eec-27bd-483b-97fd-1b917c44c244 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0ca31388-a9e7-4e3a-b64e-08ac764e9e38 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/6719caa6-6a6f-4cab-b729-6290b10de584 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/85def2ab-5d30-4c7e-943e-f9ee5d241c85 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1567eec-27bd-483b-97fd-1b917c44c244 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:01 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/6719caa6-6a6f-4cab-b729-6290b10de584 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:01 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1567eec-27bd-483b-97fd-1b917c44c244 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:03 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/6719caa6-6a6f-4cab-b729-6290b10de584 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:03 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9e9c1994-e36a-4d4f-905e-05834e186638 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:03 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1567eec-27bd-483b-97fd-1b917c44c244 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:05 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/6719caa6-6a6f-4cab-b729-6290b10de584 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:05 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1567eec-27bd-483b-97fd-1b917c44c244 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/6719caa6-6a6f-4cab-b729-6290b10de584 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1567eec-27bd-483b-97fd-1b917c44c244 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/6719caa6-6a6f-4cab-b729-6290b10de584 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1567eec-27bd-483b-97fd-1b917c44c244 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/6719caa6-6a6f-4cab-b729-6290b10de584 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/6719caa6-6a6f-4cab-b729-6290b10de584 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:18 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:21 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:21 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:23 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:23 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4faf056d-103f-453f-bb80-3f6546cc9cee failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9fcd06c1-b094-4325-b22f-74a497125001 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4faf056d-103f-453f-bb80-3f6546cc9cee failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9fcd06c1-b094-4325-b22f-74a497125001 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b2d13bc8-46dc-47b5-9b8d-694c936d081b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4faf056d-103f-453f-bb80-3f6546cc9cee failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/854b4ceb-30d8-445c-9694-8fbae70e9131 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9fcd06c1-b094-4325-b22f-74a497125001 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b2d13bc8-46dc-47b5-9b8d-694c936d081b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4faf056d-103f-453f-bb80-3f6546cc9cee failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/854b4ceb-30d8-445c-9694-8fbae70e9131 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9fcd06c1-b094-4325-b22f-74a497125001 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:30 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b2d13bc8-46dc-47b5-9b8d-694c936d081b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4faf056d-103f-453f-bb80-3f6546cc9cee failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/854b4ceb-30d8-445c-9694-8fbae70e9131 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9fcd06c1-b094-4325-b22f-74a497125001 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/b2d13bc8-46dc-47b5-9b8d-694c936d081b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4faf056d-103f-453f-bb80-3f6546cc9cee failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/854b4ceb-30d8-445c-9694-8fbae70e9131 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9fcd06c1-b094-4325-b22f-74a497125001 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4faf056d-103f-453f-bb80-3f6546cc9cee failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/854b4ceb-30d8-445c-9694-8fbae70e9131 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8838e6ae-1d21-47ed-84f7-9ffec0c52ac8 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/820d8571-4912-4dcc-bd7b-32156328220c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/854b4ceb-30d8-445c-9694-8fbae70e9131 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8838e6ae-1d21-47ed-84f7-9ffec0c52ac8 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/1c0ecc01-81e5-4928-9c3a-3de6acb4e00f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/854b4ceb-30d8-445c-9694-8fbae70e9131 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8838e6ae-1d21-47ed-84f7-9ffec0c52ac8 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:41 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8838e6ae-1d21-47ed-84f7-9ffec0c52ac8 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:43 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8838e6ae-1d21-47ed-84f7-9ffec0c52ac8 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:45 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8838e6ae-1d21-47ed-84f7-9ffec0c52ac8 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8838e6ae-1d21-47ed-84f7-9ffec0c52ac8 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a2924922-84d9-4690-a7ab-c576844606aa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a2924922-84d9-4690-a7ab-c576844606aa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:52 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f2ceb82a-f2f1-4792-b6c5-412aa947969c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:54 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/12acf009-87ab-49a6-857c-b220875d1438 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:54 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a2924922-84d9-4690-a7ab-c576844606aa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:54 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f2ceb82a-f2f1-4792-b6c5-412aa947969c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/12acf009-87ab-49a6-857c-b220875d1438 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a2924922-84d9-4690-a7ab-c576844606aa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f2ceb82a-f2f1-4792-b6c5-412aa947969c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/12acf009-87ab-49a6-857c-b220875d1438 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:15:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f2ceb82a-f2f1-4792-b6c5-412aa947969c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5d750a88-2a8a-4385-9eda-e18885acfc04 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a3fd6879-05d2-4a20-bfd3-237612828018 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bb268b96-3a63-4712-a849-47efbdcf646a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:03 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5d750a88-2a8a-4385-9eda-e18885acfc04 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:03 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a3fd6879-05d2-4a20-bfd3-237612828018 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:03 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bb268b96-3a63-4712-a849-47efbdcf646a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:05 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5d750a88-2a8a-4385-9eda-e18885acfc04 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:05 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a3fd6879-05d2-4a20-bfd3-237612828018 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:05 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bb268b96-3a63-4712-a849-47efbdcf646a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5d750a88-2a8a-4385-9eda-e18885acfc04 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a3fd6879-05d2-4a20-bfd3-237612828018 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bb268b96-3a63-4712-a849-47efbdcf646a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5d750a88-2a8a-4385-9eda-e18885acfc04 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a3fd6879-05d2-4a20-bfd3-237612828018 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bb268b96-3a63-4712-a849-47efbdcf646a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5d750a88-2a8a-4385-9eda-e18885acfc04 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a3fd6879-05d2-4a20-bfd3-237612828018 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bb268b96-3a63-4712-a849-47efbdcf646a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5d750a88-2a8a-4385-9eda-e18885acfc04 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a3fd6879-05d2-4a20-bfd3-237612828018 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/bb268b96-3a63-4712-a849-47efbdcf646a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5d750a88-2a8a-4385-9eda-e18885acfc04 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a3fd6879-05d2-4a20-bfd3-237612828018 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5d750a88-2a8a-4385-9eda-e18885acfc04 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a3fd6879-05d2-4a20-bfd3-237612828018 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3fa9582d-f96f-41f5-ad6d-acd91e36f22e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8137a5d9-61e4-4b2f-81af-643b5ee75c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3fa9582d-f96f-41f5-ad6d-acd91e36f22e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8137a5d9-61e4-4b2f-81af-643b5ee75c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3fa9582d-f96f-41f5-ad6d-acd91e36f22e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8137a5d9-61e4-4b2f-81af-643b5ee75c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0d6b3f6c-9f65-4b88-b112-e7da02a51c36 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3fa9582d-f96f-41f5-ad6d-acd91e36f22e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8137a5d9-61e4-4b2f-81af-643b5ee75c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0d6b3f6c-9f65-4b88-b112-e7da02a51c36 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3fa9582d-f96f-41f5-ad6d-acd91e36f22e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/803e6bb9-f979-4803-bfe1-b0b114abc0a5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:34 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/8137a5d9-61e4-4b2f-81af-643b5ee75c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0d6b3f6c-9f65-4b88-b112-e7da02a51c36 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3fa9582d-f96f-41f5-ad6d-acd91e36f22e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:36 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/803e6bb9-f979-4803-bfe1-b0b114abc0a5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0d6b3f6c-9f65-4b88-b112-e7da02a51c36 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3fa9582d-f96f-41f5-ad6d-acd91e36f22e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/803e6bb9-f979-4803-bfe1-b0b114abc0a5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0e7fc8b-3aef-4c7c-844c-5eae60552af0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0d6b3f6c-9f65-4b88-b112-e7da02a51c36 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3fa9582d-f96f-41f5-ad6d-acd91e36f22e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/803e6bb9-f979-4803-bfe1-b0b114abc0a5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0e7fc8b-3aef-4c7c-844c-5eae60552af0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0f3f5c9c-ab76-438c-9103-442511b3fc27 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3fa9582d-f96f-41f5-ad6d-acd91e36f22e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/803e6bb9-f979-4803-bfe1-b0b114abc0a5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0e7fc8b-3aef-4c7c-844c-5eae60552af0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3fa9582d-f96f-41f5-ad6d-acd91e36f22e failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/803e6bb9-f979-4803-bfe1-b0b114abc0a5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0e7fc8b-3aef-4c7c-844c-5eae60552af0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0e7fc8b-3aef-4c7c-844c-5eae60552af0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:48 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0e7fc8b-3aef-4c7c-844c-5eae60552af0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:50 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0e7fc8b-3aef-4c7c-844c-5eae60552af0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0e7fc8b-3aef-4c7c-844c-5eae60552af0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0e7fc8b-3aef-4c7c-844c-5eae60552af0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/988bdf56-5023-45ab-83b0-d67e186f1c72 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a0e7fc8b-3aef-4c7c-844c-5eae60552af0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:57 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/988bdf56-5023-45ab-83b0-d67e186f1c72 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:16:59 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/988bdf56-5023-45ab-83b0-d67e186f1c72 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:01 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/680a4934-3d32-4a22-b9fa-4b0442f7a33f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:03 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/680a4934-3d32-4a22-b9fa-4b0442f7a33f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/680a4934-3d32-4a22-b9fa-4b0442f7a33f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/db719843-165b-4e0f-9fbf-8a1b5b148358 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:06 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/680a4934-3d32-4a22-b9fa-4b0442f7a33f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:06 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/84115d42-1d18-4fe4-a7c0-5d7ebf9a623f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:06 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/db719843-165b-4e0f-9fbf-8a1b5b148358 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:08 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/680a4934-3d32-4a22-b9fa-4b0442f7a33f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:08 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/84115d42-1d18-4fe4-a7c0-5d7ebf9a623f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:08 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88988202-d430-40d9-bce0-7d03c47f4939 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:08 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/db719843-165b-4e0f-9fbf-8a1b5b148358 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:10 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/680a4934-3d32-4a22-b9fa-4b0442f7a33f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:10 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/84115d42-1d18-4fe4-a7c0-5d7ebf9a623f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:10 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88988202-d430-40d9-bce0-7d03c47f4939 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:12 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/680a4934-3d32-4a22-b9fa-4b0442f7a33f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:12 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/84115d42-1d18-4fe4-a7c0-5d7ebf9a623f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:12 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88988202-d430-40d9-bce0-7d03c47f4939 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:14 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/680a4934-3d32-4a22-b9fa-4b0442f7a33f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:14 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88988202-d430-40d9-bce0-7d03c47f4939 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:16 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/680a4934-3d32-4a22-b9fa-4b0442f7a33f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:16 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88988202-d430-40d9-bce0-7d03c47f4939 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:18 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88988202-d430-40d9-bce0-7d03c47f4939 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88c5e651-8a3c-4564-824f-b993fc62008a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c6134666-c53e-46c5-b1ff-c3856da6e9a0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88c5e651-8a3c-4564-824f-b993fc62008a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c6134666-c53e-46c5-b1ff-c3856da6e9a0 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/88c5e651-8a3c-4564-824f-b993fc62008a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/7a52fb2e-c7de-4070-9c6c-eb305857efae failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/7a52fb2e-c7de-4070-9c6c-eb305857efae failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:37 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/7a52fb2e-c7de-4070-9c6c-eb305857efae failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:37 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc3bf504-83fa-4066-a0e0-251a3b50b8b2 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/7a52fb2e-c7de-4070-9c6c-eb305857efae failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:38 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc3bf504-83fa-4066-a0e0-251a3b50b8b2 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/7a52fb2e-c7de-4070-9c6c-eb305857efae failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a76da1a4-9108-429e-86da-4f8b8ef4befc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:40 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc3bf504-83fa-4066-a0e0-251a3b50b8b2 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/7a52fb2e-c7de-4070-9c6c-eb305857efae failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/81ec723a-559e-46d8-9e68-c548344aff5b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a14661fb-2352-4989-97bb-b6597c0b7948 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:42 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a76da1a4-9108-429e-86da-4f8b8ef4befc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/7a52fb2e-c7de-4070-9c6c-eb305857efae failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/81ec723a-559e-46d8-9e68-c548344aff5b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a14661fb-2352-4989-97bb-b6597c0b7948 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a76da1a4-9108-429e-86da-4f8b8ef4befc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:44 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/cc8cef81-61ec-428a-b7b0-6eb1120d51d4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/7a52fb2e-c7de-4070-9c6c-eb305857efae failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/81ec723a-559e-46d8-9e68-c548344aff5b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a14661fb-2352-4989-97bb-b6597c0b7948 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a76da1a4-9108-429e-86da-4f8b8ef4befc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:46 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/cc8cef81-61ec-428a-b7b0-6eb1120d51d4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/7a52fb2e-c7de-4070-9c6c-eb305857efae failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/81ec723a-559e-46d8-9e68-c548344aff5b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a14661fb-2352-4989-97bb-b6597c0b7948 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a76da1a4-9108-429e-86da-4f8b8ef4befc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/cc8cef81-61ec-428a-b7b0-6eb1120d51d4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/81ec723a-559e-46d8-9e68-c548344aff5b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a14661fb-2352-4989-97bb-b6597c0b7948 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a76da1a4-9108-429e-86da-4f8b8ef4befc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/cc8cef81-61ec-428a-b7b0-6eb1120d51d4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/81ec723a-559e-46d8-9e68-c548344aff5b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a14661fb-2352-4989-97bb-b6597c0b7948 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a76da1a4-9108-429e-86da-4f8b8ef4befc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/cc8cef81-61ec-428a-b7b0-6eb1120d51d4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/81ec723a-559e-46d8-9e68-c548344aff5b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a14661fb-2352-4989-97bb-b6597c0b7948 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a76da1a4-9108-429e-86da-4f8b8ef4befc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/cc8cef81-61ec-428a-b7b0-6eb1120d51d4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/81ec723a-559e-46d8-9e68-c548344aff5b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a14661fb-2352-4989-97bb-b6597c0b7948 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a76da1a4-9108-429e-86da-4f8b8ef4befc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/cc8cef81-61ec-428a-b7b0-6eb1120d51d4 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/81ec723a-559e-46d8-9e68-c548344aff5b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:56 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a76da1a4-9108-429e-86da-4f8b8ef4befc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:17:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/81ec723a-559e-46d8-9e68-c548344aff5b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/0abe0fd0-2567-4285-a265-a6a8675c9d1d failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a6c657f0-a42e-4d1e-b69d-3f11647bcf0f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ad89c3ca-aaca-491a-a5f1-523a651804a5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a6c657f0-a42e-4d1e-b69d-3f11647bcf0f failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ad89c3ca-aaca-491a-a5f1-523a651804a5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4916310e-fce5-4e0d-b1cc-29a99210f4b1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d88a5543-c4de-4c1d-85ae-23ce4b738182 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4916310e-fce5-4e0d-b1cc-29a99210f4b1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/724af7a8-c936-4f23-857c-9147adafb982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d88a5543-c4de-4c1d-85ae-23ce4b738182 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4916310e-fce5-4e0d-b1cc-29a99210f4b1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/724af7a8-c936-4f23-857c-9147adafb982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d88a5543-c4de-4c1d-85ae-23ce4b738182 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4916310e-fce5-4e0d-b1cc-29a99210f4b1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/56763eff-7b75-493a-9723-bcf2986508dc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/724af7a8-c936-4f23-857c-9147adafb982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d88a5543-c4de-4c1d-85ae-23ce4b738182 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4916310e-fce5-4e0d-b1cc-29a99210f4b1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/56763eff-7b75-493a-9723-bcf2986508dc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/724af7a8-c936-4f23-857c-9147adafb982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d88a5543-c4de-4c1d-85ae-23ce4b738182 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/56763eff-7b75-493a-9723-bcf2986508dc failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/724af7a8-c936-4f23-857c-9147adafb982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d88a5543-c4de-4c1d-85ae-23ce4b738182 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e36ea634-2aa3-4ef7-8373-c7e77fdd0ea1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:19 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:19 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/724af7a8-c936-4f23-857c-9147adafb982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:19 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e36ea634-2aa3-4ef7-8373-c7e77fdd0ea1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:19 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e91ca9dc-2821-4aa7-aa33-ba77873adc7c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:21 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:21 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e36ea634-2aa3-4ef7-8373-c7e77fdd0ea1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:21 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e91ca9dc-2821-4aa7-aa33-ba77873adc7c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:21 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6eb1569-a8d8-4623-8569-0d7693aae983 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:23 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:23 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e36ea634-2aa3-4ef7-8373-c7e77fdd0ea1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:23 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e91ca9dc-2821-4aa7-aa33-ba77873adc7c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:23 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6eb1569-a8d8-4623-8569-0d7693aae983 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e36ea634-2aa3-4ef7-8373-c7e77fdd0ea1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e91ca9dc-2821-4aa7-aa33-ba77873adc7c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:25 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6eb1569-a8d8-4623-8569-0d7693aae983 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e36ea634-2aa3-4ef7-8373-c7e77fdd0ea1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e91ca9dc-2821-4aa7-aa33-ba77873adc7c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:27 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6eb1569-a8d8-4623-8569-0d7693aae983 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e36ea634-2aa3-4ef7-8373-c7e77fdd0ea1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e91ca9dc-2821-4aa7-aa33-ba77873adc7c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:29 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6eb1569-a8d8-4623-8569-0d7693aae983 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3c5d8e24-7c97-404d-957f-4231ce01857b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/5420dc65-e781-4860-a4df-6ae0a6378ba8 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e91ca9dc-2821-4aa7-aa33-ba77873adc7c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6eb1569-a8d8-4623-8569-0d7693aae983 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3c5d8e24-7c97-404d-957f-4231ce01857b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72e14563-3d48-4378-9149-bcacdd1aedce failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e91ca9dc-2821-4aa7-aa33-ba77873adc7c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:33 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6eb1569-a8d8-4623-8569-0d7693aae983 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3c5d8e24-7c97-404d-957f-4231ce01857b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72e14563-3d48-4378-9149-bcacdd1aedce failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/e91ca9dc-2821-4aa7-aa33-ba77873adc7c failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:35 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6eb1569-a8d8-4623-8569-0d7693aae983 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:37 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3c5d8e24-7c97-404d-957f-4231ce01857b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:37 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:37 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:37 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72e14563-3d48-4378-9149-bcacdd1aedce failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:37 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6eb1569-a8d8-4623-8569-0d7693aae983 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3c5d8e24-7c97-404d-957f-4231ce01857b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72e14563-3d48-4378-9149-bcacdd1aedce failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/84525148-8cc0-48b1-b9d2-f197fc8ec0a1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:39 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6eb1569-a8d8-4623-8569-0d7693aae983 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:41 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:41 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/719c82ac-dc6c-40c4-8c72-d21e83104c62 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:41 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72e14563-3d48-4378-9149-bcacdd1aedce failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:41 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/84525148-8cc0-48b1-b9d2-f197fc8ec0a1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:43 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:43 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72e14563-3d48-4378-9149-bcacdd1aedce failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:43 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/84525148-8cc0-48b1-b9d2-f197fc8ec0a1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:45 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:45 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72a12a33-762b-4ea9-ab88-fba5eba726db failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:45 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72e14563-3d48-4378-9149-bcacdd1aedce failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:45 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/84525148-8cc0-48b1-b9d2-f197fc8ec0a1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:45 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1c5e1ab-d4f8-434b-a28c-515493bacb54 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72a12a33-762b-4ea9-ab88-fba5eba726db failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/84525148-8cc0-48b1-b9d2-f197fc8ec0a1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:47 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1c5e1ab-d4f8-434b-a28c-515493bacb54 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72a12a33-762b-4ea9-ab88-fba5eba726db failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/84525148-8cc0-48b1-b9d2-f197fc8ec0a1 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:49 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1c5e1ab-d4f8-434b-a28c-515493bacb54 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72a12a33-762b-4ea9-ab88-fba5eba726db failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1c5e1ab-d4f8-434b-a28c-515493bacb54 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:51 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6a994d2-2c0d-4361-8a1a-ab5ae553afaa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3664ffd4-7235-46ea-b0b6-bfcb05943506 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/72a12a33-762b-4ea9-ab88-fba5eba726db failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1c5e1ab-d4f8-434b-a28c-515493bacb54 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6a994d2-2c0d-4361-8a1a-ab5ae553afaa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:53 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ffb4978a-6e69-4631-bb8f-89c5bdc03540 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3664ffd4-7235-46ea-b0b6-bfcb05943506 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/4302093d-34af-4ac4-9c31-c0a4df24b2f5 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1c5e1ab-d4f8-434b-a28c-515493bacb54 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6a994d2-2c0d-4361-8a1a-ab5ae553afaa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:55 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ffb4978a-6e69-4631-bb8f-89c5bdc03540 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3664ffd4-7235-46ea-b0b6-bfcb05943506 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1c5e1ab-d4f8-434b-a28c-515493bacb54 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6a994d2-2c0d-4361-8a1a-ab5ae553afaa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:18:58 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ffb4978a-6e69-4631-bb8f-89c5bdc03540 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3664ffd4-7235-46ea-b0b6-bfcb05943506 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/c1c5e1ab-d4f8-434b-a28c-515493bacb54 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6a994d2-2c0d-4361-8a1a-ab5ae553afaa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:00 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ffb4978a-6e69-4631-bb8f-89c5bdc03540 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3664ffd4-7235-46ea-b0b6-bfcb05943506 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6a994d2-2c0d-4361-8a1a-ab5ae553afaa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ffb4978a-6e69-4631-bb8f-89c5bdc03540 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3664ffd4-7235-46ea-b0b6-bfcb05943506 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6a994d2-2c0d-4361-8a1a-ab5ae553afaa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:04 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/ffb4978a-6e69-4631-bb8f-89c5bdc03540 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3664ffd4-7235-46ea-b0b6-bfcb05943506 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:07 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6a994d2-2c0d-4361-8a1a-ab5ae553afaa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/085fc834-94e4-428a-8877-9ab740508982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3664ffd4-7235-46ea-b0b6-bfcb05943506 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc29c4d3-55af-4542-a484-ef8e44821345 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:09 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/f6a994d2-2c0d-4361-8a1a-ab5ae553afaa failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/085fc834-94e4-428a-8877-9ab740508982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:11 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc29c4d3-55af-4542-a484-ef8e44821345 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/085fc834-94e4-428a-8877-9ab740508982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/62aa51e2-c9ca-49d8-a039-aa4d305e8a91 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:13 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc29c4d3-55af-4542-a484-ef8e44821345 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/085fc834-94e4-428a-8877-9ab740508982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/14416fc8-6a88-4e3a-aa13-3efce66cff6b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/62aa51e2-c9ca-49d8-a039-aa4d305e8a91 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:15 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc29c4d3-55af-4542-a484-ef8e44821345 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/085fc834-94e4-428a-8877-9ab740508982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/14416fc8-6a88-4e3a-aa13-3efce66cff6b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/62aa51e2-c9ca-49d8-a039-aa4d305e8a91 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:17 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc29c4d3-55af-4542-a484-ef8e44821345 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/085fc834-94e4-428a-8877-9ab740508982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/092d485b-76c5-4895-be34-9b78d012de06 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/14416fc8-6a88-4e3a-aa13-3efce66cff6b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/62aa51e2-c9ca-49d8-a039-aa4d305e8a91 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/98ee797a-5275-4465-97bd-0173dd85613a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:20 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc29c4d3-55af-4542-a484-ef8e44821345 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/085fc834-94e4-428a-8877-9ab740508982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/14416fc8-6a88-4e3a-aa13-3efce66cff6b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/62aa51e2-c9ca-49d8-a039-aa4d305e8a91 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/98ee797a-5275-4465-97bd-0173dd85613a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:22 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc29c4d3-55af-4542-a484-ef8e44821345 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/085fc834-94e4-428a-8877-9ab740508982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/14416fc8-6a88-4e3a-aa13-3efce66cff6b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/62aa51e2-c9ca-49d8-a039-aa4d305e8a91 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/98ee797a-5275-4465-97bd-0173dd85613a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:24 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc29c4d3-55af-4542-a484-ef8e44821345 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/085fc834-94e4-428a-8877-9ab740508982 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/14416fc8-6a88-4e3a-aa13-3efce66cff6b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/62aa51e2-c9ca-49d8-a039-aa4d305e8a91 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/98ee797a-5275-4465-97bd-0173dd85613a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:26 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc29c4d3-55af-4542-a484-ef8e44821345 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/14416fc8-6a88-4e3a-aa13-3efce66cff6b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/62aa51e2-c9ca-49d8-a039-aa4d305e8a91 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/98ee797a-5275-4465-97bd-0173dd85613a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a41541df-94c7-49c5-ae95-a085423c424a failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:28 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/dc29c4d3-55af-4542-a484-ef8e44821345 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/14416fc8-6a88-4e3a-aa13-3efce66cff6b failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/62aa51e2-c9ca-49d8-a039-aa4d305e8a91 failed. Reason: 'NoneType' object is not iterable
+10-26-2021 00:19:31 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/98ee797a-5275-4465-97bd-0173dd85613a failed. Reason: 'NoneType' object is not iterable
+
+
+
+
+task_info={UUID('66d9a7d4-09c4-4839-a61d-7859e119e539'): ('style2ada', 512, 'random', 800, 'cuda:0', 8, 1), UUID('1ed1ab12-2b39-46db-bd35-4e19bb4c76a0'): ('mobile', 1024, 'interpolation', 400, 'cuda:0', 8, 1), UUID('609d8e74-52d0-46c3-91a4-a4cdafffa421'): ('swa', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('ed030379-fded-4d5e-81ce-b4581f2966f0'): ('anycost', 1024, 'random', 800, 'cuda:1', 8, 1), UUID('92732069-f36e-4af9-aab4-c44c46097bb1'): ('style2ada', 512, 'random', 100, 'cuda:1', 8, 1), UUID('e973c322-ad7e-4a59-b72d-e8ab828501a1'): ('stylemap', 512, 'interpolation', 100, 'cuda:1', 8, 1), UUID('c4dd799e-4f81-436a-9237-6cace1eb6f72'): ('style2', 512, 'random', 100, 'cuda:1', 8, 1), UUID('007ac871-6e8f-4480-be3d-968852aea82e'): ('swa', 1024, 'interpolation', 400, 'cuda:0', 8, 1), UUID('93b0f776-ebac-4b17-a9a0-ffe730360f91'): ('style2ada', 256, 'random', 800, 'cuda:0', 8, 1), UUID('513b7d95-bedf-46ee-aa4a-687de56d4944'): ('style2', 1024, 'interpolation', 200, 'cuda:1', 8, 1), UUID('d2511107-f13c-4361-af9a-a07b9dc388f5'): ('mobile', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('e22f5859-f833-459f-919b-1b2ec413b03e'): ('anycost', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('f8d1cefd-6879-4b54-8f1c-e464220d1d77'): ('style2ada', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('56105bbe-6cfc-4798-b925-ef66a0adb222'): ('swa', 256, 'interpolation', 800, 'cuda:0', 8, 1), UUID('2d41c1f9-37f0-40e8-94ed-56e5150bc48f'): ('swa', 1024, 'interpolation', 800, 'cuda:1', 8, 1), UUID('80475c8a-914e-4501-9f8c-8ea519eaf4f0'): ('style2ada', 256, 'random', 100, 'cuda:1', 8, 1), UUID('a76e5857-5471-428f-b1b9-7dc8eb28a736'): ('mobile', 256, 'interpolation', 400, 'cuda:0', 8, 1), UUID('ce3cf909-4786-4258-a0dd-7559680612f4'): ('style1', 256, 'interpolation', 100, 'cuda:1', 8, 1), UUID('50dc27c9-8fc6-4dee-83f4-9f6579d98c39'): ('mobile', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('7332763a-fb2d-4021-9605-029a52511deb'): ('swa', 256, 'interpolation', 100, 'cuda:0', 8, 1), UUID('05f0982b-2226-4df4-b858-a6af388155bb'): ('style2ada', 256, 'interpolation', 800, 'cuda:0', 8, 1), UUID('75889bc1-5598-4de6-8acc-ca9a2263b2e5'): ('stylemap', 1024, 'interpolation', 100, 'cuda:1', 8, 1), UUID('ccf20d90-8a7b-4942-9b5b-9ee6bfd1bac2'): ('anycost', 1024, 'random', 400, 'cuda:0', 8, 1), UUID('105d46d0-f86e-4273-a64f-115677131165'): ('swa', 512, 'interpolation', 400, 'cuda:1', 8, 1), UUID('6b384b51-e7ca-4888-8a12-e75c3049d099'): ('style2ada', 256, 'random', 400, 'cuda:0', 8, 1), UUID('8015669f-9784-4f92-b8c3-cd342b2852e1'): ('style2ada', 1024, 'interpolation', 800, 'cuda:0', 8, 1), UUID('8f2fbb2f-05fb-4d39-98c5-ee73285b706d'): ('stylemap', 256, 'interpolation', 400, 'cuda:0', 8, 1), UUID('e5d97529-5bd2-4a6b-8ee7-1419525662d6'): ('swa', 512, 'interpolation', 100, 'cuda:0', 8, 1), UUID('d11116dd-af73-4459-a953-c2ff887be21f'): ('style1', 512, 'random', 100, 'cuda:0', 8, 1), UUID('01bde85f-e005-43d7-9a89-f48ef7a0c8fc'): ('swa', 256, 'random', 200, 'cuda:0', 8, 1), UUID('31f52ca9-0a29-43aa-aef3-f1b6d42d5e4f'): ('anycost', 256, 'random', 200, 'cuda:0', 8, 1), UUID('a5586450-c07a-4cd5-b223-613b9864f445'): ('swa', 512, 'random', 800, 'cuda:1', 8, 1), UUID('240f1036-c6d3-4b46-8c49-1ad3c63f1341'): ('anycost', 256, 'random', 200, 'cuda:1', 8, 1), UUID('a1d42320-b4c8-4ed8-9c78-3cb889bb4ade'): ('style1', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('ff269569-9dcb-4cca-93e3-a8218b1848c3'): ('style2ada', 256, 'random', 200, 'cuda:0', 8, 1), UUID('4abfb8fe-839c-4b80-8a17-e264bbbe51f7'): ('mobile', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('86020c68-83e2-403b-a186-6b4d790f9dfc'): ('swa', 256, 'interpolation', 200, 'cuda:0', 8, 1), UUID('0dae364c-22d9-42ce-a6ff-9424affe70e9'): ('style1', 256, 'interpolation', 200, 'cuda:0', 8, 1), UUID('801478d6-4789-40d1-9b10-faca7b0b3425'): ('mobile', 512, 'random', 800, 'cuda:0', 8, 1), UUID('ed5f8317-3d98-4062-b0a6-8b23ccf528ca'): ('swa', 512, 'random', 100, 'cuda:1', 8, 1), UUID('a63a110a-7f70-47a7-9159-d9b5c2d7ae77'): ('style1', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('64083f89-3007-4fd0-a30a-15ede92ab34b'): ('swa', 512, 'interpolation', 200, 'cuda:0', 8, 1), UUID('4c1f86c4-a7b0-42d9-ad85-e5a92358aef2'): ('swa', 256, 'random', 100, 'cuda:0', 8, 1), UUID('45063416-14a1-4b77-a48b-502e1ada89fd'): ('swa', 512, 'interpolation', 100, 'cuda:0', 8, 1), UUID('a0b398c3-89e7-4b69-a532-88bccef002fa'): ('swa', 1024, 'interpolation', 800, 'cuda:1', 8, 1), UUID('9c407ada-c48c-42df-a077-31b390b080f0'): ('anycost', 1024, 'interpolation', 200, 'cuda:0', 8, 1), UUID('3e45d1c5-8613-474a-ac68-36fbdb391fc5'): ('style2ada', 256, 'interpolation', 100, 'cuda:0', 8, 1), UUID('c811e373-cd9c-40b0-a28f-2ce2cca8e002'): ('style2', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('559f7961-5d05-44c8-9e9c-c9cdcb347a31'): ('swa', 256, 'interpolation', 800, 'cuda:0', 8, 1), UUID('1f3d3c72-9c46-4fff-9f1f-da8ac5412cd8'): ('swa', 512, 'random', 400, 'cuda:0', 8, 1), UUID('0bc35838-9b1e-46f2-b48b-4c9cc2eb0664'): ('stylemap', 512, 'random', 200, 'cuda:1', 8, 1), UUID('3d547e73-8f4a-4eb3-9f3a-66104e82ba1d'): ('mobile', 512, 'random', 800, 'cuda:1', 8, 1), UUID('5b1dbba6-2bb1-4078-ae50-b4ca39e1740f'): ('swa', 1024, 'interpolation', 100, 'cuda:0', 8, 1), UUID('4f8ad772-07a6-457d-95d2-dbbbd467344f'): ('anycost', 512, 'random', 200, 'cuda:0', 8, 1), UUID('df0b06b2-eb0a-4b4b-87ac-f0b2edb8cb72'): ('style2ada', 1024, 'interpolation', 800, 'cuda:0', 8, 1), UUID('b4be1225-1b82-4580-acdb-ef16b05a8539'): ('stylemap', 1024, 'random', 100, 'cuda:0', 8, 1), UUID('d4bbf25b-0642-4d65-a070-0c735c64e5de'): ('stylemap', 256, 'interpolation', 100, 'cuda:0', 8, 1), UUID('bef42c20-aaaa-4862-be72-d046a7899925'): ('swa', 1024, 'interpolation', 400, 'cuda:1', 8, 1), UUID('c2fd583b-687f-4f49-9519-e41a9a1e2426'): ('swa', 1024, 'interpolation', 200, 'cuda:0', 8, 1), UUID('0ce0700e-00ad-4205-ba8f-99fdc5e5588f'): ('style2', 1024, 'random', 100, 'cuda:0', 8, 1), UUID('e4ba8644-f6ed-456f-b1c2-495337644042'): ('anycost', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('e66440b4-6d34-43da-bc8b-5203b9fe1a95'): ('style2ada', 512, 'random', 200, 'cuda:0', 8, 1), UUID('ce2df0da-ca23-4d9e-8b11-fa463e84768e'): ('style2', 256, 'interpolation', 100, 'cuda:1', 8, 1), UUID('f5cec852-fc6b-4e2e-a05a-2fce401270eb'): ('mobile', 512, 'random', 800, 'cuda:0', 8, 1), UUID('b408c71e-ccfd-4d83-b1af-6dda71a4de96'): ('swa', 512, 'random', 200, 'cuda:0', 8, 1), UUID('083df0ee-6905-4dcc-b729-fe189521c0a7'): ('style1', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('4516c021-a3aa-43c0-966b-cf0db5b0e927'): ('swa', 256, 'interpolation', 800, 'cuda:0', 8, 1), UUID('504d48f9-c454-4f33-ba29-f2e2a575141e'): ('swa', 1024, 'random', 100, 'cuda:1', 8, 1), UUID('136378c8-9756-49b7-80a9-3e44d810bb46'): ('style2', 512, 'random', 400, 'cuda:0', 8, 1), UUID('63f62c6e-d29d-45e3-912f-551da97981ab'): ('style1', 256, 'random', 200, 'cuda:1', 8, 1), UUID('087aff5b-4d79-4596-9cbe-1ff1e4dbc95e'): ('style2ada', 1024, 'interpolation', 400, 'cuda:1', 8, 1), UUID('b95ed344-2f61-4068-9cac-0db16baef88e'): ('style2ada', 1024, 'interpolation', 200, 'cuda:0', 8, 1), UUID('69833478-2eda-4fc0-8093-de95743be5ac'): ('style2ada', 256, 'random', 400, 'cuda:0', 8, 1), UUID('5ac4214f-64d5-4080-99cd-97f657b6eb17'): ('style2', 256, 'random', 100, 'cuda:0', 8, 1), UUID('00f2b8d8-4d3d-49a3-9eb4-96c77bcfce0e'): ('anycost', 512, 'interpolation', 200, 'cuda:0', 8, 1), UUID('144471f7-7bc2-49d2-9447-826e60bd41c2'): ('mobile', 1024, 'random', 800, 'cuda:1', 8, 1), UUID('007b49f1-d842-4a61-806c-77f982845fb9'): ('anycost', 256, 'interpolation', 200, 'cuda:0', 8, 1), UUID('ec7766fe-0133-43e7-8ed6-fd683a567cca'): ('style2', 256, 'interpolation', 800, 'cuda:1', 8, 1), UUID('8a103a61-68e4-4a89-8426-e2db8573a588'): ('anycost', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('0ca31388-a9e7-4e3a-b64e-08ac764e9e38'): ('style2', 512, 'interpolation', 800, 'cuda:1', 8, 1), UUID('85def2ab-5d30-4c7e-943e-f9ee5d241c85'): ('style2ada', 256, 'interpolation', 100, 'cuda:1', 8, 1), UUID('c1567eec-27bd-483b-97fd-1b917c44c244'): ('mobile', 256, 'random', 400, 'cuda:0', 8, 1), UUID('6719caa6-6a6f-4cab-b729-6290b10de584'): ('swa', 1024, 'interpolation', 100, 'cuda:0', 8, 1), UUID('9e9c1994-e36a-4d4f-905e-05834e186638'): ('anycost', 256, 'random', 400, 'cuda:0', 8, 1), UUID('820d8571-4912-4dcc-bd7b-32156328220c'): ('swa', 256, 'interpolation', 800, 'cuda:1', 8, 1), UUID('1c0ecc01-81e5-4928-9c3a-3de6acb4e00f'): ('mobile', 256, 'interpolation', 100, 'cuda:1', 8, 1), UUID('9fcd06c1-b094-4325-b22f-74a497125001'): ('mobile', 256, 'interpolation', 200, 'cuda:0', 8, 1), UUID('4faf056d-103f-453f-bb80-3f6546cc9cee'): ('style2', 256, 'random', 400, 'cuda:1', 8, 1), UUID('b2d13bc8-46dc-47b5-9b8d-694c936d081b'): ('anycost', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('854b4ceb-30d8-445c-9694-8fbae70e9131'): ('style1', 1024, 'interpolation', 200, 'cuda:1', 8, 1), UUID('8838e6ae-1d21-47ed-84f7-9ffec0c52ac8'): ('stylemap', 1024, 'interpolation', 100, 'cuda:0', 8, 1), UUID('a2924922-84d9-4690-a7ab-c576844606aa'): ('anycost', 1024, 'interpolation', 100, 'cuda:0', 8, 1), UUID('f2ceb82a-f2f1-4792-b6c5-412aa947969c'): ('style1', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('12acf009-87ab-49a6-857c-b220875d1438'): ('style1', 1024, 'interpolation', 200, 'cuda:0', 8, 1), UUID('bb268b96-3a63-4712-a849-47efbdcf646a'): ('style2', 256, 'interpolation', 800, 'cuda:1', 8, 1), UUID('a3fd6879-05d2-4a20-bfd3-237612828018'): ('mobile', 512, 'random', 200, 'cuda:1', 8, 1), UUID('5d750a88-2a8a-4385-9eda-e18885acfc04'): ('stylemap', 1024, 'random', 400, 'cuda:1', 8, 1), UUID('0f3f5c9c-ab76-438c-9103-442511b3fc27'): ('style2', 1024, 'random', 400, 'cuda:1', 8, 1), UUID('3fa9582d-f96f-41f5-ad6d-acd91e36f22e'): ('style2ada', 256, 'random', 800, 'cuda:0', 8, 1), UUID('8137a5d9-61e4-4b2f-81af-643b5ee75c62'): ('style2', 256, 'interpolation', 400, 'cuda:0', 8, 1), UUID('0d6b3f6c-9f65-4b88-b112-e7da02a51c36'): ('stylemap', 512, 'random', 100, 'cuda:0', 8, 1), UUID('803e6bb9-f979-4803-bfe1-b0b114abc0a5'): ('stylemap', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('a0e7fc8b-3aef-4c7c-844c-5eae60552af0'): ('anycost', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('988bdf56-5023-45ab-83b0-d67e186f1c72'): ('mobile', 256, 'interpolation', 100, 'cuda:0', 8, 1), UUID('680a4934-3d32-4a22-b9fa-4b0442f7a33f'): ('style2', 1024, 'random', 200, 'cuda:1', 8, 1), UUID('db719843-165b-4e0f-9fbf-8a1b5b148358'): ('stylemap', 256, 'random', 100, 'cuda:1', 8, 1), UUID('84115d42-1d18-4fe4-a7c0-5d7ebf9a623f'): ('style1', 512, 'random', 200, 'cuda:1', 8, 1), UUID('88988202-d430-40d9-bce0-7d03c47f4939'): ('mobile', 256, 'random', 800, 'cuda:0', 8, 1), UUID('88c5e651-8a3c-4564-824f-b993fc62008a'): ('style1', 256, 'random', 400, 'cuda:0', 8, 1), UUID('c6134666-c53e-46c5-b1ff-c3856da6e9a0'): ('anycost', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('7a52fb2e-c7de-4070-9c6c-eb305857efae'): ('style2ada', 1024, 'interpolation', 100, 'cuda:0', 8, 1), UUID('dc3bf504-83fa-4066-a0e0-251a3b50b8b2'): ('anycost', 512, 'random', 800, 'cuda:0', 8, 1), UUID('a76da1a4-9108-429e-86da-4f8b8ef4befc'): ('style2', 1024, 'interpolation', 800, 'cuda:1', 8, 1), UUID('0abe0fd0-2567-4285-a265-a6a8675c9d1d'): ('style2', 1024, 'interpolation', 800, 'cuda:1', 8, 1), UUID('81ec723a-559e-46d8-9e68-c548344aff5b'): ('swa', 256, 'random', 200, 'cuda:0', 8, 1), UUID('a14661fb-2352-4989-97bb-b6597c0b7948'): ('style2ada', 256, 'interpolation', 100, 'cuda:1', 8, 1), UUID('cc8cef81-61ec-428a-b7b0-6eb1120d51d4'): ('anycost', 512, 'random', 800, 'cuda:0', 8, 1), UUID('ad89c3ca-aaca-491a-a5f1-523a651804a5'): ('style1', 512, 'random', 400, 'cuda:1', 8, 1), UUID('a6c657f0-a42e-4d1e-b69d-3f11647bcf0f'): ('style1', 256, 'random', 200, 'cuda:0', 8, 1), UUID('4916310e-fce5-4e0d-b1cc-29a99210f4b1'): ('style2ada', 512, 'random', 800, 'cuda:0', 8, 1), UUID('d88a5543-c4de-4c1d-85ae-23ce4b738182'): ('anycost', 256, 'random', 100, 'cuda:0', 8, 1), UUID('724af7a8-c936-4f23-857c-9147adafb982'): ('style1', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('56763eff-7b75-493a-9723-bcf2986508dc'): ('style2ada', 1024, 'interpolation', 100, 'cuda:0', 8, 1), UUID('e36ea634-2aa3-4ef7-8373-c7e77fdd0ea1'): ('style2', 512, 'random', 100, 'cuda:1', 8, 1), UUID('719c82ac-dc6c-40c4-8c72-d21e83104c62'): ('mobile', 256, 'random', 200, 'cuda:0', 8, 1), UUID('e91ca9dc-2821-4aa7-aa33-ba77873adc7c'): ('style2', 512, 'interpolation', 100, 'cuda:0', 8, 1), UUID('f6eb1569-a8d8-4623-8569-0d7693aae983'): ('anycost', 512, 'random', 800, 'cuda:0', 8, 1), UUID('3c5d8e24-7c97-404d-957f-4231ce01857b'): ('mobile', 512, 'random', 200, 'cuda:1', 8, 1), UUID('5420dc65-e781-4860-a4df-6ae0a6378ba8'): ('anycost', 1024, 'random', 100, 'cuda:1', 8, 1), UUID('72e14563-3d48-4378-9149-bcacdd1aedce'): ('mobile', 512, 'interpolation', 800, 'cuda:0', 8, 1), UUID('4302093d-34af-4ac4-9c31-c0a4df24b2f5'): ('style2', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('84525148-8cc0-48b1-b9d2-f197fc8ec0a1'): ('style2ada', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('c1c5e1ab-d4f8-434b-a28c-515493bacb54'): ('mobile', 1024, 'random', 100, 'cuda:0', 8, 1), UUID('72a12a33-762b-4ea9-ab88-fba5eba726db'): ('style1', 256, 'random', 200, 'cuda:0', 8, 1), UUID('092d485b-76c5-4895-be34-9b78d012de06'): ('mobile', 256, 'interpolation', 400, 'cuda:1', 8, 1), UUID('f6a994d2-2c0d-4361-8a1a-ab5ae553afaa'): ('swa', 512, 'interpolation', 800, 'cuda:1', 8, 1), UUID('3664ffd4-7235-46ea-b0b6-bfcb05943506'): ('mobile', 1024, 'interpolation', 800, 'cuda:1', 8, 1), UUID('ffb4978a-6e69-4631-bb8f-89c5bdc03540'): ('style2', 1024, 'random', 200, 'cuda:0', 8, 1), UUID('a41541df-94c7-49c5-ae95-a085423c424a'): ('style1', 1024, 'random', 100, 'cuda:0', 8, 1), UUID('dc29c4d3-55af-4542-a484-ef8e44821345'): ('swa', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('085fc834-94e4-428a-8877-9ab740508982'): ('swa', 1024, 'interpolation', 100, 'cuda:0', 8, 1), UUID('62aa51e2-c9ca-49d8-a039-aa4d305e8a91'): ('stylemap', 256, 'random', 100, 'cuda:1', 8, 1), UUID('14416fc8-6a88-4e3a-aa13-3efce66cff6b'): ('style1', 512, 'interpolation', 400, 'cuda:0', 8, 1), UUID('98ee797a-5275-4465-97bd-0173dd85613a'): ('style2', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('7f3c9ead-7df2-4d1d-8398-90b8f1494032'): ('style2ada', 256, 'random', 400, 'cuda:0', 8, 1), UUID('35e1bb8a-b171-4698-9b9c-2e446efdd18c'): ('style1', 512, 'random', 200, 'cuda:0', 8, 1), UUID('a13ff530-b3e0-4b77-be82-dcee5617e18a'): ('swa', 256, 'interpolation', 100, 'cuda:0', 8, 1), UUID('ae341c00-3460-4e69-a746-35c14cc90e6e'): ('style2ada', 512, 'random', 400, 'cuda:0', 8, 1), UUID('a0b1ad0e-6706-4826-977f-ff2b787348bb'): ('anycost', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('bfcef412-d317-40a9-87d1-3be364fc81b5'): ('stylemap', 512, 'interpolation', 100, 'cuda:1', 8, 1), UUID('9a2a9331-bcc4-43e5-ab88-1f03bcd0b8a8'): ('style2ada', 512, 'interpolation', 800, 'cuda:0', 8, 1)}
+arrival_times={UUID('66d9a7d4-09c4-4839-a61d-7859e119e539'): datetime.datetime(2021, 10, 26, 0, 9, 23, 504539), UUID('1ed1ab12-2b39-46db-bd35-4e19bb4c76a0'): datetime.datetime(2021, 10, 26, 0, 9, 28, 520595), UUID('609d8e74-52d0-46c3-91a4-a4cdafffa421'): datetime.datetime(2021, 10, 26, 0, 9, 33, 532825), UUID('ed030379-fded-4d5e-81ce-b4581f2966f0'): datetime.datetime(2021, 10, 26, 0, 9, 38, 544559), UUID('92732069-f36e-4af9-aab4-c44c46097bb1'): datetime.datetime(2021, 10, 26, 0, 9, 38, 544616), UUID('e973c322-ad7e-4a59-b72d-e8ab828501a1'): datetime.datetime(2021, 10, 26, 0, 9, 43, 564550), UUID('c4dd799e-4f81-436a-9237-6cace1eb6f72'): datetime.datetime(2021, 10, 26, 0, 9, 43, 564605), UUID('007ac871-6e8f-4480-be3d-968852aea82e'): datetime.datetime(2021, 10, 26, 0, 9, 48, 584635), UUID('93b0f776-ebac-4b17-a9a0-ffe730360f91'): datetime.datetime(2021, 10, 26, 0, 9, 53, 596516), UUID('513b7d95-bedf-46ee-aa4a-687de56d4944'): datetime.datetime(2021, 10, 26, 0, 9, 58, 612601), UUID('d2511107-f13c-4361-af9a-a07b9dc388f5'): datetime.datetime(2021, 10, 26, 0, 10, 3, 629645), UUID('e22f5859-f833-459f-919b-1b2ec413b03e'): datetime.datetime(2021, 10, 26, 0, 10, 8, 652514), UUID('f8d1cefd-6879-4b54-8f1c-e464220d1d77'): datetime.datetime(2021, 10, 26, 0, 10, 8, 652553), UUID('56105bbe-6cfc-4798-b925-ef66a0adb222'): datetime.datetime(2021, 10, 26, 0, 10, 13, 681477), UUID('2d41c1f9-37f0-40e8-94ed-56e5150bc48f'): datetime.datetime(2021, 10, 26, 0, 10, 18, 702738), UUID('80475c8a-914e-4501-9f8c-8ea519eaf4f0'): datetime.datetime(2021, 10, 26, 0, 10, 18, 707979), UUID('a76e5857-5471-428f-b1b9-7dc8eb28a736'): datetime.datetime(2021, 10, 26, 0, 10, 23, 752533), UUID('ce3cf909-4786-4258-a0dd-7559680612f4'): datetime.datetime(2021, 10, 26, 0, 10, 28, 769693), UUID('50dc27c9-8fc6-4dee-83f4-9f6579d98c39'): datetime.datetime(2021, 10, 26, 0, 10, 33, 796741), UUID('7332763a-fb2d-4021-9605-029a52511deb'): datetime.datetime(2021, 10, 26, 0, 10, 38, 806811), UUID('05f0982b-2226-4df4-b858-a6af388155bb'): datetime.datetime(2021, 10, 26, 0, 10, 38, 806866), UUID('75889bc1-5598-4de6-8acc-ca9a2263b2e5'): datetime.datetime(2021, 10, 26, 0, 10, 43, 828566), UUID('ccf20d90-8a7b-4942-9b5b-9ee6bfd1bac2'): datetime.datetime(2021, 10, 26, 0, 10, 48, 844543), UUID('105d46d0-f86e-4273-a64f-115677131165'): datetime.datetime(2021, 10, 26, 0, 10, 53, 856547), UUID('6b384b51-e7ca-4888-8a12-e75c3049d099'): datetime.datetime(2021, 10, 26, 0, 10, 58, 877657), UUID('8015669f-9784-4f92-b8c3-cd342b2852e1'): datetime.datetime(2021, 10, 26, 0, 11, 3, 900545), UUID('8f2fbb2f-05fb-4d39-98c5-ee73285b706d'): datetime.datetime(2021, 10, 26, 0, 11, 8, 988640), UUID('e5d97529-5bd2-4a6b-8ee7-1419525662d6'): datetime.datetime(2021, 10, 26, 0, 11, 14, 8616), UUID('d11116dd-af73-4459-a953-c2ff887be21f'): datetime.datetime(2021, 10, 26, 0, 11, 19, 21200), UUID('01bde85f-e005-43d7-9a89-f48ef7a0c8fc'): datetime.datetime(2021, 10, 26, 0, 11, 19, 21255), UUID('31f52ca9-0a29-43aa-aef3-f1b6d42d5e4f'): datetime.datetime(2021, 10, 26, 0, 11, 19, 21296), UUID('a5586450-c07a-4cd5-b223-613b9864f445'): datetime.datetime(2021, 10, 26, 0, 11, 24, 48535), UUID('240f1036-c6d3-4b46-8c49-1ad3c63f1341'): datetime.datetime(2021, 10, 26, 0, 11, 29, 60526), UUID('a1d42320-b4c8-4ed8-9c78-3cb889bb4ade'): datetime.datetime(2021, 10, 26, 0, 11, 34, 73791), UUID('ff269569-9dcb-4cca-93e3-a8218b1848c3'): datetime.datetime(2021, 10, 26, 0, 11, 34, 73856), UUID('4abfb8fe-839c-4b80-8a17-e264bbbe51f7'): datetime.datetime(2021, 10, 26, 0, 11, 39, 124591), UUID('86020c68-83e2-403b-a186-6b4d790f9dfc'): datetime.datetime(2021, 10, 26, 0, 11, 39, 124647), UUID('0dae364c-22d9-42ce-a6ff-9424affe70e9'): datetime.datetime(2021, 10, 26, 0, 11, 44, 144786), UUID('801478d6-4789-40d1-9b10-faca7b0b3425'): datetime.datetime(2021, 10, 26, 0, 11, 49, 156595), UUID('ed5f8317-3d98-4062-b0a6-8b23ccf528ca'): datetime.datetime(2021, 10, 26, 0, 11, 54, 181830), UUID('a63a110a-7f70-47a7-9159-d9b5c2d7ae77'): datetime.datetime(2021, 10, 26, 0, 11, 59, 214131), UUID('64083f89-3007-4fd0-a30a-15ede92ab34b'): datetime.datetime(2021, 10, 26, 0, 12, 4, 225271), UUID('4c1f86c4-a7b0-42d9-ad85-e5a92358aef2'): datetime.datetime(2021, 10, 26, 0, 12, 4, 225338), UUID('45063416-14a1-4b77-a48b-502e1ada89fd'): datetime.datetime(2021, 10, 26, 0, 12, 4, 225396), UUID('a0b398c3-89e7-4b69-a532-88bccef002fa'): datetime.datetime(2021, 10, 26, 0, 12, 9, 249491), UUID('9c407ada-c48c-42df-a077-31b390b080f0'): datetime.datetime(2021, 10, 26, 0, 12, 14, 261361), UUID('3e45d1c5-8613-474a-ac68-36fbdb391fc5'): datetime.datetime(2021, 10, 26, 0, 12, 19, 281878), UUID('c811e373-cd9c-40b0-a28f-2ce2cca8e002'): datetime.datetime(2021, 10, 26, 0, 12, 24, 296509), UUID('559f7961-5d05-44c8-9e9c-c9cdcb347a31'): datetime.datetime(2021, 10, 26, 0, 12, 29, 308584), UUID('1f3d3c72-9c46-4fff-9f1f-da8ac5412cd8'): datetime.datetime(2021, 10, 26, 0, 12, 34, 320536), UUID('0bc35838-9b1e-46f2-b48b-4c9cc2eb0664'): datetime.datetime(2021, 10, 26, 0, 12, 44, 348548), UUID('3d547e73-8f4a-4eb3-9f3a-66104e82ba1d'): datetime.datetime(2021, 10, 26, 0, 12, 49, 364552), UUID('5b1dbba6-2bb1-4078-ae50-b4ca39e1740f'): datetime.datetime(2021, 10, 26, 0, 12, 59, 582189), UUID('4f8ad772-07a6-457d-95d2-dbbbd467344f'): datetime.datetime(2021, 10, 26, 0, 13, 4, 605079), UUID('df0b06b2-eb0a-4b4b-87ac-f0b2edb8cb72'): datetime.datetime(2021, 10, 26, 0, 13, 9, 617638), UUID('b4be1225-1b82-4580-acdb-ef16b05a8539'): datetime.datetime(2021, 10, 26, 0, 13, 14, 630686), UUID('d4bbf25b-0642-4d65-a070-0c735c64e5de'): datetime.datetime(2021, 10, 26, 0, 13, 14, 630748), UUID('bef42c20-aaaa-4862-be72-d046a7899925'): datetime.datetime(2021, 10, 26, 0, 13, 19, 656521), UUID('c2fd583b-687f-4f49-9519-e41a9a1e2426'): datetime.datetime(2021, 10, 26, 0, 13, 19, 656581), UUID('0ce0700e-00ad-4205-ba8f-99fdc5e5588f'): datetime.datetime(2021, 10, 26, 0, 13, 24, 680007), UUID('e4ba8644-f6ed-456f-b1c2-495337644042'): datetime.datetime(2021, 10, 26, 0, 13, 29, 692576), UUID('e66440b4-6d34-43da-bc8b-5203b9fe1a95'): datetime.datetime(2021, 10, 26, 0, 13, 29, 692651), UUID('ce2df0da-ca23-4d9e-8b11-fa463e84768e'): datetime.datetime(2021, 10, 26, 0, 13, 34, 712530), UUID('f5cec852-fc6b-4e2e-a05a-2fce401270eb'): datetime.datetime(2021, 10, 26, 0, 13, 34, 712603), UUID('b408c71e-ccfd-4d83-b1af-6dda71a4de96'): datetime.datetime(2021, 10, 26, 0, 13, 39, 738557), UUID('083df0ee-6905-4dcc-b729-fe189521c0a7'): datetime.datetime(2021, 10, 26, 0, 13, 44, 752503), UUID('4516c021-a3aa-43c0-966b-cf0db5b0e927'): datetime.datetime(2021, 10, 26, 0, 13, 49, 760553), UUID('504d48f9-c454-4f33-ba29-f2e2a575141e'): datetime.datetime(2021, 10, 26, 0, 13, 49, 760609), UUID('136378c8-9756-49b7-80a9-3e44d810bb46'): datetime.datetime(2021, 10, 26, 0, 13, 49, 760649), UUID('63f62c6e-d29d-45e3-912f-551da97981ab'): datetime.datetime(2021, 10, 26, 0, 13, 54, 788561), UUID('087aff5b-4d79-4596-9cbe-1ff1e4dbc95e'): datetime.datetime(2021, 10, 26, 0, 13, 59, 796509), UUID('b95ed344-2f61-4068-9cac-0db16baef88e'): datetime.datetime(2021, 10, 26, 0, 14, 4, 808483), UUID('69833478-2eda-4fc0-8093-de95743be5ac'): datetime.datetime(2021, 10, 26, 0, 14, 4, 808519), UUID('5ac4214f-64d5-4080-99cd-97f657b6eb17'): datetime.datetime(2021, 10, 26, 0, 14, 14, 829015), UUID('00f2b8d8-4d3d-49a3-9eb4-96c77bcfce0e'): datetime.datetime(2021, 10, 26, 0, 14, 14, 829074), UUID('144471f7-7bc2-49d2-9447-826e60bd41c2'): datetime.datetime(2021, 10, 26, 0, 14, 19, 860515), UUID('007b49f1-d842-4a61-806c-77f982845fb9'): datetime.datetime(2021, 10, 26, 0, 14, 19, 860570), UUID('ec7766fe-0133-43e7-8ed6-fd683a567cca'): datetime.datetime(2021, 10, 26, 0, 14, 19, 860607), UUID('8a103a61-68e4-4a89-8426-e2db8573a588'): datetime.datetime(2021, 10, 26, 0, 14, 24, 888532), UUID('0ca31388-a9e7-4e3a-b64e-08ac764e9e38'): datetime.datetime(2021, 10, 26, 0, 14, 29, 905668), UUID('85def2ab-5d30-4c7e-943e-f9ee5d241c85'): datetime.datetime(2021, 10, 26, 0, 14, 40, 1637), UUID('c1567eec-27bd-483b-97fd-1b917c44c244'): datetime.datetime(2021, 10, 26, 0, 14, 45, 24501), UUID('6719caa6-6a6f-4cab-b729-6290b10de584'): datetime.datetime(2021, 10, 26, 0, 14, 45, 24555), UUID('9e9c1994-e36a-4d4f-905e-05834e186638'): datetime.datetime(2021, 10, 26, 0, 14, 50, 47386), UUID('820d8571-4912-4dcc-bd7b-32156328220c'): datetime.datetime(2021, 10, 26, 0, 14, 55, 61313), UUID('1c0ecc01-81e5-4928-9c3a-3de6acb4e00f'): datetime.datetime(2021, 10, 26, 0, 15, 0, 77747), UUID('9fcd06c1-b094-4325-b22f-74a497125001'): datetime.datetime(2021, 10, 26, 0, 15, 5, 100580), UUID('4faf056d-103f-453f-bb80-3f6546cc9cee'): datetime.datetime(2021, 10, 26, 0, 15, 10, 112623), UUID('b2d13bc8-46dc-47b5-9b8d-694c936d081b'): datetime.datetime(2021, 10, 26, 0, 15, 10, 112678), UUID('854b4ceb-30d8-445c-9694-8fbae70e9131'): datetime.datetime(2021, 10, 26, 0, 15, 15, 137609), UUID('8838e6ae-1d21-47ed-84f7-9ffec0c52ac8'): datetime.datetime(2021, 10, 26, 0, 15, 20, 171774), UUID('a2924922-84d9-4690-a7ab-c576844606aa'): datetime.datetime(2021, 10, 26, 0, 15, 25, 237654), UUID('f2ceb82a-f2f1-4792-b6c5-412aa947969c'): datetime.datetime(2021, 10, 26, 0, 15, 25, 237727), UUID('12acf009-87ab-49a6-857c-b220875d1438'): datetime.datetime(2021, 10, 26, 0, 15, 30, 284520), UUID('bb268b96-3a63-4712-a849-47efbdcf646a'): datetime.datetime(2021, 10, 26, 0, 15, 35, 297540), UUID('a3fd6879-05d2-4a20-bfd3-237612828018'): datetime.datetime(2021, 10, 26, 0, 15, 40, 309969), UUID('5d750a88-2a8a-4385-9eda-e18885acfc04'): datetime.datetime(2021, 10, 26, 0, 15, 45, 327329), UUID('0f3f5c9c-ab76-438c-9103-442511b3fc27'): datetime.datetime(2021, 10, 26, 0, 15, 55, 352518), UUID('3fa9582d-f96f-41f5-ad6d-acd91e36f22e'): datetime.datetime(2021, 10, 26, 0, 16, 0, 369827), UUID('8137a5d9-61e4-4b2f-81af-643b5ee75c62'): datetime.datetime(2021, 10, 26, 0, 16, 0, 369919), UUID('0d6b3f6c-9f65-4b88-b112-e7da02a51c36'): datetime.datetime(2021, 10, 26, 0, 16, 10, 428594), UUID('803e6bb9-f979-4803-bfe1-b0b114abc0a5'): datetime.datetime(2021, 10, 26, 0, 16, 15, 452224), UUID('a0e7fc8b-3aef-4c7c-844c-5eae60552af0'): datetime.datetime(2021, 10, 26, 0, 16, 20, 480488), UUID('988bdf56-5023-45ab-83b0-d67e186f1c72'): datetime.datetime(2021, 10, 26, 0, 16, 25, 491445), UUID('680a4934-3d32-4a22-b9fa-4b0442f7a33f'): datetime.datetime(2021, 10, 26, 0, 16, 30, 500647), UUID('db719843-165b-4e0f-9fbf-8a1b5b148358'): datetime.datetime(2021, 10, 26, 0, 16, 40, 606380), UUID('84115d42-1d18-4fe4-a7c0-5d7ebf9a623f'): datetime.datetime(2021, 10, 26, 0, 16, 45, 628477), UUID('88988202-d430-40d9-bce0-7d03c47f4939'): datetime.datetime(2021, 10, 26, 0, 16, 50, 640586), UUID('88c5e651-8a3c-4564-824f-b993fc62008a'): datetime.datetime(2021, 10, 26, 0, 16, 55, 653985), UUID('c6134666-c53e-46c5-b1ff-c3856da6e9a0'): datetime.datetime(2021, 10, 26, 0, 16, 55, 654036), UUID('7a52fb2e-c7de-4070-9c6c-eb305857efae'): datetime.datetime(2021, 10, 26, 0, 17, 0, 693458), UUID('dc3bf504-83fa-4066-a0e0-251a3b50b8b2'): datetime.datetime(2021, 10, 26, 0, 17, 5, 718537), UUID('a76da1a4-9108-429e-86da-4f8b8ef4befc'): datetime.datetime(2021, 10, 26, 0, 17, 10, 728522), UUID('0abe0fd0-2567-4285-a265-a6a8675c9d1d'): datetime.datetime(2021, 10, 26, 0, 17, 15, 740465), UUID('81ec723a-559e-46d8-9e68-c548344aff5b'): datetime.datetime(2021, 10, 26, 0, 17, 15, 740519), UUID('a14661fb-2352-4989-97bb-b6597c0b7948'): datetime.datetime(2021, 10, 26, 0, 17, 20, 756722), UUID('cc8cef81-61ec-428a-b7b0-6eb1120d51d4'): datetime.datetime(2021, 10, 26, 0, 17, 20, 756781), UUID('ad89c3ca-aaca-491a-a5f1-523a651804a5'): datetime.datetime(2021, 10, 26, 0, 17, 25, 786686), UUID('a6c657f0-a42e-4d1e-b69d-3f11647bcf0f'): datetime.datetime(2021, 10, 26, 0, 17, 25, 791974), UUID('4916310e-fce5-4e0d-b1cc-29a99210f4b1'): datetime.datetime(2021, 10, 26, 0, 17, 30, 840530), UUID('d88a5543-c4de-4c1d-85ae-23ce4b738182'): datetime.datetime(2021, 10, 26, 0, 17, 30, 840601), UUID('724af7a8-c936-4f23-857c-9147adafb982'): datetime.datetime(2021, 10, 26, 0, 17, 30, 840649), UUID('56763eff-7b75-493a-9723-bcf2986508dc'): datetime.datetime(2021, 10, 26, 0, 17, 35, 868567), UUID('e36ea634-2aa3-4ef7-8373-c7e77fdd0ea1'): datetime.datetime(2021, 10, 26, 0, 17, 40, 880573), UUID('719c82ac-dc6c-40c4-8c72-d21e83104c62'): datetime.datetime(2021, 10, 26, 0, 17, 40, 880629), UUID('e91ca9dc-2821-4aa7-aa33-ba77873adc7c'): datetime.datetime(2021, 10, 26, 0, 17, 45, 905661), UUID('f6eb1569-a8d8-4623-8569-0d7693aae983'): datetime.datetime(2021, 10, 26, 0, 17, 50, 928550), UUID('3c5d8e24-7c97-404d-957f-4231ce01857b'): datetime.datetime(2021, 10, 26, 0, 17, 55, 940530), UUID('5420dc65-e781-4860-a4df-6ae0a6378ba8'): datetime.datetime(2021, 10, 26, 0, 17, 55, 940587), UUID('72e14563-3d48-4378-9149-bcacdd1aedce'): datetime.datetime(2021, 10, 26, 0, 17, 55, 940628), UUID('4302093d-34af-4ac4-9c31-c0a4df24b2f5'): datetime.datetime(2021, 10, 26, 0, 18, 0, 965449), UUID('84525148-8cc0-48b1-b9d2-f197fc8ec0a1'): datetime.datetime(2021, 10, 26, 0, 18, 5, 981616), UUID('c1c5e1ab-d4f8-434b-a28c-515493bacb54'): datetime.datetime(2021, 10, 26, 0, 18, 11, 14097), UUID('72a12a33-762b-4ea9-ab88-fba5eba726db'): datetime.datetime(2021, 10, 26, 0, 18, 11, 14146), UUID('092d485b-76c5-4895-be34-9b78d012de06'): datetime.datetime(2021, 10, 26, 0, 18, 16, 32642), UUID('f6a994d2-2c0d-4361-8a1a-ab5ae553afaa'): datetime.datetime(2021, 10, 26, 0, 18, 16, 32705), UUID('3664ffd4-7235-46ea-b0b6-bfcb05943506'): datetime.datetime(2021, 10, 26, 0, 18, 21, 62642), UUID('ffb4978a-6e69-4631-bb8f-89c5bdc03540'): datetime.datetime(2021, 10, 26, 0, 18, 21, 62704), UUID('a41541df-94c7-49c5-ae95-a085423c424a'): datetime.datetime(2021, 10, 26, 0, 18, 31, 109624), UUID('dc29c4d3-55af-4542-a484-ef8e44821345'): datetime.datetime(2021, 10, 26, 0, 18, 36, 132501), UUID('085fc834-94e4-428a-8877-9ab740508982'): datetime.datetime(2021, 10, 26, 0, 18, 36, 132548), UUID('62aa51e2-c9ca-49d8-a039-aa4d305e8a91'): datetime.datetime(2021, 10, 26, 0, 18, 41, 153514), UUID('14416fc8-6a88-4e3a-aa13-3efce66cff6b'): datetime.datetime(2021, 10, 26, 0, 18, 41, 153560), UUID('98ee797a-5275-4465-97bd-0173dd85613a'): datetime.datetime(2021, 10, 26, 0, 18, 46, 200651), UUID('7f3c9ead-7df2-4d1d-8398-90b8f1494032'): datetime.datetime(2021, 10, 26, 0, 18, 46, 200712), UUID('35e1bb8a-b171-4698-9b9c-2e446efdd18c'): datetime.datetime(2021, 10, 26, 0, 18, 51, 230639), UUID('a13ff530-b3e0-4b77-be82-dcee5617e18a'): datetime.datetime(2021, 10, 26, 0, 18, 56, 265654), UUID('ae341c00-3460-4e69-a746-35c14cc90e6e'): datetime.datetime(2021, 10, 26, 0, 19, 1, 280531), UUID('a0b1ad0e-6706-4826-977f-ff2b787348bb'): datetime.datetime(2021, 10, 26, 0, 19, 6, 292563), UUID('bfcef412-d317-40a9-87d1-3be364fc81b5'): datetime.datetime(2021, 10, 26, 0, 19, 11, 314827), UUID('9a2a9331-bcc4-43e5-ab88-1f03bcd0b8a8'): datetime.datetime(2021, 10, 26, 0, 19, 16, 488525)}
+finish_times={'007ac871-6e8f-4480-be3d-968852aea82e': (datetime.datetime(2021, 10, 26, 0, 9, 49, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 32, tzinfo=tzlocal())), '007b49f1-d842-4a61-806c-77f982845fb9': (datetime.datetime(2021, 10, 26, 0, 15, 48, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 16, 12, tzinfo=tzlocal())), '00f2b8d8-4d3d-49a3-9eb4-96c77bcfce0e': (datetime.datetime(2021, 10, 26, 0, 14, 49, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 10, tzinfo=tzlocal())), '01bde85f-e005-43d7-9a89-f48ef7a0c8fc': (datetime.datetime(2021, 10, 26, 0, 11, 25, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 49, tzinfo=tzlocal())), '05f0982b-2226-4df4-b858-a6af388155bb': (datetime.datetime(2021, 10, 26, 0, 10, 44, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 1, tzinfo=tzlocal())), '083df0ee-6905-4dcc-b729-fe189521c0a7': (datetime.datetime(2021, 10, 26, 0, 14, 22, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 39, tzinfo=tzlocal())), '087aff5b-4d79-4596-9cbe-1ff1e4dbc95e': (datetime.datetime(2021, 10, 26, 0, 14, 24, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 33, tzinfo=tzlocal())), '0bc35838-9b1e-46f2-b48b-4c9cc2eb0664': (datetime.datetime(2021, 10, 26, 0, 13, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 2, tzinfo=tzlocal())), '0ca31388-a9e7-4e3a-b64e-08ac764e9e38': (datetime.datetime(2021, 10, 26, 0, 15, 39, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 4, tzinfo=tzlocal())), '0ce0700e-00ad-4205-ba8f-99fdc5e5588f': (datetime.datetime(2021, 10, 26, 0, 13, 45, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 10, tzinfo=tzlocal())), '0d6b3f6c-9f65-4b88-b112-e7da02a51c36': (datetime.datetime(2021, 10, 26, 0, 16, 40, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 13, tzinfo=tzlocal())), '0dae364c-22d9-42ce-a6ff-9424affe70e9': (datetime.datetime(2021, 10, 26, 0, 11, 51, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 4, tzinfo=tzlocal())), '105d46d0-f86e-4273-a64f-115677131165': (datetime.datetime(2021, 10, 26, 0, 11, 26, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 18, tzinfo=tzlocal())), '12acf009-87ab-49a6-857c-b220875d1438': (datetime.datetime(2021, 10, 26, 0, 16, 40, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 16, 59, tzinfo=tzlocal())), '136378c8-9756-49b7-80a9-3e44d810bb46': (datetime.datetime(2021, 10, 26, 0, 15, 32, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 59, tzinfo=tzlocal())), '1c0ecc01-81e5-4928-9c3a-3de6acb4e00f': (datetime.datetime(2021, 10, 26, 0, 15, 28, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 47, tzinfo=tzlocal())), '1ed1ab12-2b39-46db-bd35-4e19bb4c76a0': (datetime.datetime(2021, 10, 26, 0, 9, 29, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 9, 50, tzinfo=tzlocal())), '1f3d3c72-9c46-4fff-9f1f-da8ac5412cd8': (datetime.datetime(2021, 10, 26, 0, 12, 46, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 13, 16, tzinfo=tzlocal())), '2d41c1f9-37f0-40e8-94ed-56e5150bc48f': (datetime.datetime(2021, 10, 26, 0, 11, 33, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 13, 12, tzinfo=tzlocal())), '31f52ca9-0a29-43aa-aef3-f1b6d42d5e4f': (datetime.datetime(2021, 10, 26, 0, 11, 27, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 44, tzinfo=tzlocal())), '3d547e73-8f4a-4eb3-9f3a-66104e82ba1d': (datetime.datetime(2021, 10, 26, 0, 13, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 13, 53, tzinfo=tzlocal())), '3e45d1c5-8613-474a-ac68-36fbdb391fc5': (datetime.datetime(2021, 10, 26, 0, 13, 30, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 13, 43, tzinfo=tzlocal())), '3fa9582d-f96f-41f5-ad6d-acd91e36f22e': (datetime.datetime(2021, 10, 26, 0, 16, 36, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 28, tzinfo=tzlocal())), '45063416-14a1-4b77-a48b-502e1ada89fd': (datetime.datetime(2021, 10, 26, 0, 12, 19, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 47, tzinfo=tzlocal())), '4516c021-a3aa-43c0-966b-cf0db5b0e927': (datetime.datetime(2021, 10, 26, 0, 14, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 54, tzinfo=tzlocal())), '4abfb8fe-839c-4b80-8a17-e264bbbe51f7': (datetime.datetime(2021, 10, 26, 0, 11, 49, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 31, tzinfo=tzlocal())), '4c1f86c4-a7b0-42d9-ad85-e5a92358aef2': (datetime.datetime(2021, 10, 26, 0, 15, 46, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 16, 16, tzinfo=tzlocal())), '4f8ad772-07a6-457d-95d2-dbbbd467344f': (datetime.datetime(2021, 10, 26, 0, 13, 14, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 13, 37, tzinfo=tzlocal())), '4faf056d-103f-453f-bb80-3f6546cc9cee': (datetime.datetime(2021, 10, 26, 0, 15, 39, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 16, 45, tzinfo=tzlocal())), '504d48f9-c454-4f33-ba29-f2e2a575141e': (datetime.datetime(2021, 10, 26, 0, 14, 6, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 32, tzinfo=tzlocal())), '50dc27c9-8fc6-4dee-83f4-9f6579d98c39': (datetime.datetime(2021, 10, 26, 0, 10, 36, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 50, tzinfo=tzlocal())), '559f7961-5d05-44c8-9e9c-c9cdcb347a31': (datetime.datetime(2021, 10, 26, 0, 12, 42, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 13, 21, tzinfo=tzlocal())), '56105bbe-6cfc-4798-b925-ef66a0adb222': (datetime.datetime(2021, 10, 26, 0, 10, 27, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 50, tzinfo=tzlocal())), '5ac4214f-64d5-4080-99cd-97f657b6eb17': (datetime.datetime(2021, 10, 26, 0, 14, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 53, tzinfo=tzlocal())), '5b1dbba6-2bb1-4078-ae50-b4ca39e1740f': (datetime.datetime(2021, 10, 26, 0, 13, 16, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 13, 40, tzinfo=tzlocal())), '609d8e74-52d0-46c3-91a4-a4cdafffa421': (datetime.datetime(2021, 10, 26, 0, 9, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, tzinfo=tzlocal())), '63f62c6e-d29d-45e3-912f-551da97981ab': (datetime.datetime(2021, 10, 26, 0, 14, 22, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 45, tzinfo=tzlocal())), '64083f89-3007-4fd0-a30a-15ede92ab34b': (datetime.datetime(2021, 10, 26, 0, 14, 35, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 8, tzinfo=tzlocal())), '66d9a7d4-09c4-4839-a61d-7859e119e539': (datetime.datetime(2021, 10, 26, 0, 9, 24, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 9, 46, tzinfo=tzlocal())), '6719caa6-6a6f-4cab-b729-6290b10de584': (datetime.datetime(2021, 10, 26, 0, 15, 26, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 42, tzinfo=tzlocal())), '69833478-2eda-4fc0-8093-de95743be5ac': (datetime.datetime(2021, 10, 26, 0, 15, 5, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 29, tzinfo=tzlocal())), '6b384b51-e7ca-4888-8a12-e75c3049d099': (datetime.datetime(2021, 10, 26, 0, 11, 3, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 21, tzinfo=tzlocal())), '7332763a-fb2d-4021-9605-029a52511deb': (datetime.datetime(2021, 10, 26, 0, 10, 43, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 56, tzinfo=tzlocal())), '7a52fb2e-c7de-4070-9c6c-eb305857efae': (datetime.datetime(2021, 10, 26, 0, 17, 55, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 18, 12, tzinfo=tzlocal())), '801478d6-4789-40d1-9b10-faca7b0b3425': (datetime.datetime(2021, 10, 26, 0, 11, 56, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 28, tzinfo=tzlocal())), '8015669f-9784-4f92-b8c3-cd342b2852e1': (datetime.datetime(2021, 10, 26, 0, 11, 18, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 52, tzinfo=tzlocal())), '803e6bb9-f979-4803-bfe1-b0b114abc0a5': (datetime.datetime(2021, 10, 26, 0, 17, 27, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 18, 5, tzinfo=tzlocal())), '80475c8a-914e-4501-9f8c-8ea519eaf4f0': (datetime.datetime(2021, 10, 26, 0, 11, 28, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 47, tzinfo=tzlocal())), '8137a5d9-61e4-4b2f-81af-643b5ee75c62': (datetime.datetime(2021, 10, 26, 0, 16, 53, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 18, tzinfo=tzlocal())), '820d8571-4912-4dcc-bd7b-32156328220c': (datetime.datetime(2021, 10, 26, 0, 15, 37, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 10, tzinfo=tzlocal())), '84115d42-1d18-4fe4-a7c0-5d7ebf9a623f': (datetime.datetime(2021, 10, 26, 0, 17, 29, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 48, tzinfo=tzlocal())), '854b4ceb-30d8-445c-9694-8fbae70e9131': (datetime.datetime(2021, 10, 26, 0, 17, 44, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 18, 9, tzinfo=tzlocal())), '86020c68-83e2-403b-a186-6b4d790f9dfc': (datetime.datetime(2021, 10, 26, 0, 11, 48, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 25, tzinfo=tzlocal())), '8838e6ae-1d21-47ed-84f7-9ffec0c52ac8': (datetime.datetime(2021, 10, 26, 0, 16, 9, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 16, 51, tzinfo=tzlocal())), '88988202-d430-40d9-bce0-7d03c47f4939': (datetime.datetime(2021, 10, 26, 0, 17, 25, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 36, tzinfo=tzlocal())), '88c5e651-8a3c-4564-824f-b993fc62008a': (datetime.datetime(2021, 10, 26, 0, 18, 9, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 18, 22, tzinfo=tzlocal())), '8a103a61-68e4-4a89-8426-e2db8573a588': (datetime.datetime(2021, 10, 26, 0, 15, 39, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 16, 45, tzinfo=tzlocal())), '8f2fbb2f-05fb-4d39-98c5-ee73285b706d': (datetime.datetime(2021, 10, 26, 0, 11, 43, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 55, tzinfo=tzlocal())), '92732069-f36e-4af9-aab4-c44c46097bb1': (datetime.datetime(2021, 10, 26, 0, 9, 39, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 6, tzinfo=tzlocal())), '93b0f776-ebac-4b17-a9a0-ffe730360f91': (datetime.datetime(2021, 10, 26, 0, 9, 55, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 14, tzinfo=tzlocal())), '988bdf56-5023-45ab-83b0-d67e186f1c72': (datetime.datetime(2021, 10, 26, 0, 17, 29, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 41, tzinfo=tzlocal())), '9c407ada-c48c-42df-a077-31b390b080f0': (datetime.datetime(2021, 10, 26, 0, 13, 11, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 13, 35, tzinfo=tzlocal())), '9e9c1994-e36a-4d4f-905e-05834e186638': (datetime.datetime(2021, 10, 26, 0, 15, 11, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 33, tzinfo=tzlocal())), '9fcd06c1-b094-4325-b22f-74a497125001': (datetime.datetime(2021, 10, 26, 0, 15, 41, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 58, tzinfo=tzlocal())), 'a0e7fc8b-3aef-4c7c-844c-5eae60552af0': (datetime.datetime(2021, 10, 26, 0, 17, 3, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 30, tzinfo=tzlocal())), 'a14661fb-2352-4989-97bb-b6597c0b7948': (datetime.datetime(2021, 10, 26, 0, 18, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 18, 24, tzinfo=tzlocal())), 'a1d42320-b4c8-4ed8-9c78-3cb889bb4ade': (datetime.datetime(2021, 10, 26, 0, 11, 40, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 54, tzinfo=tzlocal())), 'a2924922-84d9-4690-a7ab-c576844606aa': (datetime.datetime(2021, 10, 26, 0, 18, 20, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 18, 52, tzinfo=tzlocal())), 'a3fd6879-05d2-4a20-bfd3-237612828018': (datetime.datetime(2021, 10, 26, 0, 17, 7, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 24, tzinfo=tzlocal())), 'a5586450-c07a-4cd5-b223-613b9864f445': (datetime.datetime(2021, 10, 26, 0, 15, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 12, tzinfo=tzlocal())), 'a63a110a-7f70-47a7-9159-d9b5c2d7ae77': (datetime.datetime(2021, 10, 26, 0, 12, 19, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 41, tzinfo=tzlocal())), 'a76e5857-5471-428f-b1b9-7dc8eb28a736': (datetime.datetime(2021, 10, 26, 0, 10, 27, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 43, tzinfo=tzlocal())), 'b408c71e-ccfd-4d83-b1af-6dda71a4de96': (datetime.datetime(2021, 10, 26, 0, 13, 57, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 55, tzinfo=tzlocal())), 'b95ed344-2f61-4068-9cac-0db16baef88e': (datetime.datetime(2021, 10, 26, 0, 15, 5, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 29, tzinfo=tzlocal())), 'bef42c20-aaaa-4862-be72-d046a7899925': (datetime.datetime(2021, 10, 26, 0, 14, 20, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 43, tzinfo=tzlocal())), 'c1567eec-27bd-483b-97fd-1b917c44c244': (datetime.datetime(2021, 10, 26, 0, 15, 40, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 59, tzinfo=tzlocal())), 'c2fd583b-687f-4f49-9519-e41a9a1e2426': (datetime.datetime(2021, 10, 26, 0, 13, 31, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 2, tzinfo=tzlocal())), 'c4dd799e-4f81-436a-9237-6cace1eb6f72': (datetime.datetime(2021, 10, 26, 0, 11, 6, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 34, tzinfo=tzlocal())), 'c6134666-c53e-46c5-b1ff-c3856da6e9a0': (datetime.datetime(2021, 10, 26, 0, 17, 47, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 18, 13, tzinfo=tzlocal())), 'c811e373-cd9c-40b0-a28f-2ce2cca8e002': (datetime.datetime(2021, 10, 26, 0, 12, 42, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 13, 15, tzinfo=tzlocal())), 'cc8cef81-61ec-428a-b7b0-6eb1120d51d4': (datetime.datetime(2021, 10, 26, 0, 18, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 19, 11, tzinfo=tzlocal())), 'ccf20d90-8a7b-4942-9b5b-9ee6bfd1bac2': (datetime.datetime(2021, 10, 26, 0, 10, 52, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 22, tzinfo=tzlocal())), 'ce2df0da-ca23-4d9e-8b11-fa463e84768e': (datetime.datetime(2021, 10, 26, 0, 14, 1, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 20, tzinfo=tzlocal())), 'ce3cf909-4786-4258-a0dd-7559680612f4': (datetime.datetime(2021, 10, 26, 0, 10, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 49, tzinfo=tzlocal())), 'd11116dd-af73-4459-a953-c2ff887be21f': (datetime.datetime(2021, 10, 26, 0, 11, 26, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 40, tzinfo=tzlocal())), 'd2511107-f13c-4361-af9a-a07b9dc388f5': (datetime.datetime(2021, 10, 26, 0, 10, 5, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 19, tzinfo=tzlocal())), 'd4bbf25b-0642-4d65-a070-0c735c64e5de': (datetime.datetime(2021, 10, 26, 0, 13, 33, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 13, 56, tzinfo=tzlocal())), 'd88a5543-c4de-4c1d-85ae-23ce4b738182': (datetime.datetime(2021, 10, 26, 0, 18, 18, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 18, 39, tzinfo=tzlocal())), 'db719843-165b-4e0f-9fbf-8a1b5b148358': (datetime.datetime(2021, 10, 26, 0, 17, 8, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 17, 35, tzinfo=tzlocal())), 'df0b06b2-eb0a-4b4b-87ac-f0b2edb8cb72': (datetime.datetime(2021, 10, 26, 0, 14, 3, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 4, tzinfo=tzlocal())), 'e22f5859-f833-459f-919b-1b2ec413b03e': (datetime.datetime(2021, 10, 26, 0, 10, 9, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 34, tzinfo=tzlocal())), 'e4ba8644-f6ed-456f-b1c2-495337644042': (datetime.datetime(2021, 10, 26, 0, 13, 50, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 28, tzinfo=tzlocal())), 'e5d97529-5bd2-4a6b-8ee7-1419525662d6': (datetime.datetime(2021, 10, 26, 0, 11, 20, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 36, tzinfo=tzlocal())), 'e66440b4-6d34-43da-bc8b-5203b9fe1a95': (datetime.datetime(2021, 10, 26, 0, 13, 47, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 9, tzinfo=tzlocal())), 'e973c322-ad7e-4a59-b72d-e8ab828501a1': (datetime.datetime(2021, 10, 26, 0, 12, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 44, tzinfo=tzlocal())), 'ec7766fe-0133-43e7-8ed6-fd683a567cca': (datetime.datetime(2021, 10, 26, 0, 14, 56, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 15, 52, tzinfo=tzlocal())), 'ed030379-fded-4d5e-81ce-b4581f2966f0': (datetime.datetime(2021, 10, 26, 0, 9, 39, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 11, tzinfo=tzlocal())), 'ed5f8317-3d98-4062-b0a6-8b23ccf528ca': (datetime.datetime(2021, 10, 26, 0, 12, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 12, 49, tzinfo=tzlocal())), 'f2ceb82a-f2f1-4792-b6c5-412aa947969c': (datetime.datetime(2021, 10, 26, 0, 16, 9, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 16, 29, tzinfo=tzlocal())), 'f5cec852-fc6b-4e2e-a05a-2fce401270eb': (datetime.datetime(2021, 10, 26, 0, 13, 56, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 14, 25, tzinfo=tzlocal())), 'f8d1cefd-6879-4b54-8f1c-e464220d1d77': (datetime.datetime(2021, 10, 26, 0, 10, 10, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 10, 42, tzinfo=tzlocal())), 'ff269569-9dcb-4cca-93e3-a8218b1848c3': (datetime.datetime(2021, 10, 26, 0, 11, 41, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 0, 11, 59, tzinfo=tzlocal()))}
+
+
+
+
+id,network,job_type,image_size,num_imgs,device,batch_size,data_parallelism,response_time
+66d9a7d4,style2ada,random,512,800,cuda:0,8,1,22495
+1ed1ab12,mobile,interpolation,1024,400,cuda:0,8,1,21479
+609d8e74,swa,interpolation,512,800,cuda:0,8,1,26467
+ed030379,anycost,random,1024,800,cuda:1,8,1,92455
+92732069,style2ada,random,512,100,cuda:1,8,1,27455
+e973c322,stylemap,interpolation,512,100,cuda:1,8,1,180435
+c4dd799e,style2,random,512,100,cuda:1,8,1,110435
+007ac871,swa,interpolation,1024,400,cuda:0,8,1,43415
+93b0f776,style2ada,random,256,800,cuda:0,8,1,20403
+513b7d95,style2,interpolation,1024,200,cuda:1,8,1,-1
+d2511107,mobile,interpolation,512,800,cuda:0,8,1,15370
+e22f5859,anycost,random,1024,200,cuda:0,8,1,25347
+f8d1cefd,style2ada,interpolation,512,400,cuda:0,8,1,33347
+56105bbe,swa,interpolation,256,800,cuda:0,8,1,36318
+2d41c1f9,swa,interpolation,1024,800,cuda:1,8,1,173297
+80475c8a,style2ada,random,256,100,cuda:1,8,1,88292
+a76e5857,mobile,interpolation,256,400,cuda:0,8,1,19247
+ce3cf909,style1,interpolation,256,100,cuda:1,8,1,20230
+50dc27c9,mobile,interpolation,512,800,cuda:0,8,1,16203
+7332763a,swa,interpolation,256,100,cuda:0,8,1,17193
+05f0982b,style2ada,interpolation,256,800,cuda:0,8,1,22193
+75889bc1,stylemap,interpolation,1024,100,cuda:1,8,1,-1
+ccf20d90,anycost,random,1024,400,cuda:0,8,1,33155
+105d46d0,swa,interpolation,512,400,cuda:1,8,1,84143
+6b384b51,style2ada,random,256,400,cuda:0,8,1,22122
+8015669f,style2ada,interpolation,1024,800,cuda:0,8,1,108099
+8f2fbb2f,stylemap,interpolation,256,400,cuda:0,8,1,106011
+e5d97529,swa,interpolation,512,100,cuda:0,8,1,21991
+d11116dd,style1,random,512,100,cuda:0,8,1,20978
+01bde85f,swa,random,256,200,cuda:0,8,1,29978
+31f52ca9,anycost,random,256,200,cuda:0,8,1,24978
+a5586450,swa,random,512,800,cuda:1,8,1,347951
+240f1036,anycost,random,256,200,cuda:1,8,1,-1
+a1d42320,style1,interpolation,512,400,cuda:0,8,1,19926
+ff269569,style2ada,random,256,200,cuda:0,8,1,24926
+4abfb8fe,mobile,random,1024,800,cuda:0,8,1,51875
+86020c68,swa,interpolation,256,200,cuda:0,8,1,45875
+0dae364c,style1,interpolation,256,200,cuda:0,8,1,19855
+801478d6,mobile,random,512,800,cuda:0,8,1,38843
+ed5f8317,swa,random,512,100,cuda:1,8,1,54818
+a63a110a,style1,random,1024,200,cuda:0,8,1,41785
+64083f89,swa,interpolation,512,200,cuda:0,8,1,183774
+4c1f86c4,swa,random,256,100,cuda:0,8,1,251774
+45063416,swa,interpolation,512,100,cuda:0,8,1,42774
+a0b398c3,swa,interpolation,1024,800,cuda:1,8,1,-1
+9c407ada,anycost,interpolation,1024,200,cuda:0,8,1,80738
+3e45d1c5,style2ada,interpolation,256,100,cuda:0,8,1,83718
+c811e373,style2,interpolation,512,400,cuda:0,8,1,50703
+559f7961,swa,interpolation,256,800,cuda:0,8,1,51691
+1f3d3c72,swa,random,512,400,cuda:0,8,1,41679
+0bc35838,stylemap,random,512,200,cuda:1,8,1,77651
+3d547e73,mobile,random,512,800,cuda:1,8,1,63635
+5b1dbba6,swa,interpolation,1024,100,cuda:0,8,1,40417
+4f8ad772,anycost,random,512,200,cuda:0,8,1,32394
+df0b06b2,style2ada,interpolation,1024,800,cuda:0,8,1,114382
+b4be1225,stylemap,random,1024,100,cuda:0,8,1,-1
+d4bbf25b,stylemap,interpolation,256,100,cuda:0,8,1,41369
+bef42c20,swa,interpolation,1024,400,cuda:1,8,1,143343
+c2fd583b,swa,interpolation,1024,200,cuda:0,8,1,42343
+0ce0700e,style2,random,1024,100,cuda:0,8,1,45319
+e4ba8644,anycost,random,1024,200,cuda:0,8,1,58307
+e66440b4,style2ada,random,512,200,cuda:0,8,1,39307
+ce2df0da,style2,interpolation,256,100,cuda:1,8,1,45287
+f5cec852,mobile,random,512,800,cuda:0,8,1,50287
+b408c71e,swa,random,512,200,cuda:0,8,1,75261
+083df0ee,style1,interpolation,512,400,cuda:0,8,1,54247
+4516c021,swa,interpolation,256,800,cuda:0,8,1,64239
+504d48f9,swa,random,1024,100,cuda:1,8,1,42239
+136378c8,style2,random,512,400,cuda:0,8,1,129239
+63f62c6e,style1,random,256,200,cuda:1,8,1,50211
+087aff5b,style2ada,interpolation,1024,400,cuda:1,8,1,93203
+b95ed344,style2ada,interpolation,1024,200,cuda:0,8,1,84191
+69833478,style2ada,random,256,400,cuda:0,8,1,84191
+5ac4214f,style2,random,256,100,cuda:0,8,1,38170
+00f2b8d8,anycost,interpolation,512,200,cuda:0,8,1,55170
+144471f7,mobile,random,1024,800,cuda:1,8,1,-1
+007b49f1,anycost,interpolation,256,200,cuda:0,8,1,112139
+ec7766fe,style2,interpolation,256,800,cuda:1,8,1,92139
+8a103a61,anycost,random,1024,800,cuda:0,8,1,140111
+0ca31388,style2,interpolation,512,800,cuda:1,8,1,154094
+85def2ab,style2ada,interpolation,256,100,cuda:1,8,1,-1
+c1567eec,mobile,random,256,400,cuda:0,8,1,73975
+6719caa6,swa,interpolation,1024,100,cuda:0,8,1,56975
+9e9c1994,anycost,random,256,400,cuda:0,8,1,42952
+820d8571,swa,interpolation,256,800,cuda:1,8,1,134938
+1c0ecc01,mobile,interpolation,256,100,cuda:1,8,1,46922
+9fcd06c1,mobile,interpolation,256,200,cuda:0,8,1,52899
+4faf056d,style2,random,256,400,cuda:1,8,1,94887
+b2d13bc8,anycost,random,1024,800,cuda:0,8,1,-1
+854b4ceb,style1,interpolation,1024,200,cuda:1,8,1,173862
+8838e6ae,stylemap,interpolation,1024,100,cuda:0,8,1,90828
+a2924922,anycost,interpolation,1024,100,cuda:0,8,1,206762
+f2ceb82a,style1,random,1024,200,cuda:0,8,1,63762
+12acf009,style1,interpolation,1024,200,cuda:0,8,1,88715
+bb268b96,style2,interpolation,256,800,cuda:1,8,1,-1
+a3fd6879,mobile,random,512,200,cuda:1,8,1,103690
+5d750a88,stylemap,random,1024,400,cuda:1,8,1,-1
+0f3f5c9c,style2,random,1024,400,cuda:1,8,1,-1
+3fa9582d,style2ada,random,256,800,cuda:0,8,1,87630
+8137a5d9,style2,interpolation,256,400,cuda:0,8,1,77630
+0d6b3f6c,stylemap,random,512,100,cuda:0,8,1,62571
+803e6bb9,stylemap,random,1024,200,cuda:0,8,1,109547
+a0e7fc8b,anycost,interpolation,512,400,cuda:0,8,1,69519
+988bdf56,mobile,interpolation,256,100,cuda:0,8,1,75508
+680a4934,style2,random,1024,200,cuda:1,8,1,-1
+db719843,stylemap,random,256,100,cuda:1,8,1,54393
+84115d42,style1,random,512,200,cuda:1,8,1,62371
+88988202,mobile,random,256,800,cuda:0,8,1,45359
+88c5e651,style1,random,256,400,cuda:0,8,1,86346
+c6134666,anycost,interpolation,256,200,cuda:1,8,1,77345
+7a52fb2e,style2ada,interpolation,1024,100,cuda:0,8,1,71306
+dc3bf504,anycost,random,512,800,cuda:0,8,1,-1
+a76da1a4,style2,interpolation,1024,800,cuda:1,8,1,-1
+0abe0fd0,style2,interpolation,1024,800,cuda:1,8,1,-1
+81ec723a,swa,random,256,200,cuda:0,8,1,-1
+a14661fb,style2ada,interpolation,256,100,cuda:1,8,1,63243
+cc8cef81,anycost,random,512,800,cuda:0,8,1,110243
+ad89c3ca,style1,random,512,400,cuda:1,8,1,-1
+a6c657f0,style1,random,256,200,cuda:0,8,1,-1
+4916310e,style2ada,random,512,800,cuda:0,8,1,-1
+d88a5543,anycost,random,256,100,cuda:0,8,1,68159
+724af7a8,style1,interpolation,512,400,cuda:0,8,1,-1
+56763eff,style2ada,interpolation,1024,100,cuda:0,8,1,-1
+e36ea634,style2,random,512,100,cuda:1,8,1,-1
+719c82ac,mobile,random,256,200,cuda:0,8,1,-1
+e91ca9dc,style2,interpolation,512,100,cuda:0,8,1,-1
+f6eb1569,anycost,random,512,800,cuda:0,8,1,-1
+3c5d8e24,mobile,random,512,200,cuda:1,8,1,-1
+5420dc65,anycost,random,1024,100,cuda:1,8,1,-1
+72e14563,mobile,interpolation,512,800,cuda:0,8,1,-1
+4302093d,style2,interpolation,512,400,cuda:0,8,1,-1
+84525148,style2ada,interpolation,256,200,cuda:1,8,1,-1
+c1c5e1ab,mobile,random,1024,100,cuda:0,8,1,-1
+72a12a33,style1,random,256,200,cuda:0,8,1,-1
+092d485b,mobile,interpolation,256,400,cuda:1,8,1,-1
+f6a994d2,swa,interpolation,512,800,cuda:1,8,1,-1
+3664ffd4,mobile,interpolation,1024,800,cuda:1,8,1,-1
+ffb4978a,style2,random,1024,200,cuda:0,8,1,-1
+a41541df,style1,random,1024,100,cuda:0,8,1,-1
+dc29c4d3,swa,random,1024,800,cuda:0,8,1,-1
+085fc834,swa,interpolation,1024,100,cuda:0,8,1,-1
+62aa51e2,stylemap,random,256,100,cuda:1,8,1,-1
+14416fc8,style1,interpolation,512,400,cuda:0,8,1,-1
+98ee797a,style2,random,1024,800,cuda:0,8,1,-1
+7f3c9ead,style2ada,random,256,400,cuda:0,8,1,-1
+35e1bb8a,style1,random,512,200,cuda:0,8,1,-1
+a13ff530,swa,interpolation,256,100,cuda:0,8,1,-1
+ae341c00,style2ada,random,512,400,cuda:0,8,1,-1
+a0b1ad0e,anycost,random,1024,800,cuda:0,8,1,-1
+bfcef412,stylemap,interpolation,512,100,cuda:1,8,1,-1
+9a2a9331,style2ada,interpolation,512,800,cuda:0,8,1,-1
+
+
+
+

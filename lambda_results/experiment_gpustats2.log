@@ -1,0 +1,2929 @@
+No resources found
+      "arrival_statistic": 10,
+      "scheduling": "improved",
+         "arrival_seed": 22
+Sending build context to Docker daemon  414.4MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> ea035d45d755
+Step 11/13 : ADD charts charts
+ ---> 6b2c217c9b22
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> b6bd7d35c983
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 4632e1bbeed3
+Removing intermediate container 4632e1bbeed3
+ ---> b52a5eb95265
+Successfully built b52a5eb95265
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+4a6df3db8e66: Preparing
+4a568a9884af: Preparing
+53f5cb26aedf: Preparing
+047c2b4ab985: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+4e311038b14a: Waiting
+5faf23568bde: Waiting
+3f397bf4a209: Preparing
+4942a1abcbfa: Preparing
+b9e0fc92be93: Waiting
+b69dc9a1ae51: Waiting
+a770b43c251e: Waiting
+8fa17e46d6a7: Waiting
+307814c51c70: Waiting
+9debf17f1f41: Waiting
+4942a1abcbfa: Waiting
+7b645d264080: Waiting
+c7209b337a87: Waiting
+3f397bf4a209: Waiting
+4ede1962eac3: Waiting
+81a0a694f8fb: Waiting
+4a568a9884af: Pushed
+53f5cb26aedf: Pushed
+047c2b4ab985: Pushed
+4a6df3db8e66: Pushed
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+9debf17f1f41: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+4b5b20c7e93f: Layer already exists
+7b645d264080: Layer already exists
+8fa17e46d6a7: Layer already exists
+c7209b337a87: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+2268ce97c987: Pushed
+latest: digest: sha256:69fd4e4cff766c990bfc8728a091f22b3250e0e5c6bd355e111376c15dc77521 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 01:07:37 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "04717793-a0e3-41a2-aca8-0c3e148d6125" deleted
+pytorchjob.kubeflow.org "09678b69-a66d-4563-8d8e-356acf5f67d9" deleted
+pytorchjob.kubeflow.org "12a7db9a-15d9-48e4-8d2e-f298814dd505" deleted
+pytorchjob.kubeflow.org "12fc7ad5-8bbb-4109-bb3e-929af112cfe2" deleted
+pytorchjob.kubeflow.org "1c1bda79-2181-4ff4-826f-ea6db04b36a2" deleted
+pytorchjob.kubeflow.org "1e2d0f96-65dc-4fbb-a53e-67b1032228f0" deleted
+pytorchjob.kubeflow.org "20a6c33c-6456-4d6f-a407-352b3e3a2573" deleted
+pytorchjob.kubeflow.org "242ca34d-b63d-4bd9-87cf-54ab420992ba" deleted
+pytorchjob.kubeflow.org "27f486cf-8718-4631-ab9e-d058c15754f3" deleted
+pytorchjob.kubeflow.org "3001d09a-8e72-4abc-ab05-593be9f18908" deleted
+pytorchjob.kubeflow.org "31ef7c97-d1d5-4329-9691-6f276ee8c86f" deleted
+pytorchjob.kubeflow.org "3db4a0b8-d3d2-473d-8c82-62ca119931fe" deleted
+pytorchjob.kubeflow.org "3ff113f4-fd85-4ab7-9648-87b7679b7c94" deleted
+pytorchjob.kubeflow.org "41acf9f1-b6a8-4d9e-85c6-5e944b873beb" deleted
+pytorchjob.kubeflow.org "45083b31-7dfb-4097-944a-96daba0673e2" deleted
+pytorchjob.kubeflow.org "45cfd0d2-a5fa-4182-91dc-0dbeda079e40" deleted
+pytorchjob.kubeflow.org "4e6df7aa-ae53-4332-b2ee-b2c30cd5222f" deleted
+pytorchjob.kubeflow.org "4ea1d4bb-b445-43bb-a5a6-531f61490401" deleted
+pytorchjob.kubeflow.org "4efd7451-cf9d-4c7c-8a17-c39ab993f851" deleted
+pytorchjob.kubeflow.org "512d1f50-f380-413f-9653-3db38c6b4868" deleted
+pytorchjob.kubeflow.org "567e7eed-b7e7-4963-a281-3f96391884b1" deleted
+pytorchjob.kubeflow.org "58fa273d-ccc0-40b8-9d10-2d39bd0fb8eb" deleted
+pytorchjob.kubeflow.org "5f577def-a284-442c-8584-d2c33d31ef60" deleted
+pytorchjob.kubeflow.org "6a5f8461-2adf-4933-bdc7-0a83b1e40af0" deleted
+pytorchjob.kubeflow.org "7158a0ef-34d3-48f5-8ef4-3548a31c6b26" deleted
+pytorchjob.kubeflow.org "7e805080-c678-4825-9614-5cbdd0d5946e" deleted
+pytorchjob.kubeflow.org "8283db69-fb30-4a3b-8a1d-de60205bbe7e" deleted
+pytorchjob.kubeflow.org "85a40621-f6a2-4ab4-ab9f-aefcb9398345" deleted
+pytorchjob.kubeflow.org "8da337ef-a798-4218-ad9a-bf2a1599ca3e" deleted
+pytorchjob.kubeflow.org "8e90b6c2-83e2-4410-b3f7-3a338d320409" deleted
+pytorchjob.kubeflow.org "9a1c7eae-2672-474b-822e-7c3ede14f211" deleted
+pytorchjob.kubeflow.org "a18aea40-5ea3-474f-9a32-cac8f131849f" deleted
+pytorchjob.kubeflow.org "a389b6ac-15d2-42ca-bce1-80323759e8cb" deleted
+pytorchjob.kubeflow.org "a3bfaf52-4a0b-459d-8763-b1c3697ca1f0" deleted
+pytorchjob.kubeflow.org "a50b26f0-1bec-4b35-b78a-a5e015d78d3c" deleted
+pytorchjob.kubeflow.org "a6e417a2-fac3-4a19-b936-8ab3821d2d99" deleted
+pytorchjob.kubeflow.org "a97d0895-7ca5-457a-8965-926cf944b98e" deleted
+pytorchjob.kubeflow.org "a9dd8826-1691-487d-adb5-b344f69a0de3" deleted
+pytorchjob.kubeflow.org "b2e01985-aaf5-4ac0-ad79-a7a810a137db" deleted
+pytorchjob.kubeflow.org "b7e37614-5339-492b-8426-2861b19ef78d" deleted
+pytorchjob.kubeflow.org "b8a06d0c-7fb1-46f6-bb5d-417b9c042c51" deleted
+pytorchjob.kubeflow.org "bfc3f3d0-63ce-487d-80af-1194c94a581d" deleted
+pytorchjob.kubeflow.org "c902e8f7-871f-4a79-aaca-3d11252fa3fa" deleted
+pytorchjob.kubeflow.org "ca02d308-4640-4cf6-aedb-d141fc45be64" deleted
+pytorchjob.kubeflow.org "caa4e1e0-b80c-4e12-a041-4dc027d93d74" deleted
+pytorchjob.kubeflow.org "ceea208d-be06-4a8a-b68c-2dc46d0581e5" deleted
+pytorchjob.kubeflow.org "cfb6ac6d-bbf2-472c-8fb7-b860d30e2da9" deleted
+pytorchjob.kubeflow.org "d019522e-414c-4ede-b067-d968115ca720" deleted
+pytorchjob.kubeflow.org "d416f692-d8c2-4757-a566-3b12451a3751" deleted
+pytorchjob.kubeflow.org "d4d79107-ea1b-4573-b5e9-73f79b939897" deleted
+pytorchjob.kubeflow.org "d5614b77-0070-4794-a746-09f5d57180b4" deleted
+pytorchjob.kubeflow.org "d72ae3b1-9ba8-485f-baa1-fb2544610d53" deleted
+pytorchjob.kubeflow.org "d9aecf3d-a2b1-4b81-b0e4-2aa6bf0dce19" deleted
+pytorchjob.kubeflow.org "da15e4ac-cea3-452a-89b5-435d847944c1" deleted
+pytorchjob.kubeflow.org "daef4fa4-7ca3-4c22-aa9f-d80c80b9ed51" deleted
+pytorchjob.kubeflow.org "db7f56dd-c896-49e5-b3fb-c08d7e0d901c" deleted
+pytorchjob.kubeflow.org "dddd22b5-7199-44c1-ae1f-cef673b5fe73" deleted
+pytorchjob.kubeflow.org "e494ad8f-35b3-4b93-94b9-4860ee618057" deleted
+pytorchjob.kubeflow.org "e5604358-bcf6-4138-8873-daae9240a3f3" deleted
+pytorchjob.kubeflow.org "ef398ec3-ea48-4fe0-80aa-991ca18d4bbc" deleted
+pytorchjob.kubeflow.org "f1416d9b-5b98-4499-a3df-7e6c8c1f2586" deleted
+      "arrival_statistic": 10,
+      "scheduling": "improved",
+         "arrival_seed": 03
+Sending build context to Docker daemon  414.5MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> f19d4f2851c6
+Step 11/13 : ADD charts charts
+ ---> 58b1fe5a35c3
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 1873daada360
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 8e4ea9822687
+Removing intermediate container 8e4ea9822687
+ ---> 0c27aa946e84
+Successfully built 0c27aa946e84
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+0b09bd4c121b: Preparing
+0365fa856b43: Preparing
+4b72f8425566: Preparing
+0f44bc76c4f3: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+4942a1abcbfa: Preparing
+81a0a694f8fb: Waiting
+4e311038b14a: Waiting
+b69dc9a1ae51: Waiting
+307814c51c70: Waiting
+a770b43c251e: Waiting
+1eb927d93505: Waiting
+5faf23568bde: Waiting
+7b645d264080: Waiting
+9debf17f1f41: Waiting
+3f397bf4a209: Waiting
+4ede1962eac3: Waiting
+c7209b337a87: Waiting
+4b5b20c7e93f: Waiting
+8fa17e46d6a7: Waiting
+4942a1abcbfa: Waiting
+b9e0fc92be93: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+0365fa856b43: Pushed
+4b72f8425566: Pushed
+0f44bc76c4f3: Pushed
+0b09bd4c121b: Pushed
+latest: digest: sha256:61663f9591b3a9aed7bd47b9c6d1a49dc2d0bb70ea5808f00ce86040ac4d92f9 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 01:18:48 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+No resources found
+      "arrival_statistic": 10,
+      "scheduling": "improved",
+         "arrival_seed": 1996
+Sending build context to Docker daemon  414.7MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> 036c283b4116
+Step 11/13 : ADD charts charts
+ ---> 392f72ddfc96
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> e417ebfd858a
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 98300ae795d8
+Removing intermediate container 98300ae795d8
+ ---> 50eed21f12fb
+Successfully built 50eed21f12fb
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+d411bf080a9a: Preparing
+0f9caaba3532: Preparing
+1cc7aac15f1f: Preparing
+df01c41fdb4c: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+4942a1abcbfa: Preparing
+5faf23568bde: Waiting
+b9e0fc92be93: Waiting
+4e311038b14a: Waiting
+307814c51c70: Waiting
+81a0a694f8fb: Waiting
+c7209b337a87: Waiting
+b69dc9a1ae51: Waiting
+8fa17e46d6a7: Waiting
+1eb927d93505: Waiting
+4b5b20c7e93f: Waiting
+7b645d264080: Waiting
+4942a1abcbfa: Waiting
+3f397bf4a209: Waiting
+a770b43c251e: Waiting
+9debf17f1f41: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+0f9caaba3532: Pushed
+1cc7aac15f1f: Pushed
+df01c41fdb4c: Pushed
+d411bf080a9a: Pushed
+latest: digest: sha256:01f310aa39a25ee82b751e22809bbf753afdf957332ed51881fbccf10940a9c8 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 01:29:26 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "09c2353e-d529-4dc7-8d9d-c7f717f0c49f" deleted
+pytorchjob.kubeflow.org "0e28a721-fda4-480c-a66e-190aa6bad9fa" deleted
+pytorchjob.kubeflow.org "0fae4d71-d7b4-4614-9838-c791845e45fd" deleted
+pytorchjob.kubeflow.org "10139460-fcfc-463a-9809-c6e70c5d5571" deleted
+pytorchjob.kubeflow.org "112ba45b-45cf-4409-8f52-629367842164" deleted
+pytorchjob.kubeflow.org "14e18a72-825f-469d-9996-d3745e01e68e" deleted
+pytorchjob.kubeflow.org "15bc89c8-ac8b-45c9-96b3-c59998e2c6db" deleted
+pytorchjob.kubeflow.org "18f74305-cf81-4c82-b0d7-ff276f716262" deleted
+pytorchjob.kubeflow.org "1c864626-f01e-4ef5-b235-b18da0e2eaf3" deleted
+pytorchjob.kubeflow.org "213a4065-675f-4ca0-a973-bb285ae7fcdb" deleted
+pytorchjob.kubeflow.org "22dc47d7-1c10-41a2-8248-6b977415af3b" deleted
+pytorchjob.kubeflow.org "25632706-3361-410e-a069-0d67cf5edfb2" deleted
+pytorchjob.kubeflow.org "27a9f703-3b9c-4a45-b20a-e18bd6c5f3c8" deleted
+pytorchjob.kubeflow.org "2867e551-9941-4410-a959-efe3df3455a1" deleted
+pytorchjob.kubeflow.org "2fdd6b09-eeff-406e-8af1-e7449127abc5" deleted
+pytorchjob.kubeflow.org "3549797a-c13e-4ca1-ac64-129af677ea04" deleted
+pytorchjob.kubeflow.org "359d790c-292c-4042-a783-f97637c33dd1" deleted
+pytorchjob.kubeflow.org "389adcfb-66eb-45f9-af07-b2870b59e130" deleted
+pytorchjob.kubeflow.org "3f0c3f02-7220-4346-a3b9-29395ef71d4e" deleted
+pytorchjob.kubeflow.org "4a1349c4-323a-4728-a077-e96a995ce15b" deleted
+pytorchjob.kubeflow.org "4d95f953-395b-4c44-bf19-e16e7cd29343" deleted
+pytorchjob.kubeflow.org "4dff6398-5fbe-42d6-8061-e949ffae4994" deleted
+pytorchjob.kubeflow.org "4e0010b4-07e8-437b-9f17-f475a4e4ef1b" deleted
+pytorchjob.kubeflow.org "4e0d17f5-02cc-4b74-ba6b-c0f03ca3d135" deleted
+pytorchjob.kubeflow.org "52dc64e5-45eb-48c7-996a-6967d406eb6a" deleted
+pytorchjob.kubeflow.org "5c492e27-eeb0-4bbe-97cb-1f8b34b660bc" deleted
+pytorchjob.kubeflow.org "5d492b05-a195-4141-83e5-86f2a1723981" deleted
+pytorchjob.kubeflow.org "6070c2d1-92f8-4fac-a0bb-2eca850573bc" deleted
+pytorchjob.kubeflow.org "63a45553-cbde-4ad4-81b1-96e0fc700243" deleted
+pytorchjob.kubeflow.org "6411f665-27b0-4933-85dc-8c733b74a3aa" deleted
+pytorchjob.kubeflow.org "7251f3c1-ebe7-437f-917e-24d3b56af149" deleted
+pytorchjob.kubeflow.org "75ea4796-2deb-4467-b23b-2282af62e41e" deleted
+pytorchjob.kubeflow.org "7af2222d-289b-4156-88bc-55f0a388682d" deleted
+pytorchjob.kubeflow.org "7c44008c-1b8b-4937-9556-b229cefd2bd9" deleted
+pytorchjob.kubeflow.org "7eaf7d32-de40-4ebc-8be8-3fe66b756b17" deleted
+pytorchjob.kubeflow.org "8bb9c9f0-4e6f-41d3-85d2-d082e1d67170" deleted
+pytorchjob.kubeflow.org "960da193-01e0-4e7f-abec-3ecb89426f89" deleted
+pytorchjob.kubeflow.org "9d2eab2f-b8e5-4940-9ba7-fc58fb0dffe4" deleted
+pytorchjob.kubeflow.org "ae3d8373-126d-4d15-a1ba-a69431323a55" deleted
+pytorchjob.kubeflow.org "b1d57664-9198-4b75-8b4e-7092efc8b381" deleted
+pytorchjob.kubeflow.org "b249214e-1301-42d8-9b16-da4a093d0e90" deleted
+pytorchjob.kubeflow.org "b5096908-0031-4701-b371-33dcfadf6e79" deleted
+pytorchjob.kubeflow.org "bcd7e92f-5a81-4232-8139-f87ad19cba02" deleted
+pytorchjob.kubeflow.org "be623ab0-e705-42ee-be51-16fd6c20e2e1" deleted
+pytorchjob.kubeflow.org "c3ea230f-c1ef-4f23-9c8e-cbfe2a4b6b91" deleted
+pytorchjob.kubeflow.org "c95bdb6b-62b6-4de8-a820-d6548cb84047" deleted
+pytorchjob.kubeflow.org "c99224b6-6d4a-4990-97e0-6b8beff489b9" deleted
+pytorchjob.kubeflow.org "cf4ee2ef-cbd1-405f-9c65-dd90449c81d2" deleted
+pytorchjob.kubeflow.org "cfee1763-9868-40b2-91ce-272008711f7e" deleted
+pytorchjob.kubeflow.org "d22d4289-f622-466a-ae09-2a56dd3ebcac" deleted
+pytorchjob.kubeflow.org "d4d0bbd5-c282-41f5-9982-bff77b704aac" deleted
+pytorchjob.kubeflow.org "d71e571b-1c08-416b-a34b-3ca87341de0e" deleted
+pytorchjob.kubeflow.org "d9a58e83-6e3f-4208-b220-fd8ed0b74988" deleted
+pytorchjob.kubeflow.org "e167281f-2494-4097-bdde-0cee86ec532b" deleted
+pytorchjob.kubeflow.org "e26b6df5-df00-49fa-a9a5-844fe42925ee" deleted
+pytorchjob.kubeflow.org "e29d8e88-35ee-4c6e-bc8d-f9ed3c3bd474" deleted
+pytorchjob.kubeflow.org "ea457b8f-e99e-4e9c-a9fe-6cf16d586d82" deleted
+pytorchjob.kubeflow.org "f07f8644-1512-427b-b7a3-ef247ba9d666" deleted
+pytorchjob.kubeflow.org "f2f0fab4-afc5-4c9c-9066-8e5c7a137fc6" deleted
+pytorchjob.kubeflow.org "fa2e1826-617d-4160-9d92-93aa8462991a" deleted
+      "arrival_statistic": 5,
+      "scheduling": "improved",
+         "arrival_seed": 22
+Sending build context to Docker daemon  414.8MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> b27e6f98a194
+Step 11/13 : ADD charts charts
+ ---> 379e3ae898ea
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 17d90ab4159e
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in daf43f525e77
+Removing intermediate container daf43f525e77
+ ---> 90191ed52f94
+Successfully built 90191ed52f94
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+faffda38652e: Preparing
+94eec7fba195: Preparing
+ba3c0b1e8d00: Preparing
+e8cdaf4ffdc9: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+b69dc9a1ae51: Waiting
+4942a1abcbfa: Preparing
+a770b43c251e: Waiting
+4e311038b14a: Waiting
+9debf17f1f41: Waiting
+307814c51c70: Waiting
+c7209b337a87: Waiting
+4ede1962eac3: Waiting
+81a0a694f8fb: Waiting
+4b5b20c7e93f: Waiting
+7b645d264080: Waiting
+4942a1abcbfa: Waiting
+1eb927d93505: Waiting
+5faf23568bde: Waiting
+8fa17e46d6a7: Waiting
+b9e0fc92be93: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+94eec7fba195: Pushed
+ba3c0b1e8d00: Pushed
+e8cdaf4ffdc9: Pushed
+faffda38652e: Pushed
+latest: digest: sha256:7f37ca0f8bf36579e549c90c871d340decf92ff320c2c85c1cdade49e0a0e66c size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 01:40:38 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "047b2f95-4f58-4341-92a3-ab8679de16bb" deleted
+pytorchjob.kubeflow.org "067f0acd-e36e-4106-acbe-6c8931f8e1a1" deleted
+pytorchjob.kubeflow.org "0718313c-2a7d-4272-9add-c996876f36a5" deleted
+pytorchjob.kubeflow.org "18035d12-a7dc-4d05-842c-b2cb42be88b4" deleted
+pytorchjob.kubeflow.org "1908ed39-a722-4cf2-865d-a4437237a68a" deleted
+pytorchjob.kubeflow.org "1a084bb0-6c92-4dfc-8ec3-377a7ea0cbfa" deleted
+pytorchjob.kubeflow.org "1c144504-a7de-4400-9294-99c57d309bcc" deleted
+pytorchjob.kubeflow.org "1dc26769-590b-4a71-b019-44eb0619d970" deleted
+pytorchjob.kubeflow.org "1e28a491-235b-4092-a989-87017952d52e" deleted
+pytorchjob.kubeflow.org "21115161-37ce-476a-8d90-a20ad83039e0" deleted
+pytorchjob.kubeflow.org "279ef20b-a3a0-4eef-af04-72fee3d57ece" deleted
+pytorchjob.kubeflow.org "27f53417-0533-46d4-89aa-43a91306e6fd" deleted
+pytorchjob.kubeflow.org "2932bf17-4c75-4d34-af0d-5c2554f80f63" deleted
+pytorchjob.kubeflow.org "297e25b1-f1fb-43cb-bded-bff412f3144f" deleted
+pytorchjob.kubeflow.org "2af1a7bd-8037-4111-b82b-ae2dde6580c4" deleted
+pytorchjob.kubeflow.org "30210b4c-ff25-408f-a6e5-1bee4cbd8ba2" deleted
+pytorchjob.kubeflow.org "30ca4cac-3e06-4562-b121-5b7f84900faa" deleted
+pytorchjob.kubeflow.org "35541591-88ea-40ff-a46b-0c58ad2d6d82" deleted
+pytorchjob.kubeflow.org "39e0e04c-3f64-45d7-bef9-81329a2a501b" deleted
+pytorchjob.kubeflow.org "4085d8c5-a89e-4f2e-bcca-81d3f27bb5d5" deleted
+pytorchjob.kubeflow.org "4275fc1e-e9af-44a6-898c-f52afc02d18e" deleted
+pytorchjob.kubeflow.org "428adac1-0ac1-4ecd-83b4-dff5a8f0b95a" deleted
+pytorchjob.kubeflow.org "43dfc9e6-ef6b-4945-b884-b45ca35887f4" deleted
+pytorchjob.kubeflow.org "44398227-1a51-4972-99b1-c31c75df8e34" deleted
+pytorchjob.kubeflow.org "454e8daa-f7eb-4485-8709-1cc457e17402" deleted
+pytorchjob.kubeflow.org "46bffb55-2cf8-447a-aea5-67c8f3b8428e" deleted
+pytorchjob.kubeflow.org "47a59eef-4e4a-497c-ac5a-317fd9525e9f" deleted
+pytorchjob.kubeflow.org "49c24692-ddeb-4b75-a4cf-ad6a3fb8a9e6" deleted
+pytorchjob.kubeflow.org "4d9e0128-d1fc-4657-a5c9-5e5346815e04" deleted
+pytorchjob.kubeflow.org "4eb6c09d-af9b-400f-824b-a90869157ce9" deleted
+pytorchjob.kubeflow.org "4ee9100d-6c38-46cf-b00a-a132bd902339" deleted
+pytorchjob.kubeflow.org "533183f2-4411-4eda-a296-d1158ecde63a" deleted
+pytorchjob.kubeflow.org "55051fed-e44c-4688-a1c0-c38475ea9685" deleted
+pytorchjob.kubeflow.org "5ae46667-f604-4c6a-a2a2-8c54491f26d4" deleted
+pytorchjob.kubeflow.org "5ca35cd0-5a5e-470a-aa35-2f40c056f6d3" deleted
+pytorchjob.kubeflow.org "5cca990c-b834-4667-b8fc-1b8499497f32" deleted
+pytorchjob.kubeflow.org "5e36267a-0b3f-4cef-ac08-f3a0d4593cfa" deleted
+pytorchjob.kubeflow.org "5e919cce-1a54-4c59-abed-10eac36165a0" deleted
+pytorchjob.kubeflow.org "5f2793c0-229f-4fb7-a6a3-c71b631b1d6c" deleted
+pytorchjob.kubeflow.org "602ac30d-421c-4900-ab27-07a31ce14e7a" deleted
+pytorchjob.kubeflow.org "62ca9d1a-8cda-4d71-843f-84efbb6e6d6d" deleted
+pytorchjob.kubeflow.org "66e02e04-2f93-453d-a099-ee083286d723" deleted
+pytorchjob.kubeflow.org "68b0d7fe-da33-4c72-b518-55d84ebe8d0c" deleted
+pytorchjob.kubeflow.org "704eac58-15c7-4f53-a895-77cbde4de7db" deleted
+pytorchjob.kubeflow.org "77d1dc81-b4b3-4534-b3a9-aaa7b32d9663" deleted
+pytorchjob.kubeflow.org "7b57e98b-613e-4247-8a7d-af27eebc7536" deleted
+pytorchjob.kubeflow.org "7f8518f6-4e43-4cb0-9789-309fea952451" deleted
+pytorchjob.kubeflow.org "89dc16b1-ba8f-439b-a3a1-1cb12213a359" deleted
+pytorchjob.kubeflow.org "8c176bcf-f4fe-45d8-a9b8-f9305daa44e4" deleted
+pytorchjob.kubeflow.org "8fab57b2-1529-49b4-b190-e9856e3ada96" deleted
+pytorchjob.kubeflow.org "93d8b5b2-1aa0-4441-af4b-985606b8a5e6" deleted
+pytorchjob.kubeflow.org "a106ddd6-63f7-4b4e-9c4d-bee9a673afbe" deleted
+pytorchjob.kubeflow.org "a3e6ce50-ded6-45f3-9f3c-2b83d2b027e1" deleted
+pytorchjob.kubeflow.org "a565cfa5-3c3c-487c-a09a-0615bcd6aae1" deleted
+pytorchjob.kubeflow.org "a5ce7d80-1d06-4dc4-a740-d462ca5936e2" deleted
+pytorchjob.kubeflow.org "a5d9ba27-2cb7-4a69-aac4-b002bb493548" deleted
+pytorchjob.kubeflow.org "b231d9b1-969b-4001-852c-38d6146d166c" deleted
+pytorchjob.kubeflow.org "b3ef50b1-e769-4ea9-8f3a-037d4b6b5772" deleted
+pytorchjob.kubeflow.org "b63a2490-0bc3-431f-999a-736c84527398" deleted
+pytorchjob.kubeflow.org "b9880992-1f0b-4796-987d-4f9c6f38071f" deleted
+pytorchjob.kubeflow.org "bd4d3d8b-f8c2-4190-b904-dacd40156309" deleted
+pytorchjob.kubeflow.org "beda85d3-0aa0-44fa-9f42-05469aef44d4" deleted
+pytorchjob.kubeflow.org "bef91a1d-f6a2-4203-8ba4-29960d1a74a5" deleted
+pytorchjob.kubeflow.org "c16bbf28-38c3-4ae4-9b2e-0c6c248b6615" deleted
+pytorchjob.kubeflow.org "c504a158-16c3-41f1-9e1f-767c485465db" deleted
+pytorchjob.kubeflow.org "c5a2c653-60ea-4776-adc5-f8b903548017" deleted
+pytorchjob.kubeflow.org "c8d2c2eb-792b-47fc-a651-863b17eca361" deleted
+pytorchjob.kubeflow.org "c9deb212-948b-4818-80d6-003495c39a84" deleted
+pytorchjob.kubeflow.org "cba30e04-2913-4c0e-83dc-6c92d1b2db63" deleted
+pytorchjob.kubeflow.org "d02ecd87-2a51-433b-a2f5-d0898d8a4896" deleted
+pytorchjob.kubeflow.org "d6e775a6-69ec-4873-87b5-325a83eb5b0b" deleted
+pytorchjob.kubeflow.org "db92c099-52b6-4036-876e-516376f53e4e" deleted
+pytorchjob.kubeflow.org "dfa9edac-8f50-49da-b22f-9188d17d27f9" deleted
+pytorchjob.kubeflow.org "f26b38ae-6b52-4b52-84ec-6c00dc54e82b" deleted
+pytorchjob.kubeflow.org "f5f60ee0-068b-4e81-9bc8-e67897f8a9b6" deleted
+pytorchjob.kubeflow.org "fa43a850-017e-4c5f-b4ab-52ae4618b501" deleted
+pytorchjob.kubeflow.org "ff321e36-8035-4e82-9d49-64787ce9040e" deleted
+      "arrival_statistic": 5,
+      "scheduling": "improved",
+         "arrival_seed": 03
+Sending build context to Docker daemon  415.1MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> 3bb42e1bdf89
+Step 11/13 : ADD charts charts
+ ---> d991e110a5e8
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 1f7868587deb
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 5df7d1b7b0d7
+Removing intermediate container 5df7d1b7b0d7
+ ---> 71f8413ad6b5
+Successfully built 71f8413ad6b5
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+1a9eabffefab: Preparing
+5ebaa1853a19: Preparing
+58c425e48d59: Preparing
+0dee707f88dd: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+81a0a694f8fb: Waiting
+4942a1abcbfa: Preparing
+307814c51c70: Waiting
+1eb927d93505: Waiting
+5faf23568bde: Waiting
+9debf17f1f41: Waiting
+a770b43c251e: Waiting
+b9e0fc92be93: Waiting
+b69dc9a1ae51: Waiting
+c7209b337a87: Waiting
+4e311038b14a: Waiting
+8fa17e46d6a7: Waiting
+4ede1962eac3: Waiting
+4b5b20c7e93f: Waiting
+7b645d264080: Waiting
+4942a1abcbfa: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+5ebaa1853a19: Pushed
+0dee707f88dd: Pushed
+58c425e48d59: Pushed
+1a9eabffefab: Pushed
+latest: digest: sha256:519d023a9abe3a17bf1bb9c99dba309f07b949fa65612cdd19c6903e9fa25ad3 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 01:51:48 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+No resources found
+      "arrival_statistic": 5,
+      "scheduling": "improved",
+         "arrival_seed": 1996
+Sending build context to Docker daemon  415.2MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> b17ad1c4720a
+Step 11/13 : ADD charts charts
+ ---> 744d6d04e2c6
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 48233d7e5606
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 6e969192e025
+Removing intermediate container 6e969192e025
+ ---> 279d59f38c96
+Successfully built 279d59f38c96
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+0dd0db42a24b: Preparing
+c6e05ee431d9: Preparing
+7dd2e7894147: Preparing
+cc8df0a24f21: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+5faf23568bde: Waiting
+3f397bf4a209: Preparing
+b9e0fc92be93: Waiting
+4e311038b14a: Waiting
+4942a1abcbfa: Preparing
+9debf17f1f41: Waiting
+7b645d264080: Waiting
+307814c51c70: Waiting
+8fa17e46d6a7: Waiting
+c7209b337a87: Waiting
+4b5b20c7e93f: Waiting
+4ede1962eac3: Waiting
+b69dc9a1ae51: Waiting
+81a0a694f8fb: Waiting
+3f397bf4a209: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+c6e05ee431d9: Pushed
+7dd2e7894147: Pushed
+cc8df0a24f21: Pushed
+0dd0db42a24b: Pushed
+latest: digest: sha256:cbbe5f67599d4df83d6a56c64c2ea18ce32d02d8ee3db1758ada629416722e25 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 02:02:27 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "0044eb6f-f556-4a1e-b0df-aa7ab86c2628" deleted
+pytorchjob.kubeflow.org "021b7074-76da-412a-af6a-4193a108593b" deleted
+pytorchjob.kubeflow.org "028b991a-c20f-49ec-b9b2-3ea6862e25ac" deleted
+pytorchjob.kubeflow.org "071c6db4-4fe9-45f9-be41-5b23f7866424" deleted
+pytorchjob.kubeflow.org "0ce31b55-0d3a-4c07-9671-0e2a2926541b" deleted
+pytorchjob.kubeflow.org "0d499dce-997e-4c1f-b317-93735703b1ef" deleted
+pytorchjob.kubeflow.org "0e5fca4a-8db1-4955-82e1-dfe210e7a424" deleted
+pytorchjob.kubeflow.org "1397781f-2b5f-4970-91e1-9f1f169038ba" deleted
+pytorchjob.kubeflow.org "15ec7c0e-3a44-400f-bb2d-fc3978b3746f" deleted
+pytorchjob.kubeflow.org "19138ca9-8fe3-448b-88e5-45875f0e4cd6" deleted
+pytorchjob.kubeflow.org "226e2c2b-1776-4389-a158-1a4c90af1c47" deleted
+pytorchjob.kubeflow.org "25729d83-0a71-4553-87cf-16f37da69c16" deleted
+pytorchjob.kubeflow.org "28b8e948-a545-4f7a-83bd-1216a5bfb768" deleted
+pytorchjob.kubeflow.org "2b4aa100-4dd0-4c8d-86a2-9989c663ae4f" deleted
+pytorchjob.kubeflow.org "2b62d308-8dc2-4a7d-a3fa-5c01435d9149" deleted
+pytorchjob.kubeflow.org "31d07e97-649b-45fe-b833-0f4a8d68f436" deleted
+pytorchjob.kubeflow.org "34522332-7a6d-453a-84e6-ff518e437175" deleted
+pytorchjob.kubeflow.org "39649b2a-4441-44fd-9a36-a6c27634b9fa" deleted
+pytorchjob.kubeflow.org "399edd66-7b9e-43ec-a036-921ad118bdcf" deleted
+pytorchjob.kubeflow.org "3ad64f7b-1110-4ac5-a50e-7f9adef0d6da" deleted
+pytorchjob.kubeflow.org "3d9cc084-a0ae-4bc8-8a67-d43378235a14" deleted
+pytorchjob.kubeflow.org "3ee399d3-a3ce-4f35-ab22-568f866d054a" deleted
+pytorchjob.kubeflow.org "411010c0-2e34-4e86-b466-0710a1e2a121" deleted
+pytorchjob.kubeflow.org "41e6008b-2b3a-4f1c-92f6-c4aa49587517" deleted
+pytorchjob.kubeflow.org "42891b67-c678-4153-bdeb-cc2c7ad247d8" deleted
+pytorchjob.kubeflow.org "526c4b7b-a8ce-46a1-8ea0-70f46e3b8d15" deleted
+pytorchjob.kubeflow.org "579dea3f-4af0-4f6e-b14a-850b1ffd2e53" deleted
+pytorchjob.kubeflow.org "58eb6c26-c103-4674-bbae-33b2fe27d913" deleted
+pytorchjob.kubeflow.org "5d5f51f0-d42f-41ad-bd6a-56dc10bc12d7" deleted
+pytorchjob.kubeflow.org "60c8d114-8a26-416b-a2b5-e6449f1cb967" deleted
+pytorchjob.kubeflow.org "6386b802-3a9e-4458-9683-a494ab061897" deleted
+pytorchjob.kubeflow.org "6848d871-86d3-4935-ad33-868c18677bf7" deleted
+pytorchjob.kubeflow.org "6848faa0-300d-4206-a797-b831fb2f2a64" deleted
+pytorchjob.kubeflow.org "6d6a97d9-41f1-40df-9081-d2d9d3624610" deleted
+pytorchjob.kubeflow.org "730c8129-0243-4062-aa6b-65e9d9931c30" deleted
+pytorchjob.kubeflow.org "73a96b35-7501-42e3-b823-3d1630a8d9fb" deleted
+pytorchjob.kubeflow.org "74c81121-91c8-48e3-9cb3-a34e54b2db59" deleted
+pytorchjob.kubeflow.org "755111ba-6d87-40db-a6e6-b7da82fb920e" deleted
+pytorchjob.kubeflow.org "77073c81-6b07-4cee-9034-8442d03e543c" deleted
+pytorchjob.kubeflow.org "879d849d-8d9f-4ab9-8f96-a82628f08ac0" deleted
+pytorchjob.kubeflow.org "87f72024-0190-4278-bc95-332fdbbdc6f4" deleted
+pytorchjob.kubeflow.org "8850bc8b-eeeb-4347-ad42-f4da42260a91" deleted
+pytorchjob.kubeflow.org "88e5814f-e6dd-49d3-9441-74bc921391d0" deleted
+pytorchjob.kubeflow.org "89f806c3-294c-44c3-82ae-073af29a4958" deleted
+pytorchjob.kubeflow.org "8a4250e1-d2d3-4412-9c08-baf1400d3c87" deleted
+pytorchjob.kubeflow.org "8bf62209-d1c6-4645-a41a-b5fc8ffe6805" deleted
+pytorchjob.kubeflow.org "8cc3464e-5c77-40f9-bbf5-289bfd454772" deleted
+pytorchjob.kubeflow.org "8f469849-4af8-4fbd-82c9-61c60e3128ab" deleted
+pytorchjob.kubeflow.org "9bac102f-ad9d-4c3c-bfc6-7ecdbe710c0f" deleted
+pytorchjob.kubeflow.org "9c81c070-312b-41fa-9c84-99dd35a3801a" deleted
+pytorchjob.kubeflow.org "a5720180-a6ff-4f52-b43e-3d1fbd59abb8" deleted
+pytorchjob.kubeflow.org "a597752d-e0a3-4951-9a49-cf6e9ed5eb12" deleted
+pytorchjob.kubeflow.org "a9f70a7e-f2c5-4e21-9edb-553da27cd2bc" deleted
+pytorchjob.kubeflow.org "ab3a3934-69ac-4cd9-bb0a-1e0f47783e48" deleted
+pytorchjob.kubeflow.org "b642a871-7995-4721-9cf1-938792a7507a" deleted
+pytorchjob.kubeflow.org "b7b30eb4-1328-40fd-a0cd-d8d3c766c769" deleted
+pytorchjob.kubeflow.org "c598d79d-564f-43c8-b02a-c64fcf00ae53" deleted
+pytorchjob.kubeflow.org "c626d61d-ce8e-4a07-a8d5-6dc019028302" deleted
+pytorchjob.kubeflow.org "c9405a9c-5063-409e-90c2-abcddc91f555" deleted
+pytorchjob.kubeflow.org "ca98501d-01c7-42dc-a658-cea9b669e4f5" deleted
+pytorchjob.kubeflow.org "cf857257-c5c2-4162-be3e-0f15bf90ceea" deleted
+pytorchjob.kubeflow.org "d7dd47c9-3708-4789-bb12-485ae108068a" deleted
+pytorchjob.kubeflow.org "da13fc78-2de6-45c2-9d14-3c5c7f0935de" deleted
+pytorchjob.kubeflow.org "dcdd6d37-1bc3-4484-9ec2-aca090199c19" deleted
+pytorchjob.kubeflow.org "dde25fd2-ea45-4f07-a7dc-ca33dbf59c2c" deleted
+pytorchjob.kubeflow.org "df484f67-f019-4846-887d-142aa371a1d6" deleted
+pytorchjob.kubeflow.org "e0f80a80-dbea-4f69-bef9-4074c6826874" deleted
+pytorchjob.kubeflow.org "e48f4908-afbd-43ec-9f6e-cb43d34ee211" deleted
+pytorchjob.kubeflow.org "e72f1a24-ce19-4ee9-b3b5-834b1a5d985e" deleted
+pytorchjob.kubeflow.org "e85f32f7-4df2-4de4-bc85-a6261084d0c8" deleted
+pytorchjob.kubeflow.org "f93feac0-5638-49ae-be3b-56dc0338a18a" deleted
+pytorchjob.kubeflow.org "fa247c6e-98c2-43a0-8511-9a3b09566c2a" deleted
+pytorchjob.kubeflow.org "fa4e3f94-d614-4730-9663-16f8ae385c39" deleted
+pytorchjob.kubeflow.org "fc9f3d42-3db6-488c-8aad-2cf64b129352" deleted
+pytorchjob.kubeflow.org "ff1f46f8-8b6d-4f7e-9134-248d9b453550" deleted
+      "arrival_statistic": 4,
+      "scheduling": "improved",
+         "arrival_seed": 22
+Sending build context to Docker daemon  415.4MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> e82392dc33a2
+Step 11/13 : ADD charts charts
+ ---> d82f76a10bc2
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 75ad222ea7dc
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in b4a23e0aab0e
+Removing intermediate container b4a23e0aab0e
+ ---> 608324eb5932
+Successfully built 608324eb5932
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+87d5b2a3c319: Preparing
+a41e20a887b8: Preparing
+8d3d64383a08: Preparing
+fd9695b0397d: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+81a0a694f8fb: Waiting
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+1eb927d93505: Waiting
+4942a1abcbfa: Preparing
+4e311038b14a: Waiting
+b9e0fc92be93: Waiting
+9debf17f1f41: Waiting
+5faf23568bde: Waiting
+a770b43c251e: Waiting
+307814c51c70: Waiting
+c7209b337a87: Waiting
+4ede1962eac3: Waiting
+b69dc9a1ae51: Waiting
+8fa17e46d6a7: Waiting
+4b5b20c7e93f: Waiting
+4942a1abcbfa: Waiting
+3f397bf4a209: Waiting
+7b645d264080: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+8d3d64383a08: Pushed
+fd9695b0397d: Pushed
+a41e20a887b8: Pushed
+87d5b2a3c319: Pushed
+latest: digest: sha256:d22faf573e84f2445690501ba227a37798990435dba5de9f88d7511caca6a7d8 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 02:13:38 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "000b5331-b706-4ecc-859c-8879424d602a" deleted
+pytorchjob.kubeflow.org "03f3b185-2367-4560-bf1b-9f76ad503b33" deleted
+pytorchjob.kubeflow.org "06ab3663-6bcb-479a-b7c8-45bc1994770a" deleted
+pytorchjob.kubeflow.org "074005f4-69f5-4c62-a236-eb4c18bf69c7" deleted
+pytorchjob.kubeflow.org "0c49902d-4867-4bd3-adf5-8196d96b7f6c" deleted
+pytorchjob.kubeflow.org "0e9f80e7-eac3-4440-b063-a90a4a5b8925" deleted
+pytorchjob.kubeflow.org "0f49e9d7-bea4-447a-a483-418e1dd97434" deleted
+pytorchjob.kubeflow.org "11c6e520-49fc-4e7b-8c07-2f9bde364f5d" deleted
+pytorchjob.kubeflow.org "12200f74-e264-4071-883b-6b373d859278" deleted
+pytorchjob.kubeflow.org "18f97ab5-ca87-4710-a1ff-2caabeb8d362" deleted
+pytorchjob.kubeflow.org "1918cac7-277e-4823-ae4f-26304287b2d6" deleted
+pytorchjob.kubeflow.org "1b9b421e-8bc7-4876-a3e0-513319e96218" deleted
+pytorchjob.kubeflow.org "222d17db-15af-4352-ac51-af49dbcd3402" deleted
+pytorchjob.kubeflow.org "26ed5345-a028-424d-964e-59c08a33bb22" deleted
+pytorchjob.kubeflow.org "28e3fc89-ad03-4705-a8f5-7b264badbb27" deleted
+pytorchjob.kubeflow.org "2b6a92c3-108d-41d7-8c2f-6e013d0c5ac7" deleted
+pytorchjob.kubeflow.org "2bf18ddb-8c26-46af-9f6f-728ea973ae2d" deleted
+pytorchjob.kubeflow.org "2e484481-50b0-497f-b5dc-2e0764b1bed9" deleted
+pytorchjob.kubeflow.org "2fa603bd-18dc-4c01-9557-dab7c8dc8a79" deleted
+pytorchjob.kubeflow.org "32e1ee5a-402f-4071-86a7-f7d912f7a6a8" deleted
+pytorchjob.kubeflow.org "391ae487-af4f-4539-91db-41c9e3c9878d" deleted
+pytorchjob.kubeflow.org "3b920203-0cc0-4318-bb5b-d243e9d0145c" deleted
+pytorchjob.kubeflow.org "3daf039d-17ec-4ab4-b8d5-b9bbba24bb3c" deleted
+pytorchjob.kubeflow.org "3dedbfdd-67ae-4598-9176-e87d4dd27369" deleted
+pytorchjob.kubeflow.org "40ef545e-4120-43e9-9b62-8e82da07b906" deleted
+pytorchjob.kubeflow.org "42153344-a62f-45b3-aede-e5e4f3650a69" deleted
+pytorchjob.kubeflow.org "59dce636-e2cc-4b04-82b1-688b92058820" deleted
+pytorchjob.kubeflow.org "5f135ef8-6c5e-4d3d-b8a2-93ff062af424" deleted
+pytorchjob.kubeflow.org "6830d90a-aea3-4f7a-98c3-511ecc673bc6" deleted
+pytorchjob.kubeflow.org "6de18395-40e0-45dc-b01f-7247b3cf167b" deleted
+pytorchjob.kubeflow.org "6ef21e12-2b44-4148-8f65-a874e2659bce" deleted
+pytorchjob.kubeflow.org "74d877a0-88d7-48bd-82ba-465ca42373db" deleted
+pytorchjob.kubeflow.org "7a009012-76c4-4a2a-bf5d-3d9be0c8319f" deleted
+pytorchjob.kubeflow.org "7a39eea7-6ee0-4604-a832-529cf291d8e5" deleted
+pytorchjob.kubeflow.org "825f9a44-f7b1-41bf-b88e-67d08e96bdab" deleted
+pytorchjob.kubeflow.org "82ad03e1-f0d4-4361-b82f-c8c1f88c3ff2" deleted
+pytorchjob.kubeflow.org "86f5dcbd-ddd3-405b-a3d2-47520fdb30da" deleted
+pytorchjob.kubeflow.org "8aa294bf-2bf3-4a6c-824e-0005b4a4f388" deleted
+pytorchjob.kubeflow.org "8d3b33b8-dbc2-4780-a2ee-bbec0ef52ea2" deleted
+pytorchjob.kubeflow.org "8e88ff67-e138-4980-9755-94e144a55555" deleted
+pytorchjob.kubeflow.org "90cd4076-2c5e-4e64-ba2e-1cbe8679c860" deleted
+pytorchjob.kubeflow.org "91f6b05e-68be-4410-a98a-a44c6ec813fc" deleted
+pytorchjob.kubeflow.org "932c925e-84b1-4f31-9415-58d27186073a" deleted
+pytorchjob.kubeflow.org "93b71ced-0fe5-440c-8b74-1ac4e299d270" deleted
+pytorchjob.kubeflow.org "96e7dc24-53da-4b62-b2be-c9c78c1f5275" deleted
+pytorchjob.kubeflow.org "97a148cf-b90a-4afb-8404-bf7fbe02a7e9" deleted
+pytorchjob.kubeflow.org "9b24b4cf-b868-4c46-9a31-3b34ab49a789" deleted
+pytorchjob.kubeflow.org "a782816d-b012-4eb3-b786-f34d60145f46" deleted
+pytorchjob.kubeflow.org "b60d677d-cf5b-46a5-8987-d2e7686cd78f" deleted
+pytorchjob.kubeflow.org "bbdda651-17f7-48a2-927f-0a252886448b" deleted
+pytorchjob.kubeflow.org "c1e4ce31-f3f1-4859-a245-855fe67f9c8f" deleted
+pytorchjob.kubeflow.org "c47a912c-431d-43d9-aa9e-6c779cc5f9e4" deleted
+pytorchjob.kubeflow.org "c4c1caad-415f-453f-8260-05fd633a8fe7" deleted
+pytorchjob.kubeflow.org "c56ac7e5-15ea-47b8-b9cd-e61aa577f69a" deleted
+pytorchjob.kubeflow.org "ca5fcdfb-7902-4802-b22c-a499b5e0c974" deleted
+pytorchjob.kubeflow.org "cb611a64-d7ed-47b3-8ad8-90f737848932" deleted
+pytorchjob.kubeflow.org "cbf3aee5-e0db-4292-afbd-5941e2c93c63" deleted
+pytorchjob.kubeflow.org "ce1939a7-569a-44cf-8658-54163b6337c1" deleted
+pytorchjob.kubeflow.org "cf9ff145-b237-46d9-bc37-6431e5af4568" deleted
+pytorchjob.kubeflow.org "d13830bf-8bed-4226-8c6d-b1a2b0202680" deleted
+pytorchjob.kubeflow.org "d6aaeb28-51f6-485b-8c15-840c8a5afdf0" deleted
+pytorchjob.kubeflow.org "e0ce0a8b-bde2-4444-b11c-5b37423f4272" deleted
+pytorchjob.kubeflow.org "eb12e972-e8da-479f-9ce5-ca335a9c5f48" deleted
+pytorchjob.kubeflow.org "ecb2b0da-fef3-4b3e-bbe5-808829134f71" deleted
+pytorchjob.kubeflow.org "eefa8459-dd0c-4629-bbbb-12021453ab53" deleted
+pytorchjob.kubeflow.org "efcefabb-0ecd-4371-a317-94ba41d69f44" deleted
+pytorchjob.kubeflow.org "f23501ee-c0c6-4370-ad71-02d04232f1d7" deleted
+pytorchjob.kubeflow.org "f3c42b06-9154-4531-80ba-dae87db68dd5" deleted
+pytorchjob.kubeflow.org "f9826e95-6847-451b-addb-a22ac18099dd" deleted
+pytorchjob.kubeflow.org "faeb5b53-418b-4be9-9edc-f72da6507aa8" deleted
+      "arrival_statistic": 4,
+      "scheduling": "improved",
+         "arrival_seed": 03
+Sending build context to Docker daemon  415.6MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> 9f0bd358a142
+Step 11/13 : ADD charts charts
+ ---> 931ae35aed7c
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 6e05a4d30dab
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 362f812a5b5f
+Removing intermediate container 362f812a5b5f
+ ---> 107de39310bf
+Successfully built 107de39310bf
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+fa47cca05847: Preparing
+eb26dbac5e6b: Preparing
+ba9af7ced036: Preparing
+37ed1f7562ba: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+b9e0fc92be93: Waiting
+3f397bf4a209: Preparing
+5faf23568bde: Waiting
+4942a1abcbfa: Preparing
+4e311038b14a: Waiting
+8fa17e46d6a7: Waiting
+307814c51c70: Waiting
+7b645d264080: Waiting
+b69dc9a1ae51: Waiting
+4ede1962eac3: Waiting
+a770b43c251e: Waiting
+3f397bf4a209: Waiting
+4942a1abcbfa: Waiting
+9debf17f1f41: Waiting
+c7209b337a87: Waiting
+4b5b20c7e93f: Waiting
+81a0a694f8fb: Waiting
+1eb927d93505: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+eb26dbac5e6b: Pushed
+37ed1f7562ba: Pushed
+ba9af7ced036: Pushed
+fa47cca05847: Pushed
+latest: digest: sha256:2292a3171efaa6a0417ff1c9f9e77727a0b216fd6c154f9fec795931c27219cd size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 02:24:48 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+No resources found
+      "arrival_statistic": 4,
+      "scheduling": "improved",
+         "arrival_seed": 1996
+Sending build context to Docker daemon  415.8MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> 0604e1067360
+Step 11/13 : ADD charts charts
+ ---> 4b20a66255a9
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> af19d2d04ee4
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 9a8a585a7b14
+Removing intermediate container 9a8a585a7b14
+ ---> 9858a0d6a018
+Successfully built 9858a0d6a018
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+2ad147f8bf55: Preparing
+84d9d5c75f64: Preparing
+ac0bac6e4bbe: Preparing
+5f89c5e0e26c: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+b9e0fc92be93: Waiting
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+81a0a694f8fb: Waiting
+4e311038b14a: Waiting
+3f397bf4a209: Preparing
+4942a1abcbfa: Preparing
+307814c51c70: Waiting
+1eb927d93505: Waiting
+5faf23568bde: Waiting
+4b5b20c7e93f: Waiting
+b69dc9a1ae51: Waiting
+8fa17e46d6a7: Waiting
+9debf17f1f41: Waiting
+3f397bf4a209: Waiting
+4942a1abcbfa: Waiting
+a770b43c251e: Waiting
+c7209b337a87: Waiting
+7b645d264080: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+84d9d5c75f64: Pushed
+ac0bac6e4bbe: Pushed
+5f89c5e0e26c: Pushed
+2ad147f8bf55: Pushed
+latest: digest: sha256:a447ced5da94629518d766ba7de389867958cc85c7fc6b2b910a6b041b80ebd4 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 02:35:26 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "0d51bc8b-8637-47e4-9a28-729ac469ea81" deleted
+pytorchjob.kubeflow.org "0dc0ac0e-bcc5-419b-b018-432a43ec8851" deleted
+pytorchjob.kubeflow.org "120e7adc-5202-49b9-8a38-551ffbaa5399" deleted
+pytorchjob.kubeflow.org "13618be2-5214-44a1-af38-c0880103ae39" deleted
+pytorchjob.kubeflow.org "17b7ed5f-e57a-43c4-9382-415373dce80e" deleted
+pytorchjob.kubeflow.org "2080efab-58bf-450c-839b-a97cb96be38c" deleted
+pytorchjob.kubeflow.org "24ef523e-b542-471b-86de-1c26cf62497a" deleted
+pytorchjob.kubeflow.org "259c6496-7dcb-43e1-bbc1-11e6f5b532ce" deleted
+pytorchjob.kubeflow.org "25cc7d61-cf99-4289-befd-617da01a9c79" deleted
+pytorchjob.kubeflow.org "25ed1723-abc8-46d9-9a4d-c7ed78983a52" deleted
+pytorchjob.kubeflow.org "29829c25-f043-4057-b9e7-bd72af58db8c" deleted
+pytorchjob.kubeflow.org "2a009307-a20f-46b4-8724-8d17be783643" deleted
+pytorchjob.kubeflow.org "2cdb399b-7b64-48c8-8588-859d272cb8cd" deleted
+pytorchjob.kubeflow.org "31795a71-df5c-4896-a0df-e4e32d67093a" deleted
+pytorchjob.kubeflow.org "320dc69c-9471-4b8a-b9dd-bbfb7f9ed9a0" deleted
+pytorchjob.kubeflow.org "36178514-52c0-4a10-bf91-5a2efb1c47d6" deleted
+pytorchjob.kubeflow.org "3d9bad1d-f11a-40ca-af89-5c6f728033b1" deleted
+pytorchjob.kubeflow.org "403a6501-a33a-4966-9262-08c347b75df9" deleted
+pytorchjob.kubeflow.org "40c0aade-2d78-470a-8adb-b0fee1231af8" deleted
+pytorchjob.kubeflow.org "41fdd5e2-ba0c-4baf-9bb7-1659d7cdaac7" deleted
+pytorchjob.kubeflow.org "44496f0d-79d8-4e31-90ba-34dac6cae401" deleted
+pytorchjob.kubeflow.org "45a4fa25-24e9-46c1-ac56-063278c8f964" deleted
+pytorchjob.kubeflow.org "46072d78-7c3c-4f3b-bc27-3e29484bc825" deleted
+pytorchjob.kubeflow.org "46cd86f1-7a26-4f66-a719-8dfb75659164" deleted
+pytorchjob.kubeflow.org "484b67a7-b98c-4e5a-b17e-24d0fdb8cae2" deleted
+pytorchjob.kubeflow.org "49cfbc31-b2e4-4b26-8bfa-fb884931cb76" deleted
+pytorchjob.kubeflow.org "4acdefa0-4e3b-4c1c-a84c-0544df6fbffb" deleted
+pytorchjob.kubeflow.org "4c13b912-e87a-483b-a0d1-76aafead80c1" deleted
+pytorchjob.kubeflow.org "543d8726-9ded-471c-a8ad-3d009c26789e" deleted
+pytorchjob.kubeflow.org "576c3f08-fa2c-4aac-a0cd-01406f3d7982" deleted
+pytorchjob.kubeflow.org "57bb65c8-f49a-4c8d-bdb6-800cd65a3741" deleted
+pytorchjob.kubeflow.org "5975b5c9-3fcd-48fd-af55-a89be09ccfc7" deleted
+pytorchjob.kubeflow.org "5a4f0e16-31d9-4c3b-9f50-d60d77d91125" deleted
+pytorchjob.kubeflow.org "5aa3a568-893c-4483-a6b8-680b7bd54519" deleted
+pytorchjob.kubeflow.org "5eb960eb-df2f-482f-8df3-e84c0aee30f2" deleted
+pytorchjob.kubeflow.org "602669f7-f2e8-4a33-987b-3a4da46ad9bf" deleted
+pytorchjob.kubeflow.org "74f562e0-2b75-4cb4-a95f-1f9c4bedd807" deleted
+pytorchjob.kubeflow.org "75f46b11-1fc5-4289-842a-33785fc4c075" deleted
+pytorchjob.kubeflow.org "777aacc3-2d76-46f1-bf36-ed2de2e232c3" deleted
+pytorchjob.kubeflow.org "7b3bf770-c0a6-4f65-9c07-67b367980004" deleted
+pytorchjob.kubeflow.org "7c647a41-7b1f-4afa-87b4-79a96b7bc6e8" deleted
+pytorchjob.kubeflow.org "80c58987-b7e8-4aa1-bf5e-a17d4c2b59f0" deleted
+pytorchjob.kubeflow.org "8502412a-1c5f-48de-8ba9-0ea53838e48b" deleted
+pytorchjob.kubeflow.org "85e1b347-1e8e-4dc6-a96b-0c3a65d7ee71" deleted
+pytorchjob.kubeflow.org "8657249c-f017-42b2-9492-8b30d63aa618" deleted
+pytorchjob.kubeflow.org "86885fba-c11e-4f7c-8e1f-d77f17af8f83" deleted
+pytorchjob.kubeflow.org "8f812099-4de7-4bfa-9730-d0703b6f73a0" deleted
+pytorchjob.kubeflow.org "954ec146-5fa1-46ea-a0be-f0aa56dbc429" deleted
+pytorchjob.kubeflow.org "97a575d7-0a29-418e-a9c1-4467096ec0bb" deleted
+pytorchjob.kubeflow.org "9a2303e0-06aa-498c-885f-fcfcdc1bf5ab" deleted
+pytorchjob.kubeflow.org "9aec6312-e8b0-406e-bc47-195eaaf9db97" deleted
+pytorchjob.kubeflow.org "9dd2968a-e027-41b8-bf1c-9c33b11beda5" deleted
+pytorchjob.kubeflow.org "9e925626-58df-46e9-b773-be15ffebd0bd" deleted
+pytorchjob.kubeflow.org "a087ce10-5104-49df-abfd-218b3a1496bd" deleted
+pytorchjob.kubeflow.org "a0d8c0e5-fe59-4aaa-a49a-6fd5639fc20e" deleted
+pytorchjob.kubeflow.org "a83e7500-286f-4690-beb5-879e0f046a8d" deleted
+pytorchjob.kubeflow.org "ac1de1eb-6248-46d4-b989-e7f8792a5164" deleted
+pytorchjob.kubeflow.org "b2e131e0-53ca-477d-b078-65d53a14b30a" deleted
+pytorchjob.kubeflow.org "b56787f1-4cbf-45e4-9b13-0bd5f364a439" deleted
+pytorchjob.kubeflow.org "b75957d9-8784-4261-964b-aae1681c1355" deleted
+pytorchjob.kubeflow.org "b940b61c-100a-472e-9ae2-c5a2613055d4" deleted
+pytorchjob.kubeflow.org "babda70b-4fde-45cb-b022-4e7d98bb926b" deleted
+pytorchjob.kubeflow.org "bc16297e-2334-493d-a710-d7525e6cc7f2" deleted
+pytorchjob.kubeflow.org "c41125bd-e91e-4407-b1e5-ac1bc62664f0" deleted
+pytorchjob.kubeflow.org "d828d088-ef6d-4eb5-8770-5f5d047e7094" deleted
+pytorchjob.kubeflow.org "e10ad161-9c1a-4d40-8b0b-535ca734c298" deleted
+pytorchjob.kubeflow.org "efb6a8d8-2ccc-4573-946d-ecf32da2be48" deleted
+pytorchjob.kubeflow.org "f0e5bfb8-fcb1-49b1-943d-c63030813b2f" deleted
+pytorchjob.kubeflow.org "f38cf240-5463-4f16-860b-5e3ae8b79c4a" deleted
+pytorchjob.kubeflow.org "f9c71660-0883-42be-afa4-f00365f120e1" deleted
+pytorchjob.kubeflow.org "fa220aaa-c059-49f4-af20-9d743b31c8b4" deleted
+      "arrival_statistic": 3,
+      "scheduling": "improved",
+         "arrival_seed": 22
+Sending build context to Docker daemon    416MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> cf9bf2e7e4d7
+Step 11/13 : ADD charts charts
+ ---> 3ed5419fc3de
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 00a428cfb0f0
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 85973f71e1ab
+Removing intermediate container 85973f71e1ab
+ ---> 039e3328c9cd
+Successfully built 039e3328c9cd
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+76f31312ce39: Preparing
+0e22cda4f7cf: Preparing
+6c8b537bb1cd: Preparing
+76b4662fc4e9: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+5faf23568bde: Waiting
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+9debf17f1f41: Waiting
+3f397bf4a209: Preparing
+c7209b337a87: Waiting
+4942a1abcbfa: Preparing
+b69dc9a1ae51: Waiting
+a770b43c251e: Waiting
+7b645d264080: Waiting
+4e311038b14a: Waiting
+4b5b20c7e93f: Waiting
+4ede1962eac3: Waiting
+8fa17e46d6a7: Waiting
+3f397bf4a209: Waiting
+4942a1abcbfa: Waiting
+81a0a694f8fb: Waiting
+1eb927d93505: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+76b4662fc4e9: Pushed
+0e22cda4f7cf: Pushed
+6c8b537bb1cd: Pushed
+76f31312ce39: Pushed
+latest: digest: sha256:229d93d82edf6d37fd8fb81f7034590a1e796db4e594f6a4dbf06001df6029c5 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 02:46:38 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "01c498a5-b90b-45ae-94b1-114acc0d4930" deleted
+pytorchjob.kubeflow.org "05f57ec2-551e-4ced-aaa4-4bf30d3525f5" deleted
+pytorchjob.kubeflow.org "070eecc4-1e16-4fad-8d6f-a3d9e6e21519" deleted
+pytorchjob.kubeflow.org "0731b068-8ae2-4b9b-b674-6ceba2e3252c" deleted
+pytorchjob.kubeflow.org "08234b1b-ac1a-4c88-8b5c-f9a7de657401" deleted
+pytorchjob.kubeflow.org "091280a5-a6d6-4261-902f-a6d0f735daed" deleted
+pytorchjob.kubeflow.org "09599d0c-c1a4-40ac-9925-9895ff87a8a3" deleted
+pytorchjob.kubeflow.org "0ee65703-f1d5-424d-8af4-b7ffd5ec3af1" deleted
+pytorchjob.kubeflow.org "180c2a2f-ee85-455c-9540-6056b847e21d" deleted
+pytorchjob.kubeflow.org "187ea84a-314e-4291-9161-f5d338dc8761" deleted
+pytorchjob.kubeflow.org "2653e997-3a37-4b51-a198-ceba71e19d7e" deleted
+pytorchjob.kubeflow.org "2bc98020-1b71-4f3b-a518-116b5be59a6e" deleted
+pytorchjob.kubeflow.org "2d22ee6b-c74e-448b-894c-a49637ee73b7" deleted
+pytorchjob.kubeflow.org "2ef9fe18-2980-41ea-91ce-0de48c4e38d1" deleted
+pytorchjob.kubeflow.org "3042192c-a5f8-4e41-8eaf-ed34dd1b5ec7" deleted
+pytorchjob.kubeflow.org "30c25e74-5adb-4c6e-95b5-5ae40f03854c" deleted
+pytorchjob.kubeflow.org "356d2ed4-c4cf-4090-93fd-ef66d2e99dac" deleted
+pytorchjob.kubeflow.org "35b35a40-7d69-4633-a160-3d7c73bbeb43" deleted
+pytorchjob.kubeflow.org "3c61b824-44c2-42cd-8040-6056fcd7c386" deleted
+pytorchjob.kubeflow.org "4aab8daf-8af8-4059-b19f-b41ac12ac151" deleted
+pytorchjob.kubeflow.org "52a70f77-2f38-4451-878f-b140bd85fd33" deleted
+pytorchjob.kubeflow.org "55d462a9-a621-4d6d-a1c2-e9843f0472c0" deleted
+pytorchjob.kubeflow.org "579f7850-9c60-44ee-aa0d-53ed718e2488" deleted
+pytorchjob.kubeflow.org "60f90a72-0bb5-4856-af61-94b605a4d0b6" deleted
+pytorchjob.kubeflow.org "67c122a4-e87a-47fc-b915-f7d349b9547a" deleted
+pytorchjob.kubeflow.org "688df35c-927d-406c-8d0f-23da8a33fbda" deleted
+pytorchjob.kubeflow.org "6c3979e2-e28e-4f2f-96e9-1a9aa9cd8b96" deleted
+pytorchjob.kubeflow.org "6d640053-8705-4fc8-ab10-7d9e588e2da3" deleted
+pytorchjob.kubeflow.org "6ebf72c8-3cc2-4852-9a91-a00dcf152419" deleted
+pytorchjob.kubeflow.org "6ecb30e7-83f4-475d-b6cc-04277d5b32d7" deleted
+pytorchjob.kubeflow.org "6fa0e631-de07-4048-a3d4-eb642c6b1365" deleted
+pytorchjob.kubeflow.org "73dacc3e-6596-4b80-b96e-330b023ae0a3" deleted
+pytorchjob.kubeflow.org "7587864b-fc56-4a19-a5ba-3e508a99e186" deleted
+pytorchjob.kubeflow.org "7757da19-1003-40d9-b563-5bd5f047c67f" deleted
+pytorchjob.kubeflow.org "7a01e32a-4d30-4104-b196-ef849fd39f71" deleted
+pytorchjob.kubeflow.org "7a033276-c496-4b23-aed7-93188293e997" deleted
+pytorchjob.kubeflow.org "7aefd403-a46f-4178-8c34-b422c6636981" deleted
+pytorchjob.kubeflow.org "7dc2f4ff-8d30-4fee-902b-92e1b0aae436" deleted
+pytorchjob.kubeflow.org "920c27e0-13db-4572-91a0-aaa82cccdeaf" deleted
+pytorchjob.kubeflow.org "924cfc78-ea4c-46da-82c3-16fc6ce35e0c" deleted
+pytorchjob.kubeflow.org "94823522-2677-485c-9e35-13b343594cd0" deleted
+pytorchjob.kubeflow.org "962c56e5-ee50-490d-8d55-f1896ab8e72d" deleted
+pytorchjob.kubeflow.org "9ec77f12-9f45-4dca-b9fd-d02826030def" deleted
+pytorchjob.kubeflow.org "adfc848c-e555-4532-878c-e489b28c8dac" deleted
+pytorchjob.kubeflow.org "b07456b5-c836-4bd6-9ec0-a05da5929d9a" deleted
+pytorchjob.kubeflow.org "b8619f91-5a20-454d-90f7-1fd4d2eadaab" deleted
+pytorchjob.kubeflow.org "ba9460af-034e-4a4d-b1f3-fbf4ac92d3ae" deleted
+pytorchjob.kubeflow.org "bbca8612-9e52-424f-9d5a-e49e47d6ead1" deleted
+pytorchjob.kubeflow.org "c023336e-d96e-4762-b56b-03642bdee210" deleted
+pytorchjob.kubeflow.org "c1743006-cc5f-46fe-a498-2dba23c9c567" deleted
+pytorchjob.kubeflow.org "c33621ab-7d02-4530-8358-44c0d6be3c94" deleted
+pytorchjob.kubeflow.org "c48d48d4-1142-40fa-be08-2297d4f6b1c1" deleted
+pytorchjob.kubeflow.org "c523884c-cbd3-4b92-902b-fc37ab14cfa9" deleted
+pytorchjob.kubeflow.org "c78c5429-f012-47d4-bb43-d8badcc82d52" deleted
+pytorchjob.kubeflow.org "c8640afe-6257-4c79-bff4-8354da401a03" deleted
+pytorchjob.kubeflow.org "cee057bf-af2a-40f0-8c04-9bdc5bc399b9" deleted
+pytorchjob.kubeflow.org "dbfd41b0-c4e6-4ecc-bc49-2a9f9eca0143" deleted
+pytorchjob.kubeflow.org "dc45b2ab-f10b-48fd-b927-596a8806e843" deleted
+pytorchjob.kubeflow.org "de5589ce-d240-4b8a-98a2-29cbe3ed4510" deleted
+pytorchjob.kubeflow.org "de679783-9823-4d7f-87f9-57fc248762b0" deleted
+pytorchjob.kubeflow.org "ea4d9a30-e664-4afc-b632-c58251202444" deleted
+pytorchjob.kubeflow.org "ea678e6a-e6f7-4f8b-92fb-2fb7b226bed2" deleted
+pytorchjob.kubeflow.org "ecf050dc-650c-4878-b192-65bf25658dbc" deleted
+pytorchjob.kubeflow.org "edbaccd1-0522-4861-ae3f-00f0f7ed5975" deleted
+pytorchjob.kubeflow.org "eff037af-5c2e-4dcb-a5c2-a21db8b043d9" deleted
+pytorchjob.kubeflow.org "f7a3195a-56fa-4d1b-9fa6-95e3d2fb61cd" deleted
+pytorchjob.kubeflow.org "fca04b9c-1244-4f32-95e2-c613837ed704" deleted
+      "arrival_statistic": 3,
+      "scheduling": "improved",
+         "arrival_seed": 03
+Sending build context to Docker daemon  416.2MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> 9428651237a7
+Step 11/13 : ADD charts charts
+ ---> 3fac861e2d92
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 754d6b50716c
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 547c61322dbd
+Removing intermediate container 547c61322dbd
+ ---> 639fe7895a06
+Successfully built 639fe7895a06
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+92f1934e0fc1: Preparing
+cbc022dc658f: Preparing
+1b3c6cc1eb7e: Preparing
+157f9db5330c: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+4942a1abcbfa: Preparing
+8fa17e46d6a7: Waiting
+307814c51c70: Waiting
+b69dc9a1ae51: Waiting
+7b645d264080: Waiting
+4ede1962eac3: Waiting
+a770b43c251e: Waiting
+9debf17f1f41: Waiting
+3f397bf4a209: Waiting
+c7209b337a87: Waiting
+4942a1abcbfa: Waiting
+4b5b20c7e93f: Waiting
+1eb927d93505: Waiting
+b9e0fc92be93: Waiting
+5faf23568bde: Waiting
+4e311038b14a: Waiting
+81a0a694f8fb: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+cbc022dc658f: Pushed
+157f9db5330c: Pushed
+1b3c6cc1eb7e: Pushed
+92f1934e0fc1: Pushed
+latest: digest: sha256:be31ecc71d125e93e438d39ce5af65d9832db0b4f4db32f7e626c03d1a6cca8e size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 02:57:48 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+No resources found
+      "arrival_statistic": 3,
+      "scheduling": "improved",
+         "arrival_seed": 1996
+Sending build context to Docker daemon  416.4MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> 397f12d36afb
+Step 11/13 : ADD charts charts
+ ---> 9b4fb208a96c
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> cfb6693a3a06
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 8d5406b15443
+Removing intermediate container 8d5406b15443
+ ---> c7067b0dc247
+Successfully built c7067b0dc247
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+9eb3cb71b595: Preparing
+68550c503941: Preparing
+f11c576cc727: Preparing
+7316048fa491: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+4942a1abcbfa: Preparing
+b69dc9a1ae51: Waiting
+8fa17e46d6a7: Waiting
+3f397bf4a209: Waiting
+4ede1962eac3: Waiting
+a770b43c251e: Waiting
+4942a1abcbfa: Waiting
+81a0a694f8fb: Waiting
+7b645d264080: Waiting
+9debf17f1f41: Waiting
+1eb927d93505: Waiting
+b9e0fc92be93: Waiting
+307814c51c70: Waiting
+c7209b337a87: Waiting
+4b5b20c7e93f: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+7316048fa491: Pushed
+f11c576cc727: Pushed
+9eb3cb71b595: Pushed
+68550c503941: Pushed
+latest: digest: sha256:1e3c091041c687396c5f873a36619ae9c1441f50396e5c47f14ecaeb889473d5 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 03:08:26 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "00cacf76-ca5a-48df-bf1e-c2c090ead140" deleted
+pytorchjob.kubeflow.org "02276b4f-748f-4661-ac01-db24546b2603" deleted
+pytorchjob.kubeflow.org "02787144-3612-4a10-aa0a-b12733ebf39e" deleted
+pytorchjob.kubeflow.org "03fdcbec-9fa2-4b58-8996-0d8835b70f9f" deleted
+pytorchjob.kubeflow.org "06b5ba69-f468-49ed-aad0-0d6ec6c13953" deleted
+pytorchjob.kubeflow.org "07a44584-0e94-4bd7-bcc3-1db6f54420d1" deleted
+pytorchjob.kubeflow.org "07d4be1d-6837-4761-b421-202e9345e4a0" deleted
+pytorchjob.kubeflow.org "160f0256-9d8d-4b45-ac0c-b1406bddca60" deleted
+pytorchjob.kubeflow.org "16bd6271-9925-48ca-8cfc-b389bf830f57" deleted
+pytorchjob.kubeflow.org "1f5fd533-98cc-4909-8170-57732c69f788" deleted
+pytorchjob.kubeflow.org "217c08d6-38f3-4689-accd-c2c050414000" deleted
+pytorchjob.kubeflow.org "249b4f28-4d66-495d-aa6d-0d0a9d8a5752" deleted
+pytorchjob.kubeflow.org "253bf21d-3910-4bc4-a512-bfb78c1f94cb" deleted
+pytorchjob.kubeflow.org "2714b929-4dff-458f-8e98-133537b17932" deleted
+pytorchjob.kubeflow.org "2f822887-9e12-410c-a062-c6fb5ca9d297" deleted
+pytorchjob.kubeflow.org "2ff07994-8091-417d-803e-95f9a003b263" deleted
+pytorchjob.kubeflow.org "309ff714-2671-436b-a4b7-5533fc000d2b" deleted
+pytorchjob.kubeflow.org "310cd397-20f7-4819-a07f-b7d32e60f197" deleted
+pytorchjob.kubeflow.org "314ac371-50c5-4bcf-8b6e-a2686a23c8db" deleted
+pytorchjob.kubeflow.org "34e5367b-4334-4685-9f7b-0c6df30df8d2" deleted
+pytorchjob.kubeflow.org "39056f0d-f945-43b7-a9e7-2e8875530aa4" deleted
+pytorchjob.kubeflow.org "39976cdc-8dfc-4f73-93e8-b2961d92f6ba" deleted
+pytorchjob.kubeflow.org "3a172cf0-f066-4718-aac8-7e38ac89d60b" deleted
+pytorchjob.kubeflow.org "3fb5abd9-3d27-4f28-a729-78e4855d57a6" deleted
+pytorchjob.kubeflow.org "442d226b-abba-43f3-8f51-d1895c70ec54" deleted
+pytorchjob.kubeflow.org "44c8d8b2-cdc9-438b-bbce-3d3becbe0582" deleted
+pytorchjob.kubeflow.org "490143d8-a2c5-42ed-976c-0e0251e5ea7d" deleted
+pytorchjob.kubeflow.org "49be90bc-1347-495a-a14a-1e7e518bfc68" deleted
+pytorchjob.kubeflow.org "4a585342-ffcf-4799-8c3f-402fe0b7d678" deleted
+pytorchjob.kubeflow.org "4aa8ae8b-2ce4-4f0f-823f-34dee12c5ff5" deleted
+pytorchjob.kubeflow.org "4b4e3b97-b568-47f0-a464-35de709cd74c" deleted
+pytorchjob.kubeflow.org "526730bd-f5d2-4526-900a-a308a774371f" deleted
+pytorchjob.kubeflow.org "560fb963-a203-4f37-916a-463831e65e0e" deleted
+pytorchjob.kubeflow.org "57a6654d-8baf-41db-b383-562ea1eceac8" deleted
+pytorchjob.kubeflow.org "5fe43783-6d34-4457-885d-aa598ae71bb0" deleted
+pytorchjob.kubeflow.org "638dc4c9-8141-408d-b97c-85ab4b85dc16" deleted
+pytorchjob.kubeflow.org "64fd313b-a296-4866-a9b7-c0d2464f3ee2" deleted
+pytorchjob.kubeflow.org "68464354-e232-4596-8a52-fa0bba7e9251" deleted
+pytorchjob.kubeflow.org "6eb183c7-de00-4803-9416-72b3edc31a87" deleted
+pytorchjob.kubeflow.org "76126892-e7e7-4e27-b531-1524b4e1d80d" deleted
+pytorchjob.kubeflow.org "7a716af4-86e7-43f0-8f3c-7401f68d0de2" deleted
+pytorchjob.kubeflow.org "7c3dbceb-0284-4173-9bb0-2b79a00c9dad" deleted
+pytorchjob.kubeflow.org "7c77ad5b-b5c9-464d-a535-8dfd2dd73748" deleted
+pytorchjob.kubeflow.org "7e305b8e-9ec1-441d-8454-5671fc542eb0" deleted
+pytorchjob.kubeflow.org "856effdb-3ac0-4642-8025-68c42ee945f9" deleted
+pytorchjob.kubeflow.org "879355fc-ce8a-4644-9df2-0337f2de5f20" deleted
+pytorchjob.kubeflow.org "8a862880-d0db-4b89-8e5e-6c862c3fd3f3" deleted
+pytorchjob.kubeflow.org "8da652bc-e985-461f-9718-9b6d30a24c0e" deleted
+pytorchjob.kubeflow.org "9034fff1-a410-4199-8c5a-b77a0491fe96" deleted
+pytorchjob.kubeflow.org "9dc5e038-aabe-4ad7-8f5d-689d59eaf984" deleted
+pytorchjob.kubeflow.org "9eaf9e56-c003-415a-b19d-f2c991e9db4c" deleted
+pytorchjob.kubeflow.org "a4ad12c8-3f98-452b-ad84-fc004e0d8203" deleted
+pytorchjob.kubeflow.org "a5b8a712-41bf-4b05-beec-f234bb204548" deleted
+pytorchjob.kubeflow.org "a80d6b0c-7c3f-4918-abf4-c4bc445f318c" deleted
+pytorchjob.kubeflow.org "a964b223-1d34-4007-ade2-8244c2924d9b" deleted
+pytorchjob.kubeflow.org "a9e9c7a9-b750-4acd-95e2-8b1cb59369bf" deleted
+pytorchjob.kubeflow.org "ad5de635-7f4c-42db-8fa1-9bb5c22f6456" deleted
+pytorchjob.kubeflow.org "ad6b9979-11c0-4bb0-8fa4-b3b0ac7ccfea" deleted
+pytorchjob.kubeflow.org "ae19f0a7-4e79-434a-9af3-dd2e1c0601e9" deleted
+pytorchjob.kubeflow.org "b3a30b58-3ef0-4ab5-8796-fb23f695ef6f" deleted
+pytorchjob.kubeflow.org "b65d07c6-822a-4690-a087-fe2d47ad4063" deleted
+pytorchjob.kubeflow.org "b84da837-bea2-4ba2-a008-a252b233804f" deleted
+pytorchjob.kubeflow.org "bb4f2b26-8e63-4705-aebf-9e8449d25074" deleted
+pytorchjob.kubeflow.org "c56de497-324a-42f7-81a9-772274888b1d" deleted
+pytorchjob.kubeflow.org "c70e7ba3-6561-4d23-989b-9807e9136df0" deleted
+pytorchjob.kubeflow.org "cd91b9ab-2308-45e9-a04c-e585a79970c2" deleted
+pytorchjob.kubeflow.org "cdcc4ff0-4ad5-4f45-85e0-7aaf02b330a8" deleted
+pytorchjob.kubeflow.org "ceb89efa-c6dc-4fe5-8160-e38fa154d64f" deleted
+pytorchjob.kubeflow.org "cf827f65-02cb-4d61-8f87-4d2c9a7f3e16" deleted
+pytorchjob.kubeflow.org "d4d8ce53-1de0-40e9-99f5-ee646be4bfe6" deleted
+pytorchjob.kubeflow.org "d70108d7-74bb-4fa9-8a14-b803218eb719" deleted
+pytorchjob.kubeflow.org "d845b1fd-447f-45d0-ae57-57c67d941660" deleted
+pytorchjob.kubeflow.org "d8db434f-895e-4cdb-bcb5-0a869e21efec" deleted
+pytorchjob.kubeflow.org "da2f7a00-b13b-449a-a4cb-fc36be5cf0e1" deleted
+pytorchjob.kubeflow.org "dc8ba450-c7af-4859-b0e5-d34628bfa712" deleted
+pytorchjob.kubeflow.org "dfa1b191-e7c4-4f56-aad2-f48a21c08c1d" deleted
+pytorchjob.kubeflow.org "e3e2d1a5-631d-4a52-acdc-268c10ac494a" deleted
+pytorchjob.kubeflow.org "e43b98c8-5e5a-4b88-8f50-1c05e397c7f7" deleted
+pytorchjob.kubeflow.org "e500af3f-f225-4b86-b990-51c30d52acbd" deleted
+pytorchjob.kubeflow.org "e5338e79-955d-49cc-8bb3-4cb80633cfa9" deleted
+pytorchjob.kubeflow.org "e698b979-8cfa-4430-90e5-63dea854e1a8" deleted
+pytorchjob.kubeflow.org "f257dc1d-981b-4281-923a-3b221a07fb93" deleted
+pytorchjob.kubeflow.org "f46ab634-1b15-4363-b03d-3429b9a30a16" deleted
+pytorchjob.kubeflow.org "f4f81298-4be6-41a0-b3a4-22db27631797" deleted
+pytorchjob.kubeflow.org "f64dce5a-e0a8-4d0c-b3f9-725b07f6479e" deleted
+pytorchjob.kubeflow.org "f7932701-658f-4b82-a6d2-b5776d4d54e8" deleted
+pytorchjob.kubeflow.org "f86d9a00-d94a-4c3e-a5a3-580f9673ea2f" deleted
+      "arrival_statistic": 2,
+      "scheduling": "improved",
+         "arrival_seed": 22
+Sending build context to Docker daemon  416.6MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> 3cf1c0deadaf
+Step 11/13 : ADD charts charts
+ ---> f35a8ce1560f
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 1101c789d348
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 8303a10d6bf8
+Removing intermediate container 8303a10d6bf8
+ ---> 67e988e1f98e
+Successfully built 67e988e1f98e
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+2b0655f18c3b: Preparing
+94bce8967004: Preparing
+b140cec6c3ce: Preparing
+81c6db936b8e: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+4942a1abcbfa: Preparing
+4e311038b14a: Waiting
+81a0a694f8fb: Waiting
+307814c51c70: Waiting
+9debf17f1f41: Waiting
+1eb927d93505: Waiting
+c7209b337a87: Waiting
+b69dc9a1ae51: Waiting
+3f397bf4a209: Waiting
+4942a1abcbfa: Waiting
+5faf23568bde: Waiting
+b9e0fc92be93: Waiting
+4b5b20c7e93f: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+b140cec6c3ce: Pushed
+94bce8967004: Pushed
+2b0655f18c3b: Pushed
+81c6db936b8e: Pushed
+latest: digest: sha256:5ba8322b1b9326a27d9a053de0edb0895bbec1b64131f84663e5f4c05b471b87 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 03:19:38 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "0127ef0b-ec84-4746-bf39-75119c9b8aa8" deleted
+pytorchjob.kubeflow.org "01c69c9f-d396-415b-83fb-8db75f9ab931" deleted
+pytorchjob.kubeflow.org "02ca8828-792f-4ba7-a066-ce48afa7660d" deleted
+pytorchjob.kubeflow.org "05e5b65b-8705-4fd7-b9ef-885472e9474b" deleted
+pytorchjob.kubeflow.org "06943d74-adb3-4e3b-ac38-5fea80f3bc14" deleted
+pytorchjob.kubeflow.org "081cd90a-973b-44ad-8413-f4d90625c015" deleted
+pytorchjob.kubeflow.org "096440dd-bcd0-4553-a608-88095100495f" deleted
+pytorchjob.kubeflow.org "0c3ae48d-8a25-49a9-9ea7-35ad5e3e0c15" deleted
+pytorchjob.kubeflow.org "121be0c4-1518-4155-9a41-30cae75b9604" deleted
+pytorchjob.kubeflow.org "154932b5-d803-4aa7-9891-36ba58213ad9" deleted
+pytorchjob.kubeflow.org "16735801-f4ca-474c-8b87-f5883bbc8af2" deleted
+pytorchjob.kubeflow.org "175d6f9f-b1f4-4cde-b3cc-adcd4b2923c0" deleted
+pytorchjob.kubeflow.org "18d48123-1723-420e-a282-b8476f5eacd6" deleted
+pytorchjob.kubeflow.org "196fa794-ca2c-477d-9912-c2b58113420d" deleted
+pytorchjob.kubeflow.org "1b022fc9-c961-4737-9dfe-085dfad4c596" deleted
+pytorchjob.kubeflow.org "1d5888fc-3710-4609-a932-383616ac0c0c" deleted
+pytorchjob.kubeflow.org "1f3f46f5-ec12-4614-b1e2-b1c40918aa49" deleted
+pytorchjob.kubeflow.org "21210e14-cc28-4d64-9a41-f17ef0b2ceb0" deleted
+pytorchjob.kubeflow.org "21ca7ed1-508c-418b-ba44-3d0af4237185" deleted
+pytorchjob.kubeflow.org "2731c23b-8ce0-4076-aa00-613eb3f6bf5d" deleted
+pytorchjob.kubeflow.org "387117af-c630-4b4a-b503-cc98bff84c70" deleted
+pytorchjob.kubeflow.org "3aed5a8c-9158-4b84-ad05-071226f857ca" deleted
+pytorchjob.kubeflow.org "407845e5-37f5-4961-8815-556ffe8973d0" deleted
+pytorchjob.kubeflow.org "423513bf-7240-42ba-9f1c-8c1e221b7a89" deleted
+pytorchjob.kubeflow.org "45f7582a-1b84-40a7-80fc-1fb720966c1a" deleted
+pytorchjob.kubeflow.org "47b97cd2-4f15-4ad9-aad1-c70a588ba55e" deleted
+pytorchjob.kubeflow.org "497fb4e5-68fb-4ad8-a754-723eaea74f5c" deleted
+pytorchjob.kubeflow.org "49976091-8748-4237-861f-a625009ca549" deleted
+pytorchjob.kubeflow.org "4e9db5a9-5c92-4d3c-bad0-e4e0f95def3f" deleted
+pytorchjob.kubeflow.org "4eb8ed3b-23aa-4494-a091-5ec42eba2ec8" deleted
+pytorchjob.kubeflow.org "52e595a6-c871-478d-9c50-bb4a423981d0" deleted
+pytorchjob.kubeflow.org "53e1eb65-4ff0-4a8a-89f4-bc949454141f" deleted
+pytorchjob.kubeflow.org "56a61c40-e1ed-4ac3-a919-e9c695c66939" deleted
+pytorchjob.kubeflow.org "5bf68e2e-a178-4e49-b653-312ae66842f3" deleted
+pytorchjob.kubeflow.org "62d4e167-f079-4813-bd66-c87e24a026f7" deleted
+pytorchjob.kubeflow.org "69fdb07c-7060-465d-ab2a-227542dfbff3" deleted
+pytorchjob.kubeflow.org "6aa2422d-5c87-4789-a66f-f42c213c8d33" deleted
+pytorchjob.kubeflow.org "6aad545e-a45f-422e-8354-d2b6e86ee1ef" deleted
+pytorchjob.kubeflow.org "6bf7b1d7-a5f1-4e35-bc40-02d7cb450d8a" deleted
+pytorchjob.kubeflow.org "6fbc7ee1-4b29-4e6e-ae95-8f6dcaecc44b" deleted
+pytorchjob.kubeflow.org "72e5c1f4-5d19-4306-bd60-654269dff5da" deleted
+pytorchjob.kubeflow.org "74172ca6-f0e0-4485-9dfd-931af0ca3c7c" deleted
+pytorchjob.kubeflow.org "74950dc1-7072-49ec-aadc-c4fa9b061358" deleted
+pytorchjob.kubeflow.org "753aa995-a56c-45f2-bd7e-3cb99957bd3d" deleted
+pytorchjob.kubeflow.org "762288e6-7df0-4651-8f8f-8ee76bb0cb71" deleted
+pytorchjob.kubeflow.org "7758e839-a076-41c7-a610-5f62ac168076" deleted
+pytorchjob.kubeflow.org "78b536df-2c8d-4d11-9c1d-9b0c1eef059c" deleted
+pytorchjob.kubeflow.org "7a2c367c-60e6-4b6f-b8c7-c1b23752adb9" deleted
+pytorchjob.kubeflow.org "7ce45a9c-75ee-42f7-86d6-26b7e1f23a7a" deleted
+pytorchjob.kubeflow.org "7e6b1fed-7915-4379-8c0f-f67953991df0" deleted
+pytorchjob.kubeflow.org "7ef45f37-fa27-479d-9738-89ca508a30e9" deleted
+pytorchjob.kubeflow.org "841c5a5b-5845-4569-b884-42aa10300577" deleted
+pytorchjob.kubeflow.org "8a5fb6f3-6b00-4f1e-828a-46952a09035a" deleted
+pytorchjob.kubeflow.org "9484703d-cef0-40b7-8996-bb6d8fe299f9" deleted
+pytorchjob.kubeflow.org "963fc0ad-c226-4550-b855-b2f2b3f18b65" deleted
+pytorchjob.kubeflow.org "968d3212-f0ee-4147-b2f2-e40855c262f3" deleted
+pytorchjob.kubeflow.org "9a0f97c5-6e30-419d-abd9-0090badd4a72" deleted
+pytorchjob.kubeflow.org "9f9becef-4a0d-46eb-bdcd-6ebb7f460b4d" deleted
+pytorchjob.kubeflow.org "a0f2c4cb-e919-48fd-8c15-64fa852595b7" deleted
+pytorchjob.kubeflow.org "a6095f93-14af-4c4f-b162-ff7032a46e17" deleted
+pytorchjob.kubeflow.org "a93bc24f-605c-4d40-84cc-a9c3e4c2119e" deleted
+pytorchjob.kubeflow.org "a97215f4-1cad-4edc-b812-35a1b67f7769" deleted
+pytorchjob.kubeflow.org "a98668b2-00e5-44bf-9bae-f2c507bfef78" deleted
+pytorchjob.kubeflow.org "ae77bbe3-e678-44a9-b004-2a957079c31a" deleted
+pytorchjob.kubeflow.org "aff00e68-c793-477f-adcc-23e98693ac62" deleted
+pytorchjob.kubeflow.org "b21aaa2c-175f-4f23-9f45-8e86bd2ab46f" deleted
+pytorchjob.kubeflow.org "b24c188a-ee48-4b53-ac41-8933b7bc63a9" deleted
+pytorchjob.kubeflow.org "b53bfd7a-e1df-47a8-9f6f-1a896cdb3f0f" deleted
+pytorchjob.kubeflow.org "b60105ac-a879-4652-9d02-3438676707b9" deleted
+pytorchjob.kubeflow.org "b8942164-de04-45a7-83fc-d86834196f0e" deleted
+pytorchjob.kubeflow.org "b8c5e673-2080-434e-896e-fac3b0645202" deleted
+pytorchjob.kubeflow.org "bad8e025-398f-44e5-8227-c9faca0a2759" deleted
+pytorchjob.kubeflow.org "c1a8761a-2488-4f54-ae7d-0c602b46b964" deleted
+pytorchjob.kubeflow.org "c20c2dc6-bf6e-44d9-b655-32ed99a43b58" deleted
+pytorchjob.kubeflow.org "c44572c6-3df1-491d-9467-aa333f5c6474" deleted
+pytorchjob.kubeflow.org "c5e80b2d-16eb-4dce-8150-833e18d0fc0a" deleted
+pytorchjob.kubeflow.org "c6e0ccfe-978a-46c2-8eef-6ea9b8fd94c1" deleted
+pytorchjob.kubeflow.org "c7a2afef-7f59-4599-97ca-401cb8cc4803" deleted
+pytorchjob.kubeflow.org "c81f2f0b-82c0-4666-b77e-213f9f3da00b" deleted
+pytorchjob.kubeflow.org "d03555d8-38aa-4914-9103-dec450b3f249" deleted
+pytorchjob.kubeflow.org "d7f54791-1190-4d15-b293-b96f4b12052c" deleted
+pytorchjob.kubeflow.org "e163a89f-f0b1-450e-b2a3-b78f7442824c" deleted
+pytorchjob.kubeflow.org "e1a97ee1-c3a3-44de-8e10-f5d36131cfe2" deleted
+pytorchjob.kubeflow.org "e6d4d3ea-9243-404c-8435-c06d6b0d2afb" deleted
+pytorchjob.kubeflow.org "e74e8142-a68c-449d-a9bf-e4c7003392bf" deleted
+pytorchjob.kubeflow.org "e7ca890f-525a-4f01-b873-32170e0ba8c0" deleted
+pytorchjob.kubeflow.org "e7e37926-1640-4228-a944-4185895cf870" deleted
+pytorchjob.kubeflow.org "e8cd3495-c696-4a18-8ccb-c5cca4bf58ae" deleted
+pytorchjob.kubeflow.org "e9f506d1-afae-4b8e-bcb2-96b1cb14d390" deleted
+pytorchjob.kubeflow.org "eb6fb247-5ce4-40d9-96d9-c0010f46b024" deleted
+pytorchjob.kubeflow.org "ec30d04e-74ea-4476-b76b-480abf707ecb" deleted
+pytorchjob.kubeflow.org "ecce1581-8aba-4418-ac4a-7331b23226b4" deleted
+pytorchjob.kubeflow.org "f23a0848-29c9-41f8-aea8-df6cc74797a5" deleted
+pytorchjob.kubeflow.org "f5e26a7c-823d-49db-8192-75f60426d2bd" deleted
+pytorchjob.kubeflow.org "fb58b9ff-0d09-4aba-84ea-0432d9c4705c" deleted
+pytorchjob.kubeflow.org "fb6ac51e-7ca6-4f5b-8b48-9b327d45cacb" deleted
+pytorchjob.kubeflow.org "fb81611c-bb65-48d4-9af1-f50b3d79bdf9" deleted
+pytorchjob.kubeflow.org "ff95ccf3-9ec1-45d2-a1b7-a0acf2123334" deleted
+      "arrival_statistic": 2,
+      "scheduling": "improved",
+         "arrival_seed": 03
+Sending build context to Docker daemon  416.9MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> 04cc60229c5a
+Step 11/13 : ADD charts charts
+ ---> e3fd6c703ad6
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 9098d72783f3
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in c8f9a7e8af0d
+Removing intermediate container c8f9a7e8af0d
+ ---> 9abc5feb9506
+Successfully built 9abc5feb9506
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+b476de66950e: Preparing
+98de19a7b470: Preparing
+1fec00b06e61: Preparing
+0a6b8226a259: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+4942a1abcbfa: Preparing
+b69dc9a1ae51: Waiting
+a770b43c251e: Waiting
+9debf17f1f41: Waiting
+1eb927d93505: Waiting
+81a0a694f8fb: Waiting
+5faf23568bde: Waiting
+b9e0fc92be93: Waiting
+4ede1962eac3: Waiting
+4e311038b14a: Waiting
+3f397bf4a209: Waiting
+c7209b337a87: Waiting
+8fa17e46d6a7: Waiting
+7b645d264080: Waiting
+307814c51c70: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+0a6b8226a259: Pushed
+98de19a7b470: Pushed
+1fec00b06e61: Pushed
+b476de66950e: Pushed
+latest: digest: sha256:0420d0e7be25937aeabe38f4b3de139eceb09270f2ef0a32ff50c1e61fe98b66 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 03:30:47 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+No resources found
+      "arrival_statistic": 2,
+      "scheduling": "improved",
+         "arrival_seed": 1996
+Sending build context to Docker daemon    417MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> 7b246b42e77d
+Step 11/13 : ADD charts charts
+ ---> 43129aa490a1
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 79d17a019b00
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 74d8791a6380
+Removing intermediate container 74d8791a6380
+ ---> 64a370c13fda
+Successfully built 64a370c13fda
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+a0b351564984: Preparing
+bddf8f320aed: Preparing
+bb5f690e544a: Preparing
+e9b8c88ec71a: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+4e311038b14a: Waiting
+3f397bf4a209: Preparing
+307814c51c70: Waiting
+4942a1abcbfa: Preparing
+b69dc9a1ae51: Waiting
+5faf23568bde: Waiting
+a770b43c251e: Waiting
+b9e0fc92be93: Waiting
+4ede1962eac3: Waiting
+9debf17f1f41: Waiting
+3f397bf4a209: Waiting
+4b5b20c7e93f: Waiting
+4942a1abcbfa: Waiting
+c7209b337a87: Waiting
+8fa17e46d6a7: Waiting
+1eb927d93505: Waiting
+7b645d264080: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+bddf8f320aed: Pushed
+e9b8c88ec71a: Pushed
+a0b351564984: Pushed
+bb5f690e544a: Pushed
+latest: digest: sha256:f8830d05ade04860114865f2f5b934724955e91174a84269d059cbf848f6193c size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 03:41:26 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "02fe4870-e715-4511-9717-9c5431655105" deleted
+pytorchjob.kubeflow.org "07ab6c17-8ab6-4b3e-aa4f-ae3ece0f25ff" deleted
+pytorchjob.kubeflow.org "08e214b0-3c43-41fc-b52f-774a357f3b70" deleted
+pytorchjob.kubeflow.org "0b2287f5-33f3-4f8e-8712-762f536e2ecb" deleted
+pytorchjob.kubeflow.org "0c775bd0-c5cb-4192-a1a8-8e0173eada2c" deleted
+pytorchjob.kubeflow.org "14ee4196-eca8-4976-acf0-9e5ae56baa7b" deleted
+pytorchjob.kubeflow.org "14f0de89-d970-4157-a3a8-7bf6d413d56c" deleted
+pytorchjob.kubeflow.org "1538e11c-012f-4575-9560-cfc9cfab6f68" deleted
+pytorchjob.kubeflow.org "1594f077-9703-403f-888b-8c9e334e57a1" deleted
+pytorchjob.kubeflow.org "174af9af-db2d-4325-ba92-1ac8ac89ae1c" deleted
+pytorchjob.kubeflow.org "19490b7b-f174-48e6-b655-705c3466e25c" deleted
+pytorchjob.kubeflow.org "19b93996-ebb6-4f00-aeb3-c5dc68cfbc43" deleted
+pytorchjob.kubeflow.org "2416a8b0-f2ea-4b3d-91e2-45b6cc86ebd2" deleted
+pytorchjob.kubeflow.org "25f58791-5535-4e7c-9531-c422a2148b49" deleted
+pytorchjob.kubeflow.org "260ce430-a685-430e-ad26-3afe38416f48" deleted
+pytorchjob.kubeflow.org "270e6b02-6251-44ea-8e26-2ce023d38d10" deleted
+pytorchjob.kubeflow.org "29112e33-f92c-4735-9c84-13b143a100b6" deleted
+pytorchjob.kubeflow.org "2a254744-cde9-44ee-84fc-7e0f4477d010" deleted
+pytorchjob.kubeflow.org "2a34a576-5fb6-459a-a859-1e62fca4d0f4" deleted
+pytorchjob.kubeflow.org "2bd2a4f3-bedd-41f7-8443-700395540dc4" deleted
+pytorchjob.kubeflow.org "2de55878-688c-4f16-9101-ed7110695e81" deleted
+pytorchjob.kubeflow.org "2e55135a-7b31-4025-8d7a-7f2410f6c612" deleted
+pytorchjob.kubeflow.org "317ed614-ce36-420f-b294-db9b38841f49" deleted
+pytorchjob.kubeflow.org "34935bdf-75da-4125-a35a-d59b888ed980" deleted
+pytorchjob.kubeflow.org "3b41a6ef-ad64-4771-9e59-8dee775cc1de" deleted
+pytorchjob.kubeflow.org "43778d63-4c27-4f95-b063-3418726e42f8" deleted
+pytorchjob.kubeflow.org "4694e4c8-e4d9-4b97-a037-3ed0d863099c" deleted
+pytorchjob.kubeflow.org "47d2e5c2-1aec-4a4b-a501-c7fbeafcd84e" deleted
+pytorchjob.kubeflow.org "4b135ede-7730-4001-8255-97b56d7143d1" deleted
+pytorchjob.kubeflow.org "4be82265-43a0-4715-aac9-7c782c120038" deleted
+pytorchjob.kubeflow.org "4dd3204d-1b46-4d7c-b047-78d65063d945" deleted
+pytorchjob.kubeflow.org "4f2ef9b1-c6d3-443e-a81a-4f8d9427467d" deleted
+pytorchjob.kubeflow.org "4f57e995-a901-4c18-b9bc-13d10280514d" deleted
+pytorchjob.kubeflow.org "5003ec47-9bc4-4fad-aacc-e9ec15acea2e" deleted
+pytorchjob.kubeflow.org "509efdb8-8e3d-41ba-82a7-aed5b9dbc267" deleted
+pytorchjob.kubeflow.org "518d3584-e513-4fbb-8dc6-9111221e288f" deleted
+pytorchjob.kubeflow.org "52d5171b-f96f-4d43-a574-221350b18abe" deleted
+pytorchjob.kubeflow.org "56c4468e-cede-47e1-992b-b4322b2b5c1d" deleted
+pytorchjob.kubeflow.org "595657d9-9de6-4e6a-af68-210e6b9fee24" deleted
+pytorchjob.kubeflow.org "5ccdc4cc-4344-44c7-9e96-44f128a2f0b8" deleted
+pytorchjob.kubeflow.org "5e777565-0b2d-4644-8c22-f695c7d1c522" deleted
+pytorchjob.kubeflow.org "5e7bc643-4a89-4c10-a5e8-e6622119d1de" deleted
+pytorchjob.kubeflow.org "60c58ad8-70cf-4496-89a5-3e9649f4e961" deleted
+pytorchjob.kubeflow.org "628fc25d-e4ea-4154-a527-123c433f0fde" deleted
+pytorchjob.kubeflow.org "641aa480-78d4-44f8-8ed2-116ea622fdf7" deleted
+pytorchjob.kubeflow.org "6781d954-7cf4-4d15-99f8-dc724f8893d8" deleted
+pytorchjob.kubeflow.org "6c961f8c-522b-46cb-86c0-c4be913740db" deleted
+pytorchjob.kubeflow.org "6f36a654-eb7c-46fe-ae88-3485471f207f" deleted
+pytorchjob.kubeflow.org "732c2b9a-a453-4ed7-a914-815d815da8c5" deleted
+pytorchjob.kubeflow.org "76db1548-b5d5-4273-a6be-a041878b8e40" deleted
+pytorchjob.kubeflow.org "7f7838be-d2af-4eca-8938-88316f85c31f" deleted
+pytorchjob.kubeflow.org "7feb8dac-c570-4357-8839-560e1f5c64b4" deleted
+pytorchjob.kubeflow.org "80cc4475-95bd-4126-a990-6dd5e897e0e4" deleted
+pytorchjob.kubeflow.org "83c56481-6999-45bb-88a5-0c4dc73e9a4f" deleted
+pytorchjob.kubeflow.org "845e6bdc-7ec0-4dc0-954e-3484e881c5ab" deleted
+pytorchjob.kubeflow.org "85db4b5c-be40-419b-92c4-f89e3919eabc" deleted
+pytorchjob.kubeflow.org "87e08f75-986c-4626-af39-6d038de05a68" deleted
+pytorchjob.kubeflow.org "88025d9e-53f2-4cb5-b632-5fc293756cf7" deleted
+pytorchjob.kubeflow.org "97f9bded-85bb-421a-abc6-d9b0076fcb5c" deleted
+pytorchjob.kubeflow.org "9851164a-fa00-49c8-91c3-f95cf15c9cef" deleted
+pytorchjob.kubeflow.org "9ee332d7-3e9e-4a86-843f-d05bcbdd4058" deleted
+pytorchjob.kubeflow.org "a545aba5-bf1f-4093-b3df-10e8535b324d" deleted
+pytorchjob.kubeflow.org "af5a19c9-38ae-4628-b1c9-8a84e4955894" deleted
+pytorchjob.kubeflow.org "b54636db-e605-4e2b-b242-7e7557be3f12" deleted
+pytorchjob.kubeflow.org "b8a03e1a-f036-47e0-86d4-5644a8278f97" deleted
+pytorchjob.kubeflow.org "b96b1784-4e66-4dec-97fe-d3c4dc241442" deleted
+pytorchjob.kubeflow.org "be205e77-563c-4e19-82bd-61df30d60e45" deleted
+pytorchjob.kubeflow.org "c08f7717-06d6-4fa2-b82f-0c9c80fe53c0" deleted
+pytorchjob.kubeflow.org "c27f6084-e176-4b5e-bd9f-8ad4ec1bef05" deleted
+pytorchjob.kubeflow.org "c7332ff1-ef93-47c9-9644-2054f24929b6" deleted
+pytorchjob.kubeflow.org "c8340fb6-939b-4f51-9c9a-a7b63c6b10f2" deleted
+pytorchjob.kubeflow.org "c9bf8921-9ade-4777-bcca-dbdd5dd50f2f" deleted
+pytorchjob.kubeflow.org "cb87920b-90e6-42f2-8e49-633a82acbca9" deleted
+pytorchjob.kubeflow.org "cbe03b1d-c0e5-4fc4-af03-8ed0fd3972ea" deleted
+pytorchjob.kubeflow.org "cf5d9104-6d57-4ae3-8952-0562b0bf518f" deleted
+pytorchjob.kubeflow.org "d066eef8-874a-4f39-bda5-3c7fb4e88597" deleted
+pytorchjob.kubeflow.org "d59ec60d-81d0-4bff-92ce-205829e3ec38" deleted
+pytorchjob.kubeflow.org "d714ca09-cdae-4c58-9f71-e89d020f4c31" deleted
+pytorchjob.kubeflow.org "e1bf5342-a838-4f93-a8c8-ed916e5df3c7" deleted
+pytorchjob.kubeflow.org "edde950a-de34-4b51-b5a5-6b5fe0325b44" deleted
+pytorchjob.kubeflow.org "f3991dc3-b2d1-42c5-890f-c4842ea89980" deleted
+pytorchjob.kubeflow.org "fb02e546-e7a9-4764-a71c-871e6a87ac97" deleted
+pytorchjob.kubeflow.org "ff28cbef-4a96-4a6f-91a8-71732408e956" deleted
+pytorchjob.kubeflow.org "ff6ec462-71aa-49ed-854f-dbfc9c0f2674" deleted
+      "arrival_statistic": 1,
+      "scheduling": "improved",
+         "arrival_seed": 22
+Sending build context to Docker daemon  417.3MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> ddc81cef0709
+Step 11/13 : ADD charts charts
+ ---> 902cbec6b5ff
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> f64e1359ff75
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in 180b9c80588a
+Removing intermediate container 180b9c80588a
+ ---> 22823930d745
+Successfully built 22823930d745
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+d9727355b209: Preparing
+1a489a721436: Preparing
+2a501d160cab: Preparing
+7f5cf91ab3fe: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+81a0a694f8fb: Waiting
+3f397bf4a209: Preparing
+1eb927d93505: Waiting
+b9e0fc92be93: Waiting
+4942a1abcbfa: Preparing
+5faf23568bde: Waiting
+9debf17f1f41: Waiting
+b69dc9a1ae51: Waiting
+4e311038b14a: Waiting
+c7209b337a87: Waiting
+a770b43c251e: Waiting
+4ede1962eac3: Waiting
+307814c51c70: Waiting
+4b5b20c7e93f: Waiting
+4942a1abcbfa: Waiting
+3f397bf4a209: Waiting
+8fa17e46d6a7: Waiting
+7b645d264080: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+1a489a721436: Pushed
+2a501d160cab: Pushed
+7f5cf91ab3fe: Pushed
+d9727355b209: Pushed
+latest: digest: sha256:310e98c2b1f9941e0bbcdc8e77b95c279b098dabec30bf5eadb47807348bb56c size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 03:52:38 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "03e99c46-f19c-4fda-ab0f-5562d6030d07" deleted
+pytorchjob.kubeflow.org "0429da25-35b9-49aa-8eb0-76c22c833563" deleted
+pytorchjob.kubeflow.org "0495616c-18f8-401a-bf40-332ff07fc0ad" deleted
+pytorchjob.kubeflow.org "0511fb08-2954-4c04-9982-857d8105f2a1" deleted
+pytorchjob.kubeflow.org "058afcaf-4c88-4c36-8440-f14bdbd28d6c" deleted
+pytorchjob.kubeflow.org "05f1d612-3d98-4f97-9690-54ac421a4fdf" deleted
+pytorchjob.kubeflow.org "08567378-c5f0-4f08-88f3-834688d264b0" deleted
+pytorchjob.kubeflow.org "0e9ca371-de3d-44c6-a9ca-3d75e0f0eaae" deleted
+pytorchjob.kubeflow.org "0f227eb8-c4d5-4830-8f21-1c779ac7a398" deleted
+pytorchjob.kubeflow.org "121d10c2-0521-4ba2-912c-d2bfaefa8167" deleted
+pytorchjob.kubeflow.org "1442998f-1c05-48fa-b507-b712c2b33fbf" deleted
+pytorchjob.kubeflow.org "1d93fcbe-b58f-466e-87a4-bb738c27590d" deleted
+pytorchjob.kubeflow.org "1fc87b1b-4fc8-48b6-89b3-3bfa4bb01de4" deleted
+pytorchjob.kubeflow.org "204dcfea-43f1-42e9-99a4-43dee6600b50" deleted
+pytorchjob.kubeflow.org "20dc617d-af09-4c55-bda7-e681fcbda23c" deleted
+pytorchjob.kubeflow.org "275af376-c7c3-4da6-b6cd-a5fabef50b43" deleted
+pytorchjob.kubeflow.org "2d984bb2-9f77-4f74-9d0d-302923a6ef98" deleted
+pytorchjob.kubeflow.org "30728d7a-af5c-4827-a74f-1cbc455e4cd0" deleted
+pytorchjob.kubeflow.org "38400c7a-7959-47d3-9e75-a1b1c93f18d8" deleted
+pytorchjob.kubeflow.org "39769fc1-3a22-4efc-9e5c-1bb595c23491" deleted
+pytorchjob.kubeflow.org "3a92bc07-90ed-442b-b6da-9e7a8b0492d2" deleted
+pytorchjob.kubeflow.org "3f48b23c-f9ff-4721-a6be-e0029cd6990c" deleted
+pytorchjob.kubeflow.org "486c2319-1e37-431f-92ce-8ad6c3aa45f1" deleted
+pytorchjob.kubeflow.org "4bfd9464-e920-48f6-86ba-275dc87ba0c8" deleted
+pytorchjob.kubeflow.org "53a74f20-d5f6-49b8-9971-7b6aafaa5437" deleted
+pytorchjob.kubeflow.org "57100369-0ee4-4dd6-9940-8359f5720d00" deleted
+pytorchjob.kubeflow.org "5b7ed721-efb0-47eb-a4ef-5d17665b8798" deleted
+pytorchjob.kubeflow.org "62d6a0b9-3953-4971-8f38-15aefc46aa04" deleted
+pytorchjob.kubeflow.org "649be185-f510-4716-be83-6b54228588c3" deleted
+pytorchjob.kubeflow.org "653016d7-cd34-41b4-a81c-8a81ac3c363c" deleted
+pytorchjob.kubeflow.org "69e7b04d-6a9f-48f0-b138-4b087f0fa93a" deleted
+pytorchjob.kubeflow.org "7592cb04-3e01-4485-be7c-4420ad59c95c" deleted
+pytorchjob.kubeflow.org "76482f78-521f-4f85-9fe4-2eeb6577bf6f" deleted
+pytorchjob.kubeflow.org "7b6fb8bc-a381-461a-a917-25f691da2a33" deleted
+pytorchjob.kubeflow.org "85ad17ee-474a-4483-b680-74a595f24bb5" deleted
+pytorchjob.kubeflow.org "927bfc64-5160-4f59-a7cc-bb83738f2b74" deleted
+pytorchjob.kubeflow.org "95620476-a758-44fa-bc82-9acf215b5557" deleted
+pytorchjob.kubeflow.org "9670503c-3e40-49f4-9fb6-5e809f9dbef5" deleted
+pytorchjob.kubeflow.org "9a19cd47-83f9-4650-be5f-aeb1089a0b05" deleted
+pytorchjob.kubeflow.org "9ae97c7f-9dc7-4738-a420-a29b609a3546" deleted
+pytorchjob.kubeflow.org "9ca2efec-9315-42ae-8ffa-283c6cc88a80" deleted
+pytorchjob.kubeflow.org "9f90971a-b482-4de1-979e-7c8c5fb73873" deleted
+pytorchjob.kubeflow.org "b0d89056-ccfc-4db6-88eb-0b07fe73cf00" deleted
+pytorchjob.kubeflow.org "b235f3ab-cc7e-4876-adf3-85a1bb4966a4" deleted
+pytorchjob.kubeflow.org "b6d6e681-9ab6-4f39-aa3a-ddb1da751a78" deleted
+pytorchjob.kubeflow.org "bc7484b8-2f39-46be-a57e-c49a7f655c6b" deleted
+pytorchjob.kubeflow.org "c05f26eb-53a1-4711-b5f8-27364449e391" deleted
+pytorchjob.kubeflow.org "c0ba9212-dc16-4635-bc4e-2d237b926805" deleted
+pytorchjob.kubeflow.org "c1e9b5bd-497d-479d-a5de-af7f706981f3" deleted
+pytorchjob.kubeflow.org "c484d380-c8fa-41a0-a955-32c325ece392" deleted
+pytorchjob.kubeflow.org "c5223204-0724-40be-97f5-00dd34cedb73" deleted
+pytorchjob.kubeflow.org "c6476fc3-c216-42d0-bf80-84aa7737cd88" deleted
+pytorchjob.kubeflow.org "d331839c-7dd9-4efb-b051-d994fc587a44" deleted
+pytorchjob.kubeflow.org "dc165039-5413-49de-9e3b-9dad4e5b9ee4" deleted
+pytorchjob.kubeflow.org "de393bf8-4427-46aa-b53a-4d3e1a2f2ad2" deleted
+pytorchjob.kubeflow.org "dfa4a3ae-3131-43e1-99a3-3ea85c01f293" deleted
+pytorchjob.kubeflow.org "e08dd340-f165-4f31-b31a-2b03e805cdac" deleted
+pytorchjob.kubeflow.org "e0b74cb6-91ce-4ff3-bb18-7c952e66012d" deleted
+pytorchjob.kubeflow.org "e2655d2d-19ce-463d-956c-5a4eb7d17f0d" deleted
+pytorchjob.kubeflow.org "ed4e2309-f981-43f4-a956-0819b5b4c533" deleted
+pytorchjob.kubeflow.org "f146a186-bb09-42b3-b73f-32d3e32a682f" deleted
+pytorchjob.kubeflow.org "fa44fdd9-200d-4f76-a1c5-69e68bb4c434" deleted
+pytorchjob.kubeflow.org "feb0ccc1-e8d0-4ff2-b5cf-ed98e8e1ed60" deleted
+pytorchjob.kubeflow.org "ffa1df46-9223-4b0a-b728-4aff234c9a27" deleted
+      "arrival_statistic": 1,
+      "scheduling": "improved",
+         "arrival_seed": 03
+Sending build context to Docker daemon  417.6MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> 374f26954adf
+Step 11/13 : ADD charts charts
+ ---> ef685fd669a7
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 2161aac9f16e
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in e20cab148b87
+Removing intermediate container e20cab148b87
+ ---> d2cdbd1c7de2
+Successfully built d2cdbd1c7de2
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+5a5b407cbb67: Preparing
+3eb029e6bbe9: Preparing
+c0cc76d50c15: Preparing
+579ac4b72d39: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+a770b43c251e: Preparing
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+4b5b20c7e93f: Preparing
+8fa17e46d6a7: Preparing
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+4942a1abcbfa: Preparing
+5faf23568bde: Waiting
+4ede1962eac3: Waiting
+b9e0fc92be93: Waiting
+307814c51c70: Waiting
+8fa17e46d6a7: Waiting
+4e311038b14a: Waiting
+3f397bf4a209: Waiting
+b69dc9a1ae51: Waiting
+7b645d264080: Waiting
+9debf17f1f41: Waiting
+4942a1abcbfa: Waiting
+a770b43c251e: Waiting
+1eb927d93505: Waiting
+4b5b20c7e93f: Waiting
+c7209b337a87: Waiting
+81a0a694f8fb: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+579ac4b72d39: Pushed
+c0cc76d50c15: Pushed
+3eb029e6bbe9: Pushed
+5a5b407cbb67: Pushed
+latest: digest: sha256:8ee43a8dc634c29d85280b1b05a8f8468b409a88df58d8fd1da344e23a3a7b3e size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 04:03:48 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+No resources found
+      "arrival_statistic": 1,
+      "scheduling": "improved",
+         "arrival_seed": 1996
+Sending build context to Docker daemon  417.7MB
+Step 1/13 : FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+11.1.1-cudnn8-devel-ubuntu20.04: Pulling from nvidia/cuda
+Digest: sha256:e014cb0151b818b56c4e61a95c4c2050d7c9ee7351e1b20d8e3007fcecbfb4d4
+Status: Downloaded newer image for nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+ ---> ca0ba09cf0a2
+Step 2/13 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> ad5126f35a83
+Step 3/13 : WORKDIR /opt/federation-lab
+ ---> Using cache
+ ---> 471a19dcbb4b
+Step 4/13 : RUN apt-get update && apt-get install -y curl python3 python3-pip net-tools iproute2 git
+ ---> Using cache
+ ---> 53a5405a8c44
+Step 5/13 : RUN python3 -m pip install numpy Cython cmake ninja
+ ---> Using cache
+ ---> cc55757e1112
+Step 6/13 : RUN python3 -m pip install torch==1.9+cu111 torchvision==0.10+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+ ---> Using cache
+ ---> d9fe2a0c835f
+Step 7/13 : ADD requirements.txt ./
+ ---> Using cache
+ ---> a733432a2e03
+Step 8/13 : RUN python3 -m pip install -r requirements.txt
+ ---> Using cache
+ ---> 2e6f69826ac1
+Step 9/13 : ADD fltk fltk
+ ---> Using cache
+ ---> 7d3bd8c51b37
+Step 10/13 : ADD configs configs
+ ---> ecbc4265b922
+Step 11/13 : ADD charts charts
+ ---> 5dca98e79685
+Step 12/13 : ADD allresults.csv allresults.csv
+ ---> 021b280ad99f
+Step 13/13 : RUN sed -i 's|client.V1DeleteOptions()||g' /usr/local/lib/python3.8/dist-packages/kubeflow/pytorchjob/api/py_torch_job_client.py
+ ---> Running in b7cf3630453c
+Removing intermediate container b7cf3630453c
+ ---> f9c68f792724
+Successfully built f9c68f792724
+Successfully tagged 192.168.1.187:6000/fltk/fltk:latest
+Using default tag: latest
+The push refers to repository [192.168.1.187:6000/fltk/fltk]
+377983003c6d: Preparing
+6492f4f23095: Preparing
+d3ea50e8a10c: Preparing
+5ac45565da34: Preparing
+2268ce97c987: Preparing
+81a0a694f8fb: Preparing
+1eb927d93505: Preparing
+5faf23568bde: Preparing
+b9e0fc92be93: Preparing
+4e311038b14a: Preparing
+307814c51c70: Preparing
+b69dc9a1ae51: Preparing
+5faf23568bde: Waiting
+a770b43c251e: Preparing
+1eb927d93505: Waiting
+9debf17f1f41: Preparing
+c7209b337a87: Preparing
+b9e0fc92be93: Waiting
+4e311038b14a: Waiting
+4b5b20c7e93f: Preparing
+307814c51c70: Waiting
+8fa17e46d6a7: Preparing
+b69dc9a1ae51: Waiting
+7b645d264080: Preparing
+4ede1962eac3: Preparing
+3f397bf4a209: Preparing
+4942a1abcbfa: Preparing
+c7209b337a87: Waiting
+9debf17f1f41: Waiting
+4ede1962eac3: Waiting
+3f397bf4a209: Waiting
+7b645d264080: Waiting
+2268ce97c987: Layer already exists
+81a0a694f8fb: Layer already exists
+1eb927d93505: Layer already exists
+5faf23568bde: Layer already exists
+b9e0fc92be93: Layer already exists
+4e311038b14a: Layer already exists
+307814c51c70: Layer already exists
+b69dc9a1ae51: Layer already exists
+a770b43c251e: Layer already exists
+9debf17f1f41: Layer already exists
+c7209b337a87: Layer already exists
+4b5b20c7e93f: Layer already exists
+8fa17e46d6a7: Layer already exists
+7b645d264080: Layer already exists
+4ede1962eac3: Layer already exists
+3f397bf4a209: Layer already exists
+4942a1abcbfa: Layer already exists
+6492f4f23095: Pushed
+5ac45565da34: Pushed
+d3ea50e8a10c: Pushed
+377983003c6d: Pushed
+latest: digest: sha256:447662576a3e8be26effbff2c5b2359bfadae56778d0ee7cf13ebce3b9a39db6 size: 4739
+No resources found
+NAME: flearner
+LAST DEPLOYED: Tue Oct 26 04:14:29 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+release "flearner" uninstalled
+pytorchjob.kubeflow.org "00fdbe4f-574e-481f-a6b0-51911bdc5f07" deleted
+pytorchjob.kubeflow.org "01854400-8f4a-4d85-9c07-031b6f7fc1e8" deleted
+pytorchjob.kubeflow.org "04638f51-1f3e-4b24-96b3-9bdfa5522cf2" deleted
+pytorchjob.kubeflow.org "04ee62fc-1113-476b-bbfd-7e8c26537073" deleted
+pytorchjob.kubeflow.org "0a217612-845c-4675-9527-3d51f0e29504" deleted
+pytorchjob.kubeflow.org "1489fd8d-250a-470f-97da-6e2dcc171434" deleted
+pytorchjob.kubeflow.org "16f2297d-0e63-4979-bf82-d2c817ebd09d" deleted
+pytorchjob.kubeflow.org "19e96bd6-5899-49cd-81bd-48cef6f29c9b" deleted
+pytorchjob.kubeflow.org "1acfb98d-397f-4b29-b72e-b352b74ebe5b" deleted
+pytorchjob.kubeflow.org "1be6bce4-e212-428a-a169-54e8e71cdc6d" deleted
+pytorchjob.kubeflow.org "1e32daf4-85c4-4835-9a7f-b5e2627052ee" deleted
+pytorchjob.kubeflow.org "295c0434-d913-45ae-ac9c-f2ed4d6e22b7" deleted
+pytorchjob.kubeflow.org "2d4d8eda-4d92-43a2-9382-bccc1444d2d6" deleted
+pytorchjob.kubeflow.org "2d827ae3-1269-4805-beff-e0f4516e5a6f" deleted
+pytorchjob.kubeflow.org "313e055b-6290-4db4-b1d2-3c2c808d93ab" deleted
+pytorchjob.kubeflow.org "331d30f1-2aef-470c-9c39-f0cd264d848b" deleted
+pytorchjob.kubeflow.org "3fe20749-1e59-4738-a76a-94888b3de3f4" deleted
+pytorchjob.kubeflow.org "45a52443-a179-4de1-b987-2cb9567f1e11" deleted
+pytorchjob.kubeflow.org "4759a2db-2c6f-4fe9-b947-e8f9250cc96b" deleted
+pytorchjob.kubeflow.org "4b035f94-db2d-4c49-b731-027f50c0c69c" deleted
+pytorchjob.kubeflow.org "4b323cdd-1ea6-4899-b476-7ae59248809e" deleted
+pytorchjob.kubeflow.org "507d2115-32c1-411d-aafe-12d7edf7b4bf" deleted
+pytorchjob.kubeflow.org "53cf96d9-d192-4f81-b09f-acb64b26ff2d" deleted
+pytorchjob.kubeflow.org "60fc9077-2e1f-43d0-9fb4-ab9f45ce2d23" deleted
+pytorchjob.kubeflow.org "61596452-979c-46e7-b4c4-93711e311105" deleted
+pytorchjob.kubeflow.org "64cefd77-fa0c-4fd1-b502-770d01f5e133" deleted
+pytorchjob.kubeflow.org "72b8337f-d83a-4312-a3c7-7ea0ac5a57f2" deleted
+pytorchjob.kubeflow.org "735e1d39-c3ea-45f9-adf4-63c5c5fe46a2" deleted
+pytorchjob.kubeflow.org "74999094-85fb-4a0f-85d6-95431ac5a907" deleted
+pytorchjob.kubeflow.org "7a72bea2-332b-4c88-9cd1-62d189899f0b" deleted
+pytorchjob.kubeflow.org "7b21a6c8-ca26-424a-b9f3-a54e3a454cfa" deleted
+pytorchjob.kubeflow.org "8052f288-08eb-4a37-86f5-ba28639ca30d" deleted
+pytorchjob.kubeflow.org "886c5865-73a0-4627-b771-8ec6dbe66baa" deleted
+pytorchjob.kubeflow.org "888fde79-130b-4a00-bd11-27dca9cb3a3e" deleted
+pytorchjob.kubeflow.org "898ac615-7ce9-4d05-9bc5-29d791bf1c0d" deleted
+pytorchjob.kubeflow.org "8d292b4c-4b4e-4a34-bf6a-38f8bee220d6" deleted
+pytorchjob.kubeflow.org "8d73b497-808a-4b93-9bb4-086e42696c8e" deleted
+pytorchjob.kubeflow.org "8e2fbccf-c38c-41ff-ab14-b95001121827" deleted
+pytorchjob.kubeflow.org "8fd80a90-11ba-49c1-b4b4-ab6c8019004c" deleted
+pytorchjob.kubeflow.org "9083e9cb-0e4c-4c79-ac95-c56738edb136" deleted
+pytorchjob.kubeflow.org "91909ad8-c2ba-44e7-8edb-7c918136d7ea" deleted
+pytorchjob.kubeflow.org "9628e9f9-6b61-4aa0-8137-02621437f26b" deleted
+pytorchjob.kubeflow.org "96b3e3b6-00d1-455e-8adf-9e1ebaeaaad7" deleted
+pytorchjob.kubeflow.org "976aac38-1479-4f76-8942-b868826b551d" deleted
+pytorchjob.kubeflow.org "9898719c-0b63-4cea-8ced-5701b3c4e6a9" deleted
+pytorchjob.kubeflow.org "a1bdf9c8-40a1-483c-90ff-71dd38b1422b" deleted
+pytorchjob.kubeflow.org "a6daef64-23ce-42d6-873e-36c19df81e68" deleted
+pytorchjob.kubeflow.org "a75e805b-0030-4ec4-adf5-1c80f96aac84" deleted
+pytorchjob.kubeflow.org "a9f1d164-9c4b-46eb-b46d-ffb31f5d03a4" deleted
+pytorchjob.kubeflow.org "aaa2ec70-6c92-47cf-944c-2f50d0ba4822" deleted
+pytorchjob.kubeflow.org "ab07901f-9ecb-4630-bcce-7b351d2dffef" deleted
+pytorchjob.kubeflow.org "ab1f8c96-9da6-4cb3-99b7-6456f36fb110" deleted
+pytorchjob.kubeflow.org "ab8e2204-d788-4b7b-9e22-9ab95af4d5ab" deleted
+pytorchjob.kubeflow.org "ac7b9941-1a8c-4c41-a46b-7a814390e541" deleted
+pytorchjob.kubeflow.org "b6bdac2f-d420-4ffd-b080-deebc3ff52ad" deleted
+pytorchjob.kubeflow.org "b8ac2e16-a6aa-48ce-a2f5-f4bb09f5cc56" deleted
+pytorchjob.kubeflow.org "b9a81312-17a6-4c23-bc74-4322a386830e" deleted
+pytorchjob.kubeflow.org "beca8f2a-63a7-449e-b74b-70881b147c7b" deleted
+pytorchjob.kubeflow.org "c29c1cd1-f8ed-4918-8798-fc73daba364d" deleted
+pytorchjob.kubeflow.org "c3292072-ccfc-4d06-a2a7-b9612ea74a7d" deleted
+pytorchjob.kubeflow.org "c6fd41d6-1808-4b05-af3b-643eab670c23" deleted
+pytorchjob.kubeflow.org "c83af685-e992-401f-a596-1ae917eef32a" deleted
+pytorchjob.kubeflow.org "c8e2ee15-04af-4d4d-aba0-7c8b33d4e1a6" deleted
+pytorchjob.kubeflow.org "ca8fa950-3f93-4545-b71c-d160f47e74fb" deleted
+pytorchjob.kubeflow.org "cbb26604-b417-4967-bdbe-587405af8af1" deleted
+pytorchjob.kubeflow.org "ce96f38b-38cb-4c6c-b2b6-67d2c5c52e87" deleted
+pytorchjob.kubeflow.org "cff3112d-9854-4bd6-a588-720e4f4fc331" deleted
+pytorchjob.kubeflow.org "d0e8579b-a6ee-4a7a-923e-bd078e6aa629" deleted
+pytorchjob.kubeflow.org "d21fe81c-2932-4314-97c9-7f0f269d25ad" deleted
+pytorchjob.kubeflow.org "d3537ee4-519d-4968-a4c6-0b73cc8022fd" deleted
+pytorchjob.kubeflow.org "d669e705-8ece-4b2e-a37f-db053c7596e9" deleted
+pytorchjob.kubeflow.org "d943be72-40fd-4222-b3c4-ca6e67fbbc26" deleted
+pytorchjob.kubeflow.org "dbe9e245-facd-44f9-a01f-5b3573947f87" deleted
+pytorchjob.kubeflow.org "e3ca537e-7868-415b-bcc3-add6abcba006" deleted
+pytorchjob.kubeflow.org "e766da42-01e5-40ee-bda9-adb9ccacc1e8" deleted
+pytorchjob.kubeflow.org "e87e39f0-2b68-4b67-90a0-bd5b160f8ee7" deleted
+pytorchjob.kubeflow.org "e9cef81e-9f8d-431b-a691-e28eaaaf9107" deleted
+pytorchjob.kubeflow.org "ebffcfb5-e7f1-4c71-b8c1-3ec95b1b0fba" deleted
+pytorchjob.kubeflow.org "f57636cd-bc28-44c3-86f8-642085e3f16b" deleted
+pytorchjob.kubeflow.org "f87856c4-5ec9-4e36-8ef2-0a736b6e91b4" deleted
+pytorchjob.kubeflow.org "f8e820ce-4fd3-4d79-8b74-18c96c9ca6a1" deleted
+pytorchjob.kubeflow.org "fd5e9d48-0927-4680-a97a-25103aa6a0ec" deleted

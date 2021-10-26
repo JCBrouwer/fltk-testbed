@@ -1,0 +1,428 @@
+/usr/local/lib/python3.8/dist-packages/dataclasses_json/core.py:171: RuntimeWarning: `NoneType` object value of non-optional type config_path detected when decoding BareConfig.
+  warnings.warn(f"`NoneType` object {warning}.", RuntimeWarning)
+10-26-2021 01:07:41 root         INFO     Starting in cluster mode.
+10-26-2021 01:07:41 root         INFO     Starting as Orchestrator
+10-26-2021 01:07:41 root         INFO     Starting Orchestrator, initializing resources....
+10-26-2021 01:07:41 root         INFO     Loading in cluster configuration file
+10-26-2021 01:07:41 root         INFO     Pointing configuration to in cluster configuration.
+10-26-2021 01:07:41 root         INFO     Starting cluster manager
+10-26-2021 01:07:41 root         INFO     Starting arrival generator
+10-26-2021 01:07:41 root         INFO     Starting orchestrator
+[3 4]
+[3 4]
+[3 4]
+[3 4]
+[3 4]
+[3 4]
+[3 4]
+pending 0 deployed 0
+scheduling: swa 256 100 4 cuda:0 632
+[635   4]
+pending 0 deployed 1
+scheduling: swa 256 400 4 cuda:0 632
+[1267    4]
+pending 0 deployed 2
+scheduling: swa 1024 400 4 cuda:0 1908
+[3175    4]
+finished 04717793-a0e3-41a2-aca8-0c3e148d6125
+[1886    4]
+pending 0 deployed 2
+scheduling: style2ada 512 100 4 cuda:0 2078
+[3964    4]
+finished e494ad8f-35b3-4b93-94b9-4860ee618057
+[10688     4]
+pending 0 deployed 2
+scheduling: mobile 1024 800 4 cuda:0 2524
+[13212     4]
+pending 0 deployed 3
+scheduling: mobile 256 400 4 cuda:1 218
+[13212   222]
+finished 41acf9f1-b6a8-4d9e-85c6-5e944b873beb
+[2400    4]
+finished cfb6ac6d-bbf2-472c-8fb7-b860d30e2da9
+[2400    4]
+pending 0 deployed 2
+scheduling: style1 1024 800 4 cuda:0 2842
+[5242    4]
+pending 0 deployed 3
+scheduling: swa 512 200 4 cuda:0 1060
+[6302    4]
+finished 85a40621-f6a2-4ab4-ab9f-aefcb9398345
+[2910    4]
+finished d5614b77-0070-4794-a746-09f5d57180b4
+[2910    4]
+pending 0 deployed 2
+scheduling: mobile 1024 100 4 cuda:0 2524
+[5434    4]
+pending 0 deployed 3
+scheduling: anycost 256 400 4 cuda:0 1040
+[6474    4]
+finished d72ae3b1-9ba8-485f-baa1-fb2544610d53
+[7699    4]
+[7699    4]
+[3 4]
+[608   4]
+[1354    4]
+[2198    4]
+pending 0 deployed 3
+scheduling: anycost 256 800 4 cuda:0 1040
+[3238    4]
+finished 1e2d0f96-65dc-4fbb-a53e-67b1032228f0
+[2198    4]
+finished 6a5f8461-2adf-4933-bdc7-0a83b1e40af0
+[2198    4]
+pending 0 deployed 2
+scheduling: anycost 256 100 4 cuda:0 1040
+[3238    4]
+finished b7e37614-5339-492b-8426-2861b19ef78d
+[2198    4]
+pending 0 deployed 2
+scheduling: style2ada 256 100 4 cuda:0 1160
+[3358    4]
+finished c902e8f7-871f-4a79-aaca-3d11252fa3fa
+[3 4]
+pending 0 deployed 2
+scheduling: stylemap 512 200 4 cuda:0 5932
+[5935    4]
+finished 8da337ef-a798-4218-ad9a-bf2a1599ca3e
+[10286     4]
+pending 0 deployed 2
+scheduling: swa 256 100 4 cuda:0 632
+[10918     4]
+finished db7f56dd-c896-49e5-b3fb-c08d7e0d901c
+[10496     4]
+pending 0 deployed 2
+scheduling: swa 1024 800 4 cuda:0 1908
+[12404     4]
+pending 0 deployed 3
+scheduling: style2ada 256 400 4 cuda:0 1160
+[13564     4]
+pending 0 deployed 4
+scheduling: mobile 1024 100 4 cuda:1 2524
+[13564  2528]
+pending 0 deployed 5
+scheduling: anycost 1024 800 4 cuda:0 3518
+[17082  2528]
+finished 45cfd0d2-a5fa-4182-91dc-0dbeda079e40
+[15870  2757]
+pending 0 deployed 5
+scheduling: mobile 1024 800 4 cuda:1 2524
+[15870  5281]
+[15193  2757]
+[14088     4]
+[4107  175]
+pending 0 deployed 6
+scheduling: anycost 512 100 4 cuda:0 1820
+[5927  175]
+finished 4e6df7aa-ae53-4332-b2ee-b2c30cd5222f
+[4107  175]
+finished ef398ec3-ea48-4fe0-80aa-991ca18d4bbc
+[4107  175]
+pending 0 deployed 5
+scheduling: mobile 256 200 4 cuda:0 218
+[4325  175]
+finished 12fc7ad5-8bbb-4109-bb3e-929af112cfe2
+[14532  1723]
+pending 0 deployed 5
+scheduling: anycost 256 800 4 cuda:0 1040
+[15572  1723]
+finished 9a1c7eae-2672-474b-822e-7c3ede14f211
+[15484  1723]
+pending 0 deployed 5
+scheduling: stylemap 1024 400 2 cuda:1 5994
+[15484  7717]
+finished 45083b31-7dfb-4097-944a-96daba0673e2
+[14616  1723]
+pending 0 deployed 5
+scheduling: mobile 256 100 4 cuda:0 218
+[14834  1723]
+pending 0 deployed 6
+scheduling: swa 1024 200 4 cuda:1 1908
+[14834  3631]
+finished 242ca34d-b63d-4bd9-87cf-54ab420992ba
+[19932  4183]
+finished dddd22b5-7199-44c1-ae1f-cef673b5fe73
+[19932  4183]
+pending 0 deployed 5
+scheduling: style2ada 1024 800 4 cuda:1 3996
+[19932  8179]
+finished 567e7eed-b7e7-4963-a281-3f96391884b1
+[2462 7284]
+finished a18aea40-5ea3-474f-9a32-cac8f131849f
+[2462 7284]
+pending 0 deployed 4
+scheduling: style1 512 800 4 cuda:0 878
+[3340 7284]
+finished 5f577def-a284-442c-8584-d2c33d31ef60
+[   3 9397]
+pending 0 deployed 4
+scheduling: style2 1024 100 4 cuda:0 3512
+[3515 9397]
+pending 0 deployed 5
+scheduling: swa 512 100 4 cuda:0 1060
+[4575 9397]
+finished a50b26f0-1bec-4b35-b78a-a5e015d78d3c
+[4388 9397]
+[   3 9397]
+[   3 9397]
+[ 864 9397]
+[1592 9397]
+[10658  9397]
+pending 0 deployed 5
+scheduling: anycost 256 200 4 cuda:0 1040
+[11698  9397]
+finished a3bfaf52-4a0b-459d-8763-b1c3697ca1f0
+[10658  9397]
+pending 0 deployed 5
+scheduling: swa 512 400 4 cuda:0 1060
+[11718  9397]
+finished 58fa273d-ccc0-40b8-9d10-2d39bd0fb8eb
+[1056 9397]
+pending 0 deployed 5
+scheduling: swa 1024 400 4 cuda:0 1908
+[2964 9397]
+finished 3001d09a-8e72-4abc-ab05-593be9f18908
+[4142 6290]
+finished 4efd7451-cf9d-4c7c-8a17-c39ab993f851
+[4142 6290]
+pending 0 deployed 4
+scheduling: swa 512 800 4 cuda:0 1060
+[5202 6290]
+finished da15e4ac-cea3-452a-89b5-435d847944c1
+[10688  6290]
+pending 0 deployed 4
+scheduling: anycost 256 400 4 cuda:0 1040
+[11728  6290]
+finished 8283db69-fb30-4a3b-8a1d-de60205bbe7e
+[2110 6290]
+pending 0 deployed 4
+scheduling: style2ada 512 100 4 cuda:0 2078
+[4188 6290]
+finished d9aecf3d-a2b1-4b81-b0e4-2aa6bf0dce19
+[10682  6290]
+pending 0 deployed 4
+scheduling: style2 512 800 4 cuda:0 1820
+[12502  6290]
+finished ca02d308-4640-4cf6-aedb-d141fc45be64
+[2896 6290]
+pending 0 deployed 4
+scheduling: anycost 1024 100 4 cuda:0 3518
+[6414 6290]
+finished 7e805080-c678-4825-9614-5cbdd0d5946e
+[19378  6290]
+pending 0 deployed 4
+scheduling: style2 256 100 4 cuda:0 1038
+[20416  6290]
+pending 0 deployed 5
+scheduling: style2ada 256 400 4 cuda:1 1160
+[20416  7450]
+finished 3ff113f4-fd85-4ab7-9648-87b7679b7c94
+[10590  6290]
+finished ceea208d-be06-4a8a-b68c-2dc46d0581e5
+[10590  6290]
+[2198 6290]
+[   3 6290]
+[ 720 6290]
+[   3 2876]
+pending 0 deployed 4
+scheduling: mobile 1024 100 4 cuda:0 2524
+[2527 2876]
+finished 12a7db9a-15d9-48e4-8d2e-f298814dd505
+[   3 2876]
+finished a6e417a2-fac3-4a19-b936-8ab3821d2d99
+[   3 2876]
+pending 0 deployed 3
+scheduling: style2ada 1024 800 4 cuda:0 3996
+[3999 2876]
+pending 0 deployed 4
+scheduling: stylemap 256 800 4 cuda:0 3226
+[7225 2876]
+finished 8e90b6c2-83e2-4410-b3f7-3a338d320409
+[4804 4206]
+pending 0 deployed 4
+scheduling: style1 256 200 4 cuda:0 346
+[5150 4206]
+finished 1c1bda79-2181-4ff4-826f-ea6db04b36a2
+[10055     4]
+finished caa4e1e0-b80c-4e12-a041-4dc027d93d74
+[10055     4]
+pending 0 deployed 3
+scheduling: anycost 256 400 4 cuda:0 1040
+[11095     4]
+pending 0 deployed 4
+scheduling: style1 512 100 4 cuda:0 878
+[11973     4]
+finished b2e01985-aaf5-4ac0-ad79-a7a810a137db
+[10866     4]
+pending 0 deployed 4
+scheduling: style1 1024 200 4 cuda:0 2842
+[13708     4]
+10-26-2021 01:15:21 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/d4d79107-ea1b-4573-b5e9-73f79b939897 failed. Reason: 'NoneType' object is not iterable
+pending 0 deployed 5
+scheduling: mobile 256 100 4 cuda:1 218
+[13708   222]
+finished 3db4a0b8-d3d2-473d-8c82-62ca119931fe
+[16768     4]
+finished daef4fa4-7ca3-4c22-aa9f-d80c80b9ed51
+[16768     4]
+pending 0 deployed 4
+scheduling: style2 512 100 4 cuda:1 1820
+[16768  1824]
+finished 31ef7c97-d1d5-4329-9691-6f276ee8c86f
+[6895 1179]
+finished a9dd8826-1691-487d-adb5-b344f69a0de3
+[6895 1179]
+finished d4d79107-ea1b-4573-b5e9-73f79b939897
+[6895 1179]
+pending 0 deployed 2
+scheduling: style1 1024 200 4 cuda:0 2842
+[9737 1179]
+finished bfc3f3d0-63ce-487d-80af-1194c94a581d
+[   3 3301]
+[   3 3301]
+[ 740 3301]
+[1574 3301]
+[3 4]
+[3 4]
+[922   4]
+[11450     4]
+[3450    4]
+[3 4]
+[3 4]
+pending 0 deployed 2
+scheduling: anycost 1024 200 4 cuda:0 3518
+[3521    4]
+finished 512d1f50-f380-413f-9653-3db38c6b4868
+[3 4]
+finished a389b6ac-15d2-42ca-bce1-80323759e8cb
+[3 4]
+pending 0 deployed 1
+scheduling: swa 256 400 4 cuda:0 632
+[635   4]
+pending 0 deployed 2
+scheduling: style1 1024 400 4 cuda:0 2842
+[3477    4]
+pending 0 deployed 3
+scheduling: anycost 1024 100 4 cuda:0 3518
+[6995    4]
+finished 20a6c33c-6456-4d6f-a407-352b3e3a2573
+[2916    4]
+finished 27f486cf-8718-4631-ab9e-d058c15754f3
+[2916    4]
+pending 0 deployed 2
+scheduling: swa 256 200 4 cuda:0 632
+[3548    4]
+pending 0 deployed 3
+scheduling: mobile 1024 800 4 cuda:0 2524
+[6072    4]
+finished 7158a0ef-34d3-48f5-8ef4-3548a31c6b26
+[3 4]
+finished b8a06d0c-7fb1-46f6-bb5d-417b9c042c51
+[3 4]
+finished f1416d9b-5b98-4499-a3df-7e6c8c1f2586
+[3 4]
+pending 0 deployed 1
+scheduling: swa 512 200 4 cuda:0 1060
+[1063    4]
+pending 0 deployed 2
+scheduling: style1 1024 200 4 cuda:0 2842
+[3905    4]
+pending 0 deployed 3
+scheduling: style2 512 800 4 cuda:0 1820
+[5725    4]
+pending 0 deployed 4
+scheduling: stylemap 256 100 4 cuda:0 3226
+[8951    4]
+finished 09678b69-a66d-4563-8d8e-356acf5f67d9
+[10684     4]
+finished 4ea1d4bb-b445-43bb-a5a6-531f61490401
+[10684     4]
+finished e5604358-bcf6-4138-8873-daae9240a3f3
+[10684     4]
+[10684     4]
+[10684     4]
+[11143     4]
+[11747     4]
+[12271     4]
+pending 0 deployed 2
+scheduling: anycost 1024 200 4 cuda:0 3518
+[15789     4]
+10-26-2021 01:17:41 Orchestrator INFO     Received stop signal for the Orchestrator. Cleaning up...
+
+
+
+
+task_info={'04717793-a0e3-41a2-aca8-0c3e148d6125': ('swa', 256, 'interpolation', 100, 'cuda:0', 4, 1), 'e494ad8f-35b3-4b93-94b9-4860ee618057': ('swa', 256, 'random', 400, 'cuda:0', 4, 1), '41acf9f1-b6a8-4d9e-85c6-5e944b873beb': ('swa', 1024, 'random', 400, 'cuda:0', 4, 1), 'cfb6ac6d-bbf2-472c-8fb7-b860d30e2da9': ('style2ada', 512, 'random', 100, 'cuda:0', 4, 1), '85a40621-f6a2-4ab4-ab9f-aefcb9398345': ('mobile', 1024, 'interpolation', 800, 'cuda:0', 4, 1), 'd5614b77-0070-4794-a746-09f5d57180b4': ('mobile', 256, 'interpolation', 400, 'cuda:1', 4, 1), 'd72ae3b1-9ba8-485f-baa1-fb2544610d53': ('style1', 1024, 'interpolation', 800, 'cuda:0', 4, 1), '1e2d0f96-65dc-4fbb-a53e-67b1032228f0': ('swa', 512, 'random', 200, 'cuda:0', 4, 1), '6a5f8461-2adf-4933-bdc7-0a83b1e40af0': ('mobile', 1024, 'random', 100, 'cuda:0', 4, 1), 'b7e37614-5339-492b-8426-2861b19ef78d': ('anycost', 256, 'interpolation', 400, 'cuda:0', 4, 1), 'c902e8f7-871f-4a79-aaca-3d11252fa3fa': ('anycost', 256, 'random', 800, 'cuda:0', 4, 1), '8da337ef-a798-4218-ad9a-bf2a1599ca3e': ('anycost', 256, 'random', 100, 'cuda:0', 4, 1), 'db7f56dd-c896-49e5-b3fb-c08d7e0d901c': ('style2ada', 256, 'random', 100, 'cuda:0', 4, 1), '12fc7ad5-8bbb-4109-bb3e-929af112cfe2': ('stylemap', 512, 'interpolation', 200, 'cuda:0', 4, 1), '45cfd0d2-a5fa-4182-91dc-0dbeda079e40': ('swa', 256, 'random', 100, 'cuda:0', 4, 1), '5f577def-a284-442c-8584-d2c33d31ef60': ('swa', 1024, 'random', 800, 'cuda:0', 4, 1), 'ef398ec3-ea48-4fe0-80aa-991ca18d4bbc': ('style2ada', 256, 'random', 400, 'cuda:0', 4, 1), '4e6df7aa-ae53-4332-b2ee-b2c30cd5222f': ('mobile', 1024, 'random', 100, 'cuda:1', 4, 1), '567e7eed-b7e7-4963-a281-3f96391884b1': ('anycost', 1024, 'random', 800, 'cuda:0', 4, 1), '242ca34d-b63d-4bd9-87cf-54ab420992ba': ('mobile', 1024, 'random', 800, 'cuda:1', 4, 1), '9a1c7eae-2672-474b-822e-7c3ede14f211': ('anycost', 512, 'random', 100, 'cuda:0', 4, 1), '45083b31-7dfb-4097-944a-96daba0673e2': ('mobile', 256, 'interpolation', 200, 'cuda:0', 4, 1), 'a18aea40-5ea3-474f-9a32-cac8f131849f': ('anycost', 256, 'interpolation', 800, 'cuda:0', 4, 1), '12a7db9a-15d9-48e4-8d2e-f298814dd505': ('stylemap', 1024, 'interpolation', 400, 'cuda:1', 2, 1), 'dddd22b5-7199-44c1-ae1f-cef673b5fe73': ('mobile', 256, 'random', 100, 'cuda:0', 4, 1), '3001d09a-8e72-4abc-ab05-593be9f18908': ('swa', 1024, 'interpolation', 200, 'cuda:1', 4, 1), 'caa4e1e0-b80c-4e12-a041-4dc027d93d74': ('style2ada', 1024, 'interpolation', 800, 'cuda:1', 4, 1), 'a50b26f0-1bec-4b35-b78a-a5e015d78d3c': ('style1', 512, 'random', 800, 'cuda:0', 4, 1), 'a3bfaf52-4a0b-459d-8763-b1c3697ca1f0': ('style2', 1024, 'random', 100, 'cuda:0', 4, 1), '58fa273d-ccc0-40b8-9d10-2d39bd0fb8eb': ('swa', 512, 'interpolation', 100, 'cuda:0', 4, 1), '4efd7451-cf9d-4c7c-8a17-c39ab993f851': ('anycost', 256, 'interpolation', 200, 'cuda:0', 4, 1), 'da15e4ac-cea3-452a-89b5-435d847944c1': ('swa', 512, 'random', 400, 'cuda:0', 4, 1), '8283db69-fb30-4a3b-8a1d-de60205bbe7e': ('swa', 1024, 'interpolation', 400, 'cuda:0', 4, 1), 'd9aecf3d-a2b1-4b81-b0e4-2aa6bf0dce19': ('swa', 512, 'interpolation', 800, 'cuda:0', 4, 1), 'ca02d308-4640-4cf6-aedb-d141fc45be64': ('anycost', 256, 'interpolation', 400, 'cuda:0', 4, 1), '7e805080-c678-4825-9614-5cbdd0d5946e': ('style2ada', 512, 'random', 100, 'cuda:0', 4, 1), 'ceea208d-be06-4a8a-b68c-2dc46d0581e5': ('style2', 512, 'interpolation', 800, 'cuda:0', 4, 1), '3ff113f4-fd85-4ab7-9648-87b7679b7c94': ('anycost', 1024, 'interpolation', 100, 'cuda:0', 4, 1), 'a6e417a2-fac3-4a19-b936-8ab3821d2d99': ('style2', 256, 'interpolation', 100, 'cuda:0', 4, 1), '1c1bda79-2181-4ff4-826f-ea6db04b36a2': ('style2ada', 256, 'interpolation', 400, 'cuda:1', 4, 1), '8e90b6c2-83e2-4410-b3f7-3a338d320409': ('mobile', 1024, 'random', 100, 'cuda:0', 4, 1), 'daef4fa4-7ca3-4c22-aa9f-d80c80b9ed51': ('style2ada', 1024, 'random', 800, 'cuda:0', 4, 1), 'bfc3f3d0-63ce-487d-80af-1194c94a581d': ('stylemap', 256, 'interpolation', 800, 'cuda:0', 4, 1), 'b2e01985-aaf5-4ac0-ad79-a7a810a137db': ('style1', 256, 'random', 200, 'cuda:0', 4, 1), '31ef7c97-d1d5-4329-9691-6f276ee8c86f': ('anycost', 256, 'interpolation', 400, 'cuda:0', 4, 1), '3db4a0b8-d3d2-473d-8c82-62ca119931fe': ('style1', 512, 'interpolation', 100, 'cuda:0', 4, 1), 'd4d79107-ea1b-4573-b5e9-73f79b939897': ('style1', 1024, 'interpolation', 200, 'cuda:0', 4, 1), 'a9dd8826-1691-487d-adb5-b344f69a0de3': ('mobile', 256, 'random', 100, 'cuda:1', 4, 1), 'a389b6ac-15d2-42ca-bce1-80323759e8cb': ('style2', 512, 'interpolation', 100, 'cuda:1', 4, 1), '512d1f50-f380-413f-9653-3db38c6b4868': ('style1', 1024, 'interpolation', 200, 'cuda:0', 4, 1), '20a6c33c-6456-4d6f-a407-352b3e3a2573': ('anycost', 1024, 'random', 200, 'cuda:0', 4, 1), '27f486cf-8718-4631-ab9e-d058c15754f3': ('swa', 256, 'random', 400, 'cuda:0', 4, 1), 'f1416d9b-5b98-4499-a3df-7e6c8c1f2586': ('style1', 1024, 'interpolation', 400, 'cuda:0', 4, 1), '7158a0ef-34d3-48f5-8ef4-3548a31c6b26': ('anycost', 1024, 'random', 100, 'cuda:0', 4, 1), 'b8a06d0c-7fb1-46f6-bb5d-417b9c042c51': ('swa', 256, 'random', 200, 'cuda:0', 4, 1), 'e5604358-bcf6-4138-8873-daae9240a3f3': ('mobile', 1024, 'random', 800, 'cuda:0', 4, 1), '09678b69-a66d-4563-8d8e-356acf5f67d9': ('swa', 512, 'interpolation', 200, 'cuda:0', 4, 1), '4ea1d4bb-b445-43bb-a5a6-531f61490401': ('style1', 1024, 'random', 200, 'cuda:0', 4, 1), 'd416f692-d8c2-4757-a566-3b12451a3751': ('style2', 512, 'random', 800, 'cuda:0', 4, 1), 'a97d0895-7ca5-457a-8965-926cf944b98e': ('stylemap', 256, 'interpolation', 100, 'cuda:0', 4, 1), 'd019522e-414c-4ede-b067-d968115ca720': ('anycost', 1024, 'interpolation', 200, 'cuda:0', 4, 1)}
+arrival_times={'04717793-a0e3-41a2-aca8-0c3e148d6125': datetime.datetime(2021, 10, 26, 1, 7, 53, 498977), 'e494ad8f-35b3-4b93-94b9-4860ee618057': datetime.datetime(2021, 10, 26, 1, 7, 58, 604787), '41acf9f1-b6a8-4d9e-85c6-5e944b873beb': datetime.datetime(2021, 10, 26, 1, 8, 9, 677698), 'cfb6ac6d-bbf2-472c-8fb7-b860d30e2da9': datetime.datetime(2021, 10, 26, 1, 8, 23, 804793), '85a40621-f6a2-4ab4-ab9f-aefcb9398345': datetime.datetime(2021, 10, 26, 1, 8, 30, 879874), 'd5614b77-0070-4794-a746-09f5d57180b4': datetime.datetime(2021, 10, 26, 1, 8, 38, 905934), 'd72ae3b1-9ba8-485f-baa1-fb2544610d53': datetime.datetime(2021, 10, 26, 1, 8, 47, 971448), '1e2d0f96-65dc-4fbb-a53e-67b1032228f0': datetime.datetime(2021, 10, 26, 1, 8, 58, 993999), '6a5f8461-2adf-4933-bdc7-0a83b1e40af0': datetime.datetime(2021, 10, 26, 1, 9, 7, 21496), 'b7e37614-5339-492b-8426-2861b19ef78d': datetime.datetime(2021, 10, 26, 1, 9, 17, 222375), 'c902e8f7-871f-4a79-aaca-3d11252fa3fa': datetime.datetime(2021, 10, 26, 1, 9, 25, 259087), '8da337ef-a798-4218-ad9a-bf2a1599ca3e': datetime.datetime(2021, 10, 26, 1, 9, 35, 439422), 'db7f56dd-c896-49e5-b3fb-c08d7e0d901c': datetime.datetime(2021, 10, 26, 1, 9, 46, 476877), '12fc7ad5-8bbb-4109-bb3e-929af112cfe2': datetime.datetime(2021, 10, 26, 1, 9, 54, 664183), '45cfd0d2-a5fa-4182-91dc-0dbeda079e40': datetime.datetime(2021, 10, 26, 1, 10, 6, 695780), '5f577def-a284-442c-8584-d2c33d31ef60': datetime.datetime(2021, 10, 26, 1, 10, 12, 716109), 'ef398ec3-ea48-4fe0-80aa-991ca18d4bbc': datetime.datetime(2021, 10, 26, 1, 10, 19, 736248), '4e6df7aa-ae53-4332-b2ee-b2c30cd5222f': datetime.datetime(2021, 10, 26, 1, 10, 27, 767028), '567e7eed-b7e7-4963-a281-3f96391884b1': datetime.datetime(2021, 10, 26, 1, 10, 37, 901591), '242ca34d-b63d-4bd9-87cf-54ab420992ba': datetime.datetime(2021, 10, 26, 1, 10, 42, 924116), '9a1c7eae-2672-474b-822e-7c3ede14f211': datetime.datetime(2021, 10, 26, 1, 10, 46, 955325), '45083b31-7dfb-4097-944a-96daba0673e2': datetime.datetime(2021, 10, 26, 1, 10, 54, 981098), 'a18aea40-5ea3-474f-9a32-cac8f131849f': datetime.datetime(2021, 10, 26, 1, 11, 8, 19787), '12a7db9a-15d9-48e4-8d2e-f298814dd505': datetime.datetime(2021, 10, 26, 1, 11, 16, 44377), 'dddd22b5-7199-44c1-ae1f-cef673b5fe73': datetime.datetime(2021, 10, 26, 1, 11, 21, 182103), '3001d09a-8e72-4abc-ab05-593be9f18908': datetime.datetime(2021, 10, 26, 1, 11, 34, 264191), 'caa4e1e0-b80c-4e12-a041-4dc027d93d74': datetime.datetime(2021, 10, 26, 1, 11, 46, 305385), 'a50b26f0-1bec-4b35-b78a-a5e015d78d3c': datetime.datetime(2021, 10, 26, 1, 11, 59, 477761), 'a3bfaf52-4a0b-459d-8763-b1c3697ca1f0': datetime.datetime(2021, 10, 26, 1, 12, 8, 505494), '58fa273d-ccc0-40b8-9d10-2d39bd0fb8eb': datetime.datetime(2021, 10, 26, 1, 12, 22, 559961), '4efd7451-cf9d-4c7c-8a17-c39ab993f851': datetime.datetime(2021, 10, 26, 1, 12, 30, 743715), 'da15e4ac-cea3-452a-89b5-435d847944c1': datetime.datetime(2021, 10, 26, 1, 12, 38, 772604), '8283db69-fb30-4a3b-8a1d-de60205bbe7e': datetime.datetime(2021, 10, 26, 1, 12, 50, 889440), 'd9aecf3d-a2b1-4b81-b0e4-2aa6bf0dce19': datetime.datetime(2021, 10, 26, 1, 13, 5, 995301), 'ca02d308-4640-4cf6-aedb-d141fc45be64': datetime.datetime(2021, 10, 26, 1, 13, 19, 28760), '7e805080-c678-4825-9614-5cbdd0d5946e': datetime.datetime(2021, 10, 26, 1, 13, 32, 190261), 'ceea208d-be06-4a8a-b68c-2dc46d0581e5': datetime.datetime(2021, 10, 26, 1, 13, 42, 299201), '3ff113f4-fd85-4ab7-9648-87b7679b7c94': datetime.datetime(2021, 10, 26, 1, 13, 50, 438916), 'a6e417a2-fac3-4a19-b936-8ab3821d2d99': datetime.datetime(2021, 10, 26, 1, 14, 5, 670865), '1c1bda79-2181-4ff4-826f-ea6db04b36a2': datetime.datetime(2021, 10, 26, 1, 14, 14, 701110), '8e90b6c2-83e2-4410-b3f7-3a338d320409': datetime.datetime(2021, 10, 26, 1, 14, 20, 843672), 'daef4fa4-7ca3-4c22-aa9f-d80c80b9ed51': datetime.datetime(2021, 10, 26, 1, 14, 28, 877081), 'bfc3f3d0-63ce-487d-80af-1194c94a581d': datetime.datetime(2021, 10, 26, 1, 14, 41, 943919), 'b2e01985-aaf5-4ac0-ad79-a7a810a137db': datetime.datetime(2021, 10, 26, 1, 14, 57, 83222), '31ef7c97-d1d5-4329-9691-6f276ee8c86f': datetime.datetime(2021, 10, 26, 1, 15, 5, 110594), '3db4a0b8-d3d2-473d-8c82-62ca119931fe': datetime.datetime(2021, 10, 26, 1, 15, 12, 196604), 'd4d79107-ea1b-4573-b5e9-73f79b939897': datetime.datetime(2021, 10, 26, 1, 15, 21, 229438), 'a9dd8826-1691-487d-adb5-b344f69a0de3': datetime.datetime(2021, 10, 26, 1, 15, 27, 248263), 'a389b6ac-15d2-42ca-bce1-80323759e8cb': datetime.datetime(2021, 10, 26, 1, 15, 43, 355790), '512d1f50-f380-413f-9653-3db38c6b4868': datetime.datetime(2021, 10, 26, 1, 15, 53, 548169), '20a6c33c-6456-4d6f-a407-352b3e3a2573': datetime.datetime(2021, 10, 26, 1, 16, 11, 671685), '27f486cf-8718-4631-ab9e-d058c15754f3': datetime.datetime(2021, 10, 26, 1, 16, 21, 703532), 'f1416d9b-5b98-4499-a3df-7e6c8c1f2586': datetime.datetime(2021, 10, 26, 1, 16, 29, 729707), '7158a0ef-34d3-48f5-8ef4-3548a31c6b26': datetime.datetime(2021, 10, 26, 1, 16, 40, 810965), 'b8a06d0c-7fb1-46f6-bb5d-417b9c042c51': datetime.datetime(2021, 10, 26, 1, 16, 43, 899761), 'e5604358-bcf6-4138-8873-daae9240a3f3': datetime.datetime(2021, 10, 26, 1, 16, 59, 21270), '09678b69-a66d-4563-8d8e-356acf5f67d9': datetime.datetime(2021, 10, 26, 1, 17, 5, 75247), '4ea1d4bb-b445-43bb-a5a6-531f61490401': datetime.datetime(2021, 10, 26, 1, 17, 12, 225109), 'd416f692-d8c2-4757-a566-3b12451a3751': datetime.datetime(2021, 10, 26, 1, 17, 21, 324040), 'a97d0895-7ca5-457a-8965-926cf944b98e': datetime.datetime(2021, 10, 26, 1, 17, 32, 423729), 'd019522e-414c-4ede-b067-d968115ca720': datetime.datetime(2021, 10, 26, 1, 17, 40, 489464)}
+finish_times={'04717793-a0e3-41a2-aca8-0c3e148d6125': (datetime.datetime(2021, 10, 26, 1, 7, 55, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 8, 5, tzinfo=tzlocal())), '09678b69-a66d-4563-8d8e-356acf5f67d9': (datetime.datetime(2021, 10, 26, 1, 17, 6, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 17, 26, tzinfo=tzlocal())), '12a7db9a-15d9-48e4-8d2e-f298814dd505': (datetime.datetime(2021, 10, 26, 1, 11, 17, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 14, 20, tzinfo=tzlocal())), '12fc7ad5-8bbb-4109-bb3e-929af112cfe2': (datetime.datetime(2021, 10, 26, 1, 9, 55, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 10, 46, tzinfo=tzlocal())), '1c1bda79-2181-4ff4-826f-ea6db04b36a2': (datetime.datetime(2021, 10, 26, 1, 14, 15, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 14, 47, tzinfo=tzlocal())), '1e2d0f96-65dc-4fbb-a53e-67b1032228f0': (datetime.datetime(2021, 10, 26, 1, 9, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 9, 18, tzinfo=tzlocal())), '20a6c33c-6456-4d6f-a407-352b3e3a2573': (datetime.datetime(2021, 10, 26, 1, 16, 13, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 16, 27, tzinfo=tzlocal())), '242ca34d-b63d-4bd9-87cf-54ab420992ba': (datetime.datetime(2021, 10, 26, 1, 10, 43, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 11, 32, tzinfo=tzlocal())), '27f486cf-8718-4631-ab9e-d058c15754f3': (datetime.datetime(2021, 10, 26, 1, 16, 22, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 16, 37, tzinfo=tzlocal())), '3001d09a-8e72-4abc-ab05-593be9f18908': (datetime.datetime(2021, 10, 26, 1, 11, 35, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 12, 43, tzinfo=tzlocal())), '31ef7c97-d1d5-4329-9691-6f276ee8c86f': (datetime.datetime(2021, 10, 26, 1, 15, 6, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 15, 30, tzinfo=tzlocal())), '3db4a0b8-d3d2-473d-8c82-62ca119931fe': (datetime.datetime(2021, 10, 26, 1, 15, 13, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 15, 24, tzinfo=tzlocal())), '3ff113f4-fd85-4ab7-9648-87b7679b7c94': (datetime.datetime(2021, 10, 26, 1, 13, 51, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 14, 8, tzinfo=tzlocal())), '41acf9f1-b6a8-4d9e-85c6-5e944b873beb': (datetime.datetime(2021, 10, 26, 1, 8, 10, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 8, 31, tzinfo=tzlocal())), '45083b31-7dfb-4097-944a-96daba0673e2': (datetime.datetime(2021, 10, 26, 1, 10, 59, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 11, 8, tzinfo=tzlocal())), '45cfd0d2-a5fa-4182-91dc-0dbeda079e40': (datetime.datetime(2021, 10, 26, 1, 10, 7, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 10, 35, tzinfo=tzlocal())), '4e6df7aa-ae53-4332-b2ee-b2c30cd5222f': (datetime.datetime(2021, 10, 26, 1, 10, 28, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 10, 44, tzinfo=tzlocal())), '4ea1d4bb-b445-43bb-a5a6-531f61490401': (datetime.datetime(2021, 10, 26, 1, 17, 13, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 17, 26, tzinfo=tzlocal())), '4efd7451-cf9d-4c7c-8a17-c39ab993f851': (datetime.datetime(2021, 10, 26, 1, 12, 32, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 12, 42, tzinfo=tzlocal())), '512d1f50-f380-413f-9653-3db38c6b4868': (datetime.datetime(2021, 10, 26, 1, 16, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 16, 9, tzinfo=tzlocal())), '567e7eed-b7e7-4963-a281-3f96391884b1': (datetime.datetime(2021, 10, 26, 1, 10, 38, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 11, 36, tzinfo=tzlocal())), '58fa273d-ccc0-40b8-9d10-2d39bd0fb8eb': (datetime.datetime(2021, 10, 26, 1, 12, 23, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 12, 33, tzinfo=tzlocal())), '5f577def-a284-442c-8584-d2c33d31ef60': (datetime.datetime(2021, 10, 26, 1, 10, 13, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 11, 47, tzinfo=tzlocal())), '6a5f8461-2adf-4933-bdc7-0a83b1e40af0': (datetime.datetime(2021, 10, 26, 1, 9, 8, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 9, 18, tzinfo=tzlocal())), '7158a0ef-34d3-48f5-8ef4-3548a31c6b26': (datetime.datetime(2021, 10, 26, 1, 16, 41, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 16, 54, tzinfo=tzlocal())), '7e805080-c678-4825-9614-5cbdd0d5946e': (datetime.datetime(2021, 10, 26, 1, 13, 33, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 13, 43, tzinfo=tzlocal())), '8283db69-fb30-4a3b-8a1d-de60205bbe7e': (datetime.datetime(2021, 10, 26, 1, 12, 51, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 13, 13, tzinfo=tzlocal())), '85a40621-f6a2-4ab4-ab9f-aefcb9398345': (datetime.datetime(2021, 10, 26, 1, 8, 31, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 8, 52, tzinfo=tzlocal())), '8da337ef-a798-4218-ad9a-bf2a1599ca3e': (datetime.datetime(2021, 10, 26, 1, 9, 36, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 9, 44, tzinfo=tzlocal())), '8e90b6c2-83e2-4410-b3f7-3a338d320409': (datetime.datetime(2021, 10, 26, 1, 14, 23, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 14, 32, tzinfo=tzlocal())), '9a1c7eae-2672-474b-822e-7c3ede14f211': (datetime.datetime(2021, 10, 26, 1, 10, 49, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 11, 3, tzinfo=tzlocal())), 'a18aea40-5ea3-474f-9a32-cac8f131849f': (datetime.datetime(2021, 10, 26, 1, 11, 9, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 11, 36, tzinfo=tzlocal())), 'a389b6ac-15d2-42ca-bce1-80323759e8cb': (datetime.datetime(2021, 10, 26, 1, 15, 44, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 15, 57, tzinfo=tzlocal())), 'a3bfaf52-4a0b-459d-8763-b1c3697ca1f0': (datetime.datetime(2021, 10, 26, 1, 12, 9, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 12, 22, tzinfo=tzlocal())), 'a50b26f0-1bec-4b35-b78a-a5e015d78d3c': (datetime.datetime(2021, 10, 26, 1, 12, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 12, 11, tzinfo=tzlocal())), 'a6e417a2-fac3-4a19-b936-8ab3821d2d99': (datetime.datetime(2021, 10, 26, 1, 14, 6, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 14, 15, tzinfo=tzlocal())), 'a9dd8826-1691-487d-adb5-b344f69a0de3': (datetime.datetime(2021, 10, 26, 1, 15, 31, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 15, 42, tzinfo=tzlocal())), 'b2e01985-aaf5-4ac0-ad79-a7a810a137db': (datetime.datetime(2021, 10, 26, 1, 14, 59, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 15, 9, tzinfo=tzlocal())), 'b7e37614-5339-492b-8426-2861b19ef78d': (datetime.datetime(2021, 10, 26, 1, 9, 18, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 9, 29, tzinfo=tzlocal())), 'b8a06d0c-7fb1-46f6-bb5d-417b9c042c51': (datetime.datetime(2021, 10, 26, 1, 16, 44, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 16, 55, tzinfo=tzlocal())), 'bfc3f3d0-63ce-487d-80af-1194c94a581d': (datetime.datetime(2021, 10, 26, 1, 14, 43, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 15, 42, tzinfo=tzlocal())), 'c902e8f7-871f-4a79-aaca-3d11252fa3fa': (datetime.datetime(2021, 10, 26, 1, 9, 27, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 9, 42, tzinfo=tzlocal())), 'ca02d308-4640-4cf6-aedb-d141fc45be64': (datetime.datetime(2021, 10, 26, 1, 13, 20, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 13, 32, tzinfo=tzlocal())), 'caa4e1e0-b80c-4e12-a041-4dc027d93d74': (datetime.datetime(2021, 10, 26, 1, 11, 47, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 14, 49, tzinfo=tzlocal())), 'ceea208d-be06-4a8a-b68c-2dc46d0581e5': (datetime.datetime(2021, 10, 26, 1, 13, 43, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 14, 11, tzinfo=tzlocal())), 'cfb6ac6d-bbf2-472c-8fb7-b860d30e2da9': (datetime.datetime(2021, 10, 26, 1, 8, 24, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 8, 34, tzinfo=tzlocal())), 'd4d79107-ea1b-4573-b5e9-73f79b939897': (datetime.datetime(2021, 10, 26, 1, 15, 22, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 15, 37, tzinfo=tzlocal())), 'd5614b77-0070-4794-a746-09f5d57180b4': (datetime.datetime(2021, 10, 26, 1, 8, 39, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 8, 53, tzinfo=tzlocal())), 'd72ae3b1-9ba8-485f-baa1-fb2544610d53': (datetime.datetime(2021, 10, 26, 1, 8, 49, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 9, 12, tzinfo=tzlocal())), 'd9aecf3d-a2b1-4b81-b0e4-2aa6bf0dce19': (datetime.datetime(2021, 10, 26, 1, 13, 7, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 13, 28, tzinfo=tzlocal())), 'da15e4ac-cea3-452a-89b5-435d847944c1': (datetime.datetime(2021, 10, 26, 1, 12, 39, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 12, 56, tzinfo=tzlocal())), 'daef4fa4-7ca3-4c22-aa9f-d80c80b9ed51': (datetime.datetime(2021, 10, 26, 1, 14, 33, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 15, 18, tzinfo=tzlocal())), 'db7f56dd-c896-49e5-b3fb-c08d7e0d901c': (datetime.datetime(2021, 10, 26, 1, 9, 47, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 9, 55, tzinfo=tzlocal())), 'dddd22b5-7199-44c1-ae1f-cef673b5fe73': (datetime.datetime(2021, 10, 26, 1, 11, 22, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 11, 32, tzinfo=tzlocal())), 'e494ad8f-35b3-4b93-94b9-4860ee618057': (datetime.datetime(2021, 10, 26, 1, 7, 59, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 8, 13, tzinfo=tzlocal())), 'e5604358-bcf6-4138-8873-daae9240a3f3': (datetime.datetime(2021, 10, 26, 1, 17, 1, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 17, 27, tzinfo=tzlocal())), 'ef398ec3-ea48-4fe0-80aa-991ca18d4bbc': (datetime.datetime(2021, 10, 26, 1, 10, 20, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 10, 42, tzinfo=tzlocal())), 'f1416d9b-5b98-4499-a3df-7e6c8c1f2586': (datetime.datetime(2021, 10, 26, 1, 16, 33, tzinfo=tzlocal()), datetime.datetime(2021, 10, 26, 1, 16, 47, tzinfo=tzlocal()))}
+restarts=0
+
+
+
+
+id,network,job_type,image_size,num_imgs,device,batch_size,data_parallelism,response_time
+04717793,swa,interpolation,256,100,cuda:0,4,1,11501
+e494ad8f,swa,random,256,400,cuda:0,4,1,14395
+41acf9f1,swa,random,1024,400,cuda:0,4,1,21322
+cfb6ac6d,style2ada,random,512,100,cuda:0,4,1,10195
+85a40621,mobile,interpolation,1024,800,cuda:0,4,1,21120
+d5614b77,mobile,interpolation,256,400,cuda:1,4,1,14094
+d72ae3b1,style1,interpolation,1024,800,cuda:0,4,1,24028
+1e2d0f96,swa,random,512,200,cuda:0,4,1,19006
+6a5f8461,mobile,random,1024,100,cuda:0,4,1,10978
+b7e37614,anycost,interpolation,256,400,cuda:0,4,1,11777
+c902e8f7,anycost,random,256,800,cuda:0,4,1,16740
+8da337ef,anycost,random,256,100,cuda:0,4,1,8560
+db7f56dd,style2ada,random,256,100,cuda:0,4,1,8523
+12fc7ad5,stylemap,interpolation,512,200,cuda:0,4,1,51335
+45cfd0d2,swa,random,256,100,cuda:0,4,1,28304
+5f577def,swa,random,1024,800,cuda:0,4,1,94283
+ef398ec3,style2ada,random,256,400,cuda:0,4,1,22263
+4e6df7aa,mobile,random,1024,100,cuda:1,4,1,16232
+567e7eed,anycost,random,1024,800,cuda:0,4,1,58098
+242ca34d,mobile,random,1024,800,cuda:1,4,1,49075
+9a1c7eae,anycost,random,512,100,cuda:0,4,1,16044
+45083b31,mobile,interpolation,256,200,cuda:0,4,1,13018
+a18aea40,anycost,interpolation,256,800,cuda:0,4,1,27980
+12a7db9a,stylemap,interpolation,1024,400,cuda:1,2,1,183955
+dddd22b5,mobile,random,256,100,cuda:0,4,1,10817
+3001d09a,swa,interpolation,1024,200,cuda:1,4,1,68735
+caa4e1e0,style2ada,interpolation,1024,800,cuda:1,4,1,182694
+a50b26f0,style1,random,512,800,cuda:0,4,1,11522
+a3bfaf52,style2,random,1024,100,cuda:0,4,1,13494
+58fa273d,swa,interpolation,512,100,cuda:0,4,1,10440
+4efd7451,anycost,interpolation,256,200,cuda:0,4,1,11256
+da15e4ac,swa,random,512,400,cuda:0,4,1,17227
+8283db69,swa,interpolation,1024,400,cuda:0,4,1,22110
+d9aecf3d,swa,interpolation,512,800,cuda:0,4,1,22004
+ca02d308,anycost,interpolation,256,400,cuda:0,4,1,12971
+7e805080,style2ada,random,512,100,cuda:0,4,1,10809
+ceea208d,style2,interpolation,512,800,cuda:0,4,1,28700
+3ff113f4,anycost,interpolation,1024,100,cuda:0,4,1,17561
+a6e417a2,style2,interpolation,256,100,cuda:0,4,1,9329
+1c1bda79,style2ada,interpolation,256,400,cuda:1,4,1,32298
+8e90b6c2,mobile,random,1024,100,cuda:0,4,1,11156
+daef4fa4,style2ada,random,1024,800,cuda:0,4,1,49122
+bfc3f3d0,stylemap,interpolation,256,800,cuda:0,4,1,60056
+b2e01985,style1,random,256,200,cuda:0,4,1,11916
+31ef7c97,anycost,interpolation,256,400,cuda:0,4,1,24889
+3db4a0b8,style1,interpolation,512,100,cuda:0,4,1,11803
+d4d79107,style1,interpolation,1024,200,cuda:0,4,1,15770
+a9dd8826,mobile,random,256,100,cuda:1,4,1,14751
+a389b6ac,style2,interpolation,512,100,cuda:1,4,1,13644
+512d1f50,style1,interpolation,1024,200,cuda:0,4,1,15451
+20a6c33c,anycost,random,1024,200,cuda:0,4,1,15328
+27f486cf,swa,random,256,400,cuda:0,4,1,15296
+f1416d9b,style1,interpolation,1024,400,cuda:0,4,1,17270
+7158a0ef,anycost,random,1024,100,cuda:0,4,1,13189
+b8a06d0c,swa,random,256,200,cuda:0,4,1,11100
+e5604358,mobile,random,1024,800,cuda:0,4,1,27978
+09678b69,swa,interpolation,512,200,cuda:0,4,1,20924
+4ea1d4bb,style1,random,1024,200,cuda:0,4,1,13774
+d416f692,style2,random,512,800,cuda:0,4,1,-1
+a97d0895,stylemap,interpolation,256,100,cuda:0,4,1,-1
+d019522e,anycost,interpolation,1024,200,cuda:0,4,1,-1
+
+
+
+

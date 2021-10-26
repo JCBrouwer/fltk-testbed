@@ -13,7 +13,7 @@
    },
    "execution_config": {
       "duration": 600,
-      "arrival_statistic": 3,
+      "arrival_statistic": 1,
       "scheduling": "improved",
       "experiment_prefix": "cloud_experiment",
       "cuda": true,
@@ -31,7 +31,7 @@
       },
       "reproducibility": {
          "torch_seed": 42,
-         "arrival_seed": 456
+         "arrival_seed": 1996
       }
    }
 }

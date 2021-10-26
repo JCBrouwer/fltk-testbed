@@ -1,0 +1,148 @@
+/usr/local/lib/python3.8/dist-packages/dataclasses_json/core.py:171: RuntimeWarning: `NoneType` object value of non-optional type config_path detected when decoding BareConfig.
+  warnings.warn(f"`NoneType` object {warning}.", RuntimeWarning)
+10-25-2021 21:21:52 root         INFO     Starting in cluster mode.
+10-25-2021 21:21:52 root         INFO     Starting as Orchestrator
+10-25-2021 21:21:52 root         INFO     Starting Orchestrator, initializing resources....
+10-25-2021 21:21:52 root         INFO     Loading in cluster configuration file
+10-25-2021 21:21:52 root         INFO     Pointing configuration to in cluster configuration.
+10-25-2021 21:21:52 root         INFO     Starting cluster manager
+10-25-2021 21:21:52 root         INFO     Starting arrival generator
+10-25-2021 21:21:52 root         INFO     Starting orchestrator
+anycost 1024 100 4 cuda:0 14072
+swa 512 100 8 cuda:1 7560
+style2 512 400 8 cuda:0 13608
+style2 512 800 4 cuda:1 7280
+style1 512 200 8 cuda:1 5952
+style1 1024 100 8 cuda:0 21152
+style1 1024 400 4 cuda:0 11368
+anycost 1024 800 4 cuda:0 14072
+anycost 256 200 8 cuda:1 7392
+anycost 1024 400 4 cuda:0 14072
+mobile 512 400 8 cuda:1 5176
+swa 512 800 8 cuda:1 7560
+style2ada 1024 800 2 cuda:1 8504
+mobile 1024 800 8 cuda:0 18792
+anycost 512 400 8 cuda:0 13616
+mobile 256 800 8 cuda:1 1488
+style1 256 100 8 cuda:1 2008
+10-25-2021 21:24:32 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/3c10ff5c-4c01-4bfb-aefc-f3ad98b7fd43 failed. Reason: 'NoneType' object is not iterable
+swa 256 200 8 cuda:1 4152
+mobile 512 400 8 cuda:0 5176
+style2 512 100 8 cuda:0 13608
+style2ada 256 800 8 cuda:0 8328
+style2 1024 400 2 cuda:1 7536
+style2 512 100 8 cuda:0 13608
+style1 512 200 8 cuda:1 5952
+style2ada 512 100 4 cuda:0 8312
+style2ada 512 200 8 cuda:0 15664
+style2 512 100 8 cuda:0 13608
+style2ada 512 100 8 cuda:0 15664
+style1 512 100 8 cuda:1 5952
+stylemap 256 100 8 cuda:0 23344
+style2 512 800 4 cuda:1 7280
+style1 1024 100 8 cuda:0 21152
+swa 256 400 8 cuda:1 4152
+10-25-2021 21:27:03 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/9560a59e-ccee-4fd4-a658-17909738b452 failed. Reason: 'NoneType' object is not iterable
+stylemap 1024 800 2 cuda:0 23976
+10-25-2021 21:27:18 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/a7dcdda5-efe1-455c-ab27-7cd3b2916262 failed. Reason: 'NoneType' object is not iterable
+style2 1024 800 4 cuda:0 14048
+swa 512 800 8 cuda:1 7560
+style2 256 100 8 cuda:0 7376
+style1 256 200 8 cuda:1 2008
+anycost 1024 800 2 cuda:0 7544
+anycost 512 100 4 cuda:1 7280
+anycost 256 200 8 cuda:1 7392
+anycost 256 200 4 cuda:0 4160
+style2 1024 200 2 cuda:1 7536
+style1 1024 800 2 cuda:1 6512
+style2ada 256 200 4 cuda:0 4640
+style2ada 256 200 4 cuda:0 4640
+style1 256 200 8 cuda:1 2008
+anycost 256 200 8 cuda:1 7392
+mobile 256 200 8 cuda:1 1488
+stylemap 512 200 1 cuda:1 7768
+style1 1024 800 4 cuda:0 11368
+style2ada 256 800 8 cuda:0 8328
+mobile 512 100 8 cuda:1 5176
+swa 256 100 8 cuda:1 4152
+10-25-2021 21:31:02 ResourceWatchDog ERROR    Finish time lookup for ubuntu94025/2c8a03ac-10f9-484f-a3d2-60502f32a5cc failed. Reason: 'NoneType' object is not iterable
+anycost 1024 100 2 cuda:0 7544
+mobile 256 200 8 cuda:1 1488
+swa 512 100 8 cuda:1 7560
+style2ada 1024 800 4 cuda:0 15984
+
+
+
+
+task_info={UUID('5dfe7e02-cc20-4360-9394-f865fa54f7d3'): ('anycost', 1024, 'interpolation', 100, 'cuda:0', 4, 1), UUID('a0e7485d-2a0c-4fde-908a-f68d488c0bb6'): ('swa', 512, 'interpolation', 100, 'cuda:1', 8, 1), UUID('493448d8-f980-4c95-9a1c-9f8ab54cc2f2'): ('style2', 512, 'random', 400, 'cuda:0', 8, 1), UUID('41b316dd-28eb-42f1-adc0-07a47caab0d4'): ('style2', 512, 'random', 800, 'cuda:1', 4, 1), UUID('60e70fc5-36f2-42d4-abbe-f7af13292cf2'): ('style1', 512, 'random', 200, 'cuda:1', 8, 1), UUID('720444dc-6c81-4ef4-9dcb-5ec5e9c7351c'): ('style1', 1024, 'random', 100, 'cuda:0', 8, 1), UUID('c59bd723-4cd0-43dc-a3de-4e4f5fc1b776'): ('style1', 1024, 'interpolation', 400, 'cuda:0', 4, 1), UUID('f714c7df-4e6f-4fdc-bfb9-657a8f71ed2d'): ('anycost', 1024, 'interpolation', 800, 'cuda:0', 4, 1), UUID('df440c70-f10f-4158-b607-72b07ed11846'): ('anycost', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('7e061357-4f04-4529-acd0-18aef2edc195'): ('anycost', 1024, 'interpolation', 400, 'cuda:0', 4, 1), UUID('48605c27-56ca-41ab-9241-a97a3e4fcf67'): ('mobile', 512, 'random', 400, 'cuda:1', 8, 1), UUID('5fc4c93a-e104-4deb-979f-e3d3f516269b'): ('swa', 512, 'random', 800, 'cuda:1', 8, 1), UUID('dbd84cd4-f3f0-4ac3-92c2-b65d76c5ca23'): ('style2ada', 1024, 'random', 800, 'cuda:1', 2, 1), UUID('3d77a358-179b-4682-886e-d125a30a89ed'): ('mobile', 1024, 'random', 800, 'cuda:0', 8, 1), UUID('d5721edc-7749-44bd-b96a-686786961481'): ('anycost', 512, 'random', 400, 'cuda:0', 8, 1), UUID('141063c2-5165-4c8d-81fc-f4a47b014e76'): ('mobile', 256, 'interpolation', 800, 'cuda:1', 8, 1), UUID('3c10ff5c-4c01-4bfb-aefc-f3ad98b7fd43'): ('style1', 256, 'interpolation', 100, 'cuda:1', 8, 1), UUID('a5c690a6-9d52-490d-8519-6788d41df017'): ('swa', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('6dc816d3-fd4b-4382-8d4b-156f78a16a51'): ('mobile', 512, 'random', 400, 'cuda:0', 8, 1), UUID('df3f4f60-af8b-4176-a071-5d87773284e2'): ('style2', 512, 'random', 100, 'cuda:0', 8, 1), UUID('554a2934-5a17-4ba1-80a5-1db7078f5646'): ('style2ada', 256, 'interpolation', 800, 'cuda:0', 8, 1), UUID('a9659640-fc27-48f4-ba06-cb8e91650494'): ('style2', 1024, 'random', 400, 'cuda:1', 2, 1), UUID('0762bcce-0197-471f-94d8-3e2b61b8046b'): ('style2', 512, 'random', 100, 'cuda:0', 8, 1), UUID('369d73c4-5bf5-4028-b831-b24ad3e29588'): ('style1', 512, 'interpolation', 200, 'cuda:1', 8, 1), UUID('3e8f484b-89ab-4297-8d45-cd33f782b476'): ('style2ada', 512, 'interpolation', 100, 'cuda:0', 4, 1), UUID('926d1b59-9845-41ac-a491-ed185e8fb846'): ('style2ada', 512, 'random', 200, 'cuda:0', 8, 1), UUID('e2672686-308b-401e-a030-864fd513cae7'): ('style2', 512, 'random', 100, 'cuda:0', 8, 1), UUID('445f81b4-cc45-4e4d-a1d1-260452007d2b'): ('style2ada', 512, 'interpolation', 100, 'cuda:0', 8, 1), UUID('8588bd34-9850-4f3a-bdb1-87ef7fed263d'): ('style1', 512, 'random', 100, 'cuda:1', 8, 1), UUID('3458a10c-8efc-4e43-af36-c64fa4321692'): ('stylemap', 256, 'random', 100, 'cuda:0', 8, 1), UUID('c3cb4889-43c1-4162-93a9-e2677c424953'): ('style2', 512, 'random', 800, 'cuda:1', 4, 1), UUID('614808ee-41eb-457b-9279-6a9288ff6b5f'): ('style1', 1024, 'interpolation', 100, 'cuda:0', 8, 1), UUID('9560a59e-ccee-4fd4-a658-17909738b452'): ('swa', 256, 'random', 400, 'cuda:1', 8, 1), UUID('a7dcdda5-efe1-455c-ab27-7cd3b2916262'): ('stylemap', 1024, 'random', 800, 'cuda:0', 2, 1), UUID('f13c920f-8fab-4ff3-abdd-6c8309c1061d'): ('style2', 1024, 'interpolation', 800, 'cuda:0', 4, 1), UUID('ce1ddfa0-d3be-42f0-8e30-112129db961e'): ('swa', 512, 'interpolation', 800, 'cuda:1', 8, 1), UUID('ee28a740-686a-4100-a05f-be9d04884aeb'): ('style2', 256, 'random', 100, 'cuda:0', 8, 1), UUID('39ff80e2-ee63-47fb-956f-308aec74169f'): ('style1', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('a1b2b23b-5a6c-4005-aa93-d551913d0cf8'): ('anycost', 1024, 'interpolation', 800, 'cuda:0', 2, 1), UUID('6aa3c166-0c44-44b5-85c8-7ec3729c7431'): ('anycost', 512, 'random', 100, 'cuda:1', 4, 1), UUID('8b293105-688b-4938-8fe1-cd74336f5780'): ('anycost', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('e66bae7b-cbb4-4f33-b45c-681856272f33'): ('anycost', 256, 'random', 200, 'cuda:0', 4, 1), UUID('82413954-faf6-4b01-8bbd-778df5e0effd'): ('stylemap', 1024, 'random', 400, -1, -1, 1), UUID('0253aa4e-926c-40bb-993f-b148c93e91e2'): ('style2', 1024, 'interpolation', 200, 'cuda:1', 2, 1), UUID('1604c22a-20af-42c4-b900-78466f3e7040'): ('style1', 1024, 'random', 800, 'cuda:1', 2, 1), UUID('f686473f-8444-430b-b28f-7f048d4ae1a0'): ('style2ada', 256, 'interpolation', 200, 'cuda:0', 4, 1), UUID('86bf38cf-a1b3-4f7d-b064-c5239e743cff'): ('style2ada', 256, 'random', 200, 'cuda:0', 4, 1), UUID('d63e71a5-a5de-493f-94c1-56b92f77344b'): ('style1', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('27cf04fc-7cd6-4e69-ba1c-c492312b36dc'): ('anycost', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('8ab0a6ce-482b-413f-92f1-f8d97d7f547f'): ('mobile', 256, 'random', 200, 'cuda:1', 8, 1), UUID('8066090e-8c86-444d-85aa-e6dd035db2cb'): ('stylemap', 512, 'random', 200, 'cuda:1', 1, 1), UUID('99075d5d-6f13-4c52-bcdb-784a89f73549'): ('style1', 1024, 'random', 800, 'cuda:0', 4, 1), UUID('adc438a3-3afc-4f13-a239-f6db0728c845'): ('style2ada', 256, 'random', 800, 'cuda:0', 8, 1), UUID('15b85b4d-e94a-47f7-bedc-48d7b1744d5d'): ('mobile', 512, 'interpolation', 100, 'cuda:1', 8, 1), UUID('2c8a03ac-10f9-484f-a3d2-60502f32a5cc'): ('swa', 256, 'random', 100, 'cuda:1', 8, 1), UUID('c5cfdcac-aff8-450f-868f-5e96b1d019ec'): ('stylemap', 1024, 'interpolation', 800, -1, -1, 1), UUID('c0260435-5344-421d-82d3-4ccb4062433b'): ('anycost', 1024, 'interpolation', 100, 'cuda:0', 2, 1), UUID('d0e37556-59c9-4173-9b2b-8a5dcb21c82b'): ('mobile', 256, 'interpolation', 200, 'cuda:1', 8, 1), UUID('4c22fe75-1eae-4150-b931-7b298e91c229'): ('swa', 512, 'interpolation', 100, 'cuda:1', 8, 1), UUID('5b8f6337-49ea-43d1-a48c-5fb1041636e6'): ('style2ada', 1024, 'interpolation', 800, 'cuda:0', 4, 1)}
+arrival_times={UUID('5dfe7e02-cc20-4360-9394-f865fa54f7d3'): datetime.datetime(2021, 10, 25, 21, 22, 7, 228546), UUID('a0e7485d-2a0c-4fde-908a-f68d488c0bb6'): datetime.datetime(2021, 10, 25, 21, 22, 12, 245302), UUID('493448d8-f980-4c95-9a1c-9f8ab54cc2f2'): datetime.datetime(2021, 10, 25, 21, 22, 22, 264463), UUID('41b316dd-28eb-42f1-adc0-07a47caab0d4'): datetime.datetime(2021, 10, 25, 21, 22, 37, 287454), UUID('60e70fc5-36f2-42d4-abbe-f7af13292cf2'): datetime.datetime(2021, 10, 25, 21, 22, 42, 316325), UUID('720444dc-6c81-4ef4-9dcb-5ec5e9c7351c'): datetime.datetime(2021, 10, 25, 21, 22, 52, 406639), UUID('c59bd723-4cd0-43dc-a3de-4e4f5fc1b776'): datetime.datetime(2021, 10, 25, 21, 23, 2, 424538), UUID('f714c7df-4e6f-4fdc-bfb9-657a8f71ed2d'): datetime.datetime(2021, 10, 25, 21, 23, 12, 447291), UUID('df440c70-f10f-4158-b607-72b07ed11846'): datetime.datetime(2021, 10, 25, 21, 23, 17, 464550), UUID('7e061357-4f04-4529-acd0-18aef2edc195'): datetime.datetime(2021, 10, 25, 21, 23, 27, 488452), UUID('48605c27-56ca-41ab-9241-a97a3e4fcf67'): datetime.datetime(2021, 10, 25, 21, 23, 37, 508700), UUID('5fc4c93a-e104-4deb-979f-e3d3f516269b'): datetime.datetime(2021, 10, 25, 21, 23, 47, 532995), UUID('dbd84cd4-f3f0-4ac3-92c2-b65d76c5ca23'): datetime.datetime(2021, 10, 25, 21, 23, 57, 561547), UUID('3d77a358-179b-4682-886e-d125a30a89ed'): datetime.datetime(2021, 10, 25, 21, 24, 7, 580552), UUID('d5721edc-7749-44bd-b96a-686786961481'): datetime.datetime(2021, 10, 25, 21, 24, 17, 600665), UUID('141063c2-5165-4c8d-81fc-f4a47b014e76'): datetime.datetime(2021, 10, 25, 21, 24, 22, 616772), UUID('3c10ff5c-4c01-4bfb-aefc-f3ad98b7fd43'): datetime.datetime(2021, 10, 25, 21, 24, 32, 632624), UUID('a5c690a6-9d52-490d-8519-6788d41df017'): datetime.datetime(2021, 10, 25, 21, 24, 37, 648537), UUID('6dc816d3-fd4b-4382-8d4b-156f78a16a51'): datetime.datetime(2021, 10, 25, 21, 24, 47, 678595), UUID('df3f4f60-af8b-4176-a071-5d87773284e2'): datetime.datetime(2021, 10, 25, 21, 24, 52, 836529), UUID('554a2934-5a17-4ba1-80a5-1db7078f5646'): datetime.datetime(2021, 10, 25, 21, 24, 57, 848578), UUID('a9659640-fc27-48f4-ba06-cb8e91650494'): datetime.datetime(2021, 10, 25, 21, 25, 7, 868540), UUID('0762bcce-0197-471f-94d8-3e2b61b8046b'): datetime.datetime(2021, 10, 25, 21, 25, 17, 884494), UUID('369d73c4-5bf5-4028-b831-b24ad3e29588'): datetime.datetime(2021, 10, 25, 21, 25, 27, 904494), UUID('3e8f484b-89ab-4297-8d45-cd33f782b476'): datetime.datetime(2021, 10, 25, 21, 25, 32, 920667), UUID('926d1b59-9845-41ac-a491-ed185e8fb846'): datetime.datetime(2021, 10, 25, 21, 25, 47, 950711), UUID('e2672686-308b-401e-a030-864fd513cae7'): datetime.datetime(2021, 10, 25, 21, 25, 57, 972672), UUID('445f81b4-cc45-4e4d-a1d1-260452007d2b'): datetime.datetime(2021, 10, 25, 21, 26, 12, 993609), UUID('8588bd34-9850-4f3a-bdb1-87ef7fed263d'): datetime.datetime(2021, 10, 25, 21, 26, 23, 16517), UUID('3458a10c-8efc-4e43-af36-c64fa4321692'): datetime.datetime(2021, 10, 25, 21, 26, 33, 41583), UUID('c3cb4889-43c1-4162-93a9-e2677c424953'): datetime.datetime(2021, 10, 25, 21, 26, 43, 60495), UUID('614808ee-41eb-457b-9279-6a9288ff6b5f'): datetime.datetime(2021, 10, 25, 21, 26, 53, 80491), UUID('9560a59e-ccee-4fd4-a658-17909738b452'): datetime.datetime(2021, 10, 25, 21, 27, 3, 97588), UUID('a7dcdda5-efe1-455c-ab27-7cd3b2916262'): datetime.datetime(2021, 10, 25, 21, 27, 18, 120961), UUID('f13c920f-8fab-4ff3-abdd-6c8309c1061d'): datetime.datetime(2021, 10, 25, 21, 27, 33, 140461), UUID('ce1ddfa0-d3be-42f0-8e30-112129db961e'): datetime.datetime(2021, 10, 25, 21, 27, 43, 164522), UUID('ee28a740-686a-4100-a05f-be9d04884aeb'): datetime.datetime(2021, 10, 25, 21, 27, 53, 238039), UUID('39ff80e2-ee63-47fb-956f-308aec74169f'): datetime.datetime(2021, 10, 25, 21, 28, 3, 320544), UUID('a1b2b23b-5a6c-4005-aa93-d551913d0cf8'): datetime.datetime(2021, 10, 25, 21, 28, 18, 344525), UUID('6aa3c166-0c44-44b5-85c8-7ec3729c7431'): datetime.datetime(2021, 10, 25, 21, 28, 28, 374643), UUID('8b293105-688b-4938-8fe1-cd74336f5780'): datetime.datetime(2021, 10, 25, 21, 28, 33, 428514), UUID('e66bae7b-cbb4-4f33-b45c-681856272f33'): datetime.datetime(2021, 10, 25, 21, 28, 43, 455180), UUID('82413954-faf6-4b01-8bbd-778df5e0effd'): datetime.datetime(2021, 10, 25, 21, 28, 53, 482658), UUID('0253aa4e-926c-40bb-993f-b148c93e91e2'): datetime.datetime(2021, 10, 25, 21, 29, 10, 500385), UUID('1604c22a-20af-42c4-b900-78466f3e7040'): datetime.datetime(2021, 10, 25, 21, 29, 15, 516680), UUID('f686473f-8444-430b-b28f-7f048d4ae1a0'): datetime.datetime(2021, 10, 25, 21, 29, 25, 533439), UUID('86bf38cf-a1b3-4f7d-b064-c5239e743cff'): datetime.datetime(2021, 10, 25, 21, 29, 35, 548489), UUID('d63e71a5-a5de-493f-94c1-56b92f77344b'): datetime.datetime(2021, 10, 25, 21, 29, 40, 564536), UUID('27cf04fc-7cd6-4e69-ba1c-c492312b36dc'): datetime.datetime(2021, 10, 25, 21, 29, 55, 599651), UUID('8ab0a6ce-482b-413f-92f1-f8d97d7f547f'): datetime.datetime(2021, 10, 25, 21, 30, 5, 758637), UUID('8066090e-8c86-444d-85aa-e6dd035db2cb'): datetime.datetime(2021, 10, 25, 21, 30, 25, 922043), UUID('99075d5d-6f13-4c52-bcdb-784a89f73549'): datetime.datetime(2021, 10, 25, 21, 30, 35, 956423), UUID('adc438a3-3afc-4f13-a239-f6db0728c845'): datetime.datetime(2021, 10, 25, 21, 30, 41, 15886), UUID('15b85b4d-e94a-47f7-bedc-48d7b1744d5d'): datetime.datetime(2021, 10, 25, 21, 30, 51, 38654), UUID('2c8a03ac-10f9-484f-a3d2-60502f32a5cc'): datetime.datetime(2021, 10, 25, 21, 30, 56, 57589), UUID('c5cfdcac-aff8-450f-868f-5e96b1d019ec'): datetime.datetime(2021, 10, 25, 21, 31, 11, 153552), UUID('c0260435-5344-421d-82d3-4ccb4062433b'): datetime.datetime(2021, 10, 25, 21, 31, 18, 165630), UUID('d0e37556-59c9-4173-9b2b-8a5dcb21c82b'): datetime.datetime(2021, 10, 25, 21, 31, 23, 197311), UUID('4c22fe75-1eae-4150-b931-7b298e91c229'): datetime.datetime(2021, 10, 25, 21, 31, 33, 218270), UUID('5b8f6337-49ea-43d1-a48c-5fb1041636e6'): datetime.datetime(2021, 10, 25, 21, 31, 43, 236495)}
+finish_times={'0253aa4e-926c-40bb-993f-b148c93e91e2': (datetime.datetime(2021, 10, 25, 21, 29, 11, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 29, 49, tzinfo=tzlocal())), '0762bcce-0197-471f-94d8-3e2b61b8046b': (datetime.datetime(2021, 10, 25, 21, 25, 19, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 25, 33, tzinfo=tzlocal())), '141063c2-5165-4c8d-81fc-f4a47b014e76': (datetime.datetime(2021, 10, 25, 21, 24, 23, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 24, 46, tzinfo=tzlocal())), '15b85b4d-e94a-47f7-bedc-48d7b1744d5d': (datetime.datetime(2021, 10, 25, 21, 30, 52, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 31, 10, tzinfo=tzlocal())), '1604c22a-20af-42c4-b900-78466f3e7040': (datetime.datetime(2021, 10, 25, 21, 29, 16, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 30, 11, tzinfo=tzlocal())), '27cf04fc-7cd6-4e69-ba1c-c492312b36dc': (datetime.datetime(2021, 10, 25, 21, 29, 58, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 30, 16, tzinfo=tzlocal())), '2c8a03ac-10f9-484f-a3d2-60502f32a5cc': (datetime.datetime(2021, 10, 25, 21, 31, 2, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 31, 26, tzinfo=tzlocal())), '3458a10c-8efc-4e43-af36-c64fa4321692': (datetime.datetime(2021, 10, 25, 21, 26, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 26, 49, tzinfo=tzlocal())), '369d73c4-5bf5-4028-b831-b24ad3e29588': (datetime.datetime(2021, 10, 25, 21, 25, 29, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 25, 44, tzinfo=tzlocal())), '39ff80e2-ee63-47fb-956f-308aec74169f': (datetime.datetime(2021, 10, 25, 21, 28, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 28, 19, tzinfo=tzlocal())), '3c10ff5c-4c01-4bfb-aefc-f3ad98b7fd43': (datetime.datetime(2021, 10, 25, 21, 24, 33, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 24, 46, tzinfo=tzlocal())), '3d77a358-179b-4682-886e-d125a30a89ed': (datetime.datetime(2021, 10, 25, 21, 24, 8, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 24, 33, tzinfo=tzlocal())), '3e8f484b-89ab-4297-8d45-cd33f782b476': (datetime.datetime(2021, 10, 25, 21, 25, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 25, 44, tzinfo=tzlocal())), '41b316dd-28eb-42f1-adc0-07a47caab0d4': (datetime.datetime(2021, 10, 25, 21, 22, 38, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 23, 18, tzinfo=tzlocal())), '445f81b4-cc45-4e4d-a1d1-260452007d2b': (datetime.datetime(2021, 10, 25, 21, 26, 14, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 26, 23, tzinfo=tzlocal())), '48605c27-56ca-41ab-9241-a97a3e4fcf67': (datetime.datetime(2021, 10, 25, 21, 23, 38, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 23, 53, tzinfo=tzlocal())), '493448d8-f980-4c95-9a1c-9f8ab54cc2f2': (datetime.datetime(2021, 10, 25, 21, 22, 23, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 22, 40, tzinfo=tzlocal())), '4c22fe75-1eae-4150-b931-7b298e91c229': (datetime.datetime(2021, 10, 25, 21, 31, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 31, 53, tzinfo=tzlocal())), '554a2934-5a17-4ba1-80a5-1db7078f5646': (datetime.datetime(2021, 10, 25, 21, 24, 58, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 25, 20, tzinfo=tzlocal())), '5dfe7e02-cc20-4360-9394-f865fa54f7d3': (datetime.datetime(2021, 10, 25, 21, 22, 8, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 22, 19, tzinfo=tzlocal())), '5fc4c93a-e104-4deb-979f-e3d3f516269b': (datetime.datetime(2021, 10, 25, 21, 23, 48, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 24, 42, tzinfo=tzlocal())), '60e70fc5-36f2-42d4-abbe-f7af13292cf2': (datetime.datetime(2021, 10, 25, 21, 22, 43, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 22, 56, tzinfo=tzlocal())), '614808ee-41eb-457b-9279-6a9288ff6b5f': (datetime.datetime(2021, 10, 25, 21, 26, 58, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 27, 6, tzinfo=tzlocal())), '6aa3c166-0c44-44b5-85c8-7ec3729c7431': (datetime.datetime(2021, 10, 25, 21, 28, 29, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 28, 47, tzinfo=tzlocal())), '6dc816d3-fd4b-4382-8d4b-156f78a16a51': (datetime.datetime(2021, 10, 25, 21, 24, 48, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 24, 58, tzinfo=tzlocal())), '720444dc-6c81-4ef4-9dcb-5ec5e9c7351c': (datetime.datetime(2021, 10, 25, 21, 22, 53, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 23, 3, tzinfo=tzlocal())), '7e061357-4f04-4529-acd0-18aef2edc195': (datetime.datetime(2021, 10, 25, 21, 23, 28, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 23, 57, tzinfo=tzlocal())), '8066090e-8c86-444d-85aa-e6dd035db2cb': (datetime.datetime(2021, 10, 25, 21, 30, 29, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 31, 27, tzinfo=tzlocal())), '8588bd34-9850-4f3a-bdb1-87ef7fed263d': (datetime.datetime(2021, 10, 25, 21, 26, 26, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 26, 37, tzinfo=tzlocal())), '86bf38cf-a1b3-4f7d-b064-c5239e743cff': (datetime.datetime(2021, 10, 25, 21, 29, 36, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 29, 57, tzinfo=tzlocal())), '8ab0a6ce-482b-413f-92f1-f8d97d7f547f': (datetime.datetime(2021, 10, 25, 21, 30, 6, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 30, 20, tzinfo=tzlocal())), '8b293105-688b-4938-8fe1-cd74336f5780': (datetime.datetime(2021, 10, 25, 21, 28, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 28, 54, tzinfo=tzlocal())), '926d1b59-9845-41ac-a491-ed185e8fb846': (datetime.datetime(2021, 10, 25, 21, 25, 49, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 25, 59, tzinfo=tzlocal())), '9560a59e-ccee-4fd4-a658-17909738b452': (datetime.datetime(2021, 10, 25, 21, 27, 4, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 27, 33, tzinfo=tzlocal())), '99075d5d-6f13-4c52-bcdb-784a89f73549': (datetime.datetime(2021, 10, 25, 21, 30, 37, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 31, 14, tzinfo=tzlocal())), 'a0e7485d-2a0c-4fde-908a-f68d488c0bb6': (datetime.datetime(2021, 10, 25, 21, 22, 13, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 22, 27, tzinfo=tzlocal())), 'a1b2b23b-5a6c-4005-aa93-d551913d0cf8': (datetime.datetime(2021, 10, 25, 21, 28, 19, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 31, tzinfo=tzlocal())), 'a5c690a6-9d52-490d-8519-6788d41df017': (datetime.datetime(2021, 10, 25, 21, 24, 38, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 25, 2, tzinfo=tzlocal())), 'a7dcdda5-efe1-455c-ab27-7cd3b2916262': (datetime.datetime(2021, 10, 25, 21, 27, 19, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 31, 39, tzinfo=tzlocal())), 'a9659640-fc27-48f4-ba06-cb8e91650494': (datetime.datetime(2021, 10, 25, 21, 25, 9, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 26, 1, tzinfo=tzlocal())), 'adc438a3-3afc-4f13-a239-f6db0728c845': (datetime.datetime(2021, 10, 25, 21, 30, 42, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 31, 20, tzinfo=tzlocal())), 'c0260435-5344-421d-82d3-4ccb4062433b': (datetime.datetime(2021, 10, 25, 21, 31, 19, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 31, 39, tzinfo=tzlocal())), 'c3cb4889-43c1-4162-93a9-e2677c424953': (datetime.datetime(2021, 10, 25, 21, 26, 44, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 27, 25, tzinfo=tzlocal())), 'c59bd723-4cd0-43dc-a3de-4e4f5fc1b776': (datetime.datetime(2021, 10, 25, 21, 23, 3, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 23, 17, tzinfo=tzlocal())), 'ce1ddfa0-d3be-42f0-8e30-112129db961e': (datetime.datetime(2021, 10, 25, 21, 27, 44, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 28, 19, tzinfo=tzlocal())), 'd0e37556-59c9-4173-9b2b-8a5dcb21c82b': (datetime.datetime(2021, 10, 25, 21, 31, 30, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 31, 43, tzinfo=tzlocal())), 'd5721edc-7749-44bd-b96a-686786961481': (datetime.datetime(2021, 10, 25, 21, 24, 18, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 24, 40, tzinfo=tzlocal())), 'd63e71a5-a5de-493f-94c1-56b92f77344b': (datetime.datetime(2021, 10, 25, 21, 29, 41, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 29, 52, tzinfo=tzlocal())), 'dbd84cd4-f3f0-4ac3-92c2-b65d76c5ca23': (datetime.datetime(2021, 10, 25, 21, 23, 58, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 25, 38, tzinfo=tzlocal())), 'df3f4f60-af8b-4176-a071-5d87773284e2': (datetime.datetime(2021, 10, 25, 21, 24, 56, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 25, 13, tzinfo=tzlocal())), 'df440c70-f10f-4158-b607-72b07ed11846': (datetime.datetime(2021, 10, 25, 21, 23, 18, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 23, 34, tzinfo=tzlocal())), 'e2672686-308b-401e-a030-864fd513cae7': (datetime.datetime(2021, 10, 25, 21, 25, 59, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 26, 10, tzinfo=tzlocal())), 'e66bae7b-cbb4-4f33-b45c-681856272f33': (datetime.datetime(2021, 10, 25, 21, 28, 44, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 29, 22, tzinfo=tzlocal())), 'ee28a740-686a-4100-a05f-be9d04884aeb': (datetime.datetime(2021, 10, 25, 21, 27, 57, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 28, 15, tzinfo=tzlocal())), 'f13c920f-8fab-4ff3-abdd-6c8309c1061d': (datetime.datetime(2021, 10, 25, 21, 27, 34, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 30, 11, tzinfo=tzlocal())), 'f686473f-8444-430b-b28f-7f048d4ae1a0': (datetime.datetime(2021, 10, 25, 21, 29, 28, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 30, 9, tzinfo=tzlocal())), 'f714c7df-4e6f-4fdc-bfb9-657a8f71ed2d': (datetime.datetime(2021, 10, 25, 21, 23, 13, tzinfo=tzlocal()), datetime.datetime(2021, 10, 25, 21, 24, 2, tzinfo=tzlocal()))}
+
+
+
+
+id,network,job_type,image_size,num_imgs,device,batch_size,data_parallelism,response_time
+5dfe7e02,anycost,interpolation,1024,100,cuda:0,4,1,11771
+a0e7485d,swa,interpolation,512,100,cuda:1,8,1,14754
+493448d8,style2,random,512,400,cuda:0,8,1,17735
+41b316dd,style2,random,512,800,cuda:1,4,1,40712
+60e70fc5,style1,random,512,200,cuda:1,8,1,13683
+720444dc,style1,random,1024,100,cuda:0,8,1,10593
+c59bd723,style1,interpolation,1024,400,cuda:0,4,1,14575
+f714c7df,anycost,interpolation,1024,800,cuda:0,4,1,49552
+df440c70,anycost,interpolation,256,200,cuda:1,8,1,16535
+7e061357,anycost,interpolation,1024,400,cuda:0,4,1,29511
+48605c27,mobile,random,512,400,cuda:1,8,1,15491
+5fc4c93a,swa,random,512,800,cuda:1,8,1,54467
+dbd84cd4,style2ada,random,1024,800,cuda:1,2,1,100438
+3d77a358,mobile,random,1024,800,cuda:0,8,1,25419
+d5721edc,anycost,random,512,400,cuda:0,8,1,22399
+141063c2,mobile,interpolation,256,800,cuda:1,8,1,23383
+3c10ff5c,style1,interpolation,256,100,cuda:1,8,1,13367
+a5c690a6,swa,interpolation,256,200,cuda:1,8,1,24351
+6dc816d3,mobile,random,512,400,cuda:0,8,1,10321
+df3f4f60,style2,random,512,100,cuda:0,8,1,20163
+554a2934,style2ada,interpolation,256,800,cuda:0,8,1,22151
+a9659640,style2,random,1024,400,cuda:1,2,1,53131
+0762bcce,style2,random,512,100,cuda:0,8,1,15115
+369d73c4,style1,interpolation,512,200,cuda:1,8,1,16095
+3e8f484b,style2ada,interpolation,512,100,cuda:0,4,1,11079
+926d1b59,style2ada,random,512,200,cuda:0,8,1,11049
+e2672686,style2,random,512,100,cuda:0,8,1,12027
+445f81b4,style2ada,interpolation,512,100,cuda:0,8,1,10006
+8588bd34,style1,random,512,100,cuda:1,8,1,13983
+3458a10c,stylemap,random,256,100,cuda:0,8,1,15958
+c3cb4889,style2,random,512,800,cuda:1,4,1,41939
+614808ee,style1,interpolation,1024,100,cuda:0,8,1,12919
+9560a59e,swa,random,256,400,cuda:1,8,1,29902
+a7dcdda5,stylemap,random,1024,800,cuda:0,2,1,260879
+f13c920f,style2,interpolation,1024,800,cuda:0,4,1,157859
+ce1ddfa0,swa,interpolation,512,800,cuda:1,8,1,35835
+ee28a740,style2,random,256,100,cuda:0,8,1,21761
+39ff80e2,style1,interpolation,256,200,cuda:1,8,1,15679
+a1b2b23b,anycost,interpolation,1024,800,cuda:0,2,1,161655
+6aa3c166,anycost,random,512,100,cuda:1,4,1,18625
+8b293105,anycost,interpolation,256,200,cuda:1,8,1,20571
+e66bae7b,anycost,random,256,200,cuda:0,4,1,38544
+82413954,stylemap,random,1024,400,-1,-1,1,-1
+0253aa4e,style2,interpolation,1024,200,cuda:1,2,1,38499
+1604c22a,style1,random,1024,800,cuda:1,2,1,55483
+f686473f,style2ada,interpolation,256,200,cuda:0,4,1,43466
+86bf38cf,style2ada,random,256,200,cuda:0,4,1,21451
+d63e71a5,style1,interpolation,256,200,cuda:1,8,1,11435
+27cf04fc,anycost,interpolation,256,200,cuda:1,8,1,20400
+8ab0a6ce,mobile,random,256,200,cuda:1,8,1,14241
+8066090e,stylemap,random,512,200,cuda:1,1,1,61077
+99075d5d,style1,random,1024,800,cuda:0,4,1,38043
+adc438a3,style2ada,random,256,800,cuda:0,8,1,38984
+15b85b4d,mobile,interpolation,512,100,cuda:1,8,1,18961
+2c8a03ac,swa,random,256,100,cuda:1,8,1,29942
+c5cfdcac,stylemap,interpolation,1024,800,-1,-1,1,-1
+c0260435,anycost,interpolation,1024,100,cuda:0,2,1,20834
+d0e37556,mobile,interpolation,256,200,cuda:1,8,1,19802
+4c22fe75,swa,interpolation,512,100,cuda:1,8,1,19781
+5b8f6337,style2ada,interpolation,1024,800,cuda:0,4,1,-1
+
+
+
+
